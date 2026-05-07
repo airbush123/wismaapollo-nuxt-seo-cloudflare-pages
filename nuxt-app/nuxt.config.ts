@@ -4,14 +4,6 @@ export default defineNuxtConfig({
   devtools: { enabled: false },
   ssr: true,
   srcDir: 'app',
-
-  nitro: {
-    preset: 'cloudflare-pages',
-  },
-
-  routeRules: {
-    '/**': { prerender: true },
-  },
   
   content: {
     // Standard content config for Nuxt 4

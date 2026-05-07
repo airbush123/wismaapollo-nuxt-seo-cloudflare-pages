@@ -1,4 +1,4 @@
 name = "wisma-apollo"
 compatibility_date = "2025-01-15"
 compatibility_flags = ["nodejs_compat"]
-pages_build_output_dir = "nuxt-app/.output/public"
+pages_build_output_dir = "nuxt-app/dist"

@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build": "npm ci --prefix nuxt-app && npm run build --prefix nuxt-app",
+    "build": "npm ci --prefix nuxt-app && npm run generate --prefix nuxt-app",
     "dev": "npm ci --prefix nuxt-app && npm run dev --prefix nuxt-app",
     "generate": "npm ci --prefix nuxt-app && npm run generate --prefix nuxt-app"
   },
