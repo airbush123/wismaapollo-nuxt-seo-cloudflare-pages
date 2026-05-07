@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.wrangler/
+nuxt-app/node_modules/
+nuxt-app/.nuxt/
+nuxt-app/.output/
+nuxt-app/.data/
+*.log
+.DS_Store

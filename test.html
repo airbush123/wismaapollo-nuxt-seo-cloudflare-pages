@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5">
+    <meta name="description"
+        content="Hotel Kuala Kurun – Wisma Apollo, pilihan hotel terbaik di Kuala Kurun, Gunung Mas. Kamar bersih, AC, WiFi gratis, kedap suara. Harga mulai Rp200.000/malam. Lokasi strategis di pusat kota.">
+    <meta name="keywords"
+        content="hotel kuala kurun, hotel di kuala kurun, hotel murah kuala kurun, hotel gunung mas, wisma apollo kuala kurun, penginapan kuala kurun, hotel kalimantan tengah">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://wisma-apollo.my.id/hotel-kuala-kurun/">
+    <meta name="theme-color" content="#FAF6F0">
+    <meta property="og:title" content="Hotel Kuala Kurun – Wisma Apollo | Hotel Terbaik di Gunung Mas">
+    <meta property="og:description"
+        content="Hotel Kuala Kurun terbaik dengan fasilitas lengkap. Kamar bersih, AC, WiFi gratis. Harga mulai Rp200.000/malam.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wisma-apollo.my.id/hotel-kuala-kurun/">
+    <meta property="og:image" content="https://wisma-apollo.my.id/images/gallery/wisma-apollo-hotel-kuala-kurun.webp">
+    <meta property="og:locale" content="id_ID">
+    <meta property="og:site_name" content="Wisma Apollo Kuala Kurun">
+    <title>Hotel Kuala Kurun – Wisma Apollo | Hotel Terbaik &amp; Murah di Gunung Mas</title>
+    <link rel="icon" href="/images/logo/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="/images/logo/favicon-192.png" sizes="192x192">
+    <link rel="apple-touch-icon" href="/images/logo/favicon-192.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%
+        }
+
+        body {
+            font-family: Inter, system-ui, -apple-system, sans-serif;
+            background: #FAF6F0;
+            color: #2C2C2C;
+            line-height: 1.7;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            padding-bottom: 72px
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            line-height: 1.25;
+            color: #1B4332
+        }
+
+        .container {
+            width: 100%;
+            max-width: 480px;
+            margin: 0 auto;
+            padding: 0 20px
+        }
+
+        /* NAV */
+        #nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            background: rgba(250, 246, 240, .97);
+            border-bottom: 1px solid #E0D8CC;
+            box-shadow: 0 2px 8px rgba(91, 64, 51, .06)
+        }
+
+        .nav-inner {
+            max-width: 480px;
+            margin: 0 auto;
+            padding: 14px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.2rem;
+            font-weight: 800;
+            letter-spacing: .2px;
+            color: #1B4965
+        }
+
+        .nav-logo img {
+            border-radius: 50%;
+            object-fit: cover
+        }
+
+        .nav-logo .tk {
+            font-weight: 600
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: .85rem;
+            font-weight: 600;
+            color: #1B4332;
+            padding: 8px 0;
+            margin-top: 80px;
+            margin-bottom: 16px;
+            transition: color .2s
+        }
+
+        .back-btn:hover {
+            color: #40916C
+        }
+
+        /* HERO */
+        .lp-hero {
+            position: relative;
+            margin: -16px -20px 0;
+            padding: 60px 24px 40px;
+            background: linear-gradient(180deg, #1B4332 0%, #2D6A4F 100%);
+            color: #fff;
+            text-align: center;
+            overflow: hidden
+        }
+
+        .lp-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url('/images/hero.webp') center/cover;
+            opacity: .18
+        }
+
+        .lp-hero * {
+            position: relative;
+            z-index: 1
+        }
+
+        .lp-hero .label {
+            display: inline-block;
+            font-size: .6rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #F07B3F;
+            border: 1px solid rgba(240, 123, 63, .4);
+            padding: 4px 14px;
+            border-radius: 50px;
+            margin-bottom: 14px
+        }
+
+        .lp-hero h1 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 10px;
+            line-height: 1.3
+        }
+
+        .lp-hero p {
+            font-size: .88rem;
+            color: rgba(255, 255, 255, .85);
+            max-width: 380px;
+            margin: 0 auto 20px
+        }
+
+        .lp-hero .price-tag {
+            display: inline-block;
+            background: #E86A33;
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: .95rem;
+            color: #fff;
+            box-shadow: 0 4px 16px rgba(232, 106, 51, .3)
+        }
+
+        /* CONTENT SECTIONS */
+        .lp-section {
+            padding: 32px 0
+        }
+
+        .lp-section h2 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #1B4332;
+            margin-bottom: 14px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #E86A33;
+            display: inline-block
+        }
+
+        .lp-section p {
+            font-size: .88rem;
+            color: #2C2C2C;
+            margin-bottom: 14px;
+            line-height: 1.8
+        }
+
+        .lp-section ul {
+            margin: 0 0 16px 20px;
+            list-style: disc
+        }
+
+        .lp-section li {
+            font-size: .85rem;
+            color: #2C2C2C;
+            margin-bottom: 6px;
+            line-height: 1.7
+        }
+
+        .lp-section strong {
+            color: #1B4332
+        }
+
+        /* FACILITY GRID */
+        .fac-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin: 16px 0
+        }
+
+        .fac-item {
+            background: #fff;
+            border: 1px solid #E0D8CC;
+            border-radius: 12px;
+            padding: 16px 24px !important; display: flex !important; gap: 16px !important; text-align: left !important; flex-direction: row !important; align-items: center !important; margin-bottom: 12px;
+            text-align: center;
+            font-size: .78rem;
+            font-weight: 600;
+            color: #1B4332;
+            box-shadow: 0 2px 6px rgba(91, 64, 51, .04)
+        }
+
+        .fac-item .fac-icon {
+            font-size: 1.4rem;
+            margin-bottom: 0 !important; width: 32px; text-align: center; flex-shrink: 0; }
+
+        /* PRICE TABLE */
+        .price-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #E0D8CC
+        }
+
+        .price-table th {
+            background: #1B4332;
+            color: #fff;
+            padding: 12px 16px;
+            text-align: left;
+            font-size: .8rem;
+            font-weight: 600
+        }
+
+        .price-table td {
+            padding: 12px 16px;
+            font-size: .82rem;
+            border-bottom: 1px solid #F2EADE
+        }
+
+        .price-table tr:last-child td {
+            border-bottom: none
+        }
+
+        .price-table tr:nth-child(even) {
+            background: #FEFCF8
+        }
+
+        /* GALLERY */
+        .lp-gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin: 16px 0
+        }
+
+        .lp-gallery img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 1px solid #E0D8CC
+        }
+
+        /* CTA */
+        .cta-box {
+            background: linear-gradient(135deg, #1B4332 0%, #2D6A4F 100%);
+            color: #fff;
+            border-radius: 16px;
+            padding: 28px 24px;
+            text-align: center;
+            margin: 8px 0 32px
+        }
+
+        .cta-box h3 {
+            color: #F07B3F;
+            font-size: 1.05rem;
+            margin-bottom: 8px
+        }
+
+        .cta-box p {
+            color: rgba(255, 255, 255, .85);
+            font-size: .85rem;
+            margin-bottom: 18px
+        }
+
+        .btn-wa {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #25D366;
+            color: #fff;
+            padding: 13px 28px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: .88rem;
+            transition: background .25s, transform .25s;
+            box-shadow: 0 4px 16px rgba(37, 211, 102, .2)
+        }
+
+        .btn-wa:hover {
+            background: #1DAF54;
+            transform: translateY(-2px)
+        }
+
+        .btn-tel {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #fff;
+            color: #1B4332;
+            padding: 13px 28px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: .88rem;
+            margin-top: 10px;
+            transition: background .25s
+        }
+
+        /* FOOTER */
+        footer {
+            background: #1B4332;
+            padding: 44px 0 96px;
+            color: rgba(255, 255, 255, .85)
+        }
+
+        .footer-brand h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #F07B3F;
+            margin-bottom: 12px
+        }
+
+        .footer-brand p {
+            font-size: .8rem;
+            line-height: 1.8;
+            opacity: .8
+        }
+
+        .footer-phone {
+            margin-top: 8px;
+            color: #fff !important;
+            font-weight: 500;
+            opacity: 1 !important
+        }
+
+        .footer-links {
+            margin-top: 24px
+        }
+
+        .footer-links h4 {
+            font-size: .83rem;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 10px
+        }
+
+        .footer-links a {
+            display: block;
+            font-size: .78rem;
+            opacity: .7;
+            padding: 5px 0;
+            transition: opacity .2s
+        }
+
+        .footer-links a:hover {
+            opacity: 1
+        }
+
+        .footer-copy {
+            margin-top: 32px;
+            padding-top: 16px;
+            border-top: 1px solid rgba(255, 255, 255, .1);
+            text-align: center
+        }
+
+        .footer-copy p {
+            font-size: .7rem;
+            opacity: .5
+        }
+
+        /* BOTTOM BAR */
+        .bottom-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            display: flex;
+            gap: 1px;
+            background: #E0D8CC;
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, .08)
+        }
+
+        .bottom-bar a {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 16px 0;
+            font-size: .8rem;
+            font-weight: 600;
+            transition: background .2s
+        }
+
+        .bb-call {
+            background: #fff;
+            color: #1B4332
+        }
+
+        .bb-wa {
+            background: #25D366;
+            color: #fff
+        }
+
+        @media(max-width:480px) {
+            .nav-logo {
+                font-size: 1rem;
+                gap: 8px
+            }
+
+            .nav-logo img {
+                width: 36px;
+                height: 36px
+            }
+
+            .nav-logo .tk { display: block; font-size: 0.75rem; font-weight: 500; color: #666; margin-top: -3px; line-height: 1.1; }
+        }
+
+        @media(min-width:481px) {
+            body {
+                max-width: 480px;
+                margin: 0 auto;
+                box-shadow: 0 0 60px rgba(91, 64, 51, .08)
+            }
+
+            .bottom-bar {
+                max-width: 480px;
+                left: 50%;
+                transform: translateX(-50%)
+            }
+
+            #nav .nav-inner {
+                max-width: 480px
+            }
+        }
+    </style>
+<style>.lightbox{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.9);z-index:9999;display:none;align-items:center;justify-content:center;opacity:0;transition:opacity 0.3s ease;padding:20px;}.lightbox.show{display:flex;opacity:1;}.lightbox img{max-width:100%;max-height:100%;object-fit:contain;border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,0.5);transform:scale(0.95);transition:transform 0.3s ease;}.lightbox.show img{transform:scale(1);}.lightbox-close{position:absolute;top:20px;right:20px;color:#fff;font-size:32px;cursor:pointer;background:rgba(255,255,255,0.2);width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:background 0.2s;z-index:10000;line-height:1;}.lightbox-close:hover{background:rgba(255,255,255,0.4);}</style>
+    <link rel="stylesheet" href="/index.css" />
+  </head>
+
+<body>
+    <nav id="nav">
+        <div class="nav-inner">
+            <a href="/" class="nav-logo">
+                <img src="/images/logo/wisma-apollo-logo.png" alt="Logo Wisma Apollo" width="44" height="44"
+                    decoding="async">
+                <span class="logo-text">Wisma <span style="color:#E86A33;">Apollo</span> <span class="tk">Kuala Kurun</span></span>
+            </a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <a href="/" class="back-btn">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M19 12H5" />
+                <polyline points="12 19 5 12 12 5" />
+            </svg>
+            Kembali ke Beranda
+        </a>
+
+        <!-- HERO -->
+        <div class="lp-hero">
+            <span class="label">Hotel di Kuala Kurun</span>
+            <h1>Hotel Kuala Kurun – Wisma Apollo, Pilihan Terbaik di Gunung Mas</h1>
+            <p>Cari hotel di Kuala Kurun yang bersih, nyaman, dan harganya masuk akal? Wisma Apollo jawabannya.</p>
+            <span class="price-tag">Mulai Rp200.000/malam</span>
+        </div>
+
+        <!-- INTRO -->
+        <div class="lp-section">
+            <h2>Kenapa Wisma Apollo Jadi Hotel Pilihan di Kuala Kurun?</h2>
+            <p>Kalau kamu pernah ke Kuala Kurun, ibu kota Kabupaten Gunung Mas di Kalimantan Tengah, pasti tahu bahwa
+                pilihan hotel di sini memang tidak sebanyak kota-kota besar. Tapi justru di situlah Wisma Apollo hadir
+                sebagai solusi. Berdiri di Jalan Letjen Soeprapto No.56, tepat di pusat kota, Wisma Apollo sudah lama
+                jadi andalan para tamu yang berkunjung ke Kuala Kurun — baik untuk urusan dinas, proyek, maupun sekadar
+                transit dalam perjalanan.</p>
+            <p>Yang membedakan Wisma Apollo dari penginapan lain di Kuala Kurun bukan cuma soal harga. Kami paham betul
+                bahwa setelah seharian beraktivitas di lapangan atau di kantor pemerintahan, yang kamu butuhkan adalah
+                kamar yang benar-benar nyaman untuk istirahat. Makanya kami investasi di hal-hal yang sering diabaikan
+                hotel kecil pada umumnya: dinding kedap suara supaya tidur tidak terganggu, kasur spring bed dengan
+                bantal bulu angsa, dan AC yang dinginnya pas — bukan AC jadul yang berisik dan bocor.</p>
+        </div>
+
+        <!-- FASILITAS -->
+        <div class="lp-section">
+            <h2>Fasilitas Hotel Wisma Apollo</h2>
+            <p>Setiap kamar di Wisma Apollo sudah dilengkapi fasilitas yang biasanya cuma kamu temukan di hotel
+                berbintang di kota besar. Bedanya, di sini harganya cuma Rp200.000 per malam.</p>
+            <div class="fac-grid">
+                <div class="fac-item">
+                    <div class="fac-icon">??</div>AC Sejuk
+                </div>
+                <div class="fac-item">
+                    <div class="fac-icon">??</div>WiFi Gratis
+                </div>
+                <div class="fac-item">
+                    <div class="fac-icon">??</div>TV Android 32"
+                </div>
+                <div class="fac-item">
+                    <div class="fac-icon">??</div>Kamar Mandi Dalam
+                </div>
+                <div class="fac-item">
+                    <div class="fac-icon">??</div>Kedap Suara
+                </div>
+                <div class="fac-item">
+                    <div class="fac-icon">???</div>Spring Bed
+                </div>
+                <div class="fac-item">
+                    <div class="fac-icon">???</div>Parkir Luas
+                </div>
+                <div class="fac-item">
+                    <div class="fac-icon">??</div>Security 24 Jam
+                </div>
+            </div>
+            <p>Selain itu, setiap tamu mendapatkan <strong>air mineral, kopi, dan teh gratis</strong> setiap hari.
+                Handuk bersih dan perlengkapan mandi (sikat gigi dan pasta gigi) juga sudah kami sediakan — jadi kamu
+                tinggal datang, check-in, dan langsung istirahat.</p>
+        </div>
+
+        <!-- HARGA -->
+        <div class="lp-section">
+            <h2>Harga Kamar Hotel di Kuala Kurun</h2>
+            <p>Wisma Apollo menawarkan dua tipe kamar dengan harga yang sangat terjangkau untuk kenyamanan yang kamu
+                dapatkan:</p>
+            <table class="price-table">
+                <tr>
+                    <th>Tipe Kamar</th>
+                    <th>Harga/Malam</th>
+                </tr>
+                <tr>
+                    <td>??? Single Bed (1 orang)</td>
+                    <td><strong>Rp200.000</strong></td>
+                </tr>
+                <tr>
+                    <td>?????? Double Bed (2 orang)</td>
+                    <td><strong>Rp250.000</strong></td>
+                </tr>
+                <tr>
+                    <td>? Extra Bed + Bantal</td>
+                    <td>+Rp50.000</td>
+                </tr>
+                <tr>
+                    <td>?? Sarapan (by request)</td>
+                    <td>+Rp20.000/orang</td>
+                </tr>
+            </table>
+            <p>Harga sudah termasuk semua fasilitas kamar, WiFi, dan minuman gratis. Tidak ada biaya tambahan
+                tersembunyi — harga yang tertera adalah harga final.</p>
+        </div>
+
+        <!-- GALERI -->
+        <div class="lp-section">
+            <h2>Foto Hotel Wisma Apollo</h2>
+            <div class="lp-gallery">
+                <img src="/images/gallery/wisma-apollo-hotel-kuala-kurun.webp" alt="Hotel Kuala Kurun - Tampak Depan Wisma Apollo" width="200" height="120"
+                    loading="lazy">
+                <img src="/images/gallery/kamar-hotel-murah-kuala-kurun.webp" alt="Hotel Kuala Kurun - Fasilitas TV & Meja Kerja"
+                    width="200" height="120" loading="lazy">
+                <img src="/images/gallery/kamar-penginapan-kuala-kurun.webp" alt="Hotel Kuala Kurun - Kamar Single Bed" width="200"
+                    height="120" loading="lazy">
+                <img src="/images/gallery/kamar-penginapan-murah-kuala-kurun.webp" alt="Hotel Kuala Kurun - Kamar Mandi Dalam" width="200" height="120"
+                    loading="lazy">
+            </div>
+        </div>
+
+        <!-- LOKASI -->
+        <div class="lp-section">
+            <h2>Lokasi Hotel di Kuala Kurun</h2>
+            <p>Wisma Apollo terletak di <strong>Jl. Letjen Soeprapto No.56, Kuala Kurun</strong>, Kelurahan Tampang
+                Tumbang Anjir, Kecamatan Kurun, Kabupaten Gunung Mas, Kalimantan Tengah. Posisinya sangat strategis —
+                cukup jalan kaki ke kantor-kantor pemerintahan, cafe, dan pusat kuliner di Kuala Kurun.</p>
+            <p>Bagi yang datang dari Palangka Raya, perjalanan darat memakan waktu sekitar 3-4 jam lewat Jalan Trans
+                Kalimantan. Begitu masuk kota Kuala Kurun, Wisma Apollo sangat mudah ditemukan karena letaknya di jalan
+                utama.</p>
+        </div>
+
+        <!-- REVIEW -->
+        <div class="lp-section">
+            <h2>Apa Kata Tamu Kami?</h2>
+            <p>Sebagian besar tamu yang menginap di Wisma Apollo adalah pekerja proyek, pegawai pemerintahan, dan
+                wisatawan yang butuh tempat istirahat yang bersih tanpa harus bayar mahal. Mereka sering kembali
+                menginap — dan itu jadi bukti nyata bahwa kualitas pelayanan kami konsisten.</p>
+            <p><em>"Saya sering bolak-balik Palangka Raya – Kuala Kurun untuk urusan kantor. Wisma Apollo selalu jadi
+                    pilihan pertama karena kamarnya bersih, WiFi-nya kencang, dan yang paling penting: bisa tidur
+                    nyenyak karena kedap suara."</em></p>
+        </div>
+
+        <!-- CTA -->
+        <div class="cta-box">
+            <h3>Booking Hotel Kuala Kurun Sekarang</h3>
+            <p>Kamar terbatas, apalagi saat musim ramai. Hubungi kami sekarang untuk memastikan ketersediaan.</p>
+            <a href="https://wa.me/62818232021?text=Halo%20Wisma%20Apollo,%20saya%20ingin%20booking%20kamar%20hotel."
+                target="_blank" rel="noopener" class="btn-wa">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+                Chat WhatsApp
+            </a>
+            <br>
+            <a href="tel:+62818232021" class="btn-tel">?? Telepon: 0818 232 021</a>
+        </div>
+    </div>
+
+        <!-- FOOTER -->
+    <footer class="footer" style="background:#1B4332;padding:52px 0 96px;color:rgba(255,255,255,.85)">
+        <div class="container">
+            <div class="footer-brand">
+                <h3 style="font-size:1.1rem;font-weight:700;color:#C9A96E;margin-bottom:14px">Wisma Apollo</h3>
+                <p style="font-size:.8rem;line-height:1.8;opacity:.8">Jl. Letjen Soeprapto No.56, Kuala Kurun<br>Kel. Tampang Tumbang Anjir, Kec. Kurun<br>Kab. Gunung Mas, Kalimantan Tengah, 74571</p>
+                <p class="footer-phone" style="margin-top:10px;color:#fff;font-weight:500;opacity:1"><!-- Telp Icon --><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block;vertical-align:-3px;margin-right:4px;"><path d="M17 2H7c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h10c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2zM7 4h10v12H7V4zm5 16c-.827 0-1.5-.673-1.5-1.5S11.173 17 12 17s1.5.673 1.5 1.5S12.827 20 12 20z"/></svg> Telp/WA : 0818 232 021</p>
+            </div>
+            <div class="footer-links" style="margin-top:28px">
+                <h4 style="font-size:.83rem;font-weight:600;color:#fff;margin-bottom:10px">Jenis Penginapan</h4>
+                <a href="/hotel-kuala-kurun/" style="display:block;font-size:.78rem;opacity:.7;padding:5px 0">Hotel Kuala Kurun</a>
+                <a href="/penginapan-kuala-kurun/" style="display:block;font-size:.78rem;opacity:.7;padding:5px 0">Penginapan Kuala Kurun</a>
+                <a href="/guest-house-kuala-kurun/" style="display:block;font-size:.78rem;opacity:.7;padding:5px 0">Guest House Kuala Kurun</a>
+                <a href="/homestay-kuala-kurun/" style="display:block;font-size:.78rem;opacity:.7;padding:5px 0">Homestay Kuala Kurun</a>
+                <a href="/staycation-kuala-kurun/" style="display:block;font-size:.78rem;opacity:.7;padding:5px 0">Staycation Kuala Kurun</a>
+                <a href="/tempat-istirahat-kuala-kurun/" style="display:block;font-size:.78rem;opacity:.7;padding:5px 0">Tempat Istirahat Kuala Kurun</a>
+            </div>
+            <div class="footer-links" style="margin-top:28px">
+                <h4 style="font-size:.83rem;font-weight:600;color:#fff;margin-bottom:10px">Blog</h4>
+                <a href="/blog/" style="display:block;font-size:.78rem;opacity:.7;padding:5px 0">Semua Artikel</a>
+                <a href="/blog/tips-menginap-kuala-kurun/" style="display:block;font-size:.78rem;opacity:.7;padding:5px 0">Tips Menginap di Kuala Kurun</a>
+                <a href="/blog/wisata-gunung-mas/" style="display:block;font-size:.78rem;opacity:.7;padding:5px 0">Wisata di Gunung Mas</a>
+                <a href="/blog/kuliner-kuala-kurun/" style="display:block;font-size:.78rem;opacity:.7;padding:5px 0">Kuliner Kuala Kurun</a>
+                <a href="/blog/air-terjun-batu-mahasur/" style="display:block;font-size:.78rem;opacity:.7;padding:5px 0">Air Terjun Batu Mahasur</a>
+            </div>
+            <div class="footer-social" style="margin-top:28px">
+                <h4 style="font-size:.83rem;font-weight:600;color:#fff;margin-bottom:12px">Ikuti Kami</h4>
+                <div class="social-row" style="display:flex;gap:12px;flex-wrap:wrap">
+                    <a href="https://web.facebook.com/wismaapollokualakurun" target="_blank" rel="noopener" aria-label="Facebook" style="width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.7);transition:all 0.25s">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" /></svg>
+                    </a>
+                    <a href="https://www.instagram.com/wismaapollokualakurun/" target="_blank" rel="noopener" aria-label="Instagram" style="width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.7);transition:all 0.25s">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" /></svg>
+                    </a>
+                    <a href="https://x.com/Wismaapollo" target="_blank" rel="noopener" aria-label="Twitter/X" style="width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.7);transition:all 0.25s">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg>
+                    </a>
+                    <a href="https://www.youtube.com/@WismaApolloKualaKurun" target="_blank" rel="noopener" aria-label="YouTube" style="width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.7);transition:all 0.25s">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" /></svg>
+                    </a>
+                                        <a href="https://www.tiktok.com/@wismaapollokualakurun" target="_blank" rel="noopener" aria-label="TikTok" style="width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.7);transition:all 0.25s">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+                    </a>
+                    <a href="https://id.pinterest.com/wismaapollokualakurun/" target="_blank" rel="noopener" aria-label="Pinterest" style="width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.7);transition:all 0.25s">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 01.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12.017 24c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641 0 12.017 0z" /></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-copy" style="margin-top:36px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);text-align:center">
+                <p style="font-size:.7rem;opacity:.5">&copy; 2025 Wisma Apollo. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="bottom-bar"> <a href="https://wa.me/62818232021?text=Halo%20Wisma%20Apollo,%20saya%20ingin%20reservasi%20kamar." target="_blank" rel="noopener" class="bb-wa"> <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"> <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" /> </svg> <span>WhatsApp</span> </a> </div>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Hotel",
+        "name": "Wisma Apollo Kuala Kurun",
+        "description": "Hotel Kuala Kurun terbaik dengan fasilitas lengkap. Kamar bersih, AC, WiFi gratis, kedap suara. Harga mulai Rp200.000/malam.",
+        "url": "https://wisma-apollo.my.id/hotel-kuala-kurun/",
+        "telephone": "+62818232021",
+        "image": "https://wisma-apollo.my.id/images/gallery/wisma-apollo-hotel-kuala-kurun.webp",
+        "address": {"@type": "PostalAddress","streetAddress": "Jl. Letjen Soeprapto No.56","addressLocality": "Kuala Kurun","addressRegion": "Kalimantan Tengah","postalCode": "74571","addressCountry": "ID"},
+        "geo": {"@type": "GeoCoordinates","latitude": "-1.4683","longitude": "113.8860"},
+        "priceRange": "Rp200.000 - Rp250.000",
+        "amenityFeature": [
+            {"@type": "LocationFeatureSpecification", "name": "WiFi Gratis", "value": true},
+            {"@type": "LocationFeatureSpecification", "name": "AC", "value": true},
+            {"@type": "LocationFeatureSpecification", "name": "TV Android 32 inch", "value": true},
+            {"@type": "LocationFeatureSpecification", "name": "Kedap Suara", "value": true}
+        ]
+    }
+    </script>
+<div class="lightbox" id="lightbox"><div class="lightbox-close">&times;</div><img src="" alt="Enlarged Image" id="lightbox-img"></div><script>document.addEventListener('DOMContentLoaded',()=>{const l=document.getElementById('lightbox'),i=document.getElementById('lightbox-img'),g=document.querySelectorAll('.gallery img, .lp-gallery img');g.forEach(img=>{img.style.cursor='zoom-in';img.addEventListener('click',()=>{i.src=img.src;if(img.alt)i.alt=img.alt;l.classList.add('show');});});l.addEventListener('click',e=>{if(e.target!==i)l.classList.remove('show');});});</script>
+</body>
+
+</html>
+
+
+
+

@@ -1,0 +1,164 @@
+{
+  "nav": {
+    "about": "About Us",
+    "facilities": "Facilities",
+    "rooms": "Room Rates",
+    "gallery": "Gallery",
+    "testimonials": "Testimonials",
+    "blog": "Blog",
+    "faq": "FAQ",
+    "reserve": "Book Now"
+  },
+  "hero": {
+    "tag": "Accommodation in Kuala Kurun",
+    "title": "Welcome to Wisma Apollo",
+    "motto": "\"Comfort Like Home\"",
+    "address": "Jl. Letjen Soeprapto No.56, Kuala Kurun, Gunung Mas Regency, Central Kalimantan 74571",
+    "phone": "Phone/WA: 0818 232 021",
+    "cta": "See Rates & Book"
+  },
+  "promo": {
+    "title": "This Month's Promo",
+    "text": "Starting from",
+    "price": "Rp200,000/night!"
+  },
+  "about": {
+    "label": "About Wisma Apollo",
+    "title": "Why Choose Wisma Apollo?",
+    "desc1": "Wisma Apollo Kuala Kurun is the perfect accommodation for those who need a comfortable, clean, and quiet place to rest. Strategically located near the city center, ideal for families and business trips.",
+    "desc2": "All rooms come with full AC, free Wi-Fi, comfortable spring beds with goose feather pillows, full cotton linen sheets and bed covers, shower bathrooms, soft & clean towels daily (Breakfast by Request). For privacy and tranquility, we use soundproof walls and ceilings, so you can rest undisturbed. Extra beds & pillows are available upon request.",
+    "desc3": "Book now and experience the comfort of staying at the best and most affordable accommodation in Kuala Kurun. Contact us via WhatsApp and book your room easily!",
+    "usp": {
+      "location": { "title": "Strategic Location", "desc": "Near city center & cafes" },
+      "soundproof": { "title": "Soundproof", "desc": "Soundproof walls & ceiling" },
+      "bed": { "title": "Premium Bed", "desc": "Spring bed & goose feather pillows" },
+      "clean": { "title": "Cleanliness", "desc": "Cotton linen & fresh towels daily" }
+    }
+  },
+  "facilities": {
+    "label": "Complete Facilities",
+    "title": "Our Facilities in Kuala Kurun",
+    "room": {
+      "title": "Room Facilities",
+      "items": ["Air Conditioner (AC)", "32\" Android TV", "Clean Towels", "Bathroom Amenities", "En-suite Shower Bathroom", "Clean, Spacious & Soundproof Room"]
+    },
+    "other": {
+      "title": "Other Facilities",
+      "items": ["Free Wi-Fi", "Free Coffee & Tea", "Daily Mineral Water", "Spacious Parking", "24-Hour Security", "Friendly & Helpful Receptionist"]
+    },
+    "extra": {
+      "title": "Additional Facilities",
+      "items": ["Breakfast +IDR 20K Per Person", "Extra Bed & Pillow +IDR 50K Per Room"]
+    }
+  },
+  "rooms": {
+    "label": "Room Rates & Reservation",
+    "title": "Choose Your Room",
+    "subtitle": "We offer affordable and budget-friendly prices",
+    "single": {
+      "badge": "Single",
+      "name": "Single Bed",
+      "price": "Rp 200,000",
+      "perNight": "/night",
+      "features": ["AC & 32\" Android TV", "Free Wi-Fi", "En-suite Shower Bathroom", "Spring Bed & Goose Feather Pillows", "Soundproof"],
+      "waText": "Hello Wisma Apollo, I would like to book a Single Bed room. Thank you."
+    },
+    "double": {
+      "badge": "Double",
+      "name": "Double Bed",
+      "popular": "Most Popular",
+      "price": "Rp 250,000",
+      "perNight": "/night",
+      "features": ["AC & 32\" Android TV", "Free Wi-Fi", "En-suite Shower Bathroom", "Spring Bed & Goose Feather Pillows", "Soundproof", "More spacious"],
+      "waText": "Hello Wisma Apollo, I would like to book a Double Bed room. Thank you."
+    },
+    "bookViaWa": "Book via WhatsApp",
+    "reserveNote": "You can reserve directly via WhatsApp:",
+    "chatWa": "Chat WhatsApp 0818 232 021"
+  },
+  "gallery": {
+    "label": "Gallery",
+    "title": "Wisma Apollo Photos"
+  },
+  "testimonials": {
+    "label": "Guest Testimonials",
+    "title": "What Our Guests Say",
+    "location": "Location",
+    "room": "Room",
+    "viewAll": "View all reviews on Google Maps",
+    "ratingAria": "Rating {rating} out of 5 stars"
+  },
+  "map": {
+    "label": "Our Location",
+    "title": "Find Wisma Apollo",
+    "address": "Jl. Letjen Soeprapto No.56, Kuala Kurun, Gunung Mas Regency, Central Kalimantan 74571",
+    "openMaps": "Open in Google Maps"
+  },
+  "footer": {
+    "brand": "Wisma Apollo",
+    "addressLine1": "Jl. Letjen Soeprapto No.56, Kuala Kurun",
+    "addressLine2": "Kel. Tampang Tumbang Anjir, Kec. Kurun",
+    "addressLine3": "Gunung Mas Regency, Central Kalimantan, 74571",
+    "phone": "Phone/WA: 0818 232 021",
+    "accommodationTypes": "Accommodation Types",
+    "links": {
+      "hotel": "Hotel Kuala Kurun",
+      "penginapan": "Lodging Kuala Kurun",
+      "guestHouse": "Guest House Kuala Kurun",
+      "homestay": "Homestay Kuala Kurun",
+      "staycation": "Staycation Kuala Kurun",
+      "tempatIstirahat": "Rest Place Kuala Kurun"
+    },
+    "blogTitle": "Blog",
+    "blogLinks": {
+      "all": "All Articles",
+      "tips": "Staying Tips in Kuala Kurun",
+      "wisata": "Tourism in Gunung Mas",
+      "kuliner": "Kuala Kurun Cuisine",
+      "airTerjun": "Batu Mahasur Waterfall"
+    },
+    "followUs": "Follow Us",
+    "copyright": "© 2025 Wisma Apollo. All Rights Reserved."
+  },
+  "booking": {
+    "title": "Continue to WhatsApp",
+    "desc": "Please enter your Name and WhatsApp number to connect with our Admin.",
+    "nameLabel": "Full Name",
+    "namePlaceholder": "e.g. John Smith",
+    "phoneLabel": "WhatsApp Number (Active)",
+    "phonePlaceholder": "e.g. 081234567890",
+    "submit": "Send & Continue to WhatsApp",
+    "submitting": "Sending...",
+    "errors": {
+      "nameMin": "Name must be at least 2 characters",
+      "phoneMin": "Number must be at least 10 digits",
+      "phoneFormat": "Invalid number format"
+    }
+  },
+  "bottomBar": {
+    "whatsapp": "WhatsApp"
+  },
+  "faq": {
+    "pageTitle": "Frequently Asked Questions",
+    "pageDesc": "Find answers about location, room rates, facilities, and how to book at Wisma Apollo Kuala Kurun.",
+    "stillQuestion": "Still Have Questions?",
+    "contactUs": "Contact us directly via WhatsApp for quick answers and room reservations.",
+    "chatWa": "Chat WhatsApp",
+    "items": [
+      { "q": "Where is Wisma Apollo located?", "a": "Wisma Apollo is located at Jl. Letjen Soeprapto No.56, Kuala Kurun, Kel. Tampang Tumbang Anjir, Kec. Kurun, Gunung Mas Regency, Central Kalimantan 74571. It's strategically positioned in the city center." },
+      { "q": "How much is a room per night?", "a": "Room rates start from Rp200,000/night for Single Bed and Rp250,000/night for Double Bed. Includes AC, WiFi, 32\" Android TV, and bathroom amenities." },
+      { "q": "What facilities are available?", "a": "Every room is equipped with AC, 32\" Android TV, free WiFi, en-suite shower bathroom, spring bed + goose feather pillows, cotton linen, fresh towels daily, and soundproof walls." },
+      { "q": "Is there free WiFi?", "a": "Yes, the entire Wisma Apollo area has free WiFi with adequate speed for streaming and working." },
+      { "q": "How to make a reservation?", "a": "Reservations can be made through WhatsApp at 0818 232 021. Simply send a message with your name and desired check-in dates. We will respond quickly." },
+      { "q": "Is breakfast available?", "a": "Yes, breakfast is available by request with an additional fee of Rp20,000 per person. Contact the receptionist to order breakfast." },
+      { "q": "Is there an extra bed?", "a": "Yes, extra beds and pillows are available at Rp50,000 per room. Please inform us when making your reservation." },
+      { "q": "What are the check-in and check-out times?", "a": "Check-in starts at 2:00 PM WIB and check-out is by 12:00 PM WIB. Early check-in or late check-out can be arranged depending on availability." }
+    ]
+  },
+  "common": {
+    "backHome": "Back to Home",
+    "readMore": "Read More →",
+    "waDefault": "Hello Wisma Apollo, I would like to book a room.",
+    "skipToContent": "Skip to main content"
+  }
+}

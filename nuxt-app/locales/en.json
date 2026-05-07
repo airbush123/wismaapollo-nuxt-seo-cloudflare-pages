@@ -1,0 +1,293 @@
+{
+  "nav": {
+    "about": "About Us",
+    "facilities": "Facilities",
+    "rooms": "Room Rates",
+    "gallery": "Gallery",
+    "testimonials": "Testimonials",
+    "blog": "Blog",
+    "faq": "FAQ",
+    "reserve": "Reserve Now"
+  },
+  "blog": {
+    "title": "Wisma Apollo Blog",
+    "desc": "Tourism and accommodation tips in Kuala Kurun."
+  },
+  "hero": {
+    "tag": "Accommodation in Kuala Kurun",
+    "title": "Welcome to Wisma Apollo",
+    "motto": "\"Comfortable Like Home\"",
+    "address": "Jl. Letjen Soeprapto No.56, Kuala Kurun, Gunung Mas, Central Kalimantan 74571",
+    "phone": "Phone/WA: 0818 232 021",
+    "cta": "View Rates & Book"
+  },
+  "promo": {
+    "title": "Promo of the Month",
+    "text": "Starting from",
+    "price": "IDR 200,000/night!"
+  },
+  "about": {
+    "label": "About Wisma Apollo",
+    "title": "Why Choose Wisma Apollo?",
+    "desc1": "Wisma Apollo Kuala Kurun is the perfect accommodation for those who need a comfortable, clean, and quiet place to rest. Strategically located near the city center, it is suitable for families or business trips.",
+    "desc2": "All rooms feature full AC, free Wi-Fi, comfortable spring beds, goose feather pillows, full cotton linen, shower bathrooms, and fresh towels daily (Breakfast by Request). For privacy and peace, we use soundproof walls and ceilings, allowing you to rest without interruption. Extra beds and pillows are available if needed.",
+    "desc3": "Book now and experience stay in the best and most affordable hotel in Kuala Kurun. Contact us via WhatsApp for easy booking!",
+    "usp": {
+      "location": { "title": "Strategic Location", "desc": "Near city center & cafes" },
+      "soundproof": { "title": "Soundproof", "desc": "Soundproof walls & ceilings" },
+      "bed": { "title": "Premium Bedding", "desc": "Spring beds & goose pillows" },
+      "clean": { "title": "Cleanliness", "desc": "Cotton linen & fresh towels daily" }
+    }
+  },
+  "facilities": {
+    "label": "Complete Facilities",
+    "title": "Our Wisma Facilities in Kuala Kurun",
+    "room": {
+      "title": "Room Facilities",
+      "items": ["Air Conditioner (AC)", "32\" Android TV", "Clean Towels", "Bathroom Amenities", "En-suite Shower Room", "Clean, Spacious & Soundproof"]
+    },
+    "other": {
+      "title": "Other Facilities",
+      "items": ["Free Wi-Fi", "Free Coffee & Tea", "Mineral Water Daily", "Spacious Parking", "24-Hour Security", "Friendly Receptionist"]
+    },
+    "extra": {
+      "title": "Extra Services",
+      "items": ["Breakfast +20K Per Person", "Extra Bed & Pillow +50K Per Room"]
+    }
+  },
+  "rooms": {
+    "label": "Room Rates & Reservation",
+    "title": "Choose Your Room",
+    "subtitle": "We offer cheap & affordable rates",
+    "single": {
+      "badge": "Single",
+      "name": "Single Bed",
+      "price": "IDR 200,000",
+      "perNight": "/night",
+      "features": ["AC & 32\" Android TV", "Free Wi-Fi", "En-suite Shower Room", "Spring Bed & Goose Pillow", "Soundproof"],
+      "waText": "Hi Wisma Apollo, I would like to book a Single Bed room. Thank you."
+    },
+    "double": {
+      "badge": "Double",
+      "name": "Double Bed",
+      "popular": "Best Seller",
+      "price": "IDR 250,000",
+      "perNight": "/night",
+      "features": ["AC & 32\" Android TV", "Free Wi-Fi", "En-suite Shower Room", "Spring Bed & Goose Pillow", "Soundproof", "More spacious"],
+      "waText": "Hi Wisma Apollo, I would like to book a Double Bed room. Thank you."
+    },
+    "bookViaWa": "Book via WhatsApp",
+    "reserveNote": "Reservation can be made directly via WhatsApp:",
+    "chatWa": "Chat WhatsApp 0818 232 021"
+  },
+  "gallery": {
+    "label": "Gallery",
+    "title": "Wisma Apollo Photos"
+  },
+  "testimonials": {
+    "label": "Guest Testimonials",
+    "title": "What They Say?",
+    "location": "Location",
+    "room": "Room",
+    "viewAll": "View all reviews on Google Maps",
+    "ratingAria": "Rating {rating} out of 5 stars",
+    "items": [
+      {
+        "name": "Meri Geraldine",
+        "initial": "M",
+        "color": "#E86A33",
+        "text": "Clean room, comfortable linens, TV, WiFi, AC. Bathroom with sit toilet + shower. Provided a front table and chairs for relaxing smokes. 200k per night, one of the cheapest & best value stays I've found in Kalimantan. Safe for solo female travelers too."
+      },
+      {
+        "name": "Syahrul Rizal Nur Afan",
+        "initial": "S",
+        "color": "#1B4965",
+        "text": "The room is clean and the interior is simple yet aesthetic. Great for resting. Quiet atmosphere & equipped with smart TV + workspace. Top choice when in Kuala Kurun."
+      },
+      {
+        "name": "Pantar Kurnia",
+        "initial": "P",
+        "color": "#2D6A4F",
+        "text": "The location is perfect, comfortable room with fragrant and soft beds, pillows, and blankets. Strong shower water, clean toilet. If in Kurun, definitely staying here..."
+      }
+    ]
+  },
+  "map": {
+    "label": "Our Location",
+    "title": "Find Wisma Apollo",
+    "address": "Jl. Letjen Soeprapto No.56, Kuala Kurun, Gunung Mas, Central Kalimantan 74571",
+    "openMaps": "Open in Google Maps"
+  },
+  "footer": {
+    "brand": "Wisma Apollo",
+    "addressLine1": "Jl. Letjen Soeprapto No.56, Kuala Kurun",
+    "addressLine2": "Tampang Tumbang Anjir, Kurun District",
+    "addressLine3": "Gunung Mas, Central Kalimantan, 74571",
+    "phone": "Phone/WA: 0818 232 021",
+    "accommodationTypes": "Accommodation Types",
+    "links": {
+      "hotel": "Hotel Kuala Kurun",
+      "penginapan": "Lodging Kuala Kurun",
+      "guestHouse": "Guest House Kuala Kurun",
+      "homestay": "Homestay Kuala Kurun",
+      "staycation": "Staycation Kuala Kurun",
+      "tempatIstirahat": "Rest Place Kuala Kurun"
+    },
+    "blogTitle": "Blog",
+    "blogLinks": {
+      "all": "All Articles",
+      "tips": "Kuala Kurun Stay Tips",
+      "wisata": "Gunung Mas Tourism",
+      "kuliner": "Kuala Kurun Culinary",
+      "airTerjun": "Batu Mahasur Waterfall"
+    },
+    "followUs": "Follow Us",
+    "copyright": "© 2025 Wisma Apollo. All Rights Reserved."
+  },
+  "booking": {
+    "title": "Continue to WhatsApp",
+    "desc": "Please enter your Name and WhatsApp number to connect with our Admin.",
+    "nameLabel": "Full Name",
+    "namePlaceholder": "Example: Budi Santoso",
+    "phoneLabel": "WhatsApp No (Active)",
+    "phonePlaceholder": "Example: 081234567890",
+    "submit": "Send & Continue to WhatsApp",
+    "submitting": "Submitting...",
+    "errors": {
+      "nameMin": "Name must be at least 2 characters",
+      "phoneMin": "Number must be at least 10 digits",
+      "phoneFormat": "Invalid number format"
+    }
+  },
+  "bottomBar": {
+    "whatsapp": "WhatsApp"
+  },
+  "faq": {
+    "pageTitle": "Frequently Asked Questions",
+    "pageDesc": "Find answers about location, rates, facilities, and how to reserve at Wisma Apollo Kuala Kurun.",
+    "stillQuestion": "Still Have Questions?",
+    "contactUs": "Contact us directly via WhatsApp for quick answers and room reservations.",
+    "chatWa": "Chat WhatsApp",
+    "items": [
+      { "q": "Where is Wisma Apollo located?", "a": "Wisma Apollo is located at Jl. Letjen Soeprapto No.56, Kuala Kurun, Gunung Mas, Central Kalimantan 74571. Strategically located in the city center." },
+      { "q": "How much is the room rate per night?", "a": "Room rates start from IDR 200,000/night for Single Bed and IDR 250,000/night for Double Bed. Includes AC, WiFi, 32\" Android TV, and amenities." },
+      { "q": "What facilities are available?", "a": "Each room has AC, 32\" Android TV, free WiFi, en-suite shower bathroom, spring bed + goose pillows, cotton linen, fresh towels daily, and soundproof walls." },
+      { "q": "Is there free WiFi?", "a": "Yes, all areas of Wisma Apollo have free WiFi with adequate speed for streaming and working." },
+      { "q": "How do I make a reservation?", "a": "Reservations can be made via WhatsApp at 0818 232 021. Just send your name and desired stay dates. We will reply quickly." },
+      { "q": "Is breakfast available?", "a": "Yes, breakfast is available by request for an additional IDR 20,000 per person. Contact the receptionist to order." },
+      { "q": "Is there an extra bed?", "a": "Yes, extra beds and pillows are available for an additional IDR 50,000 per room. Please inform us during reservation." },
+      { "q": "Check-in and check-out time?", "a": "Check-in from 14:00 and check-out by 12:00. Early check-in or late check-out can be arranged based on availability." }
+    ]
+  },
+  "common": {
+    "backHome": "Back to Home",
+    "readMore": "Read More",
+    "waDefault": "Hello Wisma Apollo, I would like to book a room.",
+    "skipToContent": "Skip to main content"
+  },
+  "pages": {
+    "hotel-kuala-kurun": {
+      "title": "Hotel Kuala Kurun – Wisma Apollo",
+      "subtitle": "The Best & Affordable Hotel in Gunung Mas, Central Kalimantan",
+      "meta": "Best Hotel in Kuala Kurun with complete facilities. Clean rooms, AC, free WiFi. Rates starting from IDR 200,000/night.",
+      "sections": [
+        {
+          "heading": "Why Wisma Apollo is the Preferred Hotel in Kuala Kurun?",
+          "paragraphs": [
+            "If you have ever visited Kuala Kurun, the capital of Gunung Mas Regency in Central Kalimantan, you know that hotel options here are not as abundant as in larger cities. That is precisely where Wisma Apollo steps in as the solution.",
+            "What sets Wisma Apollo apart from other accommodations in Kuala Kurun is not just the price. We understand that after a long day of field activities or government office meetings, what you truly need is a room that is truly comfortable for rest."
+          ]
+        },
+        {
+          "heading": "Wisma Apollo Hotel Facilities",
+          "paragraphs": [
+            "Each room at Wisma Apollo is equipped with facilities typically found in star-rated hotels in big cities. The difference is, here the price is only IDR 200,000 per night.",
+            "In addition, every guest receives free mineral water, coffee, and tea every day. Clean towels and bathroom amenities are also provided."
+          ]
+        },
+        {
+          "heading": "Hotel Location in Kuala Kurun",
+          "paragraphs": [
+            "Wisma Apollo is located at Jl. Letjen Soeprapto No.56, Kuala Kurun. Its position is very strategic — within walking distance to government offices, cafes, and culinary centers in Kuala Kurun."
+          ]
+        }
+      ]
+    },
+    "penginapan-kuala-kurun": {
+      "title": "Kuala Kurun Accommodation – Wisma Apollo",
+      "subtitle": "Clean, Comfortable & Affordable Lodging in Kuala Kurun",
+      "meta": "Best accommodation in Kuala Kurun. Wisma Apollo, clean rooms, AC, free WiFi. Rates starting from IDR 200,000/night.",
+      "sections": [
+        {
+          "heading": "Comfortable Lodging in Kuala Kurun",
+          "paragraphs": [
+            "Looking for clean, comfortable, and affordable lodging in Kuala Kurun? Wisma Apollo is the perfect choice for you.",
+            "With a strategic location in the city center and complete facilities, Wisma Apollo has become a favorite accommodation for many guests visiting Kuala Kurun."
+          ]
+        },
+        {
+          "heading": "Accommodation Facilities",
+          "paragraphs": [
+            "AC, 32-inch Android TV, free WiFi, en-suite bathroom with shower, premium spring beds, goose feather pillows, and soundproof walls for maximum comfort."
+          ]
+        }
+      ]
+    },
+    "guest-house-kuala-kurun": {
+      "title": "Guest House Kuala Kurun – Wisma Apollo",
+      "subtitle": "Comfortable Guest House with Hotel Facilities in Kuala Kurun",
+      "meta": "Guest house in Kuala Kurun with complete facilities. Wisma Apollo, rates starting from IDR 200,000/night.",
+      "sections": [
+        {
+          "heading": "Best Guest House in Kuala Kurun",
+          "paragraphs": [
+            "Wisma Apollo serves as a premium guest house in Kuala Kurun with facilities equivalent to a star-rated hotel but at a very affordable price.",
+            "Perfect for business trips, official visits, or tourism in Gunung Mas Regency, Central Kalimantan."
+          ]
+        }
+      ]
+    },
+    "homestay-kuala-kurun": {
+      "title": "Homestay Kuala Kurun – Wisma Apollo",
+      "subtitle": "Comfortable Homestay like Your Own Home",
+      "meta": "Comfortable and clean homestay in Kuala Kurun. Wisma Apollo, rates starting from IDR 200,000/night.",
+      "sections": [
+        {
+          "heading": "Comfortable Homestay in Kuala Kurun",
+          "paragraphs": [
+            "Feel the comfort of staying like in your own home at Wisma Apollo Kuala Kurun. With a quiet atmosphere and complete facilities, you can rest optimally.",
+            "We provide clean rooms with AC, WiFi, and soundproof walls for your comfort."
+          ]
+        }
+      ]
+    },
+    "staycation-kuala-kurun": {
+      "title": "Staycation Kuala Kurun – Wisma Apollo",
+      "subtitle": "Enjoy a Comfortable Staycation in Kuala Kurun City Center",
+      "meta": "Fun staycation in Kuala Kurun. Wisma Apollo, rates starting from IDR 200,000/night.",
+      "sections": [
+        {
+          "heading": "Staycation in Kuala Kurun",
+          "paragraphs": [
+            "Need a refresh without going far? Wisma Apollo offers a comfortable staycation experience in Kuala Kurun.",
+            "Enjoy premium facilities: soft spring beds, goose feather pillows, cool AC, 32-inch Android TV for streaming, and fast WiFi."
+          ]
+        }
+      ]
+    },
+    "tempat-istirahat-kuala-kurun": {
+      "title": "Rest Place Kuala Kurun – Wisma Apollo",
+      "subtitle": "The Best Place to Rest in Kuala Kurun, Gunung Mas",
+      "meta": "Comfortable rest place in Kuala Kurun. Wisma Apollo, clean & soundproof rooms. Rates starting from IDR 200,000/night.",
+      "sections": [
+        {
+          "heading": "Ideal Rest Place in Kuala Kurun",
+          "paragraphs": [
+            "After a long journey or a tiring workday, what you need is a place to rest that is truly comfortable.",
+            "Wisma Apollo meets that need with clean, quiet rooms (soundproof walls) and modern facilities."
+          ]
+        }
+      ]
+    }
+  }
+}
