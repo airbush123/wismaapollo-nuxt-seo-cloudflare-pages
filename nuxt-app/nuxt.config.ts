@@ -1,9 +1,17 @@
 // Wisma Apollo – Nuxt 3 Configuration
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
-  devtools: { enabled: true },
+  devtools: { enabled: false },
   ssr: true,
   srcDir: 'app',
+
+  nitro: {
+    preset: 'cloudflare-pages',
+  },
+
+  routeRules: {
+    '/**': { prerender: true },
+  },
   
   content: {
     // Standard content config for Nuxt 4
