@@ -20,17 +20,17 @@ export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: { lang: 'id' },
-      title: 'Wisma Apollo - Penginapan - Hotel Kuala Kurun',
+      title: 'Hotel Kuala Kurun | Penginapan | Wisma Apollo',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width,initial-scale=1,maximum-scale=5' },
-        { name: 'description', content: 'Wisma Apollo adalah penginapan dan hotel Kuala Kurun yang nyaman, bersih, dan strategis. Cocok untuk pencarian Hotel Kuala Kurun, Penginapan Kuala Kurun, dan Wisma Kuala Kurun.' },
+        { name: 'description', content: 'Cari Hotel Kuala Kurun atau Penginapan Kuala Kurun yang nyaman? Wisma Apollo adalah pilihan terbaik dengan fasilitas lengkap, kamar bersih, dan lokasi strategis di pusat kota. Booking hotel murah di Kuala Kurun sekarang!' },
         { name: 'keywords', content: 'hotel kuala kurun, penginapan kuala kurun, wisma kuala kurun, wisma apollo, hotel murah kuala kurun, penginapan murah kuala kurun, guest house kuala kurun, homestay kuala kurun, hotel gunung mas kalimantan tengah' },
         { name: 'robots', content: 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' },
         { name: 'theme-color', content: '#FAF6F0' },
         // Open Graph
-        { property: 'og:title', content: 'Wisma Apollo - Penginapan - Hotel Kuala Kurun' },
-        { property: 'og:description', content: 'Wisma Apollo adalah penginapan dan hotel Kuala Kurun yang nyaman, bersih, dan strategis untuk tamu bisnis maupun keluarga.' },
+        { property: 'og:title', content: 'Hotel Kuala Kurun | Penginapan | Wisma Apollo' },
+        { property: 'og:description', content: 'Cari Hotel Kuala Kurun atau Penginapan Kuala Kurun yang nyaman? Wisma Apollo adalah pilihan terbaik dengan fasilitas lengkap, kamar bersih, dan lokasi strategis di pusat kota.' },
         { property: 'og:type', content: 'website' },
         { property: 'og:url', content: 'https://wisma-apollo.my.id/' },
         { property: 'og:image', content: 'https://wisma-apollo.my.id/images/hero.webp' },
@@ -60,15 +60,13 @@ export default defineNuxtConfig({
     locales: [
       { code: 'id', name: 'Bahasa Indonesia', file: 'id.json' },
       { code: 'en', name: 'English', file: 'en.json' },
+      { code: 'zh', name: '中文', file: 'zh.json' },
     ],
     defaultLocale: 'id',
+    fallbackLocale: 'id',
     langDir: '../locales/',
     strategy: 'prefix_except_default',
-    detectBrowserLanguage: {
-      useCookie: true,
-      cookieKey: 'i18n_redirected',
-      redirectOn: 'root',
-    },
+    detectBrowserLanguage: false,
   },
 
 

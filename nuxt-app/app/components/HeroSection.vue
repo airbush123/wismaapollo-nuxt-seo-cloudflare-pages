@@ -8,7 +8,7 @@
         >
         <NuxtImg
           src="/images/hero.webp"
-          alt="Wisma Apollo Kuala Kurun"
+          alt="Hotel Kuala Kurun - Penginapan Wisma Apollo"
           width="480"
           height="600"
           loading="eager"

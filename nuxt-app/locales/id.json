@@ -14,7 +14,7 @@
     "desc": "Tips wisata dan menginap di Kuala Kurun."
   },
   "hero": {
-    "tag": "Penginapan di Kuala Kurun",
+    "tag": "Hotel & Penginapan di Kuala Kurun",
     "title": "Selamat Datang di Wisma Apollo",
     "motto": "\"Nyaman Seperti di Rumah\"",
     "address": "Jl. Letjen Soeprapto No.56, Kuala Kurun, Kab. Gunung Mas, Kalimantan Tengah 74571",
@@ -28,8 +28,8 @@
   },
   "about": {
     "label": "Tentang Wisma Apollo",
-    "title": "Kenapa Harus Wisma Apollo?",
-    "desc1": "Wisma Apollo Kuala Kurun penginapan yang cocok buat kamu yang butuh tempat istirahat nyaman, bersih dan tenang. Lokasinya strategis dekat pusat kota dan cocok untuk keluarga atau perjalanan kerja.",
+    "title": "Kenapa Memilih Wisma Apollo?",
+    "desc1": "Rasakan pengalaman menginap terbaik di Hotel & Penginapan Kuala Kurun. Wisma Apollo memadukan ketenangan suasana rumah dengan fasilitas modern—pilihan sempurna untuk perjalanan bisnis maupun momen berharga bersama keluarga di pusat kota.",
     "desc2": "Fasilitas semua kamar full AC, TV Android 32\", free Wi-Fi, kasur spring bed yang nyaman, bantal bulu angsa, sprei dan bed cover linen full katun, kamar mandi shower, handuk yang lembut & bersih setiap hari (Breakfast by Request). Untuk privacy dan ketenangan kami menggunakan dinding dan plafon kedap suara (Soundproof Wall), agar anda bisa beristirahat tanpa gangguan. Tersedia pula extra bed + bantal jika dibutuhkan.",
     "desc3": "Booking sekarang dan rasakan kenyamanan menginap di penginapan / hotel terbaik dan termurah di Kuala Kurun. Hubungi kami lewat WhatsApp dan pesan kamar dengan mudah tanpa ribet!",
     "usp": {
@@ -41,7 +41,7 @@
   },
   "facilities": {
     "label": "Fasilitas Lengkap",
-    "title": "Fasilitas Wisma Kami di Kuala Kurun",
+    "title": "Fasilitas Hotel & Penginapan Wisma Apollo",
     "smokingArea": {
       "title": "Selasar Santai",
       "desc": "Area duduk outdoor bernuansa kayu"
@@ -63,6 +63,7 @@
     "label": "Tarif Kamar & Reservasi",
     "title": "Pilih Kamar Anda",
     "subtitle": "Kami menawarkan harga yang murah & terjangkau",
+    "normalPrice": "Harga normal",
     "single": {
       "badge": "Single",
       "name": "Single Bed",

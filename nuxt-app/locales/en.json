@@ -29,7 +29,7 @@
   "about": {
     "label": "About Wisma Apollo",
     "title": "Why Choose Wisma Apollo?",
-    "desc1": "Wisma Apollo Kuala Kurun is the perfect accommodation for those who need a comfortable, clean, and quiet place to rest. Strategically located near the city center, it is suitable for families or business trips.",
+    "desc1": "Wisma Apollo Kuala Kurun is the perfect accommodation and hotel for those who need a comfortable, clean, and quiet place to rest. Strategically located near the city center, it is suitable for families or business trips.",
     "desc2": "All rooms feature full AC, 32\" Android TV, free Wi-Fi, comfortable spring beds, goose feather pillows, full cotton linen, shower bathrooms, and fresh towels daily (Breakfast by Request). For privacy and peace, we use soundproof walls and ceilings, allowing you to rest without interruption. Extra beds and pillows are available if needed.",
     "desc3": "Book now and experience stay in the best and most affordable hotel in Kuala Kurun. Contact us via WhatsApp for easy booking!",
     "usp": {
@@ -63,6 +63,7 @@
     "label": "Room Rates & Reservation",
     "title": "Choose Your Room",
     "subtitle": "We offer cheap & affordable rates",
+    "normalPrice": "Normal price",
     "single": {
       "badge": "Single",
       "name": "Single Bed",
