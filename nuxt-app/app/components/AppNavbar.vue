@@ -4,9 +4,26 @@
       <NuxtLink :to="localePath('/')" class="nav-logo" :aria-label="'Wisma Apollo - ' + $t('common.backHome')">
         <NuxtImg src="/images/logo/wisma-apollo-logo.png" alt="Logo Wisma Apollo" width="44" height="44" loading="eager" />
         <span class="logo-text">
-          Wisma <span style="color: #E86A33;">Apollo</span>&nbsp;<span class="tk">Kuala Kurun</span>
+          Apollo
         </span>
       </NuxtLink>
+      <div class="desktop-nav-shell">
+        <div class="desktop-menu" role="menubar">
+          <NuxtLink :to="localePath('/#tentang')" role="menuitem">{{ $t('nav.about') }}</NuxtLink>
+          <NuxtLink :to="localePath('/#fasilitas')" role="menuitem">{{ $t('nav.facilities') }}</NuxtLink>
+          <NuxtLink :to="localePath('/#kamar')" role="menuitem">{{ $t('nav.rooms') }}</NuxtLink>
+          <NuxtLink :to="localePath('/#galeri')" role="menuitem">{{ $t('nav.gallery') }}</NuxtLink>
+          <NuxtLink :to="localePath('/#testimoni')" role="menuitem">{{ $t('nav.testimonials') }}</NuxtLink>
+          <NuxtLink :to="localePath('/faq')" role="menuitem">{{ $t('nav.faq') }}</NuxtLink>
+        </div>
+        <button
+          type="button"
+          class="desktop-cta"
+          @click="bookingStore.openModal()"
+        >
+          {{ $t('nav.reserve') }}
+        </button>
+      </div>
       <div style="display: flex; align-items: center;">
         <div class="lang-switch" role="group" aria-label="Language switcher">
           <button
@@ -57,8 +74,10 @@
 
 <script setup lang="ts">
 import { useUIStore } from '~/stores/useUIStore'
+import { useBookingStore } from '~/stores/useBookingStore'
 
 const uiStore = useUIStore()
+const bookingStore = useBookingStore()
 const { locale, locales, setLocale } = useI18n()
 const localePath = useLocalePath()
 

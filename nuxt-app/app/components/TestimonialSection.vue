@@ -40,7 +40,7 @@
       </article>
 
       <a
-        href="https://www.google.com/travel/search?q=wisma%20apollo&hl=id-ID&gl=id"
+        href="https://www.google.com/travel/search?q=wisma%20apollo&hl=id-ID&gl=id&qs=MidDaGtJcU9uTjY4VEEtSzhoR2cwdlp5OHhNV3h1ZHpSMloySjJFQUU4DUgA&ts=CAEaggEKYhJgCg0vZy8xMWxudzR2Z2J2Ok9XaXNtYSBBcG9sbG8gS3VhbGEgS3VydW4gKFBlbmdpbmFwYW4sIEhvdGVsLCBHdWVzdCBIb3VzZSwgSG9tZXN0YXksIFN0YXljYXRpb24pEhwSFAoHCOoPEAUYGRIHCOoPEAUYGhgBMgQIABAA&ap=KigKEglxKmzdX67yvxFHqlOSP3VcQBISCfXIw1PJ8vC_EUeqU2JNeVxAMAC6AQdyZXZpZXdz"
         target="_blank"
         rel="noopener"
         style="display:block;text-align:center;font-size:0.85rem;font-weight:600;color:#1B4965;margin-top:20px;text-decoration:underline;"

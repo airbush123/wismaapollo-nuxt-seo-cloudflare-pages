@@ -11,6 +11,12 @@ export const useBookingStore = defineStore('booking', {
     currentWaUrl: `https://wa.me/${WA_NUMBER}`,
     name: '',
     phone: '',
+    checkIn: '',
+    checkOut: '',
+    roomType: 'single' as 'single' | 'double',
+    roomCount: 1,
+    guestCount: 1,
+    notes: '',
     isSubmitting: false,
     errors: {} as Record<string, string>,
     source: 'Organic' as string,
@@ -18,8 +24,9 @@ export const useBookingStore = defineStore('booking', {
   }),
 
   actions: {
-    openModal(waUrl?: string) {
+    openModal(waUrl?: string, roomType?: 'single' | 'double') {
       if (waUrl) this.currentWaUrl = waUrl
+      if (roomType) this.roomType = roomType
       this.isModalOpen = true
       this.errors = {}
     },
@@ -56,11 +63,17 @@ export const useBookingStore = defineStore('booking', {
       const result = BookingFormSchema.safeParse({
         name: this.name,
         phone: this.phone,
+        checkIn: this.checkIn,
+        checkOut: this.checkOut,
+        roomType: this.roomType,
+        roomCount: this.roomCount,
+        guestCount: this.guestCount,
+        notes: this.notes,
       })
 
       if (!result.success) {
         this.errors = {}
-        result.error.errors.forEach((err) => {
+        result.error.issues.forEach((err) => {
           const field = err.path[0] as string
           this.errors[field] = err.message
         })
@@ -134,6 +147,12 @@ export const useBookingStore = defineStore('booking', {
         const fields = {
           name: this.name,
           phone: this.phone,
+          checkIn: this.checkIn,
+          checkOut: this.checkOut,
+          roomType: this.roomType,
+          roomCount: String(this.roomCount),
+          guestCount: String(this.guestCount),
+          notes: this.notes,
           source: this.source,
           clickId: this.clickId,
         }
@@ -156,11 +175,35 @@ export const useBookingStore = defineStore('booking', {
 
     redirectToWhatsApp() {
       if (!import.meta.client) return
-      window.location.href = this.currentWaUrl
+      const roomLabel = this.roomType === 'single'
+        ? 'Single Bed - Rp200.000/malam'
+        : 'Double Bed - Rp250.000/malam'
+      const message = [
+        'Halo Wisma Apollo, saya ingin reservasi kamar.',
+        '',
+        `Nama: ${this.name}`,
+        `Nomor WA: ${this.phone}`,
+        `Check-in: ${this.checkIn}`,
+        `Check-out: ${this.checkOut}`,
+        `Tipe kamar: ${roomLabel}`,
+        `Jumlah kamar: ${this.roomCount}`,
+        `Jumlah tamu: ${this.guestCount}`,
+        `Catatan: ${this.notes || '-'}`,
+        '',
+        'Terima kasih.'
+      ].join('\n')
+
+      window.location.href = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(message)}`
       setTimeout(() => {
         this.isSubmitting = false
         this.name = ''
         this.phone = ''
+        this.checkIn = ''
+        this.checkOut = ''
+        this.roomType = 'single'
+        this.roomCount = 1
+        this.guestCount = 1
+        this.notes = ''
         this.closeModal()
       }, 1000)
     },

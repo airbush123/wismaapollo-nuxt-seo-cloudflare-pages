@@ -5,30 +5,41 @@ category: 'Tips'
 image: '/images/gallery/penginapan-murah-kuala-kurun.webp'
 ---
 
-# Tips Menginap Nyaman di Kuala Kurun
+<p>Kuala Kurun, ibu kota Kabupaten Gunung Mas di Kalimantan Tengah, adalah destinasi yang semakin populer untuk
+            perjalanan dinas maupun wisata. Mencari <strong>penginapan di Kuala Kurun</strong> yang nyaman dan
+            terjangkau bisa jadi tantangan jika kamu belum tahu tips-nya.</p>
 
-Kuala Kurun adalah ibu kota Kabupaten Gunung Mas di Kalimantan Tengah. Bagi yang berencana berkunjung, berikut tips memilih penginapan yang tepat.
+        <h2>1. Pilih Lokasi Strategis</h2>
+        <p>Pastikan penginapan yang kamu pilih dekat dengan pusat kota. Lokasi strategis memudahkan akses ke
+            perkantoran, cafe, dan tempat kuliner. <strong>Wisma Apollo</strong> misalnya, terletak di Jl. Letjen
+            Soeprapto No.56, tepat di jantung kota Kuala Kurun.</p>
 
-## 1. Pilih Lokasi Strategis
+        <h2>2. Cek Fasilitas Kamar</h2>
+        <p>Jangan hanya tergiur harga murah. Pastikan fasilitas kamar sesuai kebutuhanmu:</p>
+        <ul>
+            <li><strong>AC</strong> – Cuaca Kalimantan bisa sangat panas</li>
+            <li><strong>WiFi gratis</strong> – Penting untuk kerja atau hiburan</li>
+            <li><strong>Kamar mandi dalam</strong> – Lebih privasi dan nyaman</li>
+            <li><strong>Kasur spring bed</strong> – Kualitas istirahat jadi lebih baik</li>
+            <li><strong>Kedap suara</strong> – Tidur tanpa gangguan</li>
+        </ul>
 
-Pastikan penginapan Anda dekat dengan pusat kota agar mudah akses ke kantor pemerintahan, restoran, dan tempat wisata. Wisma Apollo terletak di Jl. Letjen Soeprapto No.56, tepat di pusat kota Kuala Kurun.
+        <h2>3. Perhatikan Kebersihan</h2>
+        <p>Kebersihan adalah faktor utama kenyamanan. Cari penginapan yang menyediakan sprei dan handuk bersih setiap
+            hari. Di Wisma Apollo, semua linen menggunakan bahan katun full dan diganti setiap hari.</p>
 
-## 2. Perhatikan Fasilitas
+        <h2>4. Bandingkan Harga</h2>
+        <p>Harga <strong>hotel di Kuala Kurun</strong> bervariasi mulai dari Rp150.000 hingga Rp500.000 per malam. Wisma
+            Apollo menawarkan kamar mulai Rp200.000/malam dengan fasilitas lengkap – sangat terjangkau untuk kualitas
+            yang didapatkan.</p>
 
-Fasilitas penting yang harus ada: AC (karena cuaca Kalimantan cukup panas), WiFi, kamar mandi dalam, dan kasur yang nyaman. Di Wisma Apollo, semua kamar sudah dilengkapi AC, TV Android 32", WiFi gratis, dan spring bed premium.
+        <h2>5. Booking Lebih Awal</h2>
+        <p>Kuala Kurun sering ramai saat ada acara pemerintahan atau musim liburan. Booking lebih awal lewat WhatsApp
+            untuk memastikan ketersediaan kamar.</p>
 
-## 3. Cek Kebersihan
-
-Kebersihan adalah prioritas utama. Wisma Apollo menyediakan linen katun segar dan handuk bersih setiap hari.
-
-## 4. Kedap Suara
-
-Ini yang jarang diperhatikan tapi sangat penting untuk kualitas tidur. Wisma Apollo menggunakan dinding dan plafon kedap suara (soundproof) sehingga Anda bisa tidur nyenyak tanpa gangguan.
-
-## 5. Harga yang Wajar
-
-Di Kuala Kurun, harga penginapan yang wajar untuk fasilitas lengkap berkisar Rp200.000-Rp250.000 per malam. Wisma Apollo menawarkan harga mulai Rp200.000/malam untuk semua fasilitas di atas.
-
----
-
-Hubungi Wisma Apollo via WhatsApp di **0818 232 021** untuk reservasi kamar.
+        <div class="cta-box">
+            <h3>🏨 Booking Wisma Apollo Sekarang</h3>
+            <p>Kamar bersih, AC, WiFi gratis, kedap suara. Mulai Rp200.000/malam!</p>
+            <a href="https://wa.me/62818232021?text=Halo%20Wisma%20Apollo,%20saya%20ingin%20reservasi%20kamar.">💬 Chat
+                WhatsApp</a>
+        </div>

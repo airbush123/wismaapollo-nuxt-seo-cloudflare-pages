@@ -20,17 +20,17 @@ export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: { lang: 'id' },
-      title: 'Wisma Apollo Kuala Kurun - Hotel Murah & Nyaman Promo Bulan Ini',
+      title: 'Wisma Apollo - Penginapan - Hotel Kuala Kurun',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width,initial-scale=1,maximum-scale=5' },
-        { name: 'description', content: 'Penginapan Kuala Kurun & Hotel Kuala Kurun terbaik - Wisma Apollo. Kamar bersih, AC, WiFi gratis, kedap suara. Harga mulai Rp200.000/malam. Lokasi strategis di pusat kota Gunung Mas, Kalimantan Tengah. Booking via WhatsApp!' },
-        { name: 'keywords', content: 'penginapan kuala kurun, hotel kuala kurun, wisma apollo, penginapan murah kuala kurun, hotel murah kuala kurun, guest house kuala kurun, homestay kuala kurun, penginapan gunung mas, hotel gunung mas kalimantan tengah' },
+        { name: 'description', content: 'Wisma Apollo adalah penginapan dan hotel Kuala Kurun yang nyaman, bersih, dan strategis. Cocok untuk pencarian Hotel Kuala Kurun, Penginapan Kuala Kurun, dan Wisma Kuala Kurun.' },
+        { name: 'keywords', content: 'hotel kuala kurun, penginapan kuala kurun, wisma kuala kurun, wisma apollo, hotel murah kuala kurun, penginapan murah kuala kurun, guest house kuala kurun, homestay kuala kurun, hotel gunung mas kalimantan tengah' },
         { name: 'robots', content: 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' },
         { name: 'theme-color', content: '#FAF6F0' },
         // Open Graph
-        { property: 'og:title', content: 'Wisma Apollo - Penginapan & Hotel Murah di Kuala Kurun' },
-        { property: 'og:description', content: 'Penginapan Kuala Kurun & Hotel Kuala Kurun terbaik. Kamar bersih, AC, WiFi gratis, kedap suara. Harga mulai Rp200.000/malam. Booking via WhatsApp!' },
+        { property: 'og:title', content: 'Wisma Apollo - Penginapan - Hotel Kuala Kurun' },
+        { property: 'og:description', content: 'Wisma Apollo adalah penginapan dan hotel Kuala Kurun yang nyaman, bersih, dan strategis untuk tamu bisnis maupun keluarga.' },
         { property: 'og:type', content: 'website' },
         { property: 'og:url', content: 'https://wisma-apollo.my.id/' },
         { property: 'og:image', content: 'https://wisma-apollo.my.id/images/hero.webp' },

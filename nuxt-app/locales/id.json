@@ -30,7 +30,7 @@
     "label": "Tentang Wisma Apollo",
     "title": "Kenapa Harus Wisma Apollo?",
     "desc1": "Wisma Apollo Kuala Kurun penginapan yang cocok buat kamu yang butuh tempat istirahat nyaman, bersih dan tenang. Lokasinya strategis dekat pusat kota dan cocok untuk keluarga atau perjalanan kerja.",
-    "desc2": "Fasilitas semua kamar full AC, free Wi-Fi, kasur spring bed yang nyaman, bantal bulu angsa, sprei dan bed cover linen full katun, kamar mandi shower, handuk yang lembut & bersih setiap hari (Breakfast by Request). Untuk privacy dan ketenangan kami menggunakan dinding dan plafon kedap suara (Soundproof Wall), agar anda bisa beristirahat tanpa gangguan. Tersedia pula extra bed + bantal jika dibutuhkan.",
+    "desc2": "Fasilitas semua kamar full AC, TV Android 32\", free Wi-Fi, kasur spring bed yang nyaman, bantal bulu angsa, sprei dan bed cover linen full katun, kamar mandi shower, handuk yang lembut & bersih setiap hari (Breakfast by Request). Untuk privacy dan ketenangan kami menggunakan dinding dan plafon kedap suara (Soundproof Wall), agar anda bisa beristirahat tanpa gangguan. Tersedia pula extra bed + bantal jika dibutuhkan.",
     "desc3": "Booking sekarang dan rasakan kenyamanan menginap di penginapan / hotel terbaik dan termurah di Kuala Kurun. Hubungi kami lewat WhatsApp dan pesan kamar dengan mudah tanpa ribet!",
     "usp": {
       "location": { "title": "Lokasi Strategis", "desc": "Dekat pusat kota & cafe" },
@@ -42,6 +42,10 @@
   "facilities": {
     "label": "Fasilitas Lengkap",
     "title": "Fasilitas Wisma Kami di Kuala Kurun",
+    "smokingArea": {
+      "title": "Selasar Santai",
+      "desc": "Area duduk outdoor bernuansa kayu"
+    },
     "room": {
       "title": "Fasilitas Kamar",
       "items": ["Air Conditioner (AC)", "TV Android 32\"", "Handuk / Towel Bersih", "Bathroom Amenities", "Kamar Mandi Dalam Shower", "Kamar Bersih, Luas & Kedap Suara"]
@@ -145,13 +149,24 @@
     "copyright": "© 2025 Wisma Apollo. All Rights Reserved."
   },
   "booking": {
-    "title": "Lanjut ke WhatsApp",
-    "desc": "Silakan masukkan Nama dan No WhatsApp Anda untuk terhubung dengan Admin kami.",
+    "title": "Form Reservasi Wisma Apollo",
+    "desc": "Isi data singkat berikut, lalu kami arahkan ke WhatsApp dengan format reservasi otomatis.",
     "nameLabel": "Nama Lengkap",
     "namePlaceholder": "Contoh: Budi Santoso",
     "phoneLabel": "No WhatsApp (Aktif)",
     "phonePlaceholder": "Contoh: 081234567890",
-    "submit": "Kirim & Lanjut ke WhatsApp",
+    "checkInLabel": "Tanggal Check-in",
+    "checkOutLabel": "Tanggal Check-out",
+    "roomTypeLabel": "Tipe Kamar",
+    "roomTypes": {
+      "single": "Single Bed - Rp200.000/malam",
+      "double": "Double Bed - Rp250.000/malam"
+    },
+    "roomCountLabel": "Jumlah Kamar",
+    "guestCountLabel": "Jumlah Tamu",
+    "notesLabel": "Catatan Tambahan",
+    "notesPlaceholder": "Contoh: datang malam, butuh extra bed, atau request kamar tertentu",
+    "submit": "Lanjutkan ke WhatsApp",
     "submitting": "Mengirim...",
     "errors": {
       "nameMin": "Nama minimal 2 karakter",

@@ -27,6 +27,7 @@
               :id="'faq-answer-' + (i - 1)"
               class="faq-answer"
               role="region"
+              :aria-hidden="String(openIndex !== i - 1)"
               v-show="openIndex === i - 1"
             >
               <div class="faq-answer-inner">{{ $t(`faq.items[${i-1}].a`) }}</div>
@@ -34,7 +35,7 @@
           </div>
         </div>
 
-        <div style="margin-top: 40px; text-align: center;">
+        <div style="margin: 40px auto 0; text-align: center; max-width: 760px;">
           <h3 style="font-size: 1.1rem; margin-bottom: 10px;">{{ $t('faq.stillQuestion') }}</h3>
           <p class="desc">{{ $t('faq.contactUs') }}</p>
           <a

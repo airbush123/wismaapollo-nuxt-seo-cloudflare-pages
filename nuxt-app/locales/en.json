@@ -30,7 +30,7 @@
     "label": "About Wisma Apollo",
     "title": "Why Choose Wisma Apollo?",
     "desc1": "Wisma Apollo Kuala Kurun is the perfect accommodation for those who need a comfortable, clean, and quiet place to rest. Strategically located near the city center, it is suitable for families or business trips.",
-    "desc2": "All rooms feature full AC, free Wi-Fi, comfortable spring beds, goose feather pillows, full cotton linen, shower bathrooms, and fresh towels daily (Breakfast by Request). For privacy and peace, we use soundproof walls and ceilings, allowing you to rest without interruption. Extra beds and pillows are available if needed.",
+    "desc2": "All rooms feature full AC, 32\" Android TV, free Wi-Fi, comfortable spring beds, goose feather pillows, full cotton linen, shower bathrooms, and fresh towels daily (Breakfast by Request). For privacy and peace, we use soundproof walls and ceilings, allowing you to rest without interruption. Extra beds and pillows are available if needed.",
     "desc3": "Book now and experience stay in the best and most affordable hotel in Kuala Kurun. Contact us via WhatsApp for easy booking!",
     "usp": {
       "location": { "title": "Strategic Location", "desc": "Near city center & cafes" },
@@ -42,6 +42,10 @@
   "facilities": {
     "label": "Complete Facilities",
     "title": "Our Wisma Facilities in Kuala Kurun",
+    "smokingArea": {
+      "title": "Relaxing Corridor",
+      "desc": "Outdoor seating area with warm wood ambience"
+    },
     "room": {
       "title": "Room Facilities",
       "items": ["Air Conditioner (AC)", "32\" Android TV", "Clean Towels", "Bathroom Amenities", "En-suite Shower Room", "Clean, Spacious & Soundproof"]
@@ -145,13 +149,24 @@
     "copyright": "© 2025 Wisma Apollo. All Rights Reserved."
   },
   "booking": {
-    "title": "Continue to WhatsApp",
-    "desc": "Please enter your Name and WhatsApp number to connect with our Admin.",
+    "title": "Wisma Apollo Reservation Form",
+    "desc": "Fill in the short form below, then continue to WhatsApp with an automatic reservation message.",
     "nameLabel": "Full Name",
     "namePlaceholder": "Example: Budi Santoso",
     "phoneLabel": "WhatsApp No (Active)",
     "phonePlaceholder": "Example: 081234567890",
-    "submit": "Send & Continue to WhatsApp",
+    "checkInLabel": "Check-in Date",
+    "checkOutLabel": "Check-out Date",
+    "roomTypeLabel": "Room Type",
+    "roomTypes": {
+      "single": "Single Bed - IDR 200,000/night",
+      "double": "Double Bed - IDR 250,000/night"
+    },
+    "roomCountLabel": "Number of Rooms",
+    "guestCountLabel": "Number of Guests",
+    "notesLabel": "Additional Notes",
+    "notesPlaceholder": "Example: late arrival, extra bed, or specific room request",
+    "submit": "Continue to WhatsApp",
     "submitting": "Submitting...",
     "errors": {
       "nameMin": "Name must be at least 2 characters",

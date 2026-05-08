@@ -1,14 +1,20 @@
 <template>
   <header class="hero" id="hero" role="banner">
     <div class="hero-bg" aria-hidden="true">
-      <NuxtImg
-        src="/images/hero.webp"
-        alt="Wisma Apollo Kuala Kurun"
-        width="480"
-        height="600"
-        loading="eager"
-        fetchpriority="high"
-      />
+      <picture>
+        <source
+          media="(min-width: 768px)"
+          srcset="/images/penginapan-di-kuala-kurun-desktop.jpg"
+        >
+        <NuxtImg
+          src="/images/hero.webp"
+          alt="Wisma Apollo Kuala Kurun"
+          width="480"
+          height="600"
+          loading="eager"
+          fetchpriority="high"
+        />
+      </picture>
     </div>
     <div class="hero-body anim-up">
       <p class="hero-tag">{{ $t('hero.tag') }}</p>

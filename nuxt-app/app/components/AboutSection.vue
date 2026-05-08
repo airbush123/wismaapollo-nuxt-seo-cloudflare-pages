@@ -1,11 +1,25 @@
 <template>
   <section id="tentang" class="section" role="region" :aria-labelledby="'about-title'">
     <div class="container anim-up">
-      <span class="label">{{ $t('about.label') }}</span>
-      <h2 id="about-title">{{ $t('about.title') }}</h2>
-      <p class="desc">{{ $t('about.desc1') }}</p>
-      <p class="desc">{{ $t('about.desc2') }}</p>
-      <p class="desc">{{ $t('about.desc3') }}</p>
+      <div class="about-layout">
+        <div class="about-media" aria-hidden="true">
+          <NuxtImg
+            src="/images/about-lobby.webp"
+            alt=""
+            width="560"
+            height="420"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="about-copy">
+          <span class="label">{{ $t('about.label') }}</span>
+          <h2 id="about-title">{{ $t('about.title') }}</h2>
+          <p class="desc">{{ $t('about.desc1') }}</p>
+          <p class="desc">{{ $t('about.desc2') }}</p>
+          <p class="desc">{{ $t('about.desc3') }}</p>
+        </div>
+      </div>
 
       <div class="usp-row" role="list">
         <div class="usp" role="listitem">
