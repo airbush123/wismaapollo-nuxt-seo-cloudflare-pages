@@ -567,7 +567,7 @@ a:focus-visible {
   font-size: 1.55rem;
   font-weight: 700;
   margin-bottom: 16px;
-  color: var(--gold);
+  color: var(--forest);
 }
 
 .desc {
@@ -683,12 +683,12 @@ a:focus-visible {
 }
 
 .room-card:hover {
-  border-color: var(--gold);
+  border-color: var(--leaf);
   box-shadow: var(--shadow-m);
 }
 
 .room-card-pop {
-  border: 2px solid var(--gold);
+  border: 2px solid var(--forest);
 }
 
 .pop-tag {
@@ -724,7 +724,7 @@ a:focus-visible {
   font-size: 1.15rem;
   font-weight: 700;
   margin-bottom: 6px;
-  color: var(--gold);
+  color: var(--forest);
 }
 
 .room-price-wrap {
@@ -791,7 +791,7 @@ a:focus-visible {
   content: '✓';
   position: absolute;
   left: 0;
-  color: var(--gold);
+  color: var(--leaf);
   font-weight: 700;
 }
 
