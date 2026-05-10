@@ -1,5 +1,5 @@
 <template>
-  <nav :class="['nav', { scrolled: uiStore.isScrolled }]" role="navigation" :aria-label="$t('nav.about')">
+  <nav :class="['nav', { scrolled: uiStore.isScrolled }]" role="navigation" aria-label="Main Navigation">
     <div class="nav-inner">
       <NuxtLink :to="localePath('/')" class="nav-logo" :aria-label="'Wisma Apollo - ' + $t('common.backHome')">
         <NuxtImg src="/images/logo/wisma-apollo-logo.png" alt="Logo Wisma Apollo" width="44" height="44" loading="eager" />
