@@ -32,5 +32,14 @@ const { data: article } = await useAsyncData(`article-view-${locale.value}-${slu
 useSeoMeta({
   title: article.value?.title || 'Blog – Wisma Apollo',
   description: article.value?.description || '',
+  ogTitle: article.value?.title || 'Blog - Wisma Apollo',
+  ogDescription: article.value?.description || '',
+  ogUrl: () => `https://wisma-apollo.my.id/blog/${slug}`,
+})
+
+useHead({
+  link: [
+    { rel: 'canonical', href: `https://wisma-apollo.my.id/blog/${slug}` },
+  ],
 })
 </script>

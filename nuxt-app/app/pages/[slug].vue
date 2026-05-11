@@ -170,6 +170,13 @@ useSeoMeta({
   description: () => pageData.value.meta,
   ogTitle: () => pageData.value.title,
   ogDescription: () => pageData.value.meta,
+  ogUrl: () => `https://wisma-apollo.my.id/${slug.value}`,
+})
+
+useHead({
+  link: [
+    { rel: 'canonical', href: `https://wisma-apollo.my.id/${slug.value}` },
+  ],
 })
 
 useScrollAnimation()

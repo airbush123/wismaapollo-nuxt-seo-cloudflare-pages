@@ -16,6 +16,9 @@ useScrollAnimation()
 useTracking()
 
 useHead({
+  link: [
+    { rel: 'canonical', href: 'https://wisma-apollo.my.id/' },
+  ],
   script: [
     {
       type: 'application/ld+json',

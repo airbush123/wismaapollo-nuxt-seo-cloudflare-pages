@@ -4,6 +4,11 @@ export default defineNuxtConfig({
   devtools: { enabled: false },
   ssr: true,
   srcDir: 'app',
+
+  site: {
+    url: 'https://wisma-apollo.my.id',
+    name: 'Wisma Apollo Kuala Kurun',
+  },
   
   content: {
     // Standard content config for Nuxt 4
@@ -47,7 +52,6 @@ export default defineNuxtConfig({
         { name: 'twitter:image', content: 'https://wisma-apollo.my.id/images/hero.webp' },
       ],
       link: [
-        { rel: 'canonical', href: 'https://wisma-apollo.my.id/' },
         { rel: 'icon', href: '/images/logo/favicon-32.png', sizes: '32x32' },
         { rel: 'icon', href: '/images/logo/favicon-192.png', sizes: '192x192' },
         { rel: 'apple-touch-icon', href: '/images/logo/favicon-192.png' },

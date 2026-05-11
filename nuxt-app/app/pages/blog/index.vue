@@ -65,6 +65,13 @@ useSeoMeta({
   description: locale.value === 'id'
     ? 'Tips menginap, wisata, dan kuliner di Kuala Kurun & Gunung Mas, Kalimantan Tengah.'
     : 'Accommodation tips, tourism, and culinary guides for Kuala Kurun & Gunung Mas, Central Kalimantan.',
+  ogUrl: 'https://wisma-apollo.my.id/blog',
+})
+
+useHead({
+  link: [
+    { rel: 'canonical', href: 'https://wisma-apollo.my.id/blog' },
+  ],
 })
 </script>
 

@@ -66,6 +66,15 @@ function toggle(index: number) {
 useSeoMeta({
   title: 'FAQ – Wisma Apollo Kuala Kurun',
   description: 'Temukan jawaban seputar lokasi, tarif kamar, fasilitas, dan cara reservasi Wisma Apollo.',
+  ogTitle: 'FAQ - Wisma Apollo Kuala Kurun',
+  ogDescription: 'Temukan jawaban seputar lokasi, tarif kamar, fasilitas, dan cara reservasi Wisma Apollo.',
+  ogUrl: 'https://wisma-apollo.my.id/faq',
+})
+
+useHead({
+  link: [
+    { rel: 'canonical', href: 'https://wisma-apollo.my.id/faq' },
+  ],
 })
 
 useScrollAnimation()
