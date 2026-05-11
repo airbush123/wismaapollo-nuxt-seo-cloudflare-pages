@@ -27,6 +27,7 @@ export async function onRequestPost({ request, env }) {
   const accessToken = env.META_CAPI_ACCESS_TOKEN
   const pixelId = env.META_PIXEL_ID || DEFAULT_META_PIXEL_ID
   const graphVersion = env.META_GRAPH_VERSION || DEFAULT_META_GRAPH_VERSION
+  const testEventCode = env.META_TEST_EVENT_CODE || ''
 
   if (!accessToken) {
     return jsonResponse({ ok: false, error: 'META_CAPI_ACCESS_TOKEN is not configured' }, 500)
@@ -66,8 +67,8 @@ export async function onRequestPost({ request, env }) {
     data: [event],
   }
 
-  if (env.META_TEST_EVENT_CODE) {
-    metaPayload.test_event_code = env.META_TEST_EVENT_CODE
+  if (testEventCode) {
+    metaPayload.test_event_code = testEventCode
   }
 
   const metaUrl = `https://graph.facebook.com/${graphVersion}/${pixelId}/events?access_token=${encodeURIComponent(accessToken)}`
@@ -83,6 +84,7 @@ export async function onRequestPost({ request, env }) {
   return jsonResponse({
     ok: response.ok,
     status: response.status,
+    test_event_code_enabled: Boolean(testEventCode),
     result,
   }, response.ok ? 200 : 502)
 }
