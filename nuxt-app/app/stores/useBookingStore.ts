@@ -2,7 +2,7 @@ import { defineStore } from 'pinia'
 import { BookingFormSchema } from '~/schemas/booking'
 import type { BookingFormData } from '~/schemas/booking'
 
-const GOOGLE_APP_SCRIPT_URL = '/api/webhook'
+const BOOKING_LEAD_URL = '/api/booking-lead'
 const WA_NUMBER = '62818232021'
 const BREAKFAST_PRICE = 25000
 const SINGLE_ROOM_PRICE = 200000
@@ -78,6 +78,16 @@ function formatRupiah(value: number) {
     currency: 'IDR',
     maximumFractionDigits: 0,
   }).format(value)
+}
+
+function getCookieValue(name: string) {
+  if (typeof document === 'undefined') return ''
+
+  const cookie = document.cookie
+    .split('; ')
+    .find((item) => item.startsWith(`${name}=`))
+
+  return cookie ? decodeURIComponent(cookie.split('=').slice(1).join('=')) : ''
 }
 
 export const useBookingStore = defineStore('booking', {
@@ -260,10 +270,7 @@ export const useBookingStore = defineStore('booking', {
       const tracking = useTracking()
       const hashedPhone = await tracking.trackUserData(this.phone)
 
-      // Submit data via hidden iframe
-      await this.submitViaIframe()
-
-      await tracking.trackLead({
+      const leadPayload = {
         lead_source: this.source,
         room_type: this.roomTypeValue,
         room_summary: this.roomSummary,
@@ -285,75 +292,88 @@ export const useBookingStore = defineStore('booking', {
               sha256_phone_number: [hashedPhone],
             }
           : undefined,
-      })
+      }
+
+      await this.submitBookingLead(leadPayload)
+      await tracking.trackLead(leadPayload)
 
       // Redirect to WhatsApp
       this.redirectToWhatsApp()
     },
 
-    submitViaIframe(): Promise<void> {
-      return new Promise((resolve) => {
-        if (!import.meta.client) return resolve()
+    getLeadFields() {
+      return {
+        name: this.name,
+        phone: this.phone,
+        checkIn: this.checkIn,
+        checkOut: this.checkOut,
+        roomType: this.roomTypeValue,
+        roomSummary: this.roomSummary,
+        roomCount: String(this.totalRoomCount),
+        singleRoomCount: String(this.singleRoomCount),
+        doubleRoomCount: String(this.doubleRoomCount),
+        guestCount: String(this.guestCount),
+        stayNights: String(getStayNights(this.checkIn, this.checkOut)),
+        breakfast: this.breakfast ? 'Ya' : 'Tidak',
+        breakfastValue: String(getBreakfastValue(this.checkIn, this.checkOut, this.guestCount, this.breakfast)),
+        totalValue: String(this.totalBookingValue),
+        notes: this.notes,
+        source: this.source,
+        clickId: this.clickId,
+        transactionId: useTracking().getOrCreateTrxId(),
+        gclid: useTracking().getFromStorage('gclid'),
+        wbraid: useTracking().getFromStorage('wbraid'),
+        gbraid: useTracking().getFromStorage('gbraid'),
+        fbclid: useTracking().getFromStorage('fbclid'),
+        campaign: useTracking().getFromStorage('campaign'),
+        hashedPhone: useTracking().getFromStorage('hashed_phone'),
+      }
+    },
 
-        const iframeId = 'wa_data_frame'
-        let iframe = document.getElementById(iframeId) as HTMLIFrameElement | null
-        if (iframe) iframe.remove()
+    async submitBookingLead(leadPayload: Record<string, unknown>) {
+      if (!import.meta.client) return
 
-        iframe = document.createElement('iframe')
-        iframe.id = iframeId
-        iframe.name = iframeId
-        iframe.style.display = 'none'
-
-        iframe.onload = () => setTimeout(resolve, 300)
-        document.body.appendChild(iframe)
-
-        const hiddenForm = document.createElement('form')
-        hiddenForm.method = 'POST'
-        hiddenForm.action = GOOGLE_APP_SCRIPT_URL
-        hiddenForm.target = iframeId
-        hiddenForm.style.display = 'none'
-
-        const fields = {
-          name: this.name,
-          phone: this.phone,
-          checkIn: this.checkIn,
-          checkOut: this.checkOut,
-          roomType: this.roomTypeValue,
-          roomSummary: this.roomSummary,
-          roomCount: String(this.totalRoomCount),
-          singleRoomCount: String(this.singleRoomCount),
-          doubleRoomCount: String(this.doubleRoomCount),
-          guestCount: String(this.guestCount),
-          stayNights: String(getStayNights(this.checkIn, this.checkOut)),
-          breakfast: this.breakfast ? 'Ya' : 'Tidak',
-          breakfastValue: String(getBreakfastValue(this.checkIn, this.checkOut, this.guestCount, this.breakfast)),
-          totalValue: String(this.totalBookingValue),
-          notes: this.notes,
-          source: this.source,
-          clickId: this.clickId,
-          transactionId: useTracking().getOrCreateTrxId(),
-          gclid: useTracking().getFromStorage('gclid'),
-          wbraid: useTracking().getFromStorage('wbraid'),
-          gbraid: useTracking().getFromStorage('gbraid'),
-          fbclid: useTracking().getFromStorage('fbclid'),
-          campaign: useTracking().getFromStorage('campaign'),
-          hashedPhone: useTracking().getFromStorage('hashed_phone'),
-        }
-
-        Object.entries(fields).forEach(([key, value]) => {
-          const input = document.createElement('input')
-          input.type = 'hidden'
-          input.name = key
-          input.value = value
-          hiddenForm.appendChild(input)
-        })
-
-        document.body.appendChild(hiddenForm)
-        hiddenForm.submit()
-
-        // Safety timeout
-        setTimeout(resolve, 3500)
+      const tracking = useTracking()
+      const eventName = 'wisma_lead'
+      const eventId = `${tracking.getOrCreateTrxId()}-${eventName}`
+      const response = await fetch(BOOKING_LEAD_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          fields: this.getLeadFields(),
+          metaEvent: {
+            event_id: eventId,
+            event_source_url: window.location.href,
+            action_source: 'website',
+            user_data: {
+              ph: [tracking.getFromStorage('meta_hashed_phone') || tracking.getFromStorage('hashed_phone')].filter(Boolean),
+              fbp: getCookieValue('_fbp') || undefined,
+              fbc: getCookieValue('_fbc') || undefined,
+            },
+            custom_data: {
+              currency: 'IDR',
+              value: 5000,
+              content_name: 'Wisma Apollo Kuala Kurun',
+              content_category: 'hotel_booking',
+              room_type: this.roomTypeValue,
+              room_summary: this.roomSummary,
+              room_count: this.totalRoomCount,
+              guest_count: this.guestCount,
+              check_in: this.checkIn,
+              check_out: this.checkOut,
+              stay_nights: getStayNights(this.checkIn, this.checkOut),
+              breakfast: this.breakfast,
+              total_booking_value: this.totalBookingValue,
+            },
+          },
+        }),
       })
+
+      if (!response.ok) {
+        throw new Error('Booking lead submit failed')
+      }
     },
 
     redirectToWhatsApp() {

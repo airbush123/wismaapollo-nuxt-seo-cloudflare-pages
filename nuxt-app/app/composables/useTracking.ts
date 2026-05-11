@@ -363,7 +363,7 @@ export function useTracking() {
       appWindow.fbq('track', metaEventName, customData, { eventID: eventId })
     })
 
-    if (metaEventName === 'AddToCart' || metaEventName === 'Lead') {
+    if (metaEventName === 'AddToCart') {
       sendMetaCapiEvent(metaEventName, eventId, customData)
     }
   }
@@ -385,7 +385,7 @@ export function useTracking() {
       custom_data: customData,
     }
 
-    fetch('/api/meta-capi', {
+    fetch('/api/booking-event', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
