@@ -2244,6 +2244,15 @@ a:focus-visible {
     padding: 64px 0 32px;
   }
 
+  .footer-brand h3 {
+    color: #fff4d7;
+  }
+
+  .footer-brand p {
+    color: rgba(255, 255, 255, 0.94);
+    opacity: 1;
+  }
+
   .site-footer .container {
     display: grid;
     grid-template-columns: 1.4fr 1fr 1fr 1fr;
@@ -2257,6 +2266,11 @@ a:focus-visible {
 
   .footer-copy {
     grid-column: 1 / -1;
+  }
+
+  .footer-copy p {
+    color: rgba(255, 255, 255, 0.88);
+    opacity: 1;
   }
 
   .bottom-bar {
