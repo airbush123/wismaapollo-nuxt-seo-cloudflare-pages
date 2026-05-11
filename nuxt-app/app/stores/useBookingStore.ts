@@ -5,7 +5,10 @@ import type { BookingFormData } from '~/schemas/booking'
 const GOOGLE_APP_SCRIPT_URL = '/api/webhook'
 const WA_NUMBER = '62818232021'
 const BREAKFAST_PRICE = 25000
-const getRoomLimit = (roomType: 'single' | 'double') => roomType === 'single' ? 3 : 1
+const SINGLE_ROOM_PRICE = 200000
+const DOUBLE_ROOM_PRICE = 250000
+const SINGLE_ROOM_LIMIT = 3
+const DOUBLE_ROOM_LIMIT = 1
 
 function toDateInputValue(date: Date) {
   const year = date.getFullYear()
@@ -32,6 +35,28 @@ function getBreakfastValue(checkIn: string, checkOut: string, guestCount: number
   return BREAKFAST_PRICE * getStayNights(checkIn, checkOut) * Math.max(guestCount, 1)
 }
 
+function getRoomSummary(singleRoomCount: number, doubleRoomCount: number) {
+  const rooms: string[] = []
+  if (singleRoomCount > 0) rooms.push(`Single Bed: ${singleRoomCount} kamar`)
+  if (doubleRoomCount > 0) rooms.push(`Double Bed: ${doubleRoomCount} kamar`)
+  return rooms.join(', ')
+}
+
+function getRoomTypeValue(singleRoomCount: number, doubleRoomCount: number) {
+  if (singleRoomCount > 0 && doubleRoomCount > 0) return 'mixed'
+  if (doubleRoomCount > 0) return 'double'
+  return 'single'
+}
+
+function getTotalRoomCount(singleRoomCount: number, doubleRoomCount: number) {
+  return singleRoomCount + doubleRoomCount
+}
+
+function getRoomValue(checkIn: string, checkOut: string, singleRoomCount: number, doubleRoomCount: number) {
+  const nights = getStayNights(checkIn, checkOut)
+  return ((singleRoomCount * SINGLE_ROOM_PRICE) + (doubleRoomCount * DOUBLE_ROOM_PRICE)) * nights
+}
+
 export const useBookingStore = defineStore('booking', {
   state: () => ({
     isModalOpen: false,
@@ -42,6 +67,8 @@ export const useBookingStore = defineStore('booking', {
     checkOut: '',
     roomType: 'single' as 'single' | 'double',
     roomCount: 1,
+    singleRoomCount: 1,
+    doubleRoomCount: 0,
     guestCount: 1,
     breakfast: false,
     notes: '',
@@ -54,14 +81,14 @@ export const useBookingStore = defineStore('booking', {
   actions: {
     openModal(waUrl?: string, roomType?: 'single' | 'double') {
       if (waUrl) this.currentWaUrl = waUrl
-      if (roomType) this.roomType = roomType
-      this.normalizeRoomCount()
+      if (roomType) this.setPrimaryRoomType(roomType)
+      this.normalizeRoomCounts()
       this.ensureDefaultDates()
       this.isModalOpen = true
       this.errors = {}
 
       if (import.meta.client) {
-        useTracking().trackAddToCart(this.roomType)
+        useTracking().trackAddToCart(this.roomTypeValue)
       }
     },
 
@@ -70,15 +97,32 @@ export const useBookingStore = defineStore('booking', {
       this.errors = {}
     },
 
-    setRoomType(roomType: 'single' | 'double') {
+    setPrimaryRoomType(roomType: 'single' | 'double') {
       this.roomType = roomType
-      this.normalizeRoomCount()
+      this.singleRoomCount = roomType === 'single' ? 1 : 0
+      this.doubleRoomCount = roomType === 'double' ? 1 : 0
+      this.normalizeRoomCounts()
     },
 
-    normalizeRoomCount() {
-      const maxRoomCount = getRoomLimit(this.roomType)
-      if (!this.roomCount || this.roomCount < 1) this.roomCount = 1
-      if (this.roomCount > maxRoomCount) this.roomCount = maxRoomCount
+    setRoomCount(type: 'single' | 'double', count: number) {
+      if (type === 'single') {
+        this.singleRoomCount = count
+      } else {
+        this.doubleRoomCount = count
+      }
+      this.normalizeRoomCounts()
+    },
+
+    normalizeRoomCounts() {
+      this.singleRoomCount = Math.min(Math.max(Number(this.singleRoomCount) || 0, 0), SINGLE_ROOM_LIMIT)
+      this.doubleRoomCount = Math.min(Math.max(Number(this.doubleRoomCount) || 0, 0), DOUBLE_ROOM_LIMIT)
+
+      if (this.singleRoomCount + this.doubleRoomCount < 1) {
+        this.singleRoomCount = 1
+      }
+
+      this.roomType = this.doubleRoomCount > 0 && this.singleRoomCount === 0 ? 'double' : 'single'
+      this.roomCount = getTotalRoomCount(this.singleRoomCount, this.doubleRoomCount)
     },
 
     ensureDefaultDates() {
@@ -127,8 +171,8 @@ export const useBookingStore = defineStore('booking', {
         phone: this.phone,
         checkIn: this.checkIn,
         checkOut: this.checkOut,
-        roomType: this.roomType,
-        roomCount: this.roomCount,
+        singleRoomCount: this.singleRoomCount,
+        doubleRoomCount: this.doubleRoomCount,
         guestCount: this.guestCount,
         breakfast: this.breakfast,
         notes: this.notes,
@@ -161,8 +205,11 @@ export const useBookingStore = defineStore('booking', {
 
       await tracking.trackLead({
         lead_source: this.source,
-        room_type: this.roomType,
-        room_count: this.roomCount,
+        room_type: this.roomTypeValue,
+        room_summary: this.roomSummary,
+        room_count: this.totalRoomCount,
+        single_room_count: this.singleRoomCount,
+        double_room_count: this.doubleRoomCount,
         guest_count: this.guestCount,
         breakfast: this.breakfast,
         breakfast_value: getBreakfastValue(this.checkIn, this.checkOut, this.guestCount, this.breakfast),
@@ -209,8 +256,11 @@ export const useBookingStore = defineStore('booking', {
           phone: this.phone,
           checkIn: this.checkIn,
           checkOut: this.checkOut,
-          roomType: this.roomType,
-          roomCount: String(this.roomCount),
+          roomType: this.roomTypeValue,
+          roomSummary: this.roomSummary,
+          roomCount: String(this.totalRoomCount),
+          singleRoomCount: String(this.singleRoomCount),
+          doubleRoomCount: String(this.doubleRoomCount),
           guestCount: String(this.guestCount),
           breakfast: this.breakfast ? 'Ya' : 'Tidak',
           breakfastValue: String(getBreakfastValue(this.checkIn, this.checkOut, this.guestCount, this.breakfast)),
@@ -242,9 +292,10 @@ export const useBookingStore = defineStore('booking', {
 
     redirectToWhatsApp() {
       if (!import.meta.client) return
-      const roomLabel = this.roomType === 'single'
-        ? 'Single Bed - Rp200.000/malam'
-        : 'Double Bed - Rp250.000/malam'
+      const roomLines = [
+        this.singleRoomCount > 0 ? `- Single Bed: ${this.singleRoomCount} kamar` : '',
+        this.doubleRoomCount > 0 ? `- Double Bed: ${this.doubleRoomCount} kamar` : '',
+      ].filter(Boolean)
       const message = [
         'Halo Wisma Apollo, saya ingin reservasi kamar.',
         '',
@@ -252,10 +303,11 @@ export const useBookingStore = defineStore('booking', {
         `Nomor WA: ${this.phone}`,
         `Check-in: ${this.checkIn}`,
         `Check-out: ${this.checkOut}`,
-        `Tipe kamar: ${roomLabel}`,
+        'Kamar:',
+        ...roomLines,
         'Catatan kamar: Semua kamar non-smoking. Merokok tersedia di area luar.',
-        `Jumlah kamar: ${this.roomCount}`,
-        `Jumlah tamu: ${this.guestCount}`,
+        `Jumlah kamar: ${this.totalRoomCount}`,
+        `Jumlah tamu dewasa: ${this.guestCount}`,
         `Sarapan: ${this.breakfast ? `Ya, ${this.guestCount} pack/orang x ${getStayNights(this.checkIn, this.checkOut)} malam` : 'Tidak'}`,
         `Catatan: ${this.notes || '-'}`,
         '',
@@ -271,11 +323,20 @@ export const useBookingStore = defineStore('booking', {
         this.checkOut = ''
         this.roomType = 'single'
         this.roomCount = 1
+        this.singleRoomCount = 1
+        this.doubleRoomCount = 0
         this.guestCount = 1
         this.breakfast = false
         this.notes = ''
         this.closeModal()
       }, 1000)
     },
+  },
+
+  getters: {
+    totalRoomCount: (state) => getTotalRoomCount(state.singleRoomCount, state.doubleRoomCount),
+    roomSummary: (state) => getRoomSummary(state.singleRoomCount, state.doubleRoomCount),
+    roomTypeValue: (state) => getRoomTypeValue(state.singleRoomCount, state.doubleRoomCount),
+    roomValue: (state) => getRoomValue(state.checkIn, state.checkOut, state.singleRoomCount, state.doubleRoomCount),
   },
 })

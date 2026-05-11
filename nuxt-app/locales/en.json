@@ -159,7 +159,7 @@
     "phonePlaceholder": "Example: 081234567890",
     "checkInLabel": "Check-in Date",
     "checkOutLabel": "Check-out Date",
-    "timeNote": "Note: check-in starts at 13:00 WIB, check-out is no later than 12:00 WIB.",
+    "timeNote": "Note: check-in starts at 12:00 WIB. Check-out is no later than 14:00 WIB. Late check-out until 17:00 WIB is charged IDR 100,000.",
     "nonSmokingNote": "All rooms are non-smoking. Smoking is available in the outdoor area.",
     "roomTypeLabel": "Room Type",
     "roomTypes": {
@@ -171,10 +171,16 @@
       "double": "Double Bed"
     },
     "perNight": "per night",
-    "summary": "{nights} night(s) · {rooms} room(s) · {guests} guest(s)",
+    "summary": "{nights} night(s) · {rooms} room(s) · {guests} adults",
     "estimate": "Estimated total",
     "roomCountLabel": "Number of Rooms",
-    "guestCountLabel": "Number of Guests",
+    "guestCountLabel": "Number of Adult Guests",
+    "guestCountHelp": {
+      "single": "Single Bed: up to {perRoom} adults.",
+      "singleMulti": "Single Bed: up to {perRoom} adults/room, {adults} adults total for {rooms} room(s).",
+      "double": "Double Bed: up to {perRoom} adults.",
+      "mixed": "Room combination: up to {adults} adults total."
+    },
     "breakfastLabel": "Add breakfast",
     "breakfastHelp": "IDR 25,000 per pack/person. We can confirm it again via WhatsApp.",
     "notesLabel": "Additional Notes",
@@ -199,12 +205,13 @@
     "items": [
       { "q": "Where is Wisma Apollo located?", "a": "Wisma Apollo is located at Jl. Letjen Soeprapto No.56, Kuala Kurun, Gunung Mas, Central Kalimantan 74571. Strategically located in the city center." },
       { "q": "How much is the room rate per night?", "a": "Room rates start from IDR 200,000/night for Single Bed and IDR 250,000/night for Double Bed. Includes AC, WiFi, 32\" Android TV, and amenities." },
+      { "q": "What is the room capacity?", "a": "Single Bed can accommodate up to 2 adults + 1 infant. Double Bed can accommodate up to 3 adults + 1 infant. Infants are not counted as adult guests during reservation." },
       { "q": "What facilities are available?", "a": "Each room has AC, 32\" Android TV, free WiFi, en-suite shower bathroom, spring bed + goose pillows, cotton linen, fresh towels daily, and soundproof walls." },
       { "q": "Is there free WiFi?", "a": "Yes, all areas of Wisma Apollo have free WiFi with adequate speed for streaming and working." },
       { "q": "How do I make a reservation?", "a": "Reservations can be made via WhatsApp at 0818 232 021. Just send your name and desired stay dates. We will reply quickly." },
       { "q": "Is breakfast available?", "a": "Yes, breakfast is available by request for an additional IDR 25,000 per pack/person. Contact the receptionist to order." },
       { "q": "Is there an extra bed?", "a": "Yes, extra beds and pillows are available for an additional IDR 50,000 per room. Please inform us during reservation." },
-      { "q": "Check-in and check-out time?", "a": "Check-in from 14:00 and check-out by 12:00. Early check-in or late check-out can be arranged based on availability." }
+      { "q": "Check-in and check-out time?", "a": "Check-in starts at 12:00 WIB and check-out is by 14:00 WIB. Late check-out until 17:00 WIB is charged IDR 100,000 and depends on availability." }
     ]
   },
   "common": {

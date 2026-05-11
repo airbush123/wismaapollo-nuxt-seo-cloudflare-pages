@@ -1,6 +1,9 @@
 import { z } from 'zod'
 
-const getRoomLimit = (roomType: 'single' | 'double') => roomType === 'single' ? 3 : 1
+const SINGLE_ROOM_LIMIT = 3
+const DOUBLE_ROOM_LIMIT = 1
+const SINGLE_ADULT_CAPACITY = 2
+const DOUBLE_ADULT_CAPACITY = 3
 
 export const BookingFormSchema = z.object({
   name: z.string().min(2, 'Nama minimal 2 karakter'),
@@ -9,15 +12,13 @@ export const BookingFormSchema = z.object({
     .regex(/^[0-9+\-\s]+$/, 'Format nomor tidak valid'),
   checkIn: z.string().min(1, 'Tanggal check-in wajib diisi'),
   checkOut: z.string().min(1, 'Tanggal check-out wajib diisi'),
-  roomType: z.enum(['single', 'double'], {
-    message: 'Pilih tipe kamar',
-  }),
-  roomCount: z.coerce.number().min(1, 'Minimal 1 kamar'),
-  guestCount: z.coerce.number().min(1, 'Minimal 1 tamu').max(50, 'Maksimal 50 tamu'),
+  singleRoomCount: z.coerce.number().min(0, 'Jumlah Single Bed tidak valid'),
+  doubleRoomCount: z.coerce.number().min(0, 'Jumlah Double Bed tidak valid'),
+  guestCount: z.coerce.number().min(1, 'Minimal 1 tamu dewasa').max(50, 'Maksimal 50 tamu dewasa'),
   breakfast: z.boolean().optional(),
   notes: z.string().max(300, 'Catatan maksimal 300 karakter').optional(),
 }).superRefine((data, ctx) => {
-  if (!data.checkIn || !data.checkOut) return true
+  if (!data.checkIn || !data.checkOut) return
 
   const checkIn = new Date(data.checkIn)
   const checkOut = new Date(data.checkOut)
@@ -30,14 +31,37 @@ export const BookingFormSchema = z.object({
     })
   }
 
-  const roomLimit = getRoomLimit(data.roomType)
-  if (data.roomCount > roomLimit) {
+  const totalRooms = data.singleRoomCount + data.doubleRoomCount
+  if (totalRooms < 1) {
     ctx.addIssue({
       code: 'custom',
-      message: data.roomType === 'single'
-        ? 'Single Bed maksimal 3 kamar'
-        : 'Double Bed hanya tersedia 1 kamar',
-      path: ['roomCount'],
+      message: 'Pilih minimal 1 kamar',
+      path: ['singleRoomCount'],
+    })
+  }
+
+  if (data.singleRoomCount > SINGLE_ROOM_LIMIT) {
+    ctx.addIssue({
+      code: 'custom',
+      message: 'Single Bed maksimal 3 kamar',
+      path: ['singleRoomCount'],
+    })
+  }
+
+  if (data.doubleRoomCount > DOUBLE_ROOM_LIMIT) {
+    ctx.addIssue({
+      code: 'custom',
+      message: 'Double Bed hanya tersedia 1 kamar',
+      path: ['doubleRoomCount'],
+    })
+  }
+
+  const adultCapacity = (data.singleRoomCount * SINGLE_ADULT_CAPACITY) + (data.doubleRoomCount * DOUBLE_ADULT_CAPACITY)
+  if (data.guestCount > adultCapacity) {
+    ctx.addIssue({
+      code: 'custom',
+      message: `Maksimal ${adultCapacity} tamu dewasa untuk kombinasi kamar yang dipilih.`,
+      path: ['guestCount'],
     })
   }
 })

@@ -202,7 +202,7 @@
     "phonePlaceholder": "Contoh: 081234567890",
     "checkInLabel": "Tanggal Check-in",
     "checkOutLabel": "Tanggal Check-out",
-    "timeNote": "Catatan: check-in mulai jam 13.00 WIB, check-out paling lambat jam 12.00 WIB.",
+    "timeNote": "Catatan: check-in mulai jam 12.00 WIB. Check-out paling lambat jam 14.00 WIB. Late check-out sampai 17.00 WIB, ada tambahan Rp100.000.",
     "nonSmokingNote": "Semua kamar non-smoking. Merokok tersedia di area luar.",
     "roomTypeLabel": "Tipe Kamar",
     "roomTypes": {
@@ -214,10 +214,16 @@
       "double": "Double Bed"
     },
     "perNight": "per malam",
-    "summary": "{nights} malam · {rooms} kamar · {guests} tamu",
+    "summary": "{nights} malam · {rooms} kamar · {guests} dewasa",
     "estimate": "Estimasi total",
     "roomCountLabel": "Jumlah Kamar",
-    "guestCountLabel": "Jumlah Tamu",
+    "guestCountLabel": "Jumlah Tamu Dewasa",
+    "guestCountHelp": {
+      "single": "Single Bed: maks. {perRoom} dewasa.",
+      "singleMulti": "Single Bed: maks. {perRoom} dewasa/kamar, total {adults} dewasa untuk {rooms} kamar.",
+      "double": "Double Bed: maks. {perRoom} dewasa.",
+      "mixed": "Kombinasi kamar: total maks. {adults} dewasa."
+    },
     "breakfastLabel": "Tambah sarapan",
     "breakfastHelp": "Rp25.000 per pack/orang. Bisa dikonfirmasi lagi via WhatsApp.",
     "notesLabel": "Catatan Tambahan",
@@ -249,6 +255,10 @@
         "a": "Harga kamar mulai dari Rp200.000/malam untuk Single Bed dan Rp250.000/malam untuk Double Bed. Sudah termasuk AC, WiFi, TV Android 32\", dan perlengkapan mandi."
       },
       {
+        "q": "Berapa kapasitas tiap kamar?",
+        "a": "Single Bed maksimal untuk 2 dewasa + 1 bayi. Double Bed maksimal untuk 3 dewasa + 1 bayi. Bayi tidak dihitung sebagai tamu dewasa saat reservasi."
+      },
+      {
         "q": "Apa saja fasilitas yang tersedia?",
         "a": "Setiap kamar dilengkapi AC, TV Android 32\", WiFi gratis, kamar mandi dalam dengan shower, spring bed + bantal bulu angsa, linen katun, handuk bersih setiap hari, serta dinding kedap suara (soundproof)."
       },
@@ -270,7 +280,7 @@
       },
       {
         "q": "Jam check-in dan check-out?",
-        "a": "Check-in mulai pukul 14:00 WIB dan check-out paling lambat pukul 12:00 WIB. Early check-in atau late check-out bisa diatur tergantung ketersediaan."
+        "a": "Check-in mulai pukul 12:00 WIB dan check-out paling lambat pukul 14:00 WIB. Late check-out sampai pukul 17:00 WIB dikenakan tambahan Rp100.000 dan tergantung ketersediaan."
       }
     ]
   },

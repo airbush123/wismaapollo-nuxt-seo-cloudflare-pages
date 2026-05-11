@@ -159,9 +159,9 @@
     "phonePlaceholder": "例如: 081234567890",
     "checkInLabel": "入住日期",
     "checkOutLabel": "退房日期",
-    "timeNote": "备注：入住时间从 WIB 13:00 开始，退房最晚为 WIB 12:00。",
+    "timeNote": "备注：入住时间从 WIB 12:00 开始。退房最晚为 WIB 14:00。延迟退房至 WIB 17:00 需加收 IDR 100,000。",
     "nonSmokingNote": "所有客房均为禁烟房。可在室外区域吸烟。",
-    "roomTypeLabel": "房型选择",
+    "roomTypeLabel": "房型",
     "roomTypes": {
       "single": "大床房 - 200,000/晚",
       "double": "双床房 - 250,000/晚"
@@ -171,10 +171,16 @@
       "double": "双人床"
     },
     "perNight": "每晚",
-    "summary": "{nights}晚 · {rooms}间房 · {guests}位客人",
+    "summary": "{nights}晚 · {rooms}间房 · {guests}位成人",
     "estimate": "预估总价",
     "roomCountLabel": "房间数量",
-    "guestCountLabel": "入住人数",
+    "guestCountLabel": "成人入住人数",
+    "guestCountHelp": {
+      "single": "Single Bed：最多 {perRoom} 位成人。",
+      "singleMulti": "Single Bed：每间最多 {perRoom} 位成人，{rooms} 间共 {adults} 位成人。",
+      "double": "Double Bed：最多 {perRoom} 位成人。",
+      "mixed": "组合房型：最多 {adults} 位成人。"
+    },
     "breakfastLabel": "添加早餐",
     "breakfastHelp": "每份/每人 IDR 25,000，可通过 WhatsApp 再确认。",
     "notesLabel": "备注信息",
@@ -199,12 +205,13 @@
     "items": [
       { "q": "阿波罗客栈在哪里？", "a": "阿波罗客栈位于 Jl. Letjen Soeprapto No.56, Kuala Kurun, Gunung Mas, Central Kalimantan 74571。地理位置优越，处于市中心。" },
       { "q": "房价是多少？", "a": "大床房每晚 200,000 印尼盾起，双床房每晚 250,000 印尼盾起。房价已包含空调、WiFi、32英寸安卓电视及洗漱用品。" },
+      { "q": "每种房型可住几位客人？", "a": "大床房最多可入住 2 位成人 + 1 名婴儿，双床房最多可入住 3 位成人 + 1 名婴儿。预订时婴儿不计入成人人数。" },
       { "q": "有哪些配套设施？", "a": "每间客房均配有空调、32英寸安卓智能电视、免费WiFi、带淋浴的独立卫生间、高端弹簧床、鹅绒枕、纯棉床品、每日换洗毛巾以及隔音墙壁。" },
       { "q": "有免费WiFi吗？", "a": "是的，阿波罗客栈全区覆盖免费WiFi，速度足以支持流媒体播放和办公需求。" },
       { "q": "如何进行预订？", "a": "可以通过 WhatsApp 号码 0818 232 021 进行预订。只需发送包含姓名和入住日期的信息即可，我们会尽快回复。" },
       { "q": "提供早餐吗？", "a": "是的，可应要求提供早餐，费用为每份/每人额外 25,000 印尼盾。请联系前台订餐。" },
       { "q": "可以加床吗？", "a": "是的，我们提供额外加床和枕头，每间房额外收费 50,000 印尼盾。请在预订时告知。" },
-      { "q": "入住和退房时间是？", "a": "入住时间从 14:00 开始，退房时间最晚为 12:00。提前入住或延迟退房可视房源情况安排。" }
+      { "q": "入住和退房时间是？", "a": "入住时间从 WIB 12:00 开始，退房时间最晚为 WIB 14:00。延迟退房至 WIB 17:00 需加收 IDR 100,000，并视房态安排。" }
     ]
   },
   "common": {

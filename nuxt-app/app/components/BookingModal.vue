@@ -105,68 +105,90 @@
 
           <div class="bm-group">
             <span class="bm-label">{{ $t('booking.roomTypeLabel') }}</span>
-            <div class="bm-room-options" role="radiogroup" :aria-label="$t('booking.roomTypeLabel')">
-              <button
-                type="button"
+            <div class="bm-room-options" :aria-label="$t('booking.roomTypeLabel')">
+              <label
                 class="bm-room-option"
-                :class="{ active: bookingStore.roomType === 'single' }"
-                :aria-pressed="bookingStore.roomType === 'single'"
-                @click="bookingStore.setRoomType('single')"
+                :class="{ active: activeRoomCard === 'single' }"
+                for="bm-single-room-count"
+                @click="activeRoomCard = 'single'"
               >
-                <span>{{ $t('booking.roomTypeNames.single') }}</span>
-                <strong>Rp200.000</strong>
-                <small>{{ $t('booking.perNight') }}</small>
-              </button>
-              <button
-                type="button"
+                <div class="bm-room-option-top">
+                  <span class="bm-room-option-name">{{ $t('booking.roomTypeNames.single') }}</span>
+                  <div class="bm-room-option-price">
+                    <strong>Rp200.000</strong>
+                    <small>{{ $t('booking.perNight') }}</small>
+                  </div>
+                </div>
+                <div class="bm-room-option-field">
+                  <small class="bm-room-option-label">{{ $t('booking.roomCountLabel') }}</small>
+                  <input
+                    id="bm-single-room-count"
+                    v-model.number="bookingStore.singleRoomCount"
+                    type="number"
+                    min="0"
+                    max="3"
+                    inputmode="numeric"
+                    :aria-invalid="!!bookingStore.errors.singleRoomCount"
+                    @focus="activeRoomCard = 'single'"
+                    @change="bookingStore.normalizeRoomCounts()"
+                  />
+                </div>
+              </label>
+              <label
                 class="bm-room-option"
-                :class="{ active: bookingStore.roomType === 'double' }"
-                :aria-pressed="bookingStore.roomType === 'double'"
-                @click="bookingStore.setRoomType('double')"
+                :class="{ active: activeRoomCard === 'double' }"
+                for="bm-double-room-count"
+                @click="activeRoomCard = 'double'"
               >
-                <span>{{ $t('booking.roomTypeNames.double') }}</span>
-                <strong>Rp250.000</strong>
-                <small>{{ $t('booking.perNight') }}</small>
-              </button>
+                <div class="bm-room-option-top">
+                  <span class="bm-room-option-name">{{ $t('booking.roomTypeNames.double') }}</span>
+                  <div class="bm-room-option-price">
+                    <strong>Rp250.000</strong>
+                    <small>{{ $t('booking.perNight') }}</small>
+                  </div>
+                </div>
+                <div class="bm-room-option-field">
+                  <small class="bm-room-option-label">{{ $t('booking.roomCountLabel') }}</small>
+                  <input
+                    id="bm-double-room-count"
+                    v-model.number="bookingStore.doubleRoomCount"
+                    type="number"
+                    min="0"
+                    max="1"
+                    inputmode="numeric"
+                    :aria-invalid="!!bookingStore.errors.doubleRoomCount"
+                    @focus="activeRoomCard = 'double'"
+                    @change="bookingStore.normalizeRoomCounts()"
+                  />
+                </div>
+              </label>
             </div>
-            <p v-if="bookingStore.errors.roomType" id="bm-room-type-error" class="bm-error" role="alert">
-              {{ bookingStore.errors.roomType }}
+            <p v-if="bookingStore.errors.singleRoomCount" class="bm-error" role="alert">
+              {{ bookingStore.errors.singleRoomCount }}
+            </p>
+            <p v-if="bookingStore.errors.doubleRoomCount" class="bm-error" role="alert">
+              {{ bookingStore.errors.doubleRoomCount }}
             </p>
             <p class="bm-room-note">{{ $t('booking.nonSmokingNote') }}</p>
           </div>
 
           <div class="bm-form-grid compact">
             <div class="bm-group">
-              <label for="bm-room-count">{{ $t('booking.roomCountLabel') }}</label>
-              <input
-                type="number"
-                id="bm-room-count"
-                v-model.number="bookingStore.roomCount"
-                min="1"
-                :max="maxRoomCount"
-                inputmode="numeric"
-                :aria-invalid="!!bookingStore.errors.roomCount"
-                :aria-describedby="bookingStore.errors.roomCount ? 'bm-room-count-error' : undefined"
-                required
-              />
-              <p v-if="bookingStore.errors.roomCount" id="bm-room-count-error" class="bm-error" role="alert">
-                {{ bookingStore.errors.roomCount }}
-              </p>
-            </div>
-
-            <div class="bm-group">
               <label for="bm-guest-count">{{ $t('booking.guestCountLabel') }}</label>
-              <input
-                type="number"
-                id="bm-guest-count"
-                v-model.number="bookingStore.guestCount"
-                min="1"
-                max="50"
-                inputmode="numeric"
-                :aria-invalid="!!bookingStore.errors.guestCount"
-                :aria-describedby="bookingStore.errors.guestCount ? 'bm-guest-count-error' : undefined"
-                required
-              />
+              <div class="bm-guest-control-row">
+                <input
+                  type="number"
+                  id="bm-guest-count"
+                  v-model.number="bookingStore.guestCount"
+                  min="1"
+                  :max="maxGuestCount"
+                  inputmode="numeric"
+                  :aria-invalid="!!bookingStore.errors.guestCount"
+                  :aria-describedby="bookingStore.errors.guestCount ? 'bm-guest-count-error' : 'bm-guest-note'"
+                  required
+                />
+                <p id="bm-guest-note" class="bm-field-note">{{ guestCapacityHelp }}</p>
+              </div>
               <p v-if="bookingStore.errors.guestCount" id="bm-guest-count-error" class="bm-error" role="alert">
                 {{ bookingStore.errors.guestCount }}
               </p>
@@ -226,15 +248,16 @@ const bookingStore = useBookingStore()
 const modalRef = ref<HTMLElement | null>(null)
 let phoneHashTimer: ReturnType<typeof setTimeout> | null = null
 const { t, locale } = useI18n()
+const activeRoomCard = ref<'single' | 'double'>('single')
 
 const roomPrices = {
   single: 200000,
   double: 250000,
 }
 const breakfastPrice = 25000
-const roomLimits = {
-  single: 3,
-  double: 1,
+const adultCapacities = {
+  single: 2,
+  double: 3,
 }
 
 const formatCurrency = (value: number) => new Intl.NumberFormat(locale.value === 'id' ? 'id-ID' : 'en-US', {
@@ -264,10 +287,32 @@ const minCheckOutDate = computed(() => {
   const baseDate = bookingStore.checkIn ? parseDateInput(bookingStore.checkIn) : new Date()
   return toDateInputValue(addDays(baseDate, 1))
 })
-const maxRoomCount = computed(() => roomLimits[bookingStore.roomType])
+const maxGuestCount = computed(() => {
+  const singleCapacity = bookingStore.singleRoomCount * adultCapacities.single
+  const doubleCapacity = bookingStore.doubleRoomCount * adultCapacities.double
+  return Math.max(singleCapacity + doubleCapacity, adultCapacities.single)
+})
 
-const selectedRoomName = computed(() => t(`booking.roomTypeNames.${bookingStore.roomType}`))
-const selectedRoomPrice = computed(() => formatCurrency(roomPrices[bookingStore.roomType]))
+const selectedRoomName = computed(() => bookingStore.roomSummary || t('booking.roomTypeLabel'))
+const guestCapacityHelp = computed(() => {
+  const rooms = Math.max(bookingStore.totalRoomCount || 1, 1)
+  const hasSingle = bookingStore.singleRoomCount > 0
+  const hasDouble = bookingStore.doubleRoomCount > 0
+  const helpKey = hasSingle && hasDouble
+    ? 'mixed'
+    : hasSingle && bookingStore.singleRoomCount > 1
+      ? 'singleMulti'
+      : hasDouble
+        ? 'double'
+        : 'single'
+  return t(`booking.guestCountHelp.${helpKey}`, {
+    adults: maxGuestCount.value,
+    perRoom: hasDouble && !hasSingle ? adultCapacities.double : adultCapacities.single,
+    rooms,
+    singleRooms: bookingStore.singleRoomCount,
+    doubleRooms: bookingStore.doubleRoomCount,
+  })
+})
 const stayNights = computed(() => {
   if (!bookingStore.checkIn || !bookingStore.checkOut) return 1
 
@@ -278,21 +323,23 @@ const stayNights = computed(() => {
 })
 const staySummary = computed(() => t('booking.summary', {
   nights: stayNights.value,
-  rooms: bookingStore.roomCount || 1,
+  rooms: bookingStore.totalRoomCount || 1,
   guests: bookingStore.guestCount || 1,
 }))
 const totalEstimate = computed(() => {
-  const roomTotal = roomPrices[bookingStore.roomType] * stayNights.value * (bookingStore.roomCount || 1)
+  const roomTotal = ((bookingStore.singleRoomCount * roomPrices.single) + (bookingStore.doubleRoomCount * roomPrices.double)) * stayNights.value
   const breakfastTotal = bookingStore.breakfast
     ? breakfastPrice * stayNights.value * (bookingStore.guestCount || 1)
     : 0
   const total = roomTotal + breakfastTotal
   return formatCurrency(total)
 })
+const selectedRoomPrice = computed(() => totalEstimate.value)
 
 // Focus trap & initial focus
 watch(() => bookingStore.isModalOpen, (open) => {
   if (open) {
+    activeRoomCard.value = bookingStore.roomTypeValue === 'double' ? 'double' : 'single'
     nextTick(() => {
       const firstInput = document.getElementById('bm-name')
       firstInput?.focus()
@@ -309,18 +356,21 @@ watch(() => bookingStore.checkIn, () => {
   }
 })
 
-watch(() => bookingStore.roomType, () => {
-  bookingStore.normalizeRoomCount()
+watch(() => [bookingStore.singleRoomCount, bookingStore.doubleRoomCount], () => {
+  bookingStore.normalizeRoomCounts()
+  if (bookingStore.guestCount > maxGuestCount.value) {
+    bookingStore.guestCount = maxGuestCount.value
+  }
 })
 
-watch(() => bookingStore.roomCount, () => {
-  if (!bookingStore.roomCount || bookingStore.roomCount < 1) {
-    bookingStore.roomCount = 1
+watch(() => bookingStore.guestCount, () => {
+  if (!bookingStore.guestCount || bookingStore.guestCount < 1) {
+    bookingStore.guestCount = 1
     return
   }
 
-  if (bookingStore.roomCount > maxRoomCount.value) {
-    bookingStore.roomCount = maxRoomCount.value
+  if (bookingStore.guestCount > maxGuestCount.value) {
+    bookingStore.guestCount = maxGuestCount.value
   }
 })
 

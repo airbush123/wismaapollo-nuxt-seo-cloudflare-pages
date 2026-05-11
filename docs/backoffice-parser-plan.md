@@ -54,10 +54,12 @@ Nama: Bambang Irawan
 Nomor WA: 081234567890
 Check-in: 2026-05-11
 Check-out: 2026-05-12
-Tipe kamar: Single Bed - Rp200.000/malam
+Kamar:
+- Single Bed: 1 kamar
+- Double Bed: 1 kamar
 Catatan kamar: Semua kamar non-smoking. Merokok tersedia di area luar.
-Jumlah kamar: 1
-Jumlah tamu: 2
+Jumlah kamar: 2
+Jumlah tamu dewasa: 4
 Sarapan: Ya, 2 pack/orang x 1 malam
 Catatan: -
 
@@ -73,7 +75,8 @@ Parser minimal perlu mengisi:
 - Check-in
 - Check-out
 - Jumlah malam
-- Tipe kamar
+- Jumlah Single Bed
+- Jumlah Double Bed
 - Jumlah kamar
 - Jumlah tamu
 - Sarapan
