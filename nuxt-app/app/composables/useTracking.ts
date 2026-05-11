@@ -311,6 +311,7 @@ export function useTracking() {
       script.src = 'https://connect.facebook.net/en_US/fbevents.js'
       script.onload = () => {
         metaPixelLoaded = true
+        fbq('set', 'autoConfig', false, META_PIXEL_ID)
         fbq('init', META_PIXEL_ID)
         resolve()
       }
