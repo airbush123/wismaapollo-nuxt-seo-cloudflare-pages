@@ -109,6 +109,10 @@ export const useBookingStore = defineStore('booking', {
       this.ensureDefaultDates()
       this.isModalOpen = true
       this.errors = {}
+
+      if (import.meta.client) {
+        useTracking().trackContact(roomType ? `booking_open_${roomType}` : 'booking_open')
+      }
     },
 
     closeModal() {
