@@ -9,7 +9,7 @@
       <article class="room-card" role="article" aria-label="Single Bed Room">
         <div class="room-card-image">
           <NuxtImg
-            src="/images/gallery/single-bed-apollo.jpg"
+            src="/images/gallery/single-bed-apollo.webp"
             alt="Single Bed - Penginapan Kuala Kurun Wisma Apollo"
             class="single-img"
             loading="lazy"
@@ -47,7 +47,7 @@
         <div class="pop-tag">{{ $t('rooms.double.popular') }}</div>
         <div class="room-card-image">
           <NuxtImg
-            src="/images/gallery/double-bed-apollo.jpg"
+            src="/images/gallery/double-bed-apollo.webp"
             alt="Double Bed - Hotel Kuala Kurun Wisma Apollo"
             loading="lazy"
           />

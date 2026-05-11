@@ -4,7 +4,7 @@
       <picture>
         <source
           media="(min-width: 768px)"
-          srcset="/images/penginapan-di-kuala-kurun-desktop.jpg"
+          srcset="/images/penginapan-di-kuala-kurun-desktop.webp"
         >
         <NuxtImg
           src="/images/hero.webp"
