@@ -48,7 +48,7 @@
     },
     "room": {
       "title": "Room Facilities",
-      "items": ["Air Conditioner (AC)", "32\" Android TV", "Clean Towels", "Bathroom Amenities", "En-suite Shower Room", "Clean, Spacious & Soundproof"]
+      "items": ["Air Conditioner (AC)", "32\" Android TV", "Clean Towels", "Bathroom Amenities", "En-suite Shower Room", "All Non-Smoking Rooms", "Clean, Spacious & Soundproof"]
     },
     "other": {
       "title": "Other Facilities",
@@ -56,7 +56,7 @@
     },
     "extra": {
       "title": "Extra Services",
-      "items": ["Breakfast +20K Per Person", "Extra Bed & Pillow +50K Per Room"]
+      "items": ["Breakfast +25K Per Pack/Person", "Extra Bed & Pillow +50K Per Room"]
     }
   },
   "rooms": {
@@ -150,23 +150,35 @@
     "copyright": "© 2025 Wisma Apollo. All Rights Reserved."
   },
   "booking": {
+    "kicker": "Quick reservation",
     "title": "Wisma Apollo Reservation Form",
-    "desc": "Fill in the short form below, then continue to WhatsApp with an automatic reservation message.",
+    "desc": "Fill in the short form below, then continue to WhatsApp for admin verification.",
     "nameLabel": "Full Name",
     "namePlaceholder": "Example: Budi Santoso",
     "phoneLabel": "WhatsApp No (Active)",
     "phonePlaceholder": "Example: 081234567890",
     "checkInLabel": "Check-in Date",
     "checkOutLabel": "Check-out Date",
+    "timeNote": "Note: check-in starts at 13:00 WIB, check-out is no later than 12:00 WIB.",
+    "nonSmokingNote": "All rooms are non-smoking. Smoking is available in the outdoor area.",
     "roomTypeLabel": "Room Type",
     "roomTypes": {
       "single": "Single Bed - IDR 200,000/night",
       "double": "Double Bed - IDR 250,000/night"
     },
+    "roomTypeNames": {
+      "single": "Single Bed",
+      "double": "Double Bed"
+    },
+    "perNight": "per night",
+    "summary": "{nights} night(s) · {rooms} room(s) · {guests} guest(s)",
+    "estimate": "Estimated total",
     "roomCountLabel": "Number of Rooms",
     "guestCountLabel": "Number of Guests",
+    "breakfastLabel": "Add breakfast",
+    "breakfastHelp": "IDR 25,000 per pack/person. We can confirm it again via WhatsApp.",
     "notesLabel": "Additional Notes",
-    "notesPlaceholder": "Example: late arrival, extra bed, or specific room request",
+    "notesPlaceholder": "Example: late arrival, extra bed, motorbike rental, or specific room request",
     "submit": "Continue to WhatsApp",
     "submitting": "Submitting...",
     "errors": {
@@ -190,7 +202,7 @@
       { "q": "What facilities are available?", "a": "Each room has AC, 32\" Android TV, free WiFi, en-suite shower bathroom, spring bed + goose pillows, cotton linen, fresh towels daily, and soundproof walls." },
       { "q": "Is there free WiFi?", "a": "Yes, all areas of Wisma Apollo have free WiFi with adequate speed for streaming and working." },
       { "q": "How do I make a reservation?", "a": "Reservations can be made via WhatsApp at 0818 232 021. Just send your name and desired stay dates. We will reply quickly." },
-      { "q": "Is breakfast available?", "a": "Yes, breakfast is available by request for an additional IDR 20,000 per person. Contact the receptionist to order." },
+      { "q": "Is breakfast available?", "a": "Yes, breakfast is available by request for an additional IDR 25,000 per pack/person. Contact the receptionist to order." },
       { "q": "Is there an extra bed?", "a": "Yes, extra beds and pillows are available for an additional IDR 50,000 per room. Please inform us during reservation." },
       { "q": "Check-in and check-out time?", "a": "Check-in from 14:00 and check-out by 12:00. Early check-in or late check-out can be arranged based on availability." }
     ]

@@ -38,7 +38,7 @@
         </div>
         <button
           class="menu-btn"
-          :aria-expanded="String(uiStore.isMenuOpen)"
+          :aria-expanded="uiStore.isMenuOpen"
           aria-controls="mobile-menu"
           :aria-label="uiStore.isMenuOpen ? 'Close menu' : 'Open menu'"
           @click="uiStore.toggleMenu()"
@@ -51,7 +51,7 @@
       id="mobile-menu"
       class="mobile-menu"
       role="menu"
-      :aria-hidden="String(!uiStore.isMenuOpen)"
+      :aria-hidden="!uiStore.isMenuOpen"
     >
       <NuxtLink :to="localePath('/#tentang')" role="menuitem" @click="uiStore.closeMenu()">{{ $t('nav.about') }}</NuxtLink>
       <NuxtLink :to="localePath('/#fasilitas')" role="menuitem" @click="uiStore.closeMenu()">{{ $t('nav.facilities') }}</NuxtLink>
@@ -66,7 +66,7 @@
         rel="noopener"
         class="menu-cta"
         role="menuitem"
-        @click="uiStore.closeMenu()"
+        @click="handleMobileWaClick"
       >{{ $t('nav.reserve') }}</a>
     </div>
   </nav>
@@ -80,6 +80,11 @@ const uiStore = useUIStore()
 const bookingStore = useBookingStore()
 const { locale, locales, setLocale } = useI18n()
 const localePath = useLocalePath()
+
+function handleMobileWaClick() {
+  useTracking().trackContact('mobile_nav_whatsapp')
+  uiStore.closeMenu()
+}
 
 // Close menu on Escape
 onMounted(() => {

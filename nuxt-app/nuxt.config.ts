@@ -63,6 +63,9 @@ export default defineNuxtConfig({
           media: 'print',
           onload: "this.media='all'",
         },
+        { rel: 'dns-prefetch', href: 'https://www.googletagmanager.com' },
+        { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' },
+        { rel: 'dns-prefetch', href: 'https://script.google.com' },
       ],
     },
   },
@@ -82,6 +85,7 @@ export default defineNuxtConfig({
       { code: 'zh', iso: 'zh-CN', name: '中文', file: 'zh.json' },
     ],
     defaultLocale: 'id',
+    // @ts-expect-error Existing runtime i18n option; Nuxt i18n's generated type omits it here.
     fallbackLocale: 'id',
     langDir: '../locales/',
     strategy: 'prefix_except_default',
@@ -91,5 +95,13 @@ export default defineNuxtConfig({
 
   pinia: {
     storesDirs: ['./stores/**'],
+  },
+
+  routeRules: {
+    '/px/gtm/**': { proxy: 'https://www.googletagmanager.com/**' },
+    '/px/ga/**': { proxy: 'https://www.google-analytics.com/**' },
+    '/api/webhook': {
+      proxy: 'https://script.google.com/macros/s/AKfycbz2g1_ZDFhthbNDepnazQJu3hze_Cz24odh0Yjj8nf9xppSCQisS3ZK233EQW2s0wflOw/exec',
+    },
   },
 })

@@ -2,8 +2,35 @@ import { defineStore } from 'pinia'
 import { BookingFormSchema } from '~/schemas/booking'
 import type { BookingFormData } from '~/schemas/booking'
 
-const GOOGLE_APP_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz2g1_ZDFhthbNDepnazQJu3hze_Cz24odh0Yjj8nf9xppSCQisS3ZK233EQW2s0wflOw/exec'
+const GOOGLE_APP_SCRIPT_URL = '/api/webhook'
 const WA_NUMBER = '62818232021'
+const BREAKFAST_PRICE = 25000
+const getRoomLimit = (roomType: 'single' | 'double') => roomType === 'single' ? 3 : 1
+
+function toDateInputValue(date: Date) {
+  const year = date.getFullYear()
+  const month = String(date.getMonth() + 1).padStart(2, '0')
+  const day = String(date.getDate()).padStart(2, '0')
+  return `${year}-${month}-${day}`
+}
+
+function addDays(date: Date, days: number) {
+  const nextDate = new Date(date)
+  nextDate.setDate(nextDate.getDate() + days)
+  return nextDate
+}
+
+function getStayNights(checkIn: string, checkOut: string) {
+  const start = new Date(`${checkIn}T00:00:00`)
+  const end = new Date(`${checkOut}T00:00:00`)
+  const diffDays = Math.ceil((end.getTime() - start.getTime()) / 86400000)
+  return Number.isFinite(diffDays) && diffDays > 0 ? diffDays : 1
+}
+
+function getBreakfastValue(checkIn: string, checkOut: string, guestCount: number, breakfast: boolean) {
+  if (!breakfast) return 0
+  return BREAKFAST_PRICE * getStayNights(checkIn, checkOut) * Math.max(guestCount, 1)
+}
 
 export const useBookingStore = defineStore('booking', {
   state: () => ({
@@ -16,6 +43,7 @@ export const useBookingStore = defineStore('booking', {
     roomType: 'single' as 'single' | 'double',
     roomCount: 1,
     guestCount: 1,
+    breakfast: false,
     notes: '',
     isSubmitting: false,
     errors: {} as Record<string, string>,
@@ -27,13 +55,40 @@ export const useBookingStore = defineStore('booking', {
     openModal(waUrl?: string, roomType?: 'single' | 'double') {
       if (waUrl) this.currentWaUrl = waUrl
       if (roomType) this.roomType = roomType
+      this.normalizeRoomCount()
+      this.ensureDefaultDates()
       this.isModalOpen = true
       this.errors = {}
+
+      if (import.meta.client) {
+        useTracking().trackAddToCart(this.roomType)
+      }
     },
 
     closeModal() {
       this.isModalOpen = false
       this.errors = {}
+    },
+
+    setRoomType(roomType: 'single' | 'double') {
+      this.roomType = roomType
+      this.normalizeRoomCount()
+    },
+
+    normalizeRoomCount() {
+      const maxRoomCount = getRoomLimit(this.roomType)
+      if (!this.roomCount || this.roomCount < 1) this.roomCount = 1
+      if (this.roomCount > maxRoomCount) this.roomCount = maxRoomCount
+    },
+
+    ensureDefaultDates() {
+      const today = new Date()
+      if (!this.checkIn) {
+        this.checkIn = toDateInputValue(today)
+      }
+      if (!this.checkOut) {
+        this.checkOut = toDateInputValue(addDays(today, 1))
+      }
     },
 
     initTracking() {
@@ -50,10 +105,17 @@ export const useBookingStore = defineStore('booking', {
           this.clickId = urlParams.get('gclid') || ''
           sessionStorage.setItem('wa_source', this.source)
           sessionStorage.setItem('wa_click_id', this.clickId)
+        } else if (urlParams.has('wbraid') || urlParams.has('gbraid')) {
+          this.source = 'Google'
+          this.clickId = urlParams.get('wbraid') || urlParams.get('gbraid') || ''
+          sessionStorage.setItem('wa_source', this.source)
+          sessionStorage.setItem('wa_click_id', this.clickId)
         } else {
           this.source = sessionStorage.getItem('wa_source') || 'Organic'
           this.clickId = sessionStorage.getItem('wa_click_id') || ''
         }
+
+        useTracking().captureClickIds()
       } catch {
         // Ignore sessionStorage exceptions in Strict Incognito Mode
       }
@@ -68,6 +130,7 @@ export const useBookingStore = defineStore('booking', {
         roomType: this.roomType,
         roomCount: this.roomCount,
         guestCount: this.guestCount,
+        breakfast: this.breakfast,
         notes: this.notes,
       })
 
@@ -90,36 +153,33 @@ export const useBookingStore = defineStore('booking', {
 
       this.isSubmitting = true
 
-      // Fire tracking events (AdBlock-safe)
-      this.fireTrackingEvents()
+      const tracking = useTracking()
+      const hashedPhone = await tracking.trackUserData(this.phone)
 
       // Submit data via hidden iframe
       await this.submitViaIframe()
 
+      await tracking.trackLead({
+        lead_source: this.source,
+        room_type: this.roomType,
+        room_count: this.roomCount,
+        guest_count: this.guestCount,
+        breakfast: this.breakfast,
+        breakfast_value: getBreakfastValue(this.checkIn, this.checkOut, this.guestCount, this.breakfast),
+        check_in: this.checkIn,
+        check_out: this.checkOut,
+        hashed_phone: hashedPhone,
+        sha256_phone_number: hashedPhone,
+        phone_number: hashedPhone,
+        user_data: hashedPhone
+          ? {
+              sha256_phone_number: [hashedPhone],
+            }
+          : undefined,
+      })
+
       // Redirect to WhatsApp
       this.redirectToWhatsApp()
-    },
-
-    fireTrackingEvents() {
-      if (!import.meta.client) return
-      try {
-        const w = window as any
-        if (typeof w.dataLayer !== 'undefined') {
-          w.dataLayer.push({ event: 'generate_lead', lead_source: this.source })
-        }
-        if (typeof w.fbq !== 'undefined') {
-          w.fbq('track', 'Lead')
-        }
-        if (typeof w.gtag !== 'undefined') {
-          w.gtag('event', 'conversion', {
-            send_to: 'AW-11473033484/YOUR_CONVERSION_LABEL',
-            event_category: 'engagement',
-            event_label: 'WhatsApp Form',
-          })
-        }
-      } catch {
-        // Tracking blocked, ignoring safely
-      }
     },
 
     submitViaIframe(): Promise<void> {
@@ -152,9 +212,16 @@ export const useBookingStore = defineStore('booking', {
           roomType: this.roomType,
           roomCount: String(this.roomCount),
           guestCount: String(this.guestCount),
+          breakfast: this.breakfast ? 'Ya' : 'Tidak',
+          breakfastValue: String(getBreakfastValue(this.checkIn, this.checkOut, this.guestCount, this.breakfast)),
           notes: this.notes,
           source: this.source,
           clickId: this.clickId,
+          transactionId: useTracking().getOrCreateTrxId(),
+          gclid: useTracking().getFromStorage('gclid'),
+          wbraid: useTracking().getFromStorage('wbraid'),
+          gbraid: useTracking().getFromStorage('gbraid'),
+          hashedPhone: useTracking().getFromStorage('hashed_phone'),
         }
 
         Object.entries(fields).forEach(([key, value]) => {
@@ -186,8 +253,10 @@ export const useBookingStore = defineStore('booking', {
         `Check-in: ${this.checkIn}`,
         `Check-out: ${this.checkOut}`,
         `Tipe kamar: ${roomLabel}`,
+        'Catatan kamar: Semua kamar non-smoking. Merokok tersedia di area luar.',
         `Jumlah kamar: ${this.roomCount}`,
         `Jumlah tamu: ${this.guestCount}`,
+        `Sarapan: ${this.breakfast ? `Ya, ${this.guestCount} pack/orang x ${getStayNights(this.checkIn, this.checkOut)} malam` : 'Tidak'}`,
         `Catatan: ${this.notes || '-'}`,
         '',
         'Terima kasih.'
@@ -203,6 +272,7 @@ export const useBookingStore = defineStore('booking', {
         this.roomType = 'single'
         this.roomCount = 1
         this.guestCount = 1
+        this.breakfast = false
         this.notes = ''
         this.closeModal()
       }, 1000)

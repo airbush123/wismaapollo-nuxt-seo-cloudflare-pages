@@ -13,7 +13,11 @@
 
 <script setup lang="ts">
 useScrollAnimation()
-useTracking()
+const tracking = useTracking()
+
+onMounted(() => {
+  tracking.initLandingTracking()
+})
 
 useHead({
   link: [

@@ -48,7 +48,7 @@ onMounted(() => {
     if (section) {
       const obs = new IntersectionObserver(
         (entries) => {
-          if (entries[0].isIntersecting) {
+          if (entries[0]?.isIntersecting) {
             showMap.value = true
             obs.disconnect()
           }

@@ -1,0 +1,603 @@
+{
+  "exportFormatVersion": 2,
+  "exportTime": "2026-05-08 15:45:02",
+  "containerVersion": {
+    "path": "accounts/6353748494/containers/251569894/versions/0",
+    "accountId": "6353748494",
+    "containerId": "251569894",
+    "container": {
+      "path": "accounts/6353748494/containers/251569894",
+      "accountId": "6353748494",
+      "containerId": "251569894",
+      "name": "Wisma Apollo",
+      "publicId": "GTM-5995VJ5B",
+      "usageContext": [
+        "WEB"
+      ],
+      "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6353748494/containers/251569894/workspaces?apiLink=container",
+      "features": {
+        "supportUserPermissions": true,
+        "supportEnvironments": true,
+        "supportWorkspaces": true,
+        "supportGtagConfigs": false,
+        "supportBuiltInVariables": true,
+        "supportClients": false,
+        "supportFolders": true,
+        "supportTags": true,
+        "supportTemplates": true,
+        "supportTriggers": true,
+        "supportVariables": true,
+        "supportVersions": true,
+        "supportZones": true,
+        "supportTransformations": false
+      },
+      "tagIds": [
+        "GTM-5995VJ5B"
+      ]
+    },
+    "tag": [
+      {
+        "accountId": "6353748494",
+        "containerId": "251569894",
+        "tagId": "40",
+        "name": "GAds - VC Wisma",
+        "type": "awct",
+        "parameter": [
+          {
+            "type": "BOOLEAN",
+            "key": "enableConversionLinker",
+            "value": "true"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "conversionValue",
+            "value": "200"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "conversionId",
+            "value": "11473033484"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "currencyCode",
+            "value": "IDR"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "conversionLabel",
+            "value": "6VFrCKurrascEIyy4t4q"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "rdp",
+            "value": "false"
+          }
+        ],
+        "fingerprint": "1777314008588",
+        "firingTriggerId": [
+          "36"
+        ],
+        "consentSettings": {
+          "consentStatus": "NOT_SET"
+        }
+      },
+      {
+        "accountId": "6353748494",
+        "containerId": "251569894",
+        "tagId": "44",
+        "name": "GAds - PV Wisma",
+        "type": "awct",
+        "parameter": [
+          {
+            "type": "BOOLEAN",
+            "key": "enableConversionLinker",
+            "value": "true"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "conversionValue",
+            "value": "100"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "conversionId",
+            "value": "11473033484"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "currencyCode",
+            "value": "IDR"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "conversionLabel",
+            "value": "egfBCJearascEIyy4t4q"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "rdp",
+            "value": "false"
+          }
+        ],
+        "fingerprint": "1777314008589",
+        "firingTriggerId": [
+          "43"
+        ],
+        "consentSettings": {
+          "consentStatus": "NOT_SET"
+        }
+      },
+      {
+        "accountId": "6353748494",
+        "containerId": "251569894",
+        "tagId": "46",
+        "name": "GAds - Lead Wisma",
+        "type": "awct",
+        "parameter": [
+          {
+            "type": "BOOLEAN",
+            "key": "enableConversionLinker",
+            "value": "true"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "conversionValue",
+            "value": "5000"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "conversionId",
+            "value": "11473033484"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "currencyCode",
+            "value": "IDR"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "conversionLabel",
+            "value": "11473033484"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "rdp",
+            "value": "false"
+          }
+        ],
+        "fingerprint": "1777314008589",
+        "firingTriggerId": [
+          "38"
+        ],
+        "consentSettings": {
+          "consentStatus": "NOT_SET"
+        }
+      },
+      {
+        "accountId": "6353748494",
+        "containerId": "251569894",
+        "tagId": "47",
+        "name": "GAds - ATC Wisma",
+        "type": "awct",
+        "parameter": [
+          {
+            "type": "BOOLEAN",
+            "key": "enableConversionLinker",
+            "value": "true"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "conversionValue",
+            "value": "500"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "conversionId",
+            "value": "11473033484"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "currencyCode",
+            "value": "IDR"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "conversionLabel",
+            "value": "1E3pCMmBlKscEIyy4t4q"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "rdp",
+            "value": "false"
+          }
+        ],
+        "fingerprint": "1777314008589",
+        "firingTriggerId": [
+          "35"
+        ],
+        "consentSettings": {
+          "consentStatus": "NOT_SET"
+        }
+      },
+      {
+        "accountId": "6353748494",
+        "containerId": "251569894",
+        "tagId": "49",
+        "name": "Tag Enhanced Conversion",
+        "type": "awud",
+        "parameter": [
+          {
+            "type": "TEMPLATE",
+            "key": "userDataVariable",
+            "value": "{{User Data EC}}"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "enableConversionLinker",
+            "value": "true"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "conversionId",
+            "value": "11473033484"
+          }
+        ],
+        "fingerprint": "1777314204469",
+        "firingTriggerId": [
+          "41"
+        ],
+        "tagFiringOption": "ONCE_PER_EVENT",
+        "monitoringMetadata": {
+          "type": "MAP"
+        },
+        "consentSettings": {
+          "consentStatus": "NOT_SET"
+        }
+      },
+      {
+        "accountId": "6353748494",
+        "containerId": "251569894",
+        "tagId": "50",
+        "name": "Conversion Linker",
+        "type": "gclidw",
+        "parameter": [
+          {
+            "type": "BOOLEAN",
+            "key": "enableCrossDomain",
+            "value": "true"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "enableUrlPassthrough",
+            "value": "false"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "linkerDomains",
+            "value": "wisma-apollo.my.id"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "enableCookieOverrides",
+            "value": "false"
+          }
+        ],
+        "fingerprint": "1778254851302",
+        "firingTriggerId": [
+          "37"
+        ],
+        "tagFiringOption": "ONCE_PER_EVENT",
+        "monitoringMetadata": {
+          "type": "MAP"
+        },
+        "consentSettings": {
+          "consentStatus": "NOT_SET"
+        }
+      },
+      {
+        "accountId": "6353748494",
+        "containerId": "251569894",
+        "tagId": "51",
+        "name": "Tag Google AW-11473033484",
+        "type": "googtag",
+        "parameter": [
+          {
+            "type": "TEMPLATE",
+            "key": "tagId",
+            "value": "AW-11473033484"
+          }
+        ],
+        "fingerprint": "1777314417945",
+        "firingTriggerId": [
+          "2147479573"
+        ],
+        "consentSettings": {
+          "consentStatus": "NOT_SET"
+        }
+      },
+      {
+        "accountId": "6353748494",
+        "containerId": "251569894",
+        "tagId": "52",
+        "name": "GAds - Kontak Wisma",
+        "type": "awct",
+        "parameter": [
+          {
+            "type": "BOOLEAN",
+            "key": "enableConversionLinker",
+            "value": "true"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "conversionValue",
+            "value": "300"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "conversionId",
+            "value": "11473033484"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "currencyCode",
+            "value": "IDR"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "conversionLabel",
+            "value": "bIBmCPfqk6scEIyy4t4q"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "rdp",
+            "value": "false"
+          }
+        ],
+        "fingerprint": "1777314008589",
+        "firingTriggerId": [
+          "44"
+        ],
+        "consentSettings": {
+          "consentStatus": "NOT_SET"
+        }
+      }
+    ],
+    "trigger": [
+      {
+        "accountId": "6353748494",
+        "containerId": "251569894",
+        "triggerId": "35",
+        "name": "Trigger ATC",
+        "type": "CUSTOM_EVENT",
+        "customEventFilter": [
+          {
+            "type": "EQUALS",
+            "parameter": [
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{_event}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": "wisma_atc"
+              }
+            ]
+          }
+        ],
+        "fingerprint": "1777314008588"
+      },
+      {
+        "accountId": "6353748494",
+        "containerId": "251569894",
+        "triggerId": "36",
+        "name": "Trigger VC",
+        "type": "CUSTOM_EVENT",
+        "customEventFilter": [
+          {
+            "type": "EQUALS",
+            "parameter": [
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{_event}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": "wisma_vc"
+              }
+            ]
+          }
+        ],
+        "fingerprint": "1777314008588"
+      },
+      {
+        "accountId": "6353748494",
+        "containerId": "251569894",
+        "triggerId": "37",
+        "name": "All Pages",
+        "type": "PAGEVIEW",
+        "fingerprint": "1777314008588"
+      },
+      {
+        "accountId": "6353748494",
+        "containerId": "251569894",
+        "triggerId": "38",
+        "name": "Trigger Lead",
+        "type": "CUSTOM_EVENT",
+        "customEventFilter": [
+          {
+            "type": "EQUALS",
+            "parameter": [
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{_event}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": "wisma_lead"
+              }
+            ]
+          }
+        ],
+        "fingerprint": "1777314008588"
+      },
+      {
+        "accountId": "6353748494",
+        "containerId": "251569894",
+        "triggerId": "41",
+        "name": "Trigger User Data",
+        "type": "CUSTOM_EVENT",
+        "customEventFilter": [
+          {
+            "type": "EQUALS",
+            "parameter": [
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{_event}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": "wisma_user_data"
+              }
+            ]
+          }
+        ],
+        "fingerprint": "1777314008589"
+      },
+      {
+        "accountId": "6353748494",
+        "containerId": "251569894",
+        "triggerId": "43",
+        "name": "Trigger PV",
+        "type": "CUSTOM_EVENT",
+        "customEventFilter": [
+          {
+            "type": "EQUALS",
+            "parameter": [
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{_event}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": "wisma_pv"
+              }
+            ]
+          }
+        ],
+        "fingerprint": "1777314008589"
+      },
+      {
+        "accountId": "6353748494",
+        "containerId": "251569894",
+        "triggerId": "44",
+        "name": "Trigger Kontak",
+        "type": "CUSTOM_EVENT",
+        "customEventFilter": [
+          {
+            "type": "EQUALS",
+            "parameter": [
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{_event}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": "wisma_kontak"
+              }
+            ]
+          }
+        ],
+        "fingerprint": "1777314008588"
+      }
+    ],
+    "variable": [
+      {
+        "accountId": "6353748494",
+        "containerId": "251569894",
+        "variableId": "39",
+        "name": "dlv_value",
+        "type": "v",
+        "parameter": [
+          {
+            "type": "INTEGER",
+            "key": "dataLayerVersion",
+            "value": "2"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "setDefaultValue",
+            "value": "false"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "name",
+            "value": "value"
+          }
+        ],
+        "fingerprint": "1777314008588"
+      },
+      {
+        "accountId": "6353748494",
+        "containerId": "251569894",
+        "variableId": "45",
+        "name": "dlv_phone",
+        "type": "v",
+        "parameter": [
+          {
+            "type": "INTEGER",
+            "key": "dataLayerVersion",
+            "value": "2"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "setDefaultValue",
+            "value": "false"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "name",
+            "value": "sha256_phone_number"
+          }
+        ],
+        "fingerprint": "1777314008589"
+      },
+      {
+        "accountId": "6353748494",
+        "containerId": "251569894",
+        "variableId": "48",
+        "name": "User Data EC",
+        "type": "awec",
+        "parameter": [
+          {
+            "type": "TEMPLATE",
+            "key": "mode",
+            "value": "MANUAL"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "phone_number",
+            "value": "{{dlv_phone}}"
+          }
+        ],
+        "fingerprint": "1777314083721",
+        "formatValue": {}
+      }
+    ],
+    "fingerprint": "1778255101977",
+    "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/6353748494/containers/251569894/versions/0?apiLink=version",
+    "name": "Wisma Apollo Tracking"
+  }
+}
