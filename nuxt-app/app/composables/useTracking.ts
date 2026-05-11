@@ -262,6 +262,37 @@ export function useTracking() {
     pushMetaEvent(eventName, value, fullPayload)
   }
 
+  const getGtmDebugParams = (): URLSearchParams => {
+    const params = new URLSearchParams()
+    if (!hasWindow()) return params
+
+    const currentParams = new URLSearchParams(window.location.search)
+    currentParams.forEach((value, key) => {
+      if (key === 'gtm_auth' || key.startsWith('gtm_')) {
+        params.set(key, value)
+      }
+    })
+
+    return params
+  }
+
+  const isGtmPreviewMode = (): boolean => {
+    const params = getGtmDebugParams()
+    return params.has('gtm_debug') || params.has('gtm_preview') || params.has('gtm_auth')
+  }
+
+  const buildGtmScriptUrl = (): string => {
+    const params = getGtmDebugParams()
+    params.set('id', GTM_CONTAINER_ID)
+
+    const query = params.toString()
+    if (isGtmPreviewMode()) {
+      return `https://www.googletagmanager.com/gtm.js?${query}`
+    }
+
+    return `/px/gtm/gtm.js?${query}`
+  }
+
   const getEventId = (eventName: string) => `${getOrCreateTrxId()}-${eventName}`
 
   const getCookie = (name: string): string => {
@@ -443,7 +474,7 @@ export function useTracking() {
       const script = document.createElement('script')
       script.async = true
       script.dataset.gtmContainer = GTM_CONTAINER_ID
-      script.src = `/px/gtm/gtm.js?id=${GTM_CONTAINER_ID}`
+      script.src = buildGtmScriptUrl()
       script.onload = () => {
         gtmLoaded = true
         syncStoredUserData()
@@ -527,6 +558,11 @@ export function useTracking() {
         trackPageView()
         attachVcScrollTracking()
       })
+    }
+
+    if (isGtmPreviewMode()) {
+      triggerLoad()
+      return
     }
 
     let triggered = false

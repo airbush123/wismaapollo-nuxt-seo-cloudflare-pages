@@ -25,6 +25,9 @@ export async function onRequestGet({ request, params }) {
   }
 
   const originUrl = new URL('/gtm.js', GTM_ORIGIN)
+  url.searchParams.forEach((value, key) => {
+    originUrl.searchParams.set(key, value)
+  })
   originUrl.searchParams.set('id', id)
 
   const response = await fetch(originUrl.toString(), {
