@@ -90,6 +90,10 @@ function getCookieValue(name: string) {
   return cookie ? decodeURIComponent(cookie.split('=').slice(1).join('=')) : ''
 }
 
+function buildFbcFromFbclid(fbclid: string) {
+  return fbclid ? `fb.1.${Date.now()}.${fbclid}` : ''
+}
+
 export const useBookingStore = defineStore('booking', {
   state: () => ({
     isModalOpen: false,
@@ -301,8 +305,11 @@ export const useBookingStore = defineStore('booking', {
       this.redirectToWhatsApp()
     },
 
-    getLeadFields() {
+    getLeadFields(eventId = '', fbp = '', fbc = '') {
+      const tracking = useTracking()
+
       return {
+        submittedAt: new Date().toISOString(),
         name: this.name,
         phone: this.phone,
         checkIn: this.checkIn,
@@ -320,13 +327,18 @@ export const useBookingStore = defineStore('booking', {
         notes: this.notes,
         source: this.source,
         clickId: this.clickId,
-        transactionId: useTracking().getOrCreateTrxId(),
-        gclid: useTracking().getFromStorage('gclid'),
-        wbraid: useTracking().getFromStorage('wbraid'),
-        gbraid: useTracking().getFromStorage('gbraid'),
-        fbclid: useTracking().getFromStorage('fbclid'),
-        campaign: useTracking().getFromStorage('campaign'),
-        hashedPhone: useTracking().getFromStorage('hashed_phone'),
+        transactionId: tracking.getOrCreateTrxId(),
+        eventId,
+        pageLocation: import.meta.client ? window.location.href : '',
+        gclid: tracking.getFromStorage('gclid'),
+        wbraid: tracking.getFromStorage('wbraid'),
+        gbraid: tracking.getFromStorage('gbraid'),
+        fbclid: tracking.getFromStorage('fbclid'),
+        fbp,
+        fbc,
+        campaign: tracking.getFromStorage('campaign'),
+        hashedPhone: tracking.getFromStorage('hashed_phone'),
+        metaHashedPhone: tracking.getFromStorage('meta_hashed_phone'),
       }
     },
 
@@ -336,21 +348,23 @@ export const useBookingStore = defineStore('booking', {
       const tracking = useTracking()
       const eventName = 'wisma_lead'
       const eventId = `${tracking.getOrCreateTrxId()}-${eventName}`
+      const fbp = getCookieValue('_fbp')
+      const fbc = getCookieValue('_fbc') || buildFbcFromFbclid(tracking.getFromStorage('fbclid'))
       const response = await fetch(BOOKING_LEAD_URL, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          fields: this.getLeadFields(),
+          fields: this.getLeadFields(eventId, fbp, fbc),
           metaEvent: {
             event_id: eventId,
             event_source_url: window.location.href,
             action_source: 'website',
             user_data: {
               ph: [tracking.getFromStorage('meta_hashed_phone') || tracking.getFromStorage('hashed_phone')].filter(Boolean),
-              fbp: getCookieValue('_fbp') || undefined,
-              fbc: getCookieValue('_fbc') || undefined,
+              fbp: fbp || undefined,
+              fbc: fbc || undefined,
             },
             custom_data: {
               currency: 'IDR',
