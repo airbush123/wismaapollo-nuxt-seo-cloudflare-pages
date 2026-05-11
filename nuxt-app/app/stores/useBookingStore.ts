@@ -298,10 +298,13 @@ export const useBookingStore = defineStore('booking', {
           : undefined,
       }
 
-      await this.submitBookingLead(leadPayload)
-      await tracking.trackLead(leadPayload)
+      this.submitBookingLead(leadPayload).catch(() => {
+        // Do not block the guest from continuing to WhatsApp if webhook delivery is slow.
+      })
+      tracking.trackLead(leadPayload).catch(() => {
+        // Tracking is best-effort and should never slow the booking flow.
+      })
 
-      // Redirect to WhatsApp
       this.redirectToWhatsApp()
     },
 
@@ -355,6 +358,7 @@ export const useBookingStore = defineStore('booking', {
         headers: {
           'Content-Type': 'application/json',
         },
+        keepalive: true,
         body: JSON.stringify({
           fields: this.getLeadFields(eventId, fbp, fbc),
           metaEvent: {
