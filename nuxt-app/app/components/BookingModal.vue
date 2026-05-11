@@ -246,7 +246,7 @@ import { useBookingStore } from '~/stores/useBookingStore'
 
 const bookingStore = useBookingStore()
 const modalRef = ref<HTMLElement | null>(null)
-let phoneHashTimer: ReturnType<typeof setTimeout> | null = null
+let addToCartTimer: ReturnType<typeof setTimeout> | null = null
 const { t, locale } = useI18n()
 const activeRoomCard = ref<'single' | 'double'>('single')
 
@@ -374,18 +374,23 @@ watch(() => bookingStore.guestCount, () => {
   }
 })
 
-watch(() => bookingStore.phone, (phone) => {
+watch(() => [
+  bookingStore.name,
+  bookingStore.phone,
+  bookingStore.checkIn,
+  bookingStore.checkOut,
+  bookingStore.singleRoomCount,
+  bookingStore.doubleRoomCount,
+  bookingStore.guestCount,
+], () => {
   if (!import.meta.client) return
 
-  if (phoneHashTimer) {
-    clearTimeout(phoneHashTimer)
+  if (addToCartTimer) {
+    clearTimeout(addToCartTimer)
   }
 
-  const cleanPhone = phone.replace(/[^0-9]/g, '')
-  if (cleanPhone.length < 10) return
-
-  phoneHashTimer = setTimeout(() => {
-    useTracking().trackUserData(phone)
+  addToCartTimer = setTimeout(() => {
+    bookingStore.trackQualifiedAddToCart()
   }, 1200)
 })
 </script>

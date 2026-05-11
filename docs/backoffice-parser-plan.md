@@ -32,6 +32,30 @@ Rekomendasi:
 - Form website boleh langsung masuk ke database/tab lead pending.
 - Sheet utama harian hanya diisi setelah admin/CS verifikasi pembayaran.
 
+## Tracking Funnel
+
+Event Google yang dipakai:
+
+- PV: user masuk website.
+- VC: user scroll minimal 50%.
+- Kontak: user klik tombol kontak/WhatsApp di luar form booking.
+- ATC: user sudah mengisi data form yang layak booking, termasuk nomor valid dan pilihan kamar.
+- Lead: user klik tombol WhatsApp di form reservasi.
+
+Aturan data:
+
+- Click id dan attribution seperti `gclid`, `wbraid`, `gbraid`, `fbclid`, dan campaign disimpan lebih lama untuk kebutuhan iklan.
+- `trx_id`, hash nomor telepon, pesan WA terakhir, dan payload booking adalah data booking sementara.
+- Hash nomor telepon mulai dibuat saat ATC, lalu di-update lagi saat Lead.
+- Data booking sementara dibersihkan saat user masuk halaman `/thanks`.
+- Data booking sementara yang tidak sampai `/thanks` otomatis dianggap basi setelah 24 jam supaya customer yang datang lagi beberapa hari kemudian tercatat sebagai reservasi baru.
+
+Halaman `/thanks` berisi:
+
+- Tombol WhatsApp dengan isi pesan yang sama seperti tombol WA di form.
+- Nomor CS yang bisa dicopy.
+- Tombol kembali ke Home.
+
 ## Flow Yang Disarankan
 
 ```text
@@ -48,20 +72,40 @@ Input user di website
 ## Contoh Input Parser
 
 ```text
-Halo Wisma Apollo, saya ingin reservasi kamar.
+🏨 Reservasi Wisma Apollo
 
+Halo admin Wisma Apollo, saya ingin reservasi kamar.
+
+👤 Data Tamu
 Nama: Bambang Irawan
 Nomor WA: 081234567890
+
+📅 Jadwal Menginap
 Check-in: 2026-05-11
 Check-out: 2026-05-12
-Kamar:
+Durasi: 1 malam
+
+🛏️ Detail Kamar
 - Single Bed: 1 kamar
 - Double Bed: 1 kamar
-Catatan kamar: Semua kamar non-smoking. Merokok tersedia di area luar.
 Jumlah kamar: 2
 Jumlah tamu dewasa: 4
-Sarapan: Ya, 2 pack/orang x 1 malam
+
+🍽️ Sarapan
+Sarapan: Ya, 4 pack/orang x 1 hari
+
+💰 Total Estimasi
+Total: Rp550.000
+
+📝 Catatan Tamu
 Catatan: -
+
+ℹ️ Info Kamar
+Semua kamar non-smoking. Merokok tersedia di area luar.
+
+✅ Status Reservasi
+Mohon dibantu cek ketersediaan kamar untuk tanggal di atas.
+Jika kamar tersedia, reservasi resmi diterima setelah pembayaran masuk dan dikonfirmasi admin.
 
 Terima kasih.
 ```

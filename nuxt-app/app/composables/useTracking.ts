@@ -4,6 +4,10 @@ const PRODUCT_NAME = 'Wisma Apollo Kuala Kurun'
 const CURRENCY = 'IDR'
 const GTM_CONTAINER_ID = 'GTM-5995VJ5B'
 const GOOGLE_ADS_ID = '11473033484'
+const META_PIXEL_ID = '1094160098707832'
+const BOOKING_TTL_MS = 24 * 60 * 60 * 1000
+const ATTRIBUTION_TTL_MS = 90 * 24 * 60 * 60 * 1000
+const BOOKING_KEYS = ['trx_id', 'hashed_phone', 'meta_hashed_phone']
 
 const FUNNEL_EVENTS = {
   pv: {
@@ -41,11 +45,13 @@ type TrackingPayload = Record<string, unknown>
 
 let gtmLoaded = false
 let gtmLoadPromise: Promise<void> | null = null
+let metaPixelLoaded = false
+let metaPixelLoadPromise: Promise<void> | null = null
 let landingPvSent = false
 let landingVcSent = false
 let contactSent = false
-let addToCartSent = false
-let leadSent = false
+let addToCartSentForTrx = ''
+let leadSentForTrx = ''
 let vcScrollHandler: (() => void) | null = null
 let lastHashedPhone = ''
 
@@ -56,17 +62,32 @@ export function useTracking() {
     if (!hasWindow()) return ''
 
     try {
+      const expiresAt = Number(localStorage.getItem(`${STORAGE_PREFIX}${key}_expires_at`) || 0)
+      if (!expiresAt && BOOKING_KEYS.includes(key) && localStorage.getItem(`${STORAGE_PREFIX}${key}`)) {
+        localStorage.removeItem(`${STORAGE_PREFIX}${key}`)
+        return ''
+      }
+
+      if (expiresAt && Date.now() > expiresAt) {
+        localStorage.removeItem(`${STORAGE_PREFIX}${key}`)
+        localStorage.removeItem(`${STORAGE_PREFIX}${key}_expires_at`)
+        return ''
+      }
+
       return localStorage.getItem(`${STORAGE_PREFIX}${key}`) || ''
     } catch {
       return ''
     }
   }
 
-  const setToStorage = (key: string, value: string) => {
+  const setToStorage = (key: string, value: string, ttlMs?: number) => {
     if (!hasWindow()) return
 
     try {
       localStorage.setItem(`${STORAGE_PREFIX}${key}`, value)
+      if (ttlMs) {
+        localStorage.setItem(`${STORAGE_PREFIX}${key}_expires_at`, String(Date.now() + ttlMs))
+      }
     } catch {
       // Ignore storage failures in strict/private browser modes.
     }
@@ -77,6 +98,7 @@ export function useTracking() {
 
     try {
       localStorage.removeItem(`${STORAGE_PREFIX}${key}`)
+      localStorage.removeItem(`${STORAGE_PREFIX}${key}_expires_at`)
     } catch {
       // Ignore storage failures in strict/private browser modes.
     }
@@ -93,7 +115,7 @@ export function useTracking() {
     if (!trxId) {
       const rand = Math.random().toString(36).substring(2, 7)
       trxId = `TRX-${Date.now()}-${rand}`
-      setToStorage('trx_id', trxId)
+      setToStorage('trx_id', trxId, BOOKING_TTL_MS)
     }
 
     return trxId
@@ -109,11 +131,11 @@ export function useTracking() {
     const fbclid = params.get('fbclid') || ''
     const campaign = params.get('p') || params.get('utm_campaign') || ''
 
-    if (gclid) setToStorage('gclid', gclid)
-    if (wbraid) setToStorage('wbraid', wbraid)
-    if (gbraid) setToStorage('gbraid', gbraid)
-    if (fbclid) setToStorage('fbclid', fbclid)
-    if (campaign) setToStorage('campaign', campaign)
+    if (gclid) setToStorage('gclid', gclid, ATTRIBUTION_TTL_MS)
+    if (wbraid) setToStorage('wbraid', wbraid, ATTRIBUTION_TTL_MS)
+    if (gbraid) setToStorage('gbraid', gbraid, ATTRIBUTION_TTL_MS)
+    if (fbclid) setToStorage('fbclid', fbclid, ATTRIBUTION_TTL_MS)
+    if (campaign) setToStorage('campaign', campaign, ATTRIBUTION_TTL_MS)
   }
 
   const getClickId = (): string => getFromStorage('gclid') || getFromStorage('wbraid') || getFromStorage('gbraid')
@@ -153,6 +175,22 @@ export function useTracking() {
   }
 
   const hashPhone = async (rawPhone: string): Promise<string> => hashSha256(normalizePhoneForAds(rawPhone))
+
+  const normalizePhoneForMeta = (rawPhone: string): string => {
+    let cleaned = rawPhone.replace(/[^0-9]/g, '')
+
+    if (cleaned.startsWith('0')) {
+      cleaned = `62${cleaned.substring(1)}`
+    }
+
+    if (!cleaned.startsWith('62')) {
+      cleaned = `62${cleaned}`
+    }
+
+    return cleaned
+  }
+
+  const hashMetaPhone = async (rawPhone: string): Promise<string> => hashSha256(normalizePhoneForMeta(rawPhone))
 
   const ensureDataLayer = (): any[] => {
     if (!hasWindow()) return []
@@ -205,12 +243,156 @@ export function useTracking() {
     value: number,
     payload: TrackingPayload = {}
   ) => {
+    const basePayload = buildBasePayload(value)
+    const eventId = getEventId(eventName)
+    const fullPayload = {
+      ...basePayload,
+      ...payload,
+      event_id: eventId,
+      meta_event_id: eventId,
+    }
+
     pushDataLayer({
       event: eventName,
       conversion_id: GOOGLE_ADS_ID,
       send_to: payload.conversion_label ? `AW-${GOOGLE_ADS_ID}/${payload.conversion_label}` : undefined,
-      ...buildBasePayload(value),
-      ...payload
+      ...fullPayload
+    })
+
+    pushMetaEvent(eventName, value, fullPayload)
+  }
+
+  const getEventId = (eventName: string) => `${getOrCreateTrxId()}-${eventName}`
+
+  const getCookie = (name: string): string => {
+    if (!hasWindow()) return ''
+
+    const cookie = document.cookie
+      .split('; ')
+      .find((item) => item.startsWith(`${name}=`))
+
+    return cookie ? decodeURIComponent(cookie.split('=').slice(1).join('=')) : ''
+  }
+
+  const getFbc = (): string => {
+    const storedFbc = getCookie('_fbc')
+    if (storedFbc) return storedFbc
+
+    const fbclid = getFromStorage('fbclid')
+    return fbclid ? `fb.1.${Date.now()}.${fbclid}` : ''
+  }
+
+  const loadMetaPixel = (): Promise<void> => {
+    if (metaPixelLoadPromise) return metaPixelLoadPromise
+    if (!hasWindow()) return Promise.resolve()
+
+    metaPixelLoadPromise = new Promise<void>((resolve) => {
+      const appWindow = window as any
+
+      if (appWindow.fbq) {
+        metaPixelLoaded = true
+        resolve()
+        return
+      }
+
+      const fbq = function (...args: unknown[]) {
+        fbq.callMethod ? fbq.callMethod(...args) : fbq.queue.push(args)
+      } as any
+      fbq.push = fbq
+      fbq.loaded = true
+      fbq.version = '2.0'
+      fbq.queue = []
+
+      appWindow.fbq = fbq
+      appWindow._fbq = fbq
+
+      const script = document.createElement('script')
+      script.async = true
+      script.src = 'https://connect.facebook.net/en_US/fbevents.js'
+      script.onload = () => {
+        metaPixelLoaded = true
+        fbq('init', META_PIXEL_ID)
+        resolve()
+      }
+      script.onerror = () => resolve()
+      document.head.appendChild(script)
+    })
+
+    return metaPixelLoadPromise
+  }
+
+  const getMetaEventName = (eventName: string): string => {
+    const eventMap: Record<string, string> = {
+      [FUNNEL_EVENTS.pv.name]: 'PageView',
+      [FUNNEL_EVENTS.vc.name]: 'ViewContent',
+      [FUNNEL_EVENTS.contact.name]: 'Contact',
+      [FUNNEL_EVENTS.atc.name]: 'AddToCart',
+      [FUNNEL_EVENTS.lead.name]: 'Lead',
+    }
+
+    return eventMap[eventName] || ''
+  }
+
+  const buildMetaCustomData = (value: number, payload: TrackingPayload) => ({
+    currency: CURRENCY,
+    value,
+    content_name: PRODUCT_NAME,
+    content_category: 'hotel_booking',
+    room_type: payload.room_type,
+    room_summary: payload.room_summary,
+    room_count: payload.room_count,
+    guest_count: payload.guest_count,
+    check_in: payload.check_in,
+    check_out: payload.check_out,
+    stay_nights: payload.stay_nights,
+    breakfast: payload.breakfast,
+    total_booking_value: payload.total_booking_value,
+  })
+
+  const pushMetaEvent = (eventName: string, value: number, payload: TrackingPayload = {}) => {
+    const metaEventName = getMetaEventName(eventName)
+    if (!metaEventName) return
+
+    const eventId = String(payload.event_id || getEventId(eventName))
+    const customData = buildMetaCustomData(value, payload)
+
+    loadMetaPixel().then(() => {
+      const appWindow = window as any
+      if (!appWindow.fbq || !metaPixelLoaded) return
+      appWindow.fbq('track', metaEventName, customData, { eventID: eventId })
+    })
+
+    if (metaEventName === 'AddToCart' || metaEventName === 'Lead') {
+      sendMetaCapiEvent(metaEventName, eventId, customData)
+    }
+  }
+
+  const sendMetaCapiEvent = (eventName: string, eventId: string, customData: TrackingPayload) => {
+    if (!hasWindow()) return
+
+    const metaHashedPhone = getFromStorage('meta_hashed_phone') || getFromStorage('hashed_phone')
+    const payload = {
+      event_name: eventName,
+      event_id: eventId,
+      event_source_url: window.location.href,
+      action_source: 'website',
+      user_data: {
+        ph: metaHashedPhone ? [metaHashedPhone] : undefined,
+        fbp: getCookie('_fbp') || undefined,
+        fbc: getFbc() || undefined,
+      },
+      custom_data: customData,
+    }
+
+    fetch('/api/meta-capi', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(payload),
+      keepalive: true,
+    }).catch(() => {
+      // CAPI is a backup signal; never block the booking flow.
     })
   }
 
@@ -385,15 +567,17 @@ export function useTracking() {
     })
   }
 
-  const trackAddToCart = (roomType = '') => {
-    if (addToCartSent) return
+  const trackAddToCart = (roomType = '', payload: TrackingPayload = {}) => {
+    const trxId = getOrCreateTrxId()
+    if (addToCartSentForTrx === trxId) return
 
-    addToCartSent = true
+    addToCartSentForTrx = trxId
     loadGtm().then(() => {
       trackViewContent()
       pushTrackingEvent(FUNNEL_EVENTS.atc.name, FUNNEL_EVENTS.atc.value, {
         conversion_label: FUNNEL_EVENTS.atc.label,
-        room_type: roomType
+        room_type: roomType,
+        ...payload
       })
     })
   }
@@ -402,8 +586,10 @@ export function useTracking() {
     const hashedPhone = await hashPhone(rawPhone)
     if (!hashedPhone || hashedPhone === lastHashedPhone) return hashedPhone
 
+    const metaHashedPhone = await hashMetaPhone(rawPhone)
     lastHashedPhone = hashedPhone
-    setToStorage('hashed_phone', hashedPhone)
+    setToStorage('hashed_phone', hashedPhone, BOOKING_TTL_MS)
+    if (metaHashedPhone) setToStorage('meta_hashed_phone', metaHashedPhone, BOOKING_TTL_MS)
 
     loadGtm().then(() => {
       pushTrackingEvent(FUNNEL_EVENTS.userData.name, FUNNEL_EVENTS.userData.value, {
@@ -420,9 +606,10 @@ export function useTracking() {
   }
 
   const trackLead = async (payload: TrackingPayload = {}) => {
-    if (leadSent) return
+    const trxId = getOrCreateTrxId()
+    if (leadSentForTrx === trxId) return
 
-    leadSent = true
+    leadSentForTrx = trxId
     await loadGtm()
 
     pushTrackingEvent(FUNNEL_EVENTS.lead.name, FUNNEL_EVENTS.lead.value, {
@@ -432,8 +619,31 @@ export function useTracking() {
   }
 
   const resetTrackingIdentifiers = () => {
-    removeFromStorage('trx_id')
-    removeFromStorage('hashed_phone')
+    BOOKING_KEYS.forEach(removeFromStorage)
+    addToCartSentForTrx = ''
+    leadSentForTrx = ''
+  }
+
+  const clearBookingSession = () => {
+    resetTrackingIdentifiers()
+
+    if (!hasWindow()) return
+
+    try {
+      sessionStorage.removeItem('wisma_last_wa_url')
+      sessionStorage.removeItem('wisma_last_wa_message')
+      sessionStorage.removeItem('wisma_last_booking_payload')
+      sessionStorage.removeItem('wa_source')
+      sessionStorage.removeItem('wa_click_id')
+
+      document.cookie.split(';').forEach((cookie) => {
+        const cookieName = cookie.split('=')[0]?.trim()
+        if (!cookieName || !cookieName.startsWith(STORAGE_PREFIX)) return
+        document.cookie = `${cookieName}=; Max-Age=0; path=/`
+      })
+    } catch {
+      // Ignore storage failures in strict/private browser modes.
+    }
   }
 
   return {
@@ -453,6 +663,7 @@ export function useTracking() {
     trackUserData,
     trackLead,
     trackViewContent,
-    resetTrackingIdentifiers
+    resetTrackingIdentifiers,
+    clearBookingSession
   }
 }
