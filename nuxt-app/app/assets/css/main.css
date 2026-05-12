@@ -1927,6 +1927,15 @@ a:focus-visible {
 }
 
 @media (max-width: 720px) {
+  .lp-gallery-wrap .gallery {
+    gap: 10px;
+  }
+
+  .lp-gallery-wrap .gallery img {
+    aspect-ratio: 4 / 3;
+    height: auto;
+  }
+
   .booking-modal-overlay {
     align-items: flex-end;
     padding: 12px;
