@@ -2,7 +2,7 @@
   <div>
     <div class="lp-header">
       <div class="container">
-        <NuxtLink :to="localePath('/blog')" class="lp-back" style="color: rgba(255,255,255,0.7);">← {{ $t('nav.blog') }}</NuxtLink>
+        <NuxtLink :to="localePath('/blog')" class="lp-back lp-back-light">← {{ $t('nav.blog') }}</NuxtLink>
         <h1>{{ article?.title || 'Article' }}</h1>
       </div>
     </div>

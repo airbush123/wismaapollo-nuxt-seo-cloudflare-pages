@@ -2,7 +2,7 @@
   <div>
     <div class="lp-header">
       <div class="container">
-        <NuxtLink to="/" class="lp-back" style="color: rgba(255,255,255,0.7);">← {{ $t('common.backHome') }}</NuxtLink>
+        <NuxtLink to="/" class="lp-back lp-back-light">← {{ $t('common.backHome') }}</NuxtLink>
         <h1>{{ $t('faq.pageTitle') }}</h1>
         <p>{{ $t('faq.pageDesc') }}</p>
       </div>
