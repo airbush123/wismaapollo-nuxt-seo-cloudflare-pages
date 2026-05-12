@@ -42,5 +42,4 @@
 
 <script setup lang="ts">
 const localePath = useLocalePath()
-useScrollAnimation()
 </script>

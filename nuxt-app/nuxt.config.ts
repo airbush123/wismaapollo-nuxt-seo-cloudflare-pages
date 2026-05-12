@@ -4,6 +4,9 @@ export default defineNuxtConfig({
   devtools: { enabled: false },
   ssr: true,
   srcDir: 'app',
+  features: {
+    inlineStyles: true,
+  },
 
   site: {
     url: 'https://wisma-apollo.my.id',
