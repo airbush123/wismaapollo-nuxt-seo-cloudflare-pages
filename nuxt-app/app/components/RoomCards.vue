@@ -12,6 +12,9 @@
             src="/images/gallery/single-bed-apollo.webp"
             alt="Single Bed - Penginapan Kuala Kurun Wisma Apollo"
             class="single-img"
+            width="576"
+            height="1024"
+            quality="65"
             loading="lazy"
           />
         </div>
@@ -49,6 +52,9 @@
           <NuxtImg
             src="/images/gallery/double-bed-apollo.webp"
             alt="Double Bed - Hotel Kuala Kurun Wisma Apollo"
+            width="576"
+            height="1024"
+            quality="65"
             loading="lazy"
           />
         </div>
