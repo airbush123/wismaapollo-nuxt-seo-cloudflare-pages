@@ -1,7 +1,7 @@
 ---
 title: 'Bundaran Kuala Kurun: Simbol Kota yang Menyimpan Pesona'
 description: 'Bundaran Kuala Kurun: Simbol Kota yang Menyimpan Pesona.'
-category: 'Info'
+category: 'Wisata'
 image: '/images/blog/bundaran-kuala-kurun.webp'
 ---
 

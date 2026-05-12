@@ -1,7 +1,7 @@
 ---
 title: 'Penginapan Murah di Kuala Kurun – Rekomendasi 200 Ribuan Terbaik'
 description: 'Cari penginapan murah di Kuala Kurun? Wisma Apollo menawarkan kenyamanan setara hotel dengan harga mulai Rp200.000/malam.'
-category: 'Info'
+category: 'Penginapan'
 image: '/images/blog/penginapan-murah-kuala-kurun.jpg'
 ---
 

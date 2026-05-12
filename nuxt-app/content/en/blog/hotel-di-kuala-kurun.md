@@ -1,7 +1,7 @@
 ---
 title: 'Hotel in Kuala Kurun: Comfortable and Strategic Lodging Recommendation'
 description: 'Wisma Apollo offers prices starting from IDR 200,000, near Cafe Rumah Teduh, with en-suite bathroom, cold AC, and fast WiFi!'
-category: 'Tips'
+category: 'Accommodation'
 image: '/images/blog/hotel-di-kuala-kurun.webp'
 ---
 

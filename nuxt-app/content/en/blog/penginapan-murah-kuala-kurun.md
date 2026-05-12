@@ -1,7 +1,7 @@
 ---
 title: 'Affordable Lodging in Kuala Kurun – Best IDR 200k Recommendations'
 description: 'Looking for affordable lodging in Kuala Kurun? Wisma Apollo offers hotel-level comfort with prices starting from IDR 200,000/night.'
-category: 'Info'
+category: 'Accommodation'
 image: '/images/blog/penginapan-murah-kuala-kurun.jpg'
 ---
 

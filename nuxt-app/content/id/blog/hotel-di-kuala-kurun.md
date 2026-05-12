@@ -1,7 +1,7 @@
 ---
 title: 'Hotel di Kuala Kurun: Rekomendasi Penginapan Nyaman dan Strategis'
 description: 'Wisma Apollo menawarkan harga mulai Rp200.000, dekat Cafe Rumah Teduh, dengan kamar mandi dalam, AC dingin, dan WiFi kencang!'
-category: 'Tips'
+category: 'Penginapan'
 image: '/images/blog/hotel-di-kuala-kurun.webp'
 ---
 

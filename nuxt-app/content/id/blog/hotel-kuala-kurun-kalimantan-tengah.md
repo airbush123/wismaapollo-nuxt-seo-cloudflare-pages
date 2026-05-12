@@ -1,7 +1,7 @@
 ---
 title: 'Hotel di Kuala Kurun, Kalimantan Tengah – Referensi Terbaik'
 description: 'Sedang mencari hotel dan penginapan di Kuala Kurun, Kalimantan Tengah? Temukan akomodasi terpercaya yang nyaman, strategis, dan murah di Wisma Apollo.'
-category: 'Info'
+category: 'Penginapan'
 image: '/images/blog/hotel-kuala-kurun-kalimantan-tengah.jpg'
 ---
 
