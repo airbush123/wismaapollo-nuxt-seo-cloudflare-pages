@@ -15,6 +15,39 @@
           <p v-for="(p, j) in section.paragraphs" :key="j">{{ p }}</p>
         </div>
 
+        <div v-if="pageData.priceRows?.length" class="lp-price">
+          <h2>{{ pageData.priceHeading || 'Harga Kamar' }}</h2>
+          <div class="lp-price-table" role="table">
+            <div class="lp-price-row lp-price-head" role="row">
+              <span role="columnheader">Tipe Kamar</span>
+              <span role="columnheader">Harga</span>
+            </div>
+            <div v-for="(row, i) in pageData.priceRows" :key="i" class="lp-price-row" role="row">
+              <span role="cell">{{ row.type }}</span>
+              <strong role="cell">{{ row.price }}</strong>
+            </div>
+          </div>
+          <p v-if="pageData.priceNote">{{ pageData.priceNote }}</p>
+        </div>
+
+        <div v-if="pageData.gallery?.length" class="lp-gallery-wrap">
+          <h2>{{ pageData.galleryHeading || 'Foto Wisma Apollo' }}</h2>
+          <div class="gallery" role="list">
+            <NuxtImg
+              v-for="(image, i) in pageData.gallery"
+              :key="i"
+              :src="image.src"
+              :alt="image.alt"
+              width="400"
+              height="300"
+              loading="lazy"
+              format="webp"
+              sizes="sm:50vw md:25vw"
+              role="listitem"
+            />
+          </div>
+        </div>
+
         <div v-if="pageData.faqs?.length" class="lp-faq">
           <h2>Pertanyaan Seputar {{ pageData.title }}</h2>
           <div v-for="(faq, i) in pageData.faqs" :key="i" class="lp-faq-item">
@@ -55,25 +88,68 @@ const slug = computed(() => {
 const fallbackPages: Record<string, any> = {
   'hotel-kuala-kurun': {
     title: 'Hotel Kuala Kurun - Wisma Apollo',
-    subtitle: 'Hotel terbaik & murah di Gunung Mas, Kalimantan Tengah',
-    meta: 'Hotel Kuala Kurun terbaik dengan fasilitas lengkap. Kamar bersih, AC, WiFi gratis. Harga mulai Rp200.000/malam.',
+    seoTitle: 'Hotel Kuala Kurun - Wisma Apollo | Mulai Rp200.000',
+    subtitle: 'Hotel strategis, bersih, dan nyaman di pusat Kuala Kurun',
+    meta: 'Cari hotel Kuala Kurun yang bersih dan strategis? Wisma Apollo menyediakan kamar AC, WiFi, TV Android, shower, parkir luas, mulai Rp200.000/malam.',
     sections: [
       {
         heading: 'Kenapa Wisma Apollo Jadi Hotel Pilihan di Kuala Kurun?',
         paragraphs: [
-          'Wisma Apollo hadir sebagai pilihan hotel dan penginapan nyaman di Kuala Kurun untuk tamu dinas, keluarga, maupun perjalanan kerja.',
-          'Dengan lokasi strategis di Jl. Letjen Soeprapto No.56, tamu mudah menjangkau pusat kota, kuliner, cafe, dan area perkantoran.'
+          'Kalau kamu mencari hotel Kuala Kurun yang bersih, nyaman, dan harganya masuk akal, Wisma Apollo adalah pilihan yang praktis. Lokasinya berada di Jl. Letjen Soeprapto No.56, tepat di area pusat kota Kuala Kurun, Kabupaten Gunung Mas.',
+          'Wisma Apollo cocok untuk tamu dinas, pekerja proyek, sales, keluarga, maupun tamu yang transit setelah perjalanan darat. Suasananya tenang, proses reservasi mudah lewat WhatsApp, dan kamar disiapkan agar tamu bisa langsung istirahat dengan nyaman.'
         ]
       },
       {
-        heading: 'Fasilitas Lengkap dengan Harga Terjangkau',
+        heading: 'Fasilitas Hotel Wisma Apollo',
         paragraphs: [
-          'Kamar dilengkapi AC, TV Android 32", WiFi gratis, kamar mandi dalam shower, spring bed nyaman, linen bersih, dan suasana yang tenang.',
-          'Harga promo mulai Rp200.000/malam untuk Single Bed dan Rp250.000/malam untuk Double Bed.'
+          'Setiap kamar dilengkapi AC, TV Android 32 inch, WiFi gratis, kamar mandi dalam dengan shower, handuk bersih, amenities, spring bed nyaman, serta dinding dan plafon kedap suara untuk istirahat yang lebih tenang.',
+          'Tamu juga mendapatkan air mineral, kopi, dan teh gratis setiap hari. Area parkir luas, lingkungan tenang, dan bantuan resepsionis membuat Wisma Apollo nyaman untuk menginap harian maupun beberapa malam.'
+        ]
+      },
+      {
+        heading: 'Lokasi Hotel di Pusat Kuala Kurun',
+        paragraphs: [
+          'Wisma Apollo berada di Kelurahan Tampang Tumbang Anjir, Kecamatan Kurun, Kabupaten Gunung Mas, Kalimantan Tengah. Dari penginapan ini, tamu mudah menjangkau area perkantoran, kuliner, cafe, minimarket, dan titik aktivitas utama di Kuala Kurun.',
+          'Bagi tamu dari Palangka Raya atau daerah sekitar Gunung Mas, lokasi di jalan utama membantu perjalanan lebih mudah. Begitu masuk kota Kuala Kurun, Wisma Apollo mudah ditemukan dan cocok sebagai tempat istirahat yang strategis.'
+        ]
+      },
+      {
+        heading: 'Hotel Kuala Kurun untuk Tamu Dinas dan Keluarga',
+        paragraphs: [
+          'Sebagian besar tamu Wisma Apollo datang untuk urusan kerja, dinas pemerintahan, proyek, kunjungan keluarga, atau perjalanan singkat. Karena itu, fasilitas kamar dibuat sederhana tetapi lengkap: bersih, sejuk, tenang, dan mudah dipesan.',
+          'Jika kamu membutuhkan hotel di Kuala Kurun yang tidak ribet, punya harga transparan, dan tetap nyaman untuk tidur nyenyak, Wisma Apollo layak masuk daftar pilihan utama.'
         ]
       }
     ],
-    faqs: []
+    priceHeading: 'Harga Kamar Hotel di Kuala Kurun',
+    priceRows: [
+      { type: 'Single Bed', price: 'Mulai Rp200.000/malam' },
+      { type: 'Double Bed', price: 'Mulai Rp250.000/malam' },
+      { type: 'Extra Bed + Bantal', price: '+Rp50.000' },
+      { type: 'Sarapan by request', price: '+Rp25.000/pack' }
+    ],
+    priceNote: 'Harga sudah termasuk fasilitas kamar, WiFi, air mineral, kopi, dan teh. Untuk memastikan ketersediaan kamar, reservasi paling cepat dilakukan melalui WhatsApp resmi Wisma Apollo.',
+    galleryHeading: 'Foto Hotel Wisma Apollo',
+    gallery: [
+      { src: '/images/gallery/wisma-apollo-hotel-kuala-kurun.webp', alt: 'Hotel Kuala Kurun - Tampak depan Wisma Apollo' },
+      { src: '/images/gallery/kamar-hotel-murah-kuala-kurun.webp', alt: 'Hotel Kuala Kurun - Fasilitas TV dan meja kerja' },
+      { src: '/images/gallery/kamar-penginapan-kuala-kurun.webp', alt: 'Hotel Kuala Kurun - Kamar single bed Wisma Apollo' },
+      { src: '/images/gallery/kamar-penginapan-murah-kuala-kurun.webp', alt: 'Hotel Kuala Kurun - Kamar mandi dalam dengan shower' }
+    ],
+    faqs: [
+      {
+        q: 'Berapa harga kamar hotel di Wisma Apollo Kuala Kurun?',
+        a: 'Harga kamar mulai Rp200.000 per malam untuk Single Bed dan Rp250.000 per malam untuk Double Bed.'
+      },
+      {
+        q: 'Apakah Wisma Apollo cocok untuk tamu dinas?',
+        a: 'Ya. Lokasinya strategis di pusat Kuala Kurun, kamar bersih, tersedia WiFi gratis, AC, TV Android, dan suasana tenang untuk istirahat setelah bekerja.'
+      },
+      {
+        q: 'Bagaimana cara booking hotel Wisma Apollo?',
+        a: 'Reservasi bisa langsung melalui WhatsApp di 0818 232 021 dengan mengirim nama, tanggal check-in, tipe kamar, dan jumlah tamu.'
+      }
+    ]
   },
   'penginapan-kuala-kurun': {
     title: 'Penginapan Kuala Kurun - Wisma Apollo',
@@ -161,10 +237,16 @@ const pageData = computed(() => {
   if (data && typeof data === 'object' && typeof data.title === 'string') {
     return {
       title: String(data.title),
+      seoTitle: String(data.seoTitle || data.title),
       subtitle: String(data.subtitle || ''),
       meta: String(data.meta || ''),
       sections: Array.isArray(data.sections) ? data.sections : [],
-      faqs: Array.isArray(data.faqs) ? data.faqs : []
+      faqs: Array.isArray(data.faqs) ? data.faqs : [],
+      priceHeading: String(data.priceHeading || ''),
+      priceRows: Array.isArray(data.priceRows) ? data.priceRows : [],
+      priceNote: String(data.priceNote || ''),
+      galleryHeading: String(data.galleryHeading || ''),
+      gallery: Array.isArray(data.gallery) ? data.gallery : []
     }
   }
 
@@ -183,9 +265,9 @@ const pageData = computed(() => {
 })
 
 useSeoMeta({
-  title: () => pageData.value.title,
+  title: () => pageData.value.seoTitle || pageData.value.title,
   description: () => pageData.value.meta,
-  ogTitle: () => pageData.value.title,
+  ogTitle: () => pageData.value.seoTitle || pageData.value.title,
   ogDescription: () => pageData.value.meta,
   ogUrl: () => `https://wisma-apollo.my.id/${slug.value}`,
 })

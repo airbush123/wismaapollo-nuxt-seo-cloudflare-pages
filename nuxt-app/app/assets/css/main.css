@@ -1625,6 +1625,43 @@ a:focus-visible {
   line-height: 1.7;
 }
 
+.lp-price-table {
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  overflow: hidden;
+  margin: 12px 0 16px;
+  background: var(--white);
+}
+
+.lp-price-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(120px, 0.8fr);
+  gap: 12px;
+  padding: 13px 16px;
+  border-top: 1px solid var(--border);
+  font-size: 0.88rem;
+  color: var(--text2);
+}
+
+.lp-price-row:first-child {
+  border-top: 0;
+}
+
+.lp-price-head {
+  background: rgba(27, 67, 50, 0.06);
+  color: var(--forest);
+  font-weight: 700;
+}
+
+.lp-price-row strong {
+  color: var(--forest);
+  text-align: right;
+}
+
+.lp-gallery-wrap {
+  margin-top: 34px;
+}
+
 .lp-faq {
   margin-top: 34px;
 }
