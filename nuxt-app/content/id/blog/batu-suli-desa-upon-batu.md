@@ -62,7 +62,7 @@ image: '/images/blog/batu-suli-desa-upon-batu.webp'
 <div class="cta-box">
 <h3>Pulihkan Energi di Penginapan Paling Strategis!</h3>
 <p>Otot kaki pegal sehabis menyisir tebing dan sungai Batu Suli Seharian? Terhubung lagi dengan dunia
-                    maya sambil membantai lelah Anda di atas kasur super empuk <strong>Wisma Apollo Kuala
+                    maya sambil membantai lelah Anda di atas kasur super empuk <strong><a href="https://wisma-apollo.my.id/"><strong>Wisma Apollo</strong></a> Kuala
                         Kurun!</strong> Jaraknya yang ideal menuju berbagai rute wisata di Kabupaten Gunung Mas
                     menjadikan kami primadona tujuan transit bagi turis domestik dan *backpacker*. Dengan harga semalam
                     yang **ramah kantong**, Anda akan dimanjakan kamar full fasilitas bak hotel berbintang: kamar mandi

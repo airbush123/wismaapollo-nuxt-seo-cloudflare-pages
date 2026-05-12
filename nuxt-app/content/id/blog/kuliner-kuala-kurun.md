@@ -26,7 +26,7 @@ image: '/images/gallery/hotel-di-kuala-kurun.webp'
 <p>Sebagian besar kuliner khas bisa ditemukan di:</p>
 <ul>
 <li><strong>Pasar Tradisional Kuala Kurun</strong> – Buka pagi sampai siang</li>
-<li><strong>Warung-warung di sekitar Jl. Letjen Soeprapto</strong> – Dekat Wisma Apollo</li>
+<li><strong>Warung-warung di sekitar Jl. Letjen Soeprapto</strong> – Dekat <a href="https://wisma-apollo.my.id/"><strong>Wisma Apollo</strong></a></li>
 <li><strong>Cafe &amp; rumah makan di pusat kota</strong> – Menu modern dan tradisional</li>
 </ul>
 <h2>Cara Menikmati Kuliner Kuala Kurun dalam Satu Hari</h2>

@@ -56,7 +56,7 @@ image: '/images/blog/air-terjun-batu-mahasur.webp'
             kebutuhan mendadak lebih cepat dicari, dan titik keberangkatan ke berbagai arah menjadi lebih praktis.
             Setelah pulang dari wisata alam, tamu biasanya membutuhkan kamar yang bersih, AC yang sejuk, kamar mandi
             dalam, dan kasur yang nyaman untuk memulihkan tenaga.</p>
-<p>Wisma Apollo bisa menjadi base camp perjalanan karena berada di Jl. Letjen Soeprapto No.56, Kuala Kurun.
+<p><a href="https://wisma-apollo.my.id/"><strong>Wisma Apollo</strong></a> bisa menjadi base camp perjalanan karena berada di Jl. Letjen Soeprapto No.56, Kuala Kurun.
             Kamar tersedia mulai Rp200.000 per malam, dengan fasilitas seperti AC, WiFi gratis, TV Android, shower,
             handuk, amenities, parkir luas, dan suasana yang tenang. Dengan tempat menginap yang jelas, wisatawan bisa
             lebih fokus menikmati Gunung Mas tanpa khawatir mencari kamar saat sudah lelah.</p>

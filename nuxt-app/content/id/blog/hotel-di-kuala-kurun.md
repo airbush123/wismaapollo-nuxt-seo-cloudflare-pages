@@ -11,7 +11,7 @@ image: '/images/blog/hotel-di-kuala-kurun.webp'
                 ring-1 kota Kuala Kurun. Tempat singgah paling favorit yang sangat ramah untuk kebutuhan perjalanan
                 dinas PNS, pekerja *traveling*, *sales* area, maupun keluarga yang menghabiskan liburan akhir pekan.</p>
 <h2>📍 Lokasi Super Strategis: Dekat Cafe Hits & Laundry</h2>
-<p>Beralamat sah di Jl. Letjen Soeprapto No. 56, Kuala Kurun, Kabupaten Gunung Mas, Wisma Apollo diberkati
+<p>Beralamat sah di Jl. Letjen Soeprapto No. 56, Kuala Kurun, Kabupaten Gunung Mas, <a href="https://wisma-apollo.my.id/"><strong>Wisma Apollo</strong></a> diberkati
                 dengan kemudahan akses sentral. Menginap di mari artinya Anda dikelilingi oleh pilar fasilitas penunjang
                 yang pasti Anda cari dan inginkan:</p>
 <ol>

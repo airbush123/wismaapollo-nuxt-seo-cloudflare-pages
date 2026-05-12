@@ -75,7 +75,7 @@ image: '/images/blog/air-terjun-batu-mahasur.webp'
             Menginap di pusat Kuala Kurun membuat perjalanan pulang dari destinasi wisata terasa lebih praktis. Kamu
             bisa mandi, mengganti pakaian, mengisi daya ponsel, lalu mencari makan malam di sekitar kota tanpa harus
             menempuh perjalanan tambahan yang melelahkan.</p>
-<p>Wisma Apollo cocok menjadi pilihan penginapan setelah berkunjung ke Air Terjun Batu Mahasur. Lokasinya di
+<p><a href="https://wisma-apollo.my.id/"><strong>Wisma Apollo</strong></a> cocok menjadi pilihan penginapan setelah berkunjung ke Air Terjun Batu Mahasur. Lokasinya di
             Jl. Letjen Soeprapto No.56, Kuala Kurun, dengan kamar mulai Rp200.000 per malam. Fasilitas seperti AC, WiFi
             gratis, TV Android, shower, handuk, amenities, dan parkir luas membantu tamu memulihkan tenaga setelah
             seharian menikmati wisata alam Gunung Mas.</p>

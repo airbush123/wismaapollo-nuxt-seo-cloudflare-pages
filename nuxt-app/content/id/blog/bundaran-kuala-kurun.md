@@ -60,7 +60,7 @@ image: '/images/blog/bundaran-kuala-kurun.webp'
 <div class="cta-box">
 <h3>Hotel Paling Strategis Dekat Bundaran!</h3>
 <p>Mau langsung istirahat tanpa capek menembus macet setelah hunting kuliner di kawasan Bundaran?
-<strong>Wisma Apollo Kuala Kurun</strong> jawabannya! Berada di jantung ring-1 kota, kamar adem full
+<a href="https://wisma-apollo.my.id/"><strong>Wisma Apollo Kuala Kurun</strong></a> jawabannya! Berada di jantung ring-1 kota, kamar adem full
                     AC, kasur empuk, TV layar datar Android 32 Inch, dan WiFi *unlimited* kenceng kami rancang untuk
                     memulihkan energi Anda besok hari. Semuanya ditawarkan dari range harga Rp200.000 saja per-malamnya!
 </p>

@@ -10,7 +10,7 @@ image: '/images/gallery/penginapan-murah-kuala-kurun.webp'
             terjangkau bisa jadi tantangan jika kamu belum tahu tips-nya.</p>
 <h2>1. Pilih Lokasi Strategis</h2>
 <p>Pastikan penginapan yang kamu pilih dekat dengan pusat kota. Lokasi strategis memudahkan akses ke
-            perkantoran, cafe, dan tempat kuliner. <strong>Wisma Apollo</strong> misalnya, terletak di Jl. Letjen
+            perkantoran, cafe, dan tempat kuliner. <a href="https://wisma-apollo.my.id/"><strong>Wisma Apollo</strong></a> misalnya, terletak di Jl. Letjen
             Soeprapto No.56, tepat di jantung kota Kuala Kurun.</p>
 <h2>2. Cek Fasilitas Kamar</h2>
 <p>Jangan hanya tergiur harga murah. Pastikan fasilitas kamar sesuai kebutuhanmu:</p>
