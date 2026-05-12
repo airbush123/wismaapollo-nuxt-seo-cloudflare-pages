@@ -9,7 +9,18 @@
 
     <div class="blog-article">
       <div class="container">
-        <ContentRenderer v-if="article" :value="article" />
+        <template v-if="article">
+          <NuxtImg
+            v-if="(article as any).image"
+            :src="(article as any).image"
+            :alt="(article as any).title || 'Blog Wisma Apollo'"
+            width="960"
+            height="360"
+            class="blog-hero-image"
+            loading="eager"
+          />
+          <ContentRenderer :value="article" />
+        </template>
         <div v-else style="padding: 40px 0; text-align: center; color: var(--text2);">
           <p>Artikel sedang dimuat atau belum tersedia.</p>
           <NuxtLink :to="localePath('/blog')" class="lp-back" style="margin-top: 16px;">← Kembali ke Blog</NuxtLink>
@@ -43,3 +54,13 @@ useHead({
   ],
 })
 </script>
+
+<style scoped>
+.blog-hero-image {
+  width: 100%;
+  aspect-ratio: 8 / 3;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 0 0 28px;
+}
+</style>
