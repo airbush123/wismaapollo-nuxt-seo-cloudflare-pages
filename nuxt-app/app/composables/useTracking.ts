@@ -623,7 +623,7 @@ export function useTracking() {
         triggered = true
         triggerLoad()
       }
-    }, 8500)
+    }, 5000)
   }
 
   const trackContact = (source = 'whatsapp') => {
