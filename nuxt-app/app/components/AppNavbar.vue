@@ -52,6 +52,7 @@
       class="mobile-menu"
       role="menu"
       :aria-hidden="!uiStore.isMenuOpen"
+      :inert="!uiStore.isMenuOpen"
     >
       <NuxtLink :to="localePath('/#tentang')" role="menuitem" @click="uiStore.closeMenu()">{{ $t('nav.about') }}</NuxtLink>
       <NuxtLink :to="localePath('/#fasilitas')" role="menuitem" @click="uiStore.closeMenu()">{{ $t('nav.facilities') }}</NuxtLink>

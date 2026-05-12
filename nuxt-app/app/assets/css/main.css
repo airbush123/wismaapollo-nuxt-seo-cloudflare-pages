@@ -1935,6 +1935,47 @@ a:focus-visible {
 }
 
 @media (max-width: 720px) {
+  .lang-switch {
+    background: rgba(27, 67, 50, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    border-radius: 999px;
+    padding: 3px;
+  }
+
+  .lang-btn {
+    color: #FFFFFF;
+    background: rgba(0, 0, 0, 0.22);
+    border-color: rgba(255, 255, 255, 0.48);
+  }
+
+  .lang-btn.active {
+    color: #0F3D2E;
+    background: #FFFFFF;
+    border-color: #FFFFFF;
+  }
+
+  .lang-btn:hover:not(.active) {
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+    background: rgba(255, 255, 255, 0.18);
+  }
+
+  .footer-brand h3 {
+    color: #FFF4D7;
+  }
+
+  .footer-brand p,
+  .footer-copy p {
+    color: rgba(255, 255, 255, 0.94);
+    opacity: 1;
+  }
+
+  .footer-links a,
+  .social-row a {
+    color: rgba(255, 255, 255, 0.92);
+    opacity: 1;
+  }
+
   .lp-gallery-wrap .gallery {
     gap: 10px;
   }
