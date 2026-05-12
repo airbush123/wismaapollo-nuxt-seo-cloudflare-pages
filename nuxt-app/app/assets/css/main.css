@@ -1949,15 +1949,16 @@ a:focus-visible {
     -webkit-backdrop-filter: none;
     border-bottom-color: transparent;
     box-shadow: none;
+    transform: translateY(0);
   }
 
   .nav.scrolled {
-    top: 12px;
     background: transparent;
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
     border-bottom-color: transparent;
     box-shadow: none;
+    transform: translateY(-6px);
   }
 
   body {

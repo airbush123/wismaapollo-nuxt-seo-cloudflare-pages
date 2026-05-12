@@ -18,14 +18,37 @@ import { useBookingStore } from '~/stores/useBookingStore'
 
 const uiStore = useUIStore()
 const bookingStore = useBookingStore()
+let removeScrollListener: (() => void) | undefined
 
 // Initialize tracking on client
 onMounted(() => {
   bookingStore.initTracking()
 
-  // Scroll listener for navbar
-  window.addEventListener('scroll', () => {
-    uiStore.setScrolled(window.scrollY > 40)
-  }, { passive: true })
+  let isTicking = false
+  let lastScrolled = window.scrollY > 40
+  uiStore.setScrolled(lastScrolled)
+
+  const updateScrolled = () => {
+    isTicking = false
+    const nextScrolled = window.scrollY > 40
+    if (nextScrolled !== lastScrolled) {
+      lastScrolled = nextScrolled
+      uiStore.setScrolled(nextScrolled)
+    }
+  }
+
+  const onScroll = () => {
+    if (!isTicking) {
+      isTicking = true
+      window.requestAnimationFrame(updateScrolled)
+    }
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true })
+  removeScrollListener = () => window.removeEventListener('scroll', onScroll)
+})
+
+onUnmounted(() => {
+  removeScrollListener?.()
 })
 </script>

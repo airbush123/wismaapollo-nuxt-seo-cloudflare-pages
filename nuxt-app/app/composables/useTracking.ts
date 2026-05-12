@@ -53,6 +53,8 @@ let contactSent = false
 let addToCartSentForTrx = ''
 let leadSentForTrx = ''
 let vcScrollHandler: (() => void) | null = null
+let vcScrollRaf = 0
+let vcObserver: IntersectionObserver | null = null
 let lastHashedPhone = ''
 
 export function useTracking() {
@@ -505,10 +507,22 @@ export function useTracking() {
   }
 
   const clearVcScrollListener = () => {
-    if (!hasWindow() || !vcScrollHandler) return
+    if (!hasWindow()) return
 
-    window.removeEventListener('scroll', vcScrollHandler)
-    vcScrollHandler = null
+    if (vcScrollHandler) {
+      window.removeEventListener('scroll', vcScrollHandler)
+      vcScrollHandler = null
+    }
+
+    if (vcScrollRaf) {
+      window.cancelAnimationFrame(vcScrollRaf)
+      vcScrollRaf = 0
+    }
+
+    if (vcObserver) {
+      vcObserver.disconnect()
+      vcObserver = null
+    }
   }
 
   const trackViewContent = () => {
@@ -525,16 +539,36 @@ export function useTracking() {
   }
 
   const attachVcScrollTracking = () => {
-    if (!hasWindow() || landingVcSent || vcScrollHandler) return
+    if (!hasWindow() || landingVcSent || vcScrollHandler || vcObserver) return
 
-    vcScrollHandler = () => {
-      if (getScrollProgress() >= 50) {
-        trackViewContent()
+    if ('IntersectionObserver' in window) {
+      const target = document.querySelector('#kamar') || document.querySelector('#fasilitas') || document.querySelector('main')
+      if (target) {
+        vcObserver = new IntersectionObserver(
+          (entries) => {
+            if (entries.some((entry) => entry.isIntersecting)) {
+              trackViewContent()
+            }
+          },
+          { threshold: 0.01, rootMargin: '0px 0px -35% 0px' }
+        )
+        vcObserver.observe(target)
+        return
       }
     }
 
+    vcScrollHandler = () => {
+      if (vcScrollRaf) return
+
+      vcScrollRaf = window.requestAnimationFrame(() => {
+        vcScrollRaf = 0
+        if (getScrollProgress() >= 50) {
+          trackViewContent()
+        }
+      })
+    }
+
     window.addEventListener('scroll', vcScrollHandler, { passive: true })
-    vcScrollHandler()
   }
 
   const trackPageView = () => {
