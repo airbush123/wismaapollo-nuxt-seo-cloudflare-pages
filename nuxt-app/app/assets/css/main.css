@@ -1702,7 +1702,7 @@ a:focus-visible {
 }
 
 .lp-back-light {
-  color: rgba(255, 255, 255, 0.94);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .lp-back-light:hover {
@@ -2005,6 +2005,10 @@ a:focus-visible {
 }
 
 @media (min-width: 768px) {
+  .lp-back-light {
+    color: rgba(255, 255, 255, 0.94);
+  }
+
   .nav {
     top: 18px;
     background: transparent;
