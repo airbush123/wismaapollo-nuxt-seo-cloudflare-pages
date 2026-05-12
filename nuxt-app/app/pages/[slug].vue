@@ -65,20 +65,41 @@
 </template>
 
 <script setup lang="ts">
-import idMessages from '../../locales/id.json'
-import enMessages from '../../locales/en.json'
+import idMessagesRaw from '../../locales/id.json?raw'
+import enMessagesRaw from '../../locales/en.json?raw'
+import zhMessagesRaw from '../../locales/zh.json?raw'
 
 const route = useRoute()
 
 const { locale } = useI18n()
 const localePath = useLocalePath()
 
+const parseMessages = (messages: string) => JSON.parse(messages)
 const normalizeMessages = (messages: any) => messages?.default || messages
 
 const messagesByLocale = {
-  id: normalizeMessages(idMessages),
-  en: normalizeMessages(enMessages),
+  id: parseMessages(idMessagesRaw),
+  en: parseMessages(enMessagesRaw),
+  zh: parseMessages(zhMessagesRaw),
 } as const
+
+const resolveLocaleMessages = (messages: any, localeCode: string) => {
+  const normalized = normalizeMessages(messages)
+
+  if (normalized?.pages) {
+    return normalized
+  }
+
+  if (normalized?.[localeCode]?.pages) {
+    return normalized[localeCode]
+  }
+
+  if (normalized?.id?.pages) {
+    return normalized.id
+  }
+
+  return normalized || {}
+}
 
 const slug = computed(() => {
   const value = route.params.slug
@@ -230,7 +251,8 @@ const fallbackPages: Record<string, any> = {
 
 // Fetch localized page data directly so footer SEO pages never render empty.
 const pageData = computed(() => {
-  const messages = messagesByLocale[locale.value as keyof typeof messagesByLocale] || idMessages
+  const rawMessages = messagesByLocale[locale.value as keyof typeof messagesByLocale] || messagesByLocale.id
+  const messages = resolveLocaleMessages(rawMessages, locale.value)
   const currentSlug = slug.value
   const data = (messages.pages as Record<string, any>)?.[currentSlug]
   
