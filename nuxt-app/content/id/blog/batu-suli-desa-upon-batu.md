@@ -82,3 +82,29 @@ image: '/images/blog/batu-suli-desa-upon-batu.webp'
                     Tanya Ketersediaan Kamar
                 </a>
             </div>
+
+            <h2>Tips Berkunjung ke Batu Suli</h2>
+            <p>Sebelum berangkat ke Batu Suli, pastikan kamu sudah mengecek kondisi cuaca, rute, dan waktu tempuh dari
+                Kuala Kurun. Destinasi alam lebih nyaman dikunjungi saat pagi atau siang hari karena cahaya lebih baik
+                untuk melihat pemandangan dan perjalanan pulang tidak terlalu malam. Gunakan alas kaki yang nyaman,
+                bawa air minum, dan siapkan uang tunai secukupnya untuk kebutuhan kecil di perjalanan.</p>
+            <p>Jika datang bersama keluarga atau teman, jangan memaksakan jadwal terlalu padat. Nikmati perjalanan
+                dengan ritme santai, berhenti jika perlu, dan tetap menjaga kebersihan lokasi. Batu Suli akan terasa
+                lebih berkesan jika kamu datang dengan persiapan yang cukup dan sikap menghargai alam sekitar.</p>
+
+            <h2>Menginap di Kuala Kurun Setelah Menjelajah</h2>
+            <p>Setelah mengunjungi Batu Suli atau destinasi alam lain di Gunung Mas, menginap di pusat Kuala Kurun bisa
+                membuat perjalanan lebih praktis. Kamu bisa kembali ke kota untuk mandi, mencari makan, mengisi daya
+                ponsel, dan beristirahat sebelum agenda berikutnya. Ini penting terutama untuk tamu dari luar kota yang
+                belum terlalu mengenal rute sekitar.</p>
+            <p>Wisma Apollo berada di Jl. Letjen Soeprapto No.56, Kuala Kurun, dengan kamar mulai Rp200.000 per malam.
+                Fasilitas seperti AC, WiFi gratis, TV Android, kamar mandi dalam, shower, handuk, amenities, dan parkir
+                luas membantu tamu memulihkan tenaga setelah perjalanan alam. Dengan penginapan yang jelas, rencana
+                wisata ke Batu Suli bisa terasa lebih aman, terarah, dan nyaman.</p>
+            <p>Untuk hasil perjalanan yang lebih baik, jangan lupa memberi jeda antara agenda wisata dan perjalanan
+                pulang. Gunakan waktu sore untuk makan, membersihkan diri, dan mengecek kembali barang bawaan. Jika
+                masih ada agenda esok hari di Gunung Mas, menginap satu malam di Kuala Kurun akan membantu tubuh lebih
+                siap dibanding langsung melanjutkan perjalanan dalam kondisi lelah.</p>
+            <p>Wisata alam seperti Batu Suli paling nyaman dinikmati dengan ekspektasi yang realistis. Siapkan waktu
+                untuk perjalanan, hormati kondisi setempat, dan jangan lupa bertanya kepada warga lokal jika membutuhkan
+                arahan. Dengan begitu, kunjungan terasa lebih aman sekaligus lebih menghargai lingkungan sekitar.</p>

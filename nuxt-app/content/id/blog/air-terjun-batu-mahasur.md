@@ -58,6 +58,36 @@ image: '/images/blog/air-terjun-batu-mahasur.webp'
                 makanan. Jangan tinggalkan jejak sampah di sekitar air terjun.</li>
         </ul>
 
+        <h2>Persiapan Sebelum Berangkat</h2>
+        <p>Sebelum menuju Air Terjun Batu Mahasur, pastikan kondisi kendaraan dan fisik dalam keadaan baik. Destinasi
+            alam seperti ini lebih nyaman dikunjungi saat cuaca cerah, karena jalur menuju area air terjun bisa terasa
+            lebih licin setelah hujan. Gunakan alas kaki yang tidak mudah selip, bawa air minum, pakaian ganti, dan
+            kantong khusus untuk menyimpan barang basah.</p>
+        <p>Jika berangkat dari pusat Kuala Kurun, sebaiknya mulai perjalanan pagi atau menjelang siang agar masih punya
+            cukup waktu untuk menikmati lokasi tanpa terburu-buru. Jangan lupa membawa uang tunai secukupnya, karena
+            pembayaran digital belum tentu tersedia di semua titik perjalanan. Untuk tamu dari luar kota, tanyakan
+            kondisi rute terbaru kepada warga lokal atau pengelola penginapan sebelum berangkat.</p>
+
+        <h2>Etika Menjaga Alam Saat Berkunjung</h2>
+        <p>Air terjun dan kawasan hutan di sekitarnya akan tetap indah jika pengunjung ikut menjaga kebersihan. Bawa
+            pulang sampah pribadi, hindari merusak tanaman, dan jangan mencoret bebatuan. Jika membawa makanan, gunakan
+            wadah yang mudah dibawa kembali. Sikap sederhana seperti ini membantu menjaga Air Terjun Batu Mahasur tetap
+            nyaman untuk pengunjung berikutnya.</p>
+        <p>Pengunjung juga perlu berhati-hati saat mengambil foto. Area batu yang basah bisa licin, sehingga jangan
+            memaksakan posisi berbahaya hanya demi gambar. Jika datang bersama anak-anak, pastikan selalu ada orang
+            dewasa yang mengawasi. Keindahan wisata alam paling baik dinikmati dengan santai, aman, dan tetap menghargai
+            lingkungan sekitar.</p>
+
+        <h2>Rencana Menginap Setelah Wisata Alam</h2>
+        <p>Setelah bermain air atau trekking ringan, tubuh biasanya membutuhkan tempat istirahat yang bersih dan sejuk.
+            Menginap di pusat Kuala Kurun membuat perjalanan pulang dari destinasi wisata terasa lebih praktis. Kamu
+            bisa mandi, mengganti pakaian, mengisi daya ponsel, lalu mencari makan malam di sekitar kota tanpa harus
+            menempuh perjalanan tambahan yang melelahkan.</p>
+        <p>Wisma Apollo cocok menjadi pilihan penginapan setelah berkunjung ke Air Terjun Batu Mahasur. Lokasinya di
+            Jl. Letjen Soeprapto No.56, Kuala Kurun, dengan kamar mulai Rp200.000 per malam. Fasilitas seperti AC, WiFi
+            gratis, TV Android, shower, handuk, amenities, dan parkir luas membantu tamu memulihkan tenaga setelah
+            seharian menikmati wisata alam Gunung Mas.</p>
+
         <div class="cta-box">
             <h3>🏨 Penginapan Terbaik di Kuala Kurun</h3>
             <p>Setelah puas basah-basahan menikmati keindahan Air Terjun Batu Mahasur, tentu Anda membutuhkan tempat
@@ -65,3 +95,12 @@ image: '/images/blog/air-terjun-batu-mahasur.webp'
             <a href="https://wa.me/62818232021?text=Halo%20Wisma%20Apollo,%20saya%20ingin%20reservasi%20kamar.">💬
                 Booking Kamar Sekarang</a>
         </div>
+
+        <h2>Kesimpulan Perjalanan ke Batu Mahasur</h2>
+        <p>Air Terjun Batu Mahasur cocok untuk wisatawan yang ingin melihat sisi alam Gunung Mas tanpa kehilangan akses
+            ke pusat Kuala Kurun. Kuncinya adalah berangkat dengan persiapan yang cukup, menjaga kebersihan lokasi, dan
+            tidak memaksakan perjalanan saat cuaca kurang mendukung. Setelah pulang, pilih penginapan yang memudahkan
+            kamu mandi, istirahat, dan mencari makan malam.</p>
+        <p>Dengan rencana yang sederhana, wisata alam ini bisa menjadi pengalaman singkat yang menyegarkan. Kamu tidak
+            perlu itinerary yang terlalu padat. Cukup nikmati perjalanan, dengarkan suara air, ambil foto secukupnya,
+            lalu kembali ke kota untuk memulihkan tenaga di kamar yang nyaman.</p>
