@@ -2087,6 +2087,17 @@ a:focus-visible {
 }
 
 @media (max-width: 720px) {
+  .hero {
+    min-height: 94svh;
+    padding-bottom: 14px;
+  }
+
+  .hero-bg img {
+    object-position: 52% 38%;
+    transform: scale(1.04);
+    transform-origin: 52% 18%;
+  }
+
   .nav-tools {
     gap: 10px;
     flex: 0 0 auto;
