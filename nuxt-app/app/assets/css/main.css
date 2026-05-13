@@ -1481,6 +1481,10 @@ a:focus-visible {
   width: 100%;
 }
 
+.bm-guest-options {
+  display: none;
+}
+
 .bm-step-btn {
   display: none;
 }
@@ -2291,6 +2295,32 @@ a:focus-visible {
 
   .bm-guest-stepper input {
     text-align: center;
+  }
+
+  .bm-guest-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(38px, 1fr));
+    gap: 6px;
+    width: 100%;
+  }
+
+  .bm-guest-option {
+    min-height: 36px;
+    border: 1px solid rgba(39, 68, 50, 0.16);
+    border-radius: 10px;
+    background: #fff;
+    color: var(--forest);
+    font: inherit;
+    font-size: 0.88rem;
+    font-weight: 800;
+    cursor: pointer;
+  }
+
+  .bm-guest-option.active {
+    background: var(--forest);
+    border-color: var(--forest);
+    color: #fff;
+    box-shadow: 0 6px 14px rgba(15, 61, 46, 0.18);
   }
 
   .bm-step-btn {
