@@ -15,6 +15,15 @@
         <div class="about-copy">
           <span class="label">{{ $t('about.label') }}</span>
           <h2 id="about-title">{{ $t('about.title') }}</h2>
+          <div class="about-media-mobile">
+            <NuxtImg
+              src="/images/about-lobby-mobile.webp"
+              alt="Lobby Wisma Apollo dengan area resepsionis dan sofa tunggu"
+              width="720"
+              height="540"
+              loading="lazy"
+            />
+          </div>
           <p class="desc">{{ $t('about.desc1') }}</p>
           <p class="desc">{{ $t('about.desc2') }}</p>
           <p class="desc">{{ $t('about.desc3') }}</p>

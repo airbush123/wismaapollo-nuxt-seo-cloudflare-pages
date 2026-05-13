@@ -601,6 +601,11 @@ a:focus-visible {
   display: none;
 }
 
+.about-media-mobile,
+.facilities-media-mobile {
+  display: none;
+}
+
 /* ── USP ── */
 .usp-row {
   display: grid;
@@ -2169,9 +2174,87 @@ a:focus-visible {
     padding-bottom: 26px;
   }
 
+  .about-media-mobile {
+    display: block;
+    position: relative;
+    margin: 8px 0 22px;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border-radius: 18px;
+    border: 1px solid rgba(91, 64, 51, 0.14);
+    box-shadow: 0 18px 44px rgba(91, 64, 51, 0.12);
+    background: #fff;
+  }
+
+  .about-media-mobile::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(15, 28, 22, 0) 56%, rgba(15, 28, 22, 0.12) 100%);
+    pointer-events: none;
+  }
+
+  .about-media-mobile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 54%;
+    display: block;
+  }
+
   #fasilitas {
     padding-top: 24px;
     padding-bottom: 24px;
+  }
+
+  .facilities-media-mobile {
+    display: block;
+    position: relative;
+    margin: 0 0 22px;
+    aspect-ratio: 3 / 4;
+    min-height: 410px;
+    overflow: hidden;
+    border-radius: 18px;
+    border: 1px solid rgba(91, 64, 51, 0.14);
+    box-shadow: 0 18px 44px rgba(91, 64, 51, 0.12);
+  }
+
+  .facilities-media-mobile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 48% 50%;
+    display: block;
+  }
+
+  .facilities-media-mobile::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 52%, rgba(15, 28, 22, 0.72) 100%);
+    pointer-events: none;
+  }
+
+  .facilities-media-mobile .facilities-media-caption {
+    position: absolute;
+    left: 18px;
+    right: 18px;
+    bottom: 18px;
+    z-index: 1;
+    color: var(--white);
+  }
+
+  .facilities-media-mobile .facilities-media-caption strong {
+    display: block;
+    font-size: 1rem;
+    line-height: 1.2;
+  }
+
+  .facilities-media-mobile .facilities-media-caption span {
+    display: block;
+    margin-top: 4px;
+    font-size: 0.78rem;
+    opacity: 0.86;
   }
 
   #kamar {

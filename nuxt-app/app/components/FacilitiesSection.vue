@@ -3,6 +3,19 @@
     <div class="container anim-up">
       <span class="label">{{ $t('facilities.label') }}</span>
       <h2 id="facilities-title">{{ $t('facilities.title') }}</h2>
+      <div class="facilities-media-mobile">
+        <NuxtImg
+          src="/images/facilities-smoking-corridor-mobile.webp"
+          alt="Koridor santai outdoor Wisma Apollo dengan meja dan kursi"
+          width="720"
+          height="960"
+          loading="lazy"
+        />
+        <div class="facilities-media-caption">
+          <strong>{{ $t('facilities.smokingArea.title') }}</strong>
+          <span>{{ $t('facilities.smokingArea.desc') }}</span>
+        </div>
+      </div>
 
       <div class="facilities-layout">
         <div class="facilities-media">
