@@ -121,17 +121,33 @@
                 </div>
                 <div class="bm-room-option-field">
                   <small class="bm-room-option-label">{{ $t('booking.roomCountLabel') }}</small>
-                  <input
-                    id="bm-single-room-count"
-                    v-model.number="bookingStore.singleRoomCount"
-                    type="number"
-                    min="0"
-                    max="3"
-                    inputmode="numeric"
-                    :aria-invalid="!!bookingStore.errors.singleRoomCount"
-                    @focus="activeRoomCard = 'single'"
-                    @input="bookingStore.normalizeRoomCounts(false, 'double')"
-                  />
+                  <div class="bm-room-stepper">
+                    <button
+                      type="button"
+                      class="bm-step-btn"
+                      :disabled="bookingStore.singleRoomCount <= 0"
+                      aria-label="Kurangi Single Bed"
+                      @click.prevent="decrementRoom('single')"
+                    >-</button>
+                    <input
+                      id="bm-single-room-count"
+                      v-model.number="bookingStore.singleRoomCount"
+                      type="number"
+                      min="0"
+                      max="3"
+                      inputmode="numeric"
+                      :aria-invalid="!!bookingStore.errors.singleRoomCount"
+                      @focus="activeRoomCard = 'single'"
+                      @input="bookingStore.normalizeRoomCounts(false, 'double')"
+                    />
+                    <button
+                      type="button"
+                      class="bm-step-btn"
+                      :disabled="bookingStore.singleRoomCount >= 3"
+                      aria-label="Tambah Single Bed"
+                      @click.prevent="incrementRoom('single')"
+                    >+</button>
+                  </div>
                 </div>
               </label>
               <label
@@ -149,17 +165,33 @@
                 </div>
                 <div class="bm-room-option-field">
                   <small class="bm-room-option-label">{{ $t('booking.roomCountLabel') }}</small>
-                  <input
-                    id="bm-double-room-count"
-                    v-model.number="bookingStore.doubleRoomCount"
-                    type="number"
-                    min="0"
-                    max="1"
-                    inputmode="numeric"
-                    :aria-invalid="!!bookingStore.errors.doubleRoomCount"
-                    @focus="activeRoomCard = 'double'"
-                    @input="bookingStore.normalizeRoomCounts(false, 'single')"
-                  />
+                  <div class="bm-room-stepper">
+                    <button
+                      type="button"
+                      class="bm-step-btn"
+                      :disabled="bookingStore.doubleRoomCount <= 0"
+                      aria-label="Kurangi Double Bed"
+                      @click.prevent="decrementRoom('double')"
+                    >-</button>
+                    <input
+                      id="bm-double-room-count"
+                      v-model.number="bookingStore.doubleRoomCount"
+                      type="number"
+                      min="0"
+                      max="1"
+                      inputmode="numeric"
+                      :aria-invalid="!!bookingStore.errors.doubleRoomCount"
+                      @focus="activeRoomCard = 'double'"
+                      @input="bookingStore.normalizeRoomCounts(false, 'single')"
+                    />
+                    <button
+                      type="button"
+                      class="bm-step-btn"
+                      :disabled="bookingStore.doubleRoomCount >= 1"
+                      aria-label="Tambah Double Bed"
+                      @click.prevent="incrementRoom('double')"
+                    >+</button>
+                  </div>
                 </div>
               </label>
             </div>
@@ -335,6 +367,19 @@ const totalEstimate = computed(() => {
   return formatCurrency(total)
 })
 const selectedRoomPrice = computed(() => totalEstimate.value)
+
+function incrementRoom(type: 'single' | 'double') {
+  activeRoomCard.value = type
+  const currentCount = type === 'single' ? bookingStore.singleRoomCount : bookingStore.doubleRoomCount
+  const maxCount = type === 'single' ? 3 : 1
+  bookingStore.setRoomCount(type, Math.min(currentCount + 1, maxCount))
+}
+
+function decrementRoom(type: 'single' | 'double') {
+  activeRoomCard.value = type
+  const currentCount = type === 'single' ? bookingStore.singleRoomCount : bookingStore.doubleRoomCount
+  bookingStore.setRoomCount(type, Math.max(currentCount - 1, 0))
+}
 
 // Focus trap & initial focus
 watch(() => bookingStore.isModalOpen, (open) => {

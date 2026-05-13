@@ -157,7 +157,7 @@ export const useBookingStore = defineStore('booking', {
       if (this.singleRoomCount + this.doubleRoomCount < 1) {
         if (fallbackType === 'double') {
           this.doubleRoomCount = 1
-        } else if (fallbackType === 'single' || enforceMinimum || !fallbackType) {
+        } else if (fallbackType === 'single' || enforceMinimum) {
           this.singleRoomCount = 1
         }
       }
