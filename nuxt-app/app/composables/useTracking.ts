@@ -7,7 +7,6 @@ const GOOGLE_ADS_ID = '11473033484'
 const META_PIXEL_ID = '2098215477608895'
 const BOOKING_TTL_MS = 24 * 60 * 60 * 1000
 const ATTRIBUTION_TTL_MS = 90 * 24 * 60 * 60 * 1000
-const TRACKING_FALLBACK_DELAY_MS = 8500
 const BOOKING_KEYS = ['trx_id', 'hashed_phone', 'meta_hashed_phone']
 
 const FUNNEL_EVENTS = {
@@ -624,7 +623,7 @@ export function useTracking() {
         triggered = true
         triggerLoad()
       }
-    }, TRACKING_FALLBACK_DELAY_MS)
+    }, 6000)
   }
 
   const trackContact = (source = 'whatsapp') => {

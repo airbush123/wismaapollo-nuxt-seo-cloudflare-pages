@@ -23,6 +23,7 @@ import {
   buildWebsiteSchema,
 } from '~/composables/useSitelinkSchema'
 
+useScrollAnimation()
 const tracking = useTracking()
 const { locale } = useI18n()
 const siteUrl = SITE_URL

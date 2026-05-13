@@ -158,4 +158,5 @@ useHead(() => ({
   ],
 }))
 
+useScrollAnimation()
 </script>

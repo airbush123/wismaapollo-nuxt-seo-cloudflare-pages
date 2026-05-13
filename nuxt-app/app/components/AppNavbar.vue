@@ -82,25 +82,18 @@ const bookingStore = useBookingStore()
 const { locale, locales, setLocale } = useI18n()
 const localePath = useLocalePath()
 const isBlogVisible = computed(() => locale.value === 'id')
-let removeKeydownListener: (() => void) | undefined
 
 function handleMobileWaClick() {
   useTracking().trackContact('mobile_nav_whatsapp')
   uiStore.closeMenu()
 }
 
+// Close menu on Escape
 onMounted(() => {
-  const onKeydown = (e: KeyboardEvent) => {
+  document.addEventListener('keydown', (e: KeyboardEvent) => {
     if (e.key === 'Escape' && uiStore.isMenuOpen) {
       uiStore.closeMenu()
     }
-  }
-
-  document.addEventListener('keydown', onKeydown)
-  removeKeydownListener = () => document.removeEventListener('keydown', onKeydown)
-})
-
-onUnmounted(() => {
-  removeKeydownListener?.()
+  })
 })
 </script>

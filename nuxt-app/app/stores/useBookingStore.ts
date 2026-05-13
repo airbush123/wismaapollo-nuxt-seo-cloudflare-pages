@@ -147,19 +147,15 @@ export const useBookingStore = defineStore('booking', {
       } else {
         this.doubleRoomCount = count
       }
-      this.normalizeRoomCounts(type)
+      this.normalizeRoomCounts()
     },
 
-    normalizeRoomCounts(lastEditedType?: 'single' | 'double') {
+    normalizeRoomCounts() {
       this.singleRoomCount = Math.min(Math.max(Number(this.singleRoomCount) || 0, 0), SINGLE_ROOM_LIMIT)
       this.doubleRoomCount = Math.min(Math.max(Number(this.doubleRoomCount) || 0, 0), DOUBLE_ROOM_LIMIT)
 
       if (this.singleRoomCount + this.doubleRoomCount < 1) {
-        if (lastEditedType === 'single') {
-          this.doubleRoomCount = 1
-        } else {
-          this.singleRoomCount = 1
-        }
+        this.singleRoomCount = 1
       }
 
       this.roomType = this.doubleRoomCount > 0 && this.singleRoomCount === 0 ? 'double' : 'single'
