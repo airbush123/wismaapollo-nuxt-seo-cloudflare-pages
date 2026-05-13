@@ -61,14 +61,12 @@
       <NuxtLink :to="localePath('/#testimoni')" role="menuitem" @click="uiStore.closeMenu()">{{ $t('nav.testimonials') }}</NuxtLink>
       <NuxtLink v-if="isBlogVisible" :to="localePath('/blog')" role="menuitem" @click="uiStore.closeMenu()">{{ $t('nav.blog') }}</NuxtLink>
       <NuxtLink :to="localePath('/faq')" role="menuitem" @click="uiStore.closeMenu()">{{ $t('nav.faq') }}</NuxtLink>
-      <a
-        :href="`https://wa.me/62818232021?text=${encodeURIComponent($t('common.waDefault'))}`"
-        target="_blank"
-        rel="noopener"
+      <button
+        type="button"
         class="menu-cta"
         role="menuitem"
-        @click="handleMobileWaClick"
-      >{{ $t('nav.reserve') }}</a>
+        @click="handleMobileReserveClick"
+      >{{ $t('nav.reserve') }}</button>
     </div>
   </nav>
 </template>
@@ -83,9 +81,9 @@ const { locale, locales, setLocale } = useI18n()
 const localePath = useLocalePath()
 const isBlogVisible = computed(() => locale.value === 'id')
 
-function handleMobileWaClick() {
-  useTracking().trackContact('mobile_nav_whatsapp')
+function handleMobileReserveClick() {
   uiStore.closeMenu()
+  bookingStore.openModal()
 }
 
 // Close menu on Escape

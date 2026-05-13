@@ -42,7 +42,7 @@
             :href="`https://wa.me/62818232021?text=${encodeURIComponent($t('common.waDefault'))}`"
             target="_blank"
             rel="noopener"
-            class="btn-wa"
+            class="btn-wa faq-wa-desktop"
             style="max-width: 300px; margin: 16px auto 0;"
             @click="trackFaqContact"
           >
@@ -51,6 +51,17 @@
             </svg>
             {{ $t('faq.chatWa') }}
           </a>
+          <button
+            type="button"
+            class="btn-wa faq-wa-mobile"
+            style="max-width: 300px; margin: 16px auto 0;"
+            @click="openFaqBookingForm"
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M7 3h10a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Zm0 5v11h10V8H7Zm2-5v2h6V3h2v2h1v2H6V5h1V3h2Zm0 7h2v2H9v-2Zm4 0h2v2h-2v-2Zm-4 4h2v2H9v-2Zm4 0h2v2h-2v-2Z" />
+            </svg>
+            {{ $t('nav.reserve') }}
+          </button>
         </div>
       </div>
     </section>
@@ -64,10 +75,12 @@ import {
   buildGraphSchema,
   buildWebPageSchema,
 } from '~/composables/useSitelinkSchema'
+import { useBookingStore } from '~/stores/useBookingStore'
 
 const openIndex = ref<number | null>(null)
 const { locale, t } = useI18n()
 const siteUrl = SITE_URL
+const bookingStore = useBookingStore()
 
 const faqUrl = computed(() => {
   const localePrefix = locale.value === 'id' ? '' : `/${locale.value}`
@@ -116,6 +129,10 @@ const faqStructuredData = computed(() => buildGraphSchema([
 
 function toggle(index: number) {
   openIndex.value = openIndex.value === index ? null : index
+}
+
+function openFaqBookingForm() {
+  bookingStore.openModal()
 }
 
 function trackFaqContact() {
