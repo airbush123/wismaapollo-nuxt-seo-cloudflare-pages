@@ -130,7 +130,7 @@
                     inputmode="numeric"
                     :aria-invalid="!!bookingStore.errors.singleRoomCount"
                     @focus="activeRoomCard = 'single'"
-                    @change="bookingStore.normalizeRoomCounts(false)"
+                    @input="bookingStore.normalizeRoomCounts(false, 'double')"
                   />
                 </div>
               </label>
@@ -158,7 +158,7 @@
                     inputmode="numeric"
                     :aria-invalid="!!bookingStore.errors.doubleRoomCount"
                     @focus="activeRoomCard = 'double'"
-                    @change="bookingStore.normalizeRoomCounts(false)"
+                    @input="bookingStore.normalizeRoomCounts(false, 'single')"
                   />
                 </div>
               </label>

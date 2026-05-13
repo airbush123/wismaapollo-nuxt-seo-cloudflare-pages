@@ -4,7 +4,7 @@
       <NuxtLink :to="localePath('/')" class="nav-logo" :aria-label="'Wisma Apollo - ' + $t('common.backHome')">
         <NuxtImg src="/images/logo/wisma-apollo-logo.png" alt="Logo Wisma Apollo" width="44" height="44" loading="eager" />
         <span class="logo-text">
-          Apollo
+          Wisma Apollo
         </span>
       </NuxtLink>
       <div class="desktop-nav-shell">
@@ -24,7 +24,7 @@
           {{ $t('nav.reserve') }}
         </button>
       </div>
-      <div style="display: flex; align-items: center;">
+      <div class="nav-tools">
         <div class="lang-switch" role="group" aria-label="Language switcher">
           <button
             v-for="loc in locales"
