@@ -2422,9 +2422,12 @@ a:focus-visible {
 
   .bm-guest-stepper {
     display: grid;
-    grid-template-columns: 42px minmax(0, 1fr) 42px;
+    grid-template-columns: 42px 92px 42px;
     gap: 8px;
     align-items: center;
+    justify-content: start;
+    width: max-content;
+    max-width: 100%;
   }
 
   .bm-room-option input {
@@ -2435,6 +2438,8 @@ a:focus-visible {
   }
 
   .bm-guest-stepper input {
+    width: 92px;
+    max-width: 92px;
     text-align: center;
   }
 
