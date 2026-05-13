@@ -1,6 +1,6 @@
 import { jsonResponse, sendMetaEvent } from '../_meta-capi-core.js'
 
-const GOOGLE_APP_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz2g1_ZDFhthbNDepnazQJu3hze_Cz24odh0Yjj8nf9xppSCQisS3ZK233EQW2s0wflOw/exec'
+const GOOGLE_APP_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwesHjVm3vPikERszFwk0MqjM11EcomxAAmr-gclKDlYil1Lst0HfslqF2MW2O2BlE_/exec'
 
 async function forwardToAppsScript(fields) {
   const formData = new FormData()
