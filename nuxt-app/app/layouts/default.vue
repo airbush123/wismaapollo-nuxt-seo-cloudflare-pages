@@ -7,8 +7,8 @@
     </main>
     <AppFooter />
     <BottomBar />
-    <BookingModal />
-    <LightboxOverlay />
+    <LazyBookingModal v-if="bookingStore.isModalOpen" />
+    <LazyLightboxOverlay v-if="uiStore.isLightboxOpen" />
   </div>
 </template>
 
@@ -20,13 +20,12 @@ const uiStore = useUIStore()
 const bookingStore = useBookingStore()
 let removeScrollListener: (() => void) | undefined
 
-// Initialize tracking on client
 onMounted(() => {
   bookingStore.initTracking()
 
   let isTicking = false
-  let lastScrolled = window.scrollY > 40
-  uiStore.setScrolled(lastScrolled)
+  let lastScrolled = false
+  uiStore.setScrolled(false)
 
   const updateScrolled = () => {
     isTicking = false

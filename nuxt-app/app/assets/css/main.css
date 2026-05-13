@@ -132,14 +132,13 @@ a:focus-visible {
 
 /* ── ANIMATIONS ── */
 .anim-up {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.65s ease, transform 0.65s ease;
+  opacity: 1;
+  transform: none;
 }
 
 .anim-up.visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: none;
 }
 
 @keyframes pulse-zoom {
