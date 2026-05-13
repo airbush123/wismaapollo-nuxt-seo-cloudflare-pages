@@ -130,7 +130,7 @@
                     inputmode="numeric"
                     :aria-invalid="!!bookingStore.errors.singleRoomCount"
                     @focus="activeRoomCard = 'single'"
-                    @change="bookingStore.normalizeRoomCounts()"
+                    @change="bookingStore.normalizeRoomCounts(false)"
                   />
                 </div>
               </label>
@@ -158,7 +158,7 @@
                     inputmode="numeric"
                     :aria-invalid="!!bookingStore.errors.doubleRoomCount"
                     @focus="activeRoomCard = 'double'"
-                    @change="bookingStore.normalizeRoomCounts()"
+                    @change="bookingStore.normalizeRoomCounts(false)"
                   />
                 </div>
               </label>
@@ -357,7 +357,7 @@ watch(() => bookingStore.checkIn, () => {
 })
 
 watch(() => [bookingStore.singleRoomCount, bookingStore.doubleRoomCount], () => {
-  bookingStore.normalizeRoomCounts()
+  bookingStore.normalizeRoomCounts(false)
   if (bookingStore.guestCount > maxGuestCount.value) {
     bookingStore.guestCount = maxGuestCount.value
   }

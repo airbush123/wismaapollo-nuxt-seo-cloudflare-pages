@@ -119,7 +119,7 @@ export const useBookingStore = defineStore('booking', {
     openModal(waUrl?: string, roomType?: 'single' | 'double') {
       if (waUrl) this.currentWaUrl = waUrl
       if (roomType) this.setPrimaryRoomType(roomType)
-      this.normalizeRoomCounts()
+      this.normalizeRoomCounts(true)
       this.ensureDefaultDates()
       this.isModalOpen = true
       this.errors = {}
@@ -138,7 +138,7 @@ export const useBookingStore = defineStore('booking', {
       this.roomType = roomType
       this.singleRoomCount = roomType === 'single' ? 1 : 0
       this.doubleRoomCount = roomType === 'double' ? 1 : 0
-      this.normalizeRoomCounts()
+      this.normalizeRoomCounts(true)
     },
 
     setRoomCount(type: 'single' | 'double', count: number) {
@@ -150,11 +150,11 @@ export const useBookingStore = defineStore('booking', {
       this.normalizeRoomCounts()
     },
 
-    normalizeRoomCounts() {
+    normalizeRoomCounts(enforceMinimum = false) {
       this.singleRoomCount = Math.min(Math.max(Number(this.singleRoomCount) || 0, 0), SINGLE_ROOM_LIMIT)
       this.doubleRoomCount = Math.min(Math.max(Number(this.doubleRoomCount) || 0, 0), DOUBLE_ROOM_LIMIT)
 
-      if (this.singleRoomCount + this.doubleRoomCount < 1) {
+      if (enforceMinimum && this.singleRoomCount + this.doubleRoomCount < 1) {
         this.singleRoomCount = 1
       }
 
