@@ -109,6 +109,16 @@ export default defineNuxtConfig({
   },
 
   routeRules: {
+    '/hotel-di-kuala-kurun-kalimantan-tengah-wisma-apollo-pilihan-strategis-nyaman': {
+      redirect: { to: '/blog/hotel-kuala-kurun-kalimantan-tengah/', statusCode: 301 },
+    },
+    '/hotel-di-kuala-kurun-kalimantan-tengah-wisma-apollo-pilihan-strategis-nyaman/': {
+      redirect: { to: '/blog/hotel-kuala-kurun-kalimantan-tengah/', statusCode: 301 },
+    },
+    '/category/**': { redirect: { to: '/blog/', statusCode: 301 } },
+    '/tag/**': { redirect: { to: '/blog/', statusCode: 301 } },
+    '/author/**': { redirect: { to: '/blog/', statusCode: 301 } },
+    '/feed/': { redirect: { to: '/blog/', statusCode: 301 } },
     '/px/gtm/**': { proxy: 'https://www.googletagmanager.com/**' },
     '/px/ga/**': { proxy: 'https://www.google-analytics.com/**' },
     '/api/webhook': {

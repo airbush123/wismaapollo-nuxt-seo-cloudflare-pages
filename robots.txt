@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://wisma-apollo.my.id/sitemap.xml
+Sitemap: https://wisma-apollo.my.id/sitemap_index.xml
