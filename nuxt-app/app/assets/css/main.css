@@ -2774,9 +2774,12 @@ a:focus-visible {
   }
 
   .desktop-menu a {
+    display: inline-flex;
+    align-items: center;
     color: rgba(255, 255, 255, 0.9);
     font-size: 0.88rem;
     font-weight: 700;
+    min-height: 48px;
     white-space: nowrap;
     padding: 10px 18px;
     border-radius: 999px;
@@ -2808,6 +2811,7 @@ a:focus-visible {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    min-height: 48px;
     padding: 11px 20px;
     border-radius: 999px;
     background: linear-gradient(135deg, #E86A33 0%, #C75219 100%);
