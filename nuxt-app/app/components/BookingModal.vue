@@ -123,14 +123,14 @@
                   <small class="bm-room-option-label">{{ $t('booking.roomCountLabel') }}</small>
                   <input
                     id="bm-single-room-count"
-                    :value="bookingStore.singleRoomCount"
+                    v-model.number="bookingStore.singleRoomCount"
                     type="number"
                     min="0"
                     max="3"
                     inputmode="numeric"
                     :aria-invalid="!!bookingStore.errors.singleRoomCount"
                     @focus="activeRoomCard = 'single'"
-                    @input="bookingStore.setRoomCount('single', getRoomCountInputValue($event))"
+                    @change="bookingStore.normalizeRoomCounts('single')"
                   />
                 </div>
               </label>
@@ -151,14 +151,14 @@
                   <small class="bm-room-option-label">{{ $t('booking.roomCountLabel') }}</small>
                   <input
                     id="bm-double-room-count"
-                    :value="bookingStore.doubleRoomCount"
+                    v-model.number="bookingStore.doubleRoomCount"
                     type="number"
                     min="0"
                     max="1"
                     inputmode="numeric"
                     :aria-invalid="!!bookingStore.errors.doubleRoomCount"
                     @focus="activeRoomCard = 'double'"
-                    @input="bookingStore.setRoomCount('double', getRoomCountInputValue($event))"
+                    @change="bookingStore.normalizeRoomCounts('double')"
                   />
                 </div>
               </label>
@@ -282,7 +282,6 @@ const parseDateInput = (value: string) => {
   if (!year || !month || !day) return new Date()
   return new Date(year, month - 1, day)
 }
-const getRoomCountInputValue = (event: Event) => Number((event.target as HTMLInputElement).value)
 const minCheckInDate = computed(() => toDateInputValue(new Date()))
 const minCheckOutDate = computed(() => {
   const baseDate = bookingStore.checkIn ? parseDateInput(bookingStore.checkIn) : new Date()
@@ -358,7 +357,6 @@ watch(() => bookingStore.checkIn, () => {
 })
 
 watch(() => [bookingStore.singleRoomCount, bookingStore.doubleRoomCount], () => {
-  bookingStore.normalizeRoomCounts()
   if (bookingStore.guestCount > maxGuestCount.value) {
     bookingStore.guestCount = maxGuestCount.value
   }
