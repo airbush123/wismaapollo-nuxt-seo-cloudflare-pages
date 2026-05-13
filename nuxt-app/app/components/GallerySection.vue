@@ -33,6 +33,6 @@ const images = [
   { src: '/images/gallery/kamar-penginapan-kuala-kurun.webp', alt: 'Penginapan Kuala Kurun - Kamar Single Bed Nyaman' },
   { src: '/images/gallery/kamar-penginapan-murah-kuala-kurun.webp', alt: 'Penginapan Murah Kuala Kurun - Kamar Mandi Dalam' },
   { src: '/images/gallery/hotel-kuala-kurun-gunung-mas.webp', alt: 'Hotel Kuala Kurun Gunung Mas - Kamar Double Bed' },
-  { src: '/images/gallery/hotel-murah-kuala-kurun.webp', alt: 'Hotel Murah di Kuala Kurun - Kamar Bersih & Luas' },
+  { src: '/images/gallery/kamar-double-bed-wisma-apollo.webp', alt: 'Hotel Murah di Kuala Kurun - Kamar Double Bed Wisma Apollo' },
 ]
 </script>

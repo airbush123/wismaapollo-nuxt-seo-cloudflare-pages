@@ -5,8 +5,6 @@ category: 'Travel'
 image: '/images/blog/air-terjun-batu-mahasur.webp'
 ---
 
-# 5 Best Tourism Destinations in Gunung Mas
-
 Gunung Mas Regency holds many tourism charms:
 1. **Batu Mahasur Waterfall**
 2. **Batu Suli**

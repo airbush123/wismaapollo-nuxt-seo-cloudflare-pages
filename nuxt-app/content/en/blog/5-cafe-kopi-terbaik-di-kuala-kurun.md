@@ -5,8 +5,6 @@ category: 'Culinary'
 image: '/images/blog/5-cafe-kopi-terbaik-di-kuala-kurun.png'
 ---
 
-# 5 Best Coffee Cafes in Kuala Kurun
-
 Kuala Kurun has many cool places to hang out. Here are 5 recommendations:
 
 1. **Cafe Rumah Teduh** - Near Wisma Apollo, very green atmosphere.

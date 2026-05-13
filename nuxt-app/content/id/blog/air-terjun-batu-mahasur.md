@@ -79,12 +79,18 @@ image: '/images/blog/air-terjun-batu-mahasur.webp'
             Jl. Letjen Soeprapto No.56, Kuala Kurun, dengan kamar mulai Rp200.000 per malam. Fasilitas seperti AC, WiFi
             gratis, TV Android, shower, handuk, amenities, dan parkir luas membantu tamu memulihkan tenaga setelah
             seharian menikmati wisata alam Gunung Mas.</p>
-<div class="cta-box">
-<h3>🏨 Penginapan Terbaik di Kuala Kurun</h3>
-<p>Setelah puas basah-basahan menikmati keindahan Air Terjun Batu Mahasur, tentu Anda membutuhkan tempat
-                istirahat yang nyaman di tengah kota. Wisma Apollo adalah pilihan terbaik Anda!</p>
-<a href="https://wa.me/62818232021?text=Halo%20Wisma%20Apollo,%20saya%20ingin%20reservasi%20kamar.">💬
-                Booking Kamar Sekarang</a>
+<div class="cta-box cta-reservation">
+<div class="cta-copy">
+<span class="cta-kicker">Reservasi Langsung</span>
+<h3>Amankan Kamar Wisma Apollo</h3>
+<p>Isi form reservasi singkat untuk cek ketersediaan kamar. Admin akan lanjut konfirmasi lewat WhatsApp resmi Wisma Apollo.</p>
+</div>
+<div class="cta-meta" aria-label="Ringkasan fasilitas Wisma Apollo">
+<span>Mulai Rp200.000</span>
+<span>AC + WiFi</span>
+<span>Parkir luas</span>
+</div>
+<a href="#reservasi" class="blog-reserve-btn" data-booking-trigger="true">Buka Form Reservasi</a>
 </div>
 <h2>Kesimpulan Perjalanan ke Batu Mahasur</h2>
 <p>Air Terjun Batu Mahasur cocok untuk wisatawan yang ingin melihat sisi alam Gunung Mas tanpa kehilangan akses

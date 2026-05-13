@@ -5,8 +5,6 @@ category: 'Accommodation'
 image: '/images/blog/hotel-di-kuala-kurun.webp'
 ---
 
-# Hotel in Kuala Kurun
-
 If you are looking for a comfortable and strategic Hotel in Kuala Kurun, Wisma Apollo is the choice. Near Cafe Rumah Teduh, we offer complete facilities for your stay.
 
 ---

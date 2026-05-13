@@ -72,11 +72,18 @@ image: '/images/gallery/penginapan-murah-kuala-kurun.webp'
 <p>Wisma Apollo cocok untuk tamu dinas, keluarga, pekerja lapangan, wisatawan, maupun tamu transit yang mencari
             penginapan bersih dan strategis. Harga mulai Rp200.000 per malam membuatnya tetap ramah budget, sementara
             fasilitas kamar membantu tamu mendapatkan kualitas istirahat yang layak di pusat Kuala Kurun.</p>
-<div class="cta-box">
-<h3>🏨 Booking Wisma Apollo Sekarang</h3>
-<p>Kamar bersih, AC, WiFi gratis, kedap suara. Mulai Rp200.000/malam!</p>
-<a href="https://wa.me/62818232021?text=Halo%20Wisma%20Apollo,%20saya%20ingin%20reservasi%20kamar.">💬 Chat
-                WhatsApp</a>
+<div class="cta-box cta-reservation">
+<div class="cta-copy">
+<span class="cta-kicker">Reservasi Langsung</span>
+<h3>Amankan Kamar Wisma Apollo</h3>
+<p>Isi form reservasi singkat untuk cek ketersediaan kamar. Admin akan lanjut konfirmasi lewat WhatsApp resmi Wisma Apollo.</p>
+</div>
+<div class="cta-meta" aria-label="Ringkasan fasilitas Wisma Apollo">
+<span>Mulai Rp200.000</span>
+<span>AC + WiFi</span>
+<span>Parkir luas</span>
+</div>
+<a href="#reservasi" class="blog-reserve-btn" data-booking-trigger="true">Buka Form Reservasi</a>
 </div>
 <h2>Checklist Cepat Sebelum Check-in</h2>
 <p>Sebelum berangkat ke Kuala Kurun, buat checklist singkat agar tidak ada kebutuhan penting yang tertinggal.

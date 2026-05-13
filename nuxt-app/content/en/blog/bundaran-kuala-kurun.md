@@ -5,8 +5,6 @@ category: 'Travel'
 image: '/images/blog/bundaran-kuala-kurun.webp'
 ---
 
-# Kuala Kurun Roundabout: A City Symbol
-
 The Kuala Kurun Roundabout is not just a road junction, but a symbol of pride for Gunung Mas residents. With its unique design, this roundabout is often a gathering place and center for community activities in the evening.
 
 ---

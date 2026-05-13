@@ -22,7 +22,7 @@
         <NuxtLink :to="localePath('/tempat-istirahat-kuala-kurun')">{{ $t('footer.links.tempatIstirahat') }}</NuxtLink>
       </nav>
 
-      <nav class="footer-links" :aria-label="$t('footer.blogTitle')">
+      <nav v-if="isBlogVisible" class="footer-links" :aria-label="$t('footer.blogTitle')">
         <h4>{{ $t('footer.blogTitle') }}</h4>
         <NuxtLink :to="localePath('/blog')">{{ $t('footer.blogLinks.all') }}</NuxtLink>
         <NuxtLink :to="localePath('/blog/tips-menginap-kuala-kurun')">{{ $t('footer.blogLinks.tips') }}</NuxtLink>
@@ -63,5 +63,7 @@
 </template>
 
 <script setup lang="ts">
+const { locale } = useI18n()
 const localePath = useLocalePath()
+const isBlogVisible = computed(() => locale.value === 'id')
 </script>

@@ -17,7 +17,7 @@
           <NuxtLink
             v-for="(post, i) in articles"
             :key="i"
-            :to="localePath('/blog/' + ((post as any).path?.split('/').pop() || ''))"
+            :to="'/blog/' + ((post as any).path?.split('/').pop() || '')"
             class="blog-card"
             role="listitem"
           >
@@ -46,12 +46,63 @@
 </template>
 
 <script setup lang="ts">
+import {
+  SITE_URL,
+  buildBreadcrumbSchema,
+  buildGraphSchema,
+  buildWebPageSchema,
+} from '~/composables/useSitelinkSchema'
+
 const { locale } = useI18n()
-const localePath = useLocalePath()
+const siteUrl = SITE_URL
+const isIdBlog = computed(() => locale.value === 'id')
+
+const blogUrl = `${siteUrl}/blog`
+
+const blogTitle = computed(() => locale.value === 'id'
+  ? 'Blog Wisma Apollo Kuala Kurun | Tips Menginap & Wisata'
+  : 'Wisma Apollo Kuala Kurun Blog | Travel Tips & Tourism')
+
+const blogDescription = computed(() => locale.value === 'id'
+  ? 'Tips menginap, wisata, dan kuliner di Kuala Kurun & Gunung Mas, Kalimantan Tengah.'
+  : 'Accommodation tips, tourism, and culinary guides for Kuala Kurun & Gunung Mas, Central Kalimantan.')
+
+const blogImage = `${siteUrl}/images/hero.webp`
+const blogStructuredData = computed(() => buildGraphSchema([
+  buildWebPageSchema({
+    url: blogUrl,
+    name: blogTitle.value,
+    description: blogDescription.value,
+    image: blogImage,
+    inLanguage: 'id-ID',
+  }),
+  buildBreadcrumbSchema([
+    { name: 'Wisma Apollo Kuala Kurun', url: `${siteUrl}/` },
+    { name: 'Blog Wisma Apollo', url: blogUrl },
+  ]),
+  {
+    '@type': 'CollectionPage',
+    '@id': `${blogUrl}#collection`,
+    name: blogTitle.value,
+    description: blogDescription.value,
+    url: blogUrl,
+    inLanguage: 'id-ID',
+    isPartOf: { '@id': `${siteUrl}/#website` },
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: (articles.value || []).map((post: any, index: number) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        name: post.title,
+        url: `${siteUrl}/blog/${post.path?.split('/').pop() || ''}`,
+      })),
+    },
+  },
+]))
 
 const { data: articles, pending, refresh } = await useAsyncData(`articles-${locale.value}`, async () => {
   const all = await queryCollection('content').all()
-  return all.filter(a => a.path.startsWith(`/${locale.value}/blog/`))
+  return all.filter(a => a.path.startsWith('/id/blog/'))
 })
 
 watch(locale, () => {
@@ -59,20 +110,40 @@ watch(locale, () => {
 })
 
 useSeoMeta({
-  title: locale.value === 'id' 
-    ? 'Blog – Wisma Apollo Kuala Kurun | Tips Menginap & Wisata' 
-    : 'Blog – Wisma Apollo Kuala Kurun | Travel Tips & Tourism',
-  description: locale.value === 'id'
-    ? 'Tips menginap, wisata, dan kuliner di Kuala Kurun & Gunung Mas, Kalimantan Tengah.'
-    : 'Accommodation tips, tourism, and culinary guides for Kuala Kurun & Gunung Mas, Central Kalimantan.',
-  ogUrl: 'https://wisma-apollo.my.id/blog',
+  title: () => blogTitle.value,
+  description: () => blogDescription.value,
+  ogTitle: () => blogTitle.value,
+  ogDescription: () => blogDescription.value,
+  ogType: 'website',
+  ogUrl: blogUrl,
+  ogImage: blogImage,
+  ogImageAlt: 'Wisma Apollo Kuala Kurun',
+  twitterCard: 'summary_large_image',
+  twitterTitle: () => blogTitle.value,
+  twitterDescription: () => blogDescription.value,
+  twitterImage: blogImage,
+  twitterImageAlt: 'Wisma Apollo Kuala Kurun',
+  robots: () => isIdBlog.value ? 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' : 'noindex, follow',
 })
 
-useHead({
+useHead(() => ({
   link: [
-    { rel: 'canonical', href: 'https://wisma-apollo.my.id/blog' },
+    { rel: 'canonical', href: blogUrl },
   ],
-})
+  meta: [
+    { property: 'og:site_name', content: 'Wisma Apollo Kuala Kurun' },
+    { property: 'og:locale', content: locale.value === 'id' ? 'id_ID' : locale.value === 'zh' ? 'zh_CN' : 'en_US' },
+    { property: 'og:image:secure_url', content: blogImage },
+    { property: 'og:image:width', content: '1200' },
+    { property: 'og:image:height', content: '630' },
+  ],
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify(blogStructuredData.value),
+    },
+  ],
+}))
 </script>
 
 <style scoped>

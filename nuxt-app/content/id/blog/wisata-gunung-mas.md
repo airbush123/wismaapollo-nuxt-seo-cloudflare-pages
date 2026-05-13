@@ -60,12 +60,18 @@ image: '/images/blog/air-terjun-batu-mahasur.webp'
             Kamar tersedia mulai Rp200.000 per malam, dengan fasilitas seperti AC, WiFi gratis, TV Android, shower,
             handuk, amenities, parkir luas, dan suasana yang tenang. Dengan tempat menginap yang jelas, wisatawan bisa
             lebih fokus menikmati Gunung Mas tanpa khawatir mencari kamar saat sudah lelah.</p>
-<div class="cta-box">
-<h3>🏨 Nginap di Wisma Apollo</h3>
-<p>Base camp terbaik untuk menjelajahi Gunung Mas. Kamar nyaman mulai Rp200.000/malam!</p>
-<a
-                href="https://wa.me/62818232021?text=Halo%20Wisma%20Apollo,%20saya%20ingin%20reservasi%20kamar%20untuk%20wisata%20di%20Gunung%20Mas.">💬
-                Booking Sekarang</a>
+<div class="cta-box cta-reservation">
+<div class="cta-copy">
+<span class="cta-kicker">Reservasi Langsung</span>
+<h3>Amankan Kamar Wisma Apollo</h3>
+<p>Isi form reservasi singkat untuk cek ketersediaan kamar. Admin akan lanjut konfirmasi lewat WhatsApp resmi Wisma Apollo.</p>
+</div>
+<div class="cta-meta" aria-label="Ringkasan fasilitas Wisma Apollo">
+<span>Mulai Rp200.000</span>
+<span>AC + WiFi</span>
+<span>Parkir luas</span>
+</div>
+<a href="#reservasi" class="blog-reserve-btn" data-booking-trigger="true">Buka Form Reservasi</a>
 </div>
 <h2>Kesimpulan Wisata Gunung Mas</h2>
 <p>Gunung Mas cocok untuk wisatawan yang menyukai suasana alam, budaya, dan kota kecil yang masih terasa dekat

@@ -58,7 +58,61 @@
 </template>
 
 <script setup lang="ts">
+import {
+  SITE_URL,
+  buildBreadcrumbSchema,
+  buildGraphSchema,
+  buildWebPageSchema,
+} from '~/composables/useSitelinkSchema'
+
 const openIndex = ref<number | null>(null)
+const { locale, t } = useI18n()
+const siteUrl = SITE_URL
+
+const faqUrl = computed(() => {
+  const localePrefix = locale.value === 'id' ? '' : `/${locale.value}`
+  return `${siteUrl}${localePrefix}/faq`
+})
+
+const faqTitle = computed(() => {
+  if (locale.value === 'en') return 'FAQ - Wisma Apollo Kuala Kurun'
+  if (locale.value === 'zh') return '常见问题 - Wisma Apollo Kuala Kurun'
+  return 'FAQ - Wisma Apollo Kuala Kurun'
+})
+
+const faqDescription = computed(() => {
+  if (locale.value === 'en') return 'Find answers about Wisma Apollo location, room rates, facilities, check-in rules, and reservation steps in Kuala Kurun.'
+  if (locale.value === 'zh') return '了解 Wisma Apollo Kuala Kurun 的位置、房价、设施、入住规则以及预订方式。'
+  return 'Temukan jawaban tentang lokasi Wisma Apollo, tarif kamar, fasilitas, aturan check-in, dan cara reservasi di Kuala Kurun.'
+})
+
+const faqImage = `${siteUrl}/images/hero.webp`
+const faqLanguage = computed(() => locale.value === 'zh' ? 'zh-CN' : locale.value === 'en' ? 'en-US' : 'id-ID')
+const faqStructuredData = computed(() => buildGraphSchema([
+  buildWebPageSchema({
+    url: faqUrl.value,
+    name: faqTitle.value,
+    description: faqDescription.value,
+    image: faqImage,
+    inLanguage: faqLanguage.value,
+  }),
+  buildBreadcrumbSchema([
+    { name: 'Wisma Apollo Kuala Kurun', url: `${siteUrl}/` },
+    { name: 'FAQ Wisma Apollo', url: faqUrl.value },
+  ]),
+  {
+    '@type': 'FAQPage',
+    '@id': `${faqUrl.value}#faq`,
+    mainEntity: Array.from({ length: 8 }, (_, index) => ({
+      '@type': 'Question',
+      name: t(`faq.items[${index}].q`),
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: t(`faq.items[${index}].a`),
+      },
+    })),
+  },
+]))
 
 function toggle(index: number) {
   openIndex.value = openIndex.value === index ? null : index
@@ -69,18 +123,40 @@ function trackFaqContact() {
 }
 
 useSeoMeta({
-  title: 'FAQ – Wisma Apollo Kuala Kurun',
-  description: 'Temukan jawaban seputar lokasi, tarif kamar, fasilitas, dan cara reservasi Wisma Apollo.',
-  ogTitle: 'FAQ - Wisma Apollo Kuala Kurun',
-  ogDescription: 'Temukan jawaban seputar lokasi, tarif kamar, fasilitas, dan cara reservasi Wisma Apollo.',
-  ogUrl: 'https://wisma-apollo.my.id/faq',
+  title: () => faqTitle.value,
+  description: () => faqDescription.value,
+  ogTitle: () => faqTitle.value,
+  ogDescription: () => faqDescription.value,
+  ogType: 'website',
+  ogUrl: () => faqUrl.value,
+  ogImage: faqImage,
+  ogImageAlt: 'Wisma Apollo Kuala Kurun',
+  twitterCard: 'summary_large_image',
+  twitterTitle: () => faqTitle.value,
+  twitterDescription: () => faqDescription.value,
+  twitterImage: faqImage,
+  twitterImageAlt: 'Wisma Apollo Kuala Kurun',
+  robots: 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1',
 })
 
-useHead({
+useHead(() => ({
   link: [
-    { rel: 'canonical', href: 'https://wisma-apollo.my.id/faq' },
+    { rel: 'canonical', href: faqUrl.value },
   ],
-})
+  meta: [
+    { property: 'og:site_name', content: 'Wisma Apollo Kuala Kurun' },
+    { property: 'og:locale', content: locale.value === 'id' ? 'id_ID' : locale.value === 'zh' ? 'zh_CN' : 'en_US' },
+    { property: 'og:image:secure_url', content: faqImage },
+    { property: 'og:image:width', content: '1200' },
+    { property: 'og:image:height', content: '630' },
+  ],
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify(faqStructuredData.value),
+    },
+  ],
+}))
 
 useScrollAnimation()
 </script>

@@ -2,10 +2,10 @@
   <section id="tentang" class="section" role="region" :aria-labelledby="'about-title'">
     <div class="container anim-up">
       <div class="about-layout">
-        <div class="about-media" aria-hidden="true">
+        <div class="about-media">
           <NuxtImg
             src="/images/about-lobby.webp"
-            alt=""
+            alt="Lobby dan area masuk Wisma Apollo Kuala Kurun"
             width="560"
             height="420"
             loading="lazy"

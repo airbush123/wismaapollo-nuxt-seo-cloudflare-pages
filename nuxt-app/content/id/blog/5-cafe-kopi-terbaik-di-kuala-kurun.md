@@ -65,11 +65,18 @@ image: '/images/blog/5-cafe-kopi-terbaik-di-kuala-kurun.png'
             perjalanan. Kamu bisa menikmati kopi, mencoba camilan lokal, berbincang dengan teman, lalu kembali
             beristirahat. Dengan rencana sederhana, pengalaman menjelajah cafe di Kuala Kurun bisa terasa menyenangkan
             tanpa membuat jadwal perjalanan berantakan.</p>
-<div class="cta-box">
-<h3>🏨 Menginap di Wisma Apollo</h3>
-<p>Cafe-cafe di atas rata-rata berjarak dekat dari Wisma Apollo. Pesan kamarmu sebelum kehabisan!</p>
-<a href="https://wa.me/62818232021?text=Halo%20Wisma%20Apollo,%20saya%20ingin%20reservasi%20kamar.">💬
-                Booking Sekarang</a>
+<div class="cta-box cta-reservation">
+<div class="cta-copy">
+<span class="cta-kicker">Reservasi Langsung</span>
+<h3>Amankan Kamar Wisma Apollo</h3>
+<p>Isi form reservasi singkat untuk cek ketersediaan kamar. Admin akan lanjut konfirmasi lewat WhatsApp resmi Wisma Apollo.</p>
+</div>
+<div class="cta-meta" aria-label="Ringkasan fasilitas Wisma Apollo">
+<span>Mulai Rp200.000</span>
+<span>AC + WiFi</span>
+<span>Parkir luas</span>
+</div>
+<a href="#reservasi" class="blog-reserve-btn" data-booking-trigger="true">Buka Form Reservasi</a>
 </div>
 <h2>Rencana Ngopi untuk Tamu yang Menginap</h2>
 <p>Kalau kamu menginap di Kuala Kurun, jadikan agenda ngopi sebagai bagian ringan dari perjalanan, bukan jadwal

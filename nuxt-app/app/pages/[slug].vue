@@ -65,6 +65,12 @@
 </template>
 
 <script setup lang="ts">
+import {
+  SITE_URL,
+  buildBreadcrumbSchema,
+  buildGraphSchema,
+  buildWebPageSchema,
+} from '~/composables/useSitelinkSchema'
 import idMessagesRaw from '../../locales/id.json?raw'
 import enMessagesRaw from '../../locales/en.json?raw'
 import zhMessagesRaw from '../../locales/zh.json?raw'
@@ -73,6 +79,7 @@ const route = useRoute()
 
 const { locale } = useI18n()
 const localePath = useLocalePath()
+const siteUrl = SITE_URL
 
 const parseMessages = (messages: string) => JSON.parse(messages)
 const normalizeMessages = (messages: any) => messages?.default || messages
@@ -155,7 +162,7 @@ const fallbackPages: Record<string, any> = {
       { src: '/images/gallery/wisma-apollo-hotel-kuala-kurun.webp', alt: 'Hotel Kuala Kurun - Tampak depan Wisma Apollo' },
       { src: '/images/gallery/kamar-hotel-murah-kuala-kurun.webp', alt: 'Hotel Kuala Kurun - Fasilitas TV dan meja kerja' },
       { src: '/images/gallery/kamar-penginapan-kuala-kurun.webp', alt: 'Hotel Kuala Kurun - Kamar single bed Wisma Apollo' },
-      { src: '/images/gallery/kamar-penginapan-murah-kuala-kurun.webp', alt: 'Hotel Kuala Kurun - Kamar mandi dalam dengan shower' }
+      { src: '/images/gallery/kamar-double-bed-wisma-apollo.webp', alt: 'Hotel Kuala Kurun - Kamar double bed Wisma Apollo' }
     ],
     faqs: [
       {
@@ -249,6 +256,29 @@ const fallbackPages: Record<string, any> = {
   }
 }
 
+const isSupportedPageSlug = (candidate: string) => {
+  if (!candidate || candidate.includes('/') || candidate.includes('.')) {
+    return false
+  }
+
+  if (fallbackPages[candidate]) {
+    return true
+  }
+
+  return Object.entries(messagesByLocale).some(([localeCode, rawMessages]) => {
+    const messages = resolveLocaleMessages(rawMessages, localeCode)
+    return Boolean((messages.pages as Record<string, any> | undefined)?.[candidate])
+  })
+}
+
+if (!isSupportedPageSlug(slug.value)) {
+  throw createError({
+    statusCode: 404,
+    statusMessage: 'Halaman tidak ditemukan',
+    fatal: true,
+  })
+}
+
 // Fetch localized page data directly so footer SEO pages never render empty.
 const pageData = computed(() => {
   const rawMessages = messagesByLocale[locale.value as keyof typeof messagesByLocale] || messagesByLocale.id
@@ -276,47 +306,94 @@ const pageData = computed(() => {
     return fallbackPages[currentSlug]
   }
 
-  // Fallback if slug not found in i18n
-  return {
-    title: 'Wisma Apollo',
-    subtitle: locale.value === 'id' ? 'Penginapan terbaik di Kuala Kurun' : 'The best accommodation in Kuala Kurun',
-    meta: '',
-    sections: [],
-    faqs: [],
+  throw createError({
+    statusCode: 404,
+    statusMessage: 'Halaman tidak ditemukan',
+    fatal: true,
+  })
+})
+
+const pageUrl = computed(() => {
+  const localePrefix = locale.value === 'id' ? '' : `/${locale.value}`
+  return `${siteUrl}${localePrefix}/${slug.value}`
+})
+
+const pageTitle = computed(() => pageData.value.seoTitle || pageData.value.title || 'Wisma Apollo Kuala Kurun')
+const pageDescription = computed(() => pageData.value.meta || pageData.value.subtitle || 'Wisma Apollo adalah hotel dan penginapan nyaman di Kuala Kurun, Gunung Mas, Kalimantan Tengah.')
+const pageImage = computed(() => {
+  const image = pageData.value.gallery?.[0]?.src || '/images/hero.webp'
+  return image.startsWith('http') ? image : `${siteUrl}${image}`
+})
+
+const pageLanguage = computed(() => locale.value === 'zh' ? 'zh-CN' : locale.value === 'en' ? 'en-US' : 'id-ID')
+
+const pageStructuredData = computed(() => {
+  const schemaItems: any[] = [
+    buildWebPageSchema({
+      url: pageUrl.value,
+      name: pageTitle.value,
+      description: pageDescription.value,
+      image: pageImage.value,
+      inLanguage: pageLanguage.value,
+    }),
+    buildBreadcrumbSchema([
+      { name: 'Wisma Apollo Kuala Kurun', url: `${siteUrl}/` },
+      { name: pageData.value.title, url: pageUrl.value },
+    ]),
+  ]
+
+  if (pageData.value.faqs?.length) {
+    schemaItems.push({
+      '@type': 'FAQPage',
+      '@id': `${pageUrl.value}#faq`,
+      mainEntity: pageData.value.faqs.map((faq: any) => ({
+        '@type': 'Question',
+        name: faq.q,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: faq.a,
+        },
+      })),
+    })
   }
+
+  return buildGraphSchema(schemaItems)
 })
 
 useSeoMeta({
-  title: () => pageData.value.seoTitle || pageData.value.title,
-  description: () => pageData.value.meta,
-  ogTitle: () => pageData.value.seoTitle || pageData.value.title,
-  ogDescription: () => pageData.value.meta,
-  ogUrl: () => `https://wisma-apollo.my.id/${slug.value}`,
+  title: () => pageTitle.value,
+  description: () => pageDescription.value,
+  ogTitle: () => pageTitle.value,
+  ogDescription: () => pageDescription.value,
+  ogType: 'website',
+  ogUrl: () => pageUrl.value,
+  ogImage: () => pageImage.value,
+  ogImageAlt: () => pageTitle.value,
+  twitterCard: 'summary_large_image',
+  twitterTitle: () => pageTitle.value,
+  twitterDescription: () => pageDescription.value,
+  twitterImage: () => pageImage.value,
+  twitterImageAlt: () => pageTitle.value,
 })
 
 useHead(() => ({
   link: [
-    { rel: 'canonical', href: `https://wisma-apollo.my.id/${slug.value}` },
+    { rel: 'canonical', href: pageUrl.value },
   ],
-  script: pageData.value.faqs?.length
-    ? [
-        {
-          type: 'application/ld+json',
-          children: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'FAQPage',
-            mainEntity: pageData.value.faqs.map((faq: any) => ({
-              '@type': 'Question',
-              name: faq.q,
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: faq.a,
-              },
-            })),
-          }),
-        },
-      ]
-    : [],
+  meta: [
+    { property: 'og:site_name', content: 'Wisma Apollo Kuala Kurun' },
+    { property: 'og:locale', content: locale.value === 'id' ? 'id_ID' : locale.value === 'zh' ? 'zh_CN' : 'en_US' },
+    { property: 'og:image:secure_url', content: pageImage.value },
+    { property: 'og:image:width', content: '1200' },
+    { property: 'og:image:height', content: '630' },
+    { name: 'robots', content: 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' },
+  ],
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify(pageStructuredData.value),
+    },
+  ],
 }))
 
 useScrollAnimation()

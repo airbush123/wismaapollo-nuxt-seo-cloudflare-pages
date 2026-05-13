@@ -5,8 +5,6 @@ category: 'Culinary'
 image: '/images/gallery/hotel-di-kuala-kurun.webp'
 ---
 
-# Typical Culinary of Kuala Kurun
-
 If you visit Kuala Kurun, don't miss its typical culinary delights:
 - **Grilled River Fish** - Fresh from the Kahayan river.
 - **Traditional Dayak Cakes** - Unique tastes.

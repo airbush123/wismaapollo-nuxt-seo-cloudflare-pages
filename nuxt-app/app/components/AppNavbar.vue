@@ -59,7 +59,7 @@
       <NuxtLink :to="localePath('/#kamar')" role="menuitem" @click="uiStore.closeMenu()">{{ $t('nav.rooms') }}</NuxtLink>
       <NuxtLink :to="localePath('/#galeri')" role="menuitem" @click="uiStore.closeMenu()">{{ $t('nav.gallery') }}</NuxtLink>
       <NuxtLink :to="localePath('/#testimoni')" role="menuitem" @click="uiStore.closeMenu()">{{ $t('nav.testimonials') }}</NuxtLink>
-      <NuxtLink :to="localePath('/blog')" role="menuitem" @click="uiStore.closeMenu()">{{ $t('nav.blog') }}</NuxtLink>
+      <NuxtLink v-if="isBlogVisible" :to="localePath('/blog')" role="menuitem" @click="uiStore.closeMenu()">{{ $t('nav.blog') }}</NuxtLink>
       <NuxtLink :to="localePath('/faq')" role="menuitem" @click="uiStore.closeMenu()">{{ $t('nav.faq') }}</NuxtLink>
       <a
         :href="`https://wa.me/62818232021?text=${encodeURIComponent($t('common.waDefault'))}`"
@@ -81,6 +81,7 @@ const uiStore = useUIStore()
 const bookingStore = useBookingStore()
 const { locale, locales, setLocale } = useI18n()
 const localePath = useLocalePath()
+const isBlogVisible = computed(() => locale.value === 'id')
 
 function handleMobileWaClick() {
   useTracking().trackContact('mobile_nav_whatsapp')

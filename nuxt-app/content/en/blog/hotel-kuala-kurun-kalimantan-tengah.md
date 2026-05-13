@@ -5,8 +5,6 @@ category: 'Accommodation'
 image: '/images/blog/hotel-kuala-kurun-kalimantan-tengah.jpg'
 ---
 
-# Hotel in Kuala Kurun, Central Kalimantan
-
 Looking for a hotel or lodging in Kuala Kurun, Central Kalimantan? Wisma Apollo is the best recommendation for those who prioritize comfort and affordability.
 
 ## Wisma Apollo Advantages

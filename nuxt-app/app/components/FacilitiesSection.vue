@@ -5,10 +5,10 @@
       <h2 id="facilities-title">{{ $t('facilities.title') }}</h2>
 
       <div class="facilities-layout">
-        <div class="facilities-media" aria-hidden="true">
+        <div class="facilities-media">
           <NuxtImg
             src="/images/facilities-smoking-corridor.webp"
-            alt=""
+            alt="Area koridor dan fasilitas smoking area Wisma Apollo"
             width="520"
             height="680"
             loading="lazy"

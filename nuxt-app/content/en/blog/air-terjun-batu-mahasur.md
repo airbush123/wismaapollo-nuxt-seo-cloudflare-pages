@@ -5,8 +5,6 @@ category: 'Travel'
 image: '/images/blog/air-terjun-batu-mahasur.webp'
 ---
 
-# Batu Mahasur Waterfall
-
 Batu Mahasur Waterfall is one of the hidden natural gems in Gunung Mas Regency, Central Kalimantan. Located not far from Kuala Kurun, this waterfall offers breathtaking natural beauty.
 
 ## Location & Access

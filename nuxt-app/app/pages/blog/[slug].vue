@@ -2,12 +2,12 @@
   <div>
     <div class="lp-header">
       <div class="container">
-        <NuxtLink :to="localePath('/blog')" class="lp-back lp-back-light">← {{ $t('nav.blog') }}</NuxtLink>
+        <NuxtLink to="/blog" class="lp-back lp-back-light">← {{ $t('nav.blog') }}</NuxtLink>
         <h1>{{ article?.title || 'Article' }}</h1>
       </div>
     </div>
 
-    <div class="blog-article">
+    <div class="blog-article" @click="handleArticleClick">
       <div class="container">
         <template v-if="article">
           <NuxtImg
@@ -23,7 +23,7 @@
         </template>
         <div v-else style="padding: 40px 0; text-align: center; color: var(--text2);">
           <p>Artikel sedang dimuat atau belum tersedia.</p>
-          <NuxtLink :to="localePath('/blog')" class="lp-back" style="margin-top: 16px;">← Kembali ke Blog</NuxtLink>
+          <NuxtLink to="/blog" class="lp-back" style="margin-top: 16px;">← Kembali ke Blog</NuxtLink>
         </div>
       </div>
     </div>
@@ -31,28 +31,128 @@
 </template>
 
 <script setup lang="ts">
+import {
+  SITE_URL,
+  buildBreadcrumbSchema,
+  buildGraphSchema,
+  buildWebPageSchema,
+} from '~/composables/useSitelinkSchema'
+
 const route = useRoute()
 const slug = route.params.slug as string
 
 const { locale } = useI18n()
-const localePath = useLocalePath()
+const bookingStore = useBookingStore()
+const siteUrl = SITE_URL
+const isIdBlog = computed(() => locale.value === 'id')
+
 const { data: article } = await useAsyncData(`article-view-${locale.value}-${slug}`, async () => {
-  return await queryCollection('content').path(`/${locale.value}/blog/${slug}`).first()
+  return await queryCollection('content').path(`/id/blog/${slug}`).first()
 }, { watch: [locale], default: () => null })
 
-useSeoMeta({
-  title: article.value?.title || 'Blog – Wisma Apollo',
-  description: article.value?.description || '',
-  ogTitle: article.value?.title || 'Blog - Wisma Apollo',
-  ogDescription: article.value?.description || '',
-  ogUrl: () => `https://wisma-apollo.my.id/blog/${slug}`,
+const articleUrl = computed(() => {
+  const articlePath = (article.value as any)?.path
+
+  if (articlePath) {
+    const [, , articleSlug] = articlePath.match(/^\/([^/]+)\/blog\/(.+)$/) || []
+    return `${siteUrl}/blog/${articleSlug || slug}`
+  }
+
+  return `${siteUrl}/blog/${slug}`
 })
 
-useHead({
-  link: [
-    { rel: 'canonical', href: `https://wisma-apollo.my.id/blog/${slug}` },
-  ],
+const articleTitle = computed(() => article.value?.title || 'Blog Wisma Apollo Kuala Kurun')
+const articleDescription = computed(() => article.value?.description || article.value?.excerpt || 'Artikel Wisma Apollo Kuala Kurun seputar penginapan, wisata, dan kuliner di Gunung Mas.')
+const articleImage = computed(() => {
+  const image = (article.value as any)?.image || '/images/hero.webp'
+  return image.startsWith('http') ? image : `${siteUrl}${image}`
 })
+
+const articleStructuredData = computed(() => buildGraphSchema([
+  buildWebPageSchema({
+    url: articleUrl.value,
+    name: articleTitle.value,
+    description: articleDescription.value,
+    image: articleImage.value,
+    inLanguage: 'id-ID',
+  }),
+  buildBreadcrumbSchema([
+    { name: 'Wisma Apollo Kuala Kurun', url: `${siteUrl}/` },
+    { name: 'Blog Wisma Apollo', url: `${siteUrl}/blog` },
+    { name: articleTitle.value, url: articleUrl.value },
+  ]),
+  article.value
+    ? {
+        '@type': 'BlogPosting',
+        '@id': `${articleUrl.value}#article`,
+        headline: articleTitle.value,
+        description: articleDescription.value,
+        image: articleImage.value,
+        mainEntityOfPage: { '@id': `${articleUrl.value}#webpage` },
+        url: articleUrl.value,
+        inLanguage: 'id-ID',
+        author: {
+          '@type': 'Organization',
+          name: 'Wisma Apollo Kuala Kurun',
+          url: `${siteUrl}/`,
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: 'Wisma Apollo Kuala Kurun',
+          logo: {
+            '@type': 'ImageObject',
+            url: `${siteUrl}/images/logo/wisma-apollo-logo.png`,
+          },
+        },
+      }
+    : null,
+]))
+
+const handleArticleClick = (event: MouseEvent) => {
+  const target = event.target as HTMLElement | null
+  const trigger = target?.closest('[data-booking-trigger="true"]')
+
+  if (!trigger) return
+
+  event.preventDefault()
+  bookingStore.openModal()
+}
+
+useSeoMeta({
+  title: () => articleTitle.value,
+  description: () => articleDescription.value,
+  ogTitle: () => articleTitle.value,
+  ogDescription: () => articleDescription.value,
+  ogType: 'article',
+  ogUrl: () => articleUrl.value,
+  ogImage: () => articleImage.value,
+  ogImageAlt: () => articleTitle.value,
+  twitterCard: 'summary_large_image',
+  twitterTitle: () => articleTitle.value,
+  twitterDescription: () => articleDescription.value,
+  twitterImage: () => articleImage.value,
+  twitterImageAlt: () => articleTitle.value,
+  robots: () => isIdBlog.value ? 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' : 'noindex, follow',
+})
+
+useHead(() => ({
+  link: [
+    { rel: 'canonical', href: articleUrl.value },
+  ],
+  meta: [
+    { property: 'og:site_name', content: 'Wisma Apollo Kuala Kurun' },
+    { property: 'og:locale', content: locale.value === 'id' ? 'id_ID' : locale.value === 'zh' ? 'zh_CN' : 'en_US' },
+    { property: 'og:image:secure_url', content: articleImage.value },
+    { property: 'og:image:width', content: '1200' },
+    { property: 'og:image:height', content: '630' },
+  ],
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify(articleStructuredData.value),
+    },
+  ],
+}))
 </script>
 
 <style scoped>
