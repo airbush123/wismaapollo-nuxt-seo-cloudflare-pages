@@ -2021,11 +2021,11 @@ a:focus-visible {
 /* ── MOBILE ONLY LOCK ── */
 @media (max-width: 480px) {
   .nav-inner {
-    padding: 10px 12px;
+    padding: 7px 12px;
   }
 
   .nav-logo {
-    font-size: 0.95rem;
+    font-size: 1.02rem;
     gap: 8px;
     letter-spacing: 0;
     min-width: 0;
