@@ -1477,6 +1477,10 @@ a:focus-visible {
   display: contents;
 }
 
+.bm-guest-stepper {
+  width: 100%;
+}
+
 .bm-step-btn {
   display: none;
 }
@@ -2260,10 +2264,21 @@ a:focus-visible {
     align-items: center;
   }
 
+  .bm-guest-stepper {
+    display: grid;
+    grid-template-columns: 42px minmax(0, 1fr) 42px;
+    gap: 8px;
+    align-items: center;
+  }
+
   .bm-room-option input {
     width: 54px;
     max-width: 54px;
     padding: 8px 6px;
+    text-align: center;
+  }
+
+  .bm-guest-stepper input {
     text-align: center;
   }
 

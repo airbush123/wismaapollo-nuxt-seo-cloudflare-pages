@@ -208,17 +208,35 @@
             <div class="bm-group">
               <label for="bm-guest-count">{{ $t('booking.guestCountLabel') }}</label>
               <div class="bm-guest-control-row">
-                <input
-                  type="number"
-                  id="bm-guest-count"
-                  v-model.number="bookingStore.guestCount"
-                  min="1"
-                  :max="maxGuestCount"
-                  inputmode="numeric"
-                  :aria-invalid="!!bookingStore.errors.guestCount"
-                  :aria-describedby="bookingStore.errors.guestCount ? 'bm-guest-count-error' : 'bm-guest-note'"
-                  required
-                />
+                <div class="bm-guest-stepper">
+                  <button
+                    type="button"
+                    class="bm-step-btn"
+                    :disabled="bookingStore.guestCount <= 1"
+                    aria-label="Kurangi jumlah tamu"
+                    @click.prevent="decrementGuest"
+                  >-</button>
+                  <input
+                    type="number"
+                    id="bm-guest-count"
+                    v-model.number="bookingStore.guestCount"
+                    min="1"
+                    :max="maxGuestCount"
+                    step="1"
+                    inputmode="numeric"
+                    :aria-invalid="!!bookingStore.errors.guestCount"
+                    :aria-describedby="bookingStore.errors.guestCount ? 'bm-guest-count-error' : 'bm-guest-note'"
+                    required
+                    @input="normalizeGuestCount"
+                  />
+                  <button
+                    type="button"
+                    class="bm-step-btn"
+                    :disabled="bookingStore.guestCount >= maxGuestCount"
+                    aria-label="Tambah jumlah tamu"
+                    @click.prevent="incrementGuest"
+                  >+</button>
+                </div>
                 <p id="bm-guest-note" class="bm-field-note">{{ guestCapacityHelp }}</p>
               </div>
               <p v-if="bookingStore.errors.guestCount" id="bm-guest-count-error" class="bm-error" role="alert">
@@ -379,6 +397,19 @@ function decrementRoom(type: 'single' | 'double') {
   activeRoomCard.value = type
   const currentCount = type === 'single' ? bookingStore.singleRoomCount : bookingStore.doubleRoomCount
   bookingStore.setRoomCount(type, Math.max(currentCount - 1, 0))
+}
+
+function normalizeGuestCount() {
+  const nextCount = Math.floor(Number(bookingStore.guestCount) || 1)
+  bookingStore.guestCount = Math.min(Math.max(nextCount, 1), maxGuestCount.value)
+}
+
+function incrementGuest() {
+  bookingStore.guestCount = Math.min((Number(bookingStore.guestCount) || 1) + 1, maxGuestCount.value)
+}
+
+function decrementGuest() {
+  bookingStore.guestCount = Math.max((Number(bookingStore.guestCount) || 1) - 1, 1)
 }
 
 // Focus trap & initial focus
