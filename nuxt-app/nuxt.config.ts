@@ -84,6 +84,8 @@ export default defineNuxtConfig({
     prerender: {
       ignore: [
         /^\/(?:en|zh)(?:\/(?:en|zh))*\/sitemap\.xml$/,
+        /^\/(?:(?:en|zh)\/)?(?:hotel-di-kuala-kurun-kalimantan-tengah-wisma-apollo-pilihan-strategis-nyaman|hotel-di-kuala-kurun-rekomendasi-penginapan-nyaman-dan-strategis|penginapan-murah-kuala-kurun|air-terjun-batu-mahasur-keindahan-tersembunyi-di-kuala-kurun|menikmati-keindahan-alam-batu-suli-di-desa-upon-batu-kabupaten-gunung-mas|bundaran-kuala-kurun-simbol-kota-yang-menyimpan-pesona|icon-tugu-selamat-datang-di-kuala-kurun-simbol-identitas-dan-keramahan-kota|harga|hotel-murah-kuala-kurun|guest-house-kurun|penginapan-kurun|faq-wisma|tentang-kami)(?:\/|$)/,
+        /^\/(?:(?:en|zh)\/)?(?:20\d{2}\/\d{2}|category\/|tag\/|author\/|feed)(?:\/|$)/,
       ],
     },
   },
@@ -115,6 +117,60 @@ export default defineNuxtConfig({
     '/hotel-di-kuala-kurun-kalimantan-tengah-wisma-apollo-pilihan-strategis-nyaman/': {
       redirect: { to: '/blog/hotel-kuala-kurun-kalimantan-tengah/', statusCode: 301 },
     },
+    '/hotel-di-kuala-kurun-rekomendasi-penginapan-nyaman-dan-strategis': {
+      redirect: { to: '/blog/hotel-di-kuala-kurun/', statusCode: 301 },
+    },
+    '/hotel-di-kuala-kurun-rekomendasi-penginapan-nyaman-dan-strategis/': {
+      redirect: { to: '/blog/hotel-di-kuala-kurun/', statusCode: 301 },
+    },
+    '/penginapan-murah-kuala-kurun': { redirect: { to: '/blog/penginapan-murah-kuala-kurun/', statusCode: 301 } },
+    '/penginapan-murah-kuala-kurun/': { redirect: { to: '/blog/penginapan-murah-kuala-kurun/', statusCode: 301 } },
+    '/air-terjun-batu-mahasur-keindahan-tersembunyi-di-kuala-kurun': {
+      redirect: { to: '/blog/air-terjun-batu-mahasur/', statusCode: 301 },
+    },
+    '/air-terjun-batu-mahasur-keindahan-tersembunyi-di-kuala-kurun/': {
+      redirect: { to: '/blog/air-terjun-batu-mahasur/', statusCode: 301 },
+    },
+    '/menikmati-keindahan-alam-batu-suli-di-desa-upon-batu-kabupaten-gunung-mas': {
+      redirect: { to: '/blog/batu-suli-desa-upon-batu/', statusCode: 301 },
+    },
+    '/menikmati-keindahan-alam-batu-suli-di-desa-upon-batu-kabupaten-gunung-mas/': {
+      redirect: { to: '/blog/batu-suli-desa-upon-batu/', statusCode: 301 },
+    },
+    '/bundaran-kuala-kurun-simbol-kota-yang-menyimpan-pesona': {
+      redirect: { to: '/blog/bundaran-kuala-kurun/', statusCode: 301 },
+    },
+    '/bundaran-kuala-kurun-simbol-kota-yang-menyimpan-pesona/': {
+      redirect: { to: '/blog/bundaran-kuala-kurun/', statusCode: 301 },
+    },
+    '/icon-tugu-selamat-datang-di-kuala-kurun-simbol-identitas-dan-keramahan-kota': {
+      redirect: { to: '/blog/bundaran-kuala-kurun/', statusCode: 301 },
+    },
+    '/icon-tugu-selamat-datang-di-kuala-kurun-simbol-identitas-dan-keramahan-kota/': {
+      redirect: { to: '/blog/bundaran-kuala-kurun/', statusCode: 301 },
+    },
+    '/harga': { redirect: { to: '/hotel-kuala-kurun/', statusCode: 301 } },
+    '/harga/': { redirect: { to: '/hotel-kuala-kurun/', statusCode: 301 } },
+    '/hotel-murah-kuala-kurun': { redirect: { to: '/hotel-kuala-kurun/', statusCode: 301 } },
+    '/hotel-murah-kuala-kurun/': { redirect: { to: '/hotel-kuala-kurun/', statusCode: 301 } },
+    '/guest-house-kurun': { redirect: { to: '/guest-house-kuala-kurun/', statusCode: 301 } },
+    '/guest-house-kurun/': { redirect: { to: '/guest-house-kuala-kurun/', statusCode: 301 } },
+    '/penginapan-kurun': { redirect: { to: '/penginapan-kuala-kurun/', statusCode: 301 } },
+    '/penginapan-kurun/': { redirect: { to: '/penginapan-kuala-kurun/', statusCode: 301 } },
+    '/faq-wisma': { redirect: { to: '/faq/', statusCode: 301 } },
+    '/faq-wisma/': { redirect: { to: '/faq/', statusCode: 301 } },
+    '/tentang-kami': { redirect: { to: '/', statusCode: 301 } },
+    '/tentang-kami/': { redirect: { to: '/', statusCode: 301 } },
+    '/2024/10': { redirect: { to: '/blog/', statusCode: 301 } },
+    '/2024/10/': { redirect: { to: '/blog/', statusCode: 301 } },
+    '/2025/06': { redirect: { to: '/blog/', statusCode: 301 } },
+    '/2025/06/': { redirect: { to: '/blog/', statusCode: 301 } },
+    '/tag/guest-house-kurun': { redirect: { to: '/guest-house-kuala-kurun/', statusCode: 301 } },
+    '/tag/guest-house-kurun/': { redirect: { to: '/guest-house-kuala-kurun/', statusCode: 301 } },
+    '/tag/staycation-kuala-kurun': { redirect: { to: '/staycation-kuala-kurun/', statusCode: 301 } },
+    '/tag/staycation-kuala-kurun/': { redirect: { to: '/staycation-kuala-kurun/', statusCode: 301 } },
+    '/tag/penginapan-di-kuala-kurun': { redirect: { to: '/penginapan-kuala-kurun/', statusCode: 301 } },
+    '/tag/penginapan-di-kuala-kurun/': { redirect: { to: '/penginapan-kuala-kurun/', statusCode: 301 } },
     '/category/**': { redirect: { to: '/blog/', statusCode: 301 } },
     '/tag/**': { redirect: { to: '/blog/', statusCode: 301 } },
     '/author/**': { redirect: { to: '/blog/', statusCode: 301 } },
