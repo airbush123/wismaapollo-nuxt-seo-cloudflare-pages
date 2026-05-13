@@ -237,19 +237,6 @@
                     @click.prevent="incrementGuest"
                   >+</button>
                 </div>
-                <div class="bm-guest-options" :aria-label="$t('booking.guestCountLabel')">
-                  <button
-                    v-for="guestOption in guestCountOptions"
-                    :key="guestOption"
-                    type="button"
-                    class="bm-guest-option"
-                    :class="{ active: bookingStore.guestCount === guestOption }"
-                    :aria-pressed="bookingStore.guestCount === guestOption"
-                    @click.prevent="setGuestCount(guestOption)"
-                  >
-                    {{ guestOption }}
-                  </button>
-                </div>
                 <p id="bm-guest-note" class="bm-field-note">{{ guestCapacityHelp }}</p>
               </div>
               <p v-if="bookingStore.errors.guestCount" id="bm-guest-count-error" class="bm-error" role="alert">
@@ -355,7 +342,6 @@ const maxGuestCount = computed(() => {
   const doubleCapacity = bookingStore.doubleRoomCount * adultCapacities.double
   return Math.max(singleCapacity + doubleCapacity, adultCapacities.single)
 })
-const guestCountOptions = computed(() => Array.from({ length: maxGuestCount.value }, (_, index) => index + 1))
 
 const selectedRoomName = computed(() => bookingStore.roomSummary || t('booking.roomTypeLabel'))
 const guestCapacityHelp = computed(() => {
@@ -416,10 +402,6 @@ function decrementRoom(type: 'single' | 'double') {
 function normalizeGuestCount() {
   const nextCount = Math.floor(Number(bookingStore.guestCount) || 1)
   bookingStore.guestCount = Math.min(Math.max(nextCount, 1), maxGuestCount.value)
-}
-
-function setGuestCount(count: number) {
-  bookingStore.guestCount = Math.min(Math.max(count, 1), maxGuestCount.value)
 }
 
 function incrementGuest() {
