@@ -2418,8 +2418,8 @@ a:focus-visible {
 
   .bm-guest-stepper {
     display: grid;
-    grid-template-columns: 42px 76px 42px;
-    gap: 8px;
+    grid-template-columns: 34px 54px 34px;
+    gap: 6px;
     align-items: center;
     justify-content: start;
     width: max-content;
@@ -2434,8 +2434,9 @@ a:focus-visible {
   }
 
   .bm-guest-stepper input {
-    width: 76px;
-    max-width: 76px;
+    width: 54px;
+    max-width: 54px;
+    padding: 8px 6px;
     text-align: center;
   }
 
