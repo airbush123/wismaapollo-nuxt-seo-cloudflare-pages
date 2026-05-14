@@ -537,6 +537,12 @@ a:focus-visible {
   white-space: nowrap;
 }
 
+.promo-marquee-copy {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
 @keyframes promoSlideLeft {
   from {
     transform: translateX(-620px);
@@ -548,13 +554,11 @@ a:focus-visible {
 }
 
 @keyframes promoSlideRightMobile {
-  0%,
-  12% {
-    transform: translateX(0);
+  from {
+    transform: translateX(calc(-100% - 42px));
   }
 
-  88%,
-  100% {
+  to {
     transform: translateX(calc(100vw + 32px));
   }
 }
@@ -2136,7 +2140,7 @@ a:focus-visible {
   }
 
   .promo-marquee-row {
-    height: 44px;
+    height: 58px;
   }
 
   .promo-marquee-track {
@@ -2151,7 +2155,14 @@ a:focus-visible {
     color: var(--forest);
   }
 
-  .promo-marquee-item>span {
+  .promo-marquee-copy {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+  }
+
+  .promo-marquee-icon {
     font-size: 1.55rem;
     line-height: 1;
   }
@@ -2164,6 +2175,7 @@ a:focus-visible {
   .promo-marquee-item small {
     font-size: 0.88rem;
     color: var(--text2);
+    line-height: 1.15;
   }
 
   #tentang {
@@ -2675,7 +2687,7 @@ a:focus-visible {
     color: var(--forest);
   }
 
-  .promo-marquee-item>span {
+  .promo-marquee-icon {
     font-size: 1.7rem;
     line-height: 1;
   }

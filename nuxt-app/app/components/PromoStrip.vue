@@ -12,9 +12,11 @@
       <div class="promo-marquee-row">
         <div class="promo-marquee-track">
           <span class="promo-marquee-item">
-            <span>&#128293;</span>
-            <strong>{{ $t('promo.title') }}</strong>
-            <small>{{ $t('promo.text') }} <em>{{ $t('promo.price') }}</em></small>
+            <span class="promo-marquee-icon">&#128293;</span>
+            <span class="promo-marquee-copy">
+              <strong>{{ $t('promo.title') }}</strong>
+              <small>{{ $t('promo.text') }} <em>{{ $t('promo.price') }}</em></small>
+            </span>
           </span>
         </div>
       </div>
