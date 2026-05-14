@@ -2,7 +2,14 @@
   <nav :class="['nav', { scrolled: uiStore.isScrolled }]" role="navigation" aria-label="Main Navigation">
     <div class="nav-inner">
       <NuxtLink :to="localePath('/')" class="nav-logo" :aria-label="'Wisma Apollo - ' + $t('common.backHome')">
-        <NuxtImg src="/images/logo/wisma-apollo-logo.png" alt="Logo Wisma Apollo" width="44" height="44" loading="eager" />
+        <img
+          src="/images/logo/wisma-apollo-logo-88.webp"
+          alt="Logo Wisma Apollo"
+          width="44"
+          height="44"
+          loading="eager"
+          decoding="async"
+        >
         <span class="logo-text">
           Wisma Apollo
         </span>

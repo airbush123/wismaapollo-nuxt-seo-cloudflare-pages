@@ -6,13 +6,14 @@
           media="(min-width: 768px)"
           srcset="/images/penginapan-di-kuala-kurun-desktop.webp"
         >
-        <NuxtImg
+        <img
           src="/images/hero.webp"
           alt="Hotel Kuala Kurun - Penginapan Wisma Apollo"
           width="480"
           height="600"
           loading="eager"
           fetchpriority="high"
+          decoding="async"
         />
       </picture>
     </div>

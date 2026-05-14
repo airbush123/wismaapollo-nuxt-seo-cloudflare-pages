@@ -581,6 +581,19 @@ export function useTracking() {
     })
   }
 
+  const scheduleIdleTrackingLoad = (callback: () => void) => {
+    const appWindow = window as typeof window & {
+      requestIdleCallback?: (handler: () => void, options?: { timeout: number }) => number
+    }
+
+    if (typeof appWindow.requestIdleCallback === 'function') {
+      appWindow.requestIdleCallback(callback, { timeout: 15000 })
+      return
+    }
+
+    setTimeout(callback, 15000)
+  }
+
   const initLandingTracking = () => {
     if (!hasWindow()) return
 
@@ -618,12 +631,12 @@ export function useTracking() {
     window.addEventListener('click', onInteraction, { passive: true, once: true })
     window.addEventListener('keydown', onInteraction, { passive: true, once: true })
 
-    setTimeout(() => {
+    scheduleIdleTrackingLoad(() => {
       if (!triggered) {
         triggered = true
         triggerLoad()
       }
-    }, 8500)
+    })
   }
 
   const trackContact = (source = 'whatsapp') => {
