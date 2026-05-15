@@ -32,7 +32,7 @@ const FUNNEL_EVENTS = {
   },
   lead: {
     name: 'wisma_lead',
-    label: '11473033484',
+    label: 'kR_PCIngrascEIyy4t4q',
     value: 5000
   },
   userData: {
