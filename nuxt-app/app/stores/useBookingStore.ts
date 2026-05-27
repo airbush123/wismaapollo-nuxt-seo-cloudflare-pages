@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
 
-const BOOKING_LEAD_URL = '/api/booking-lead'
+const BOOKING_LEAD_URL = '/api/webhook'
 const WA_NUMBER = '62818232021'
 const BREAKFAST_PRICE = 25000
 const SINGLE_ROOM_PRICE = 200000
@@ -423,40 +423,14 @@ export const useBookingStore = defineStore('booking', {
       const eventId = `${tracking.getOrCreateTrxId()}-${eventName}`
       const fbp = getCookieValue('_fbp')
       const fbc = getCookieValue('_fbc') || buildFbcFromFbclid(tracking.getFromStorage('fbclid'))
+      const fields = this.getLeadFields(eventId, fbp, fbc)
       const response = await fetch(BOOKING_LEAD_URL, {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
         },
         keepalive: true,
-        body: JSON.stringify({
-          fields: this.getLeadFields(eventId, fbp, fbc),
-          metaEvent: {
-            event_id: eventId,
-            event_source_url: window.location.href,
-            action_source: 'website',
-            user_data: {
-              ph: [tracking.getFromStorage('meta_hashed_phone') || tracking.getFromStorage('hashed_phone')].filter(Boolean),
-              fbp: fbp || undefined,
-              fbc: fbc || undefined,
-            },
-            custom_data: {
-              currency: 'IDR',
-              value: 5000,
-              content_name: 'Wisma Apollo Kuala Kurun',
-              content_category: 'hotel_booking',
-              room_type: this.roomTypeValue,
-              room_summary: this.roomSummary,
-              room_count: this.totalRoomCount,
-              guest_count: this.guestCount,
-              check_in: this.checkIn,
-              check_out: this.checkOut,
-              stay_nights: getStayNights(this.checkIn, this.checkOut),
-              breakfast: this.breakfast,
-              total_booking_value: this.totalBookingValue,
-            },
-          },
-        }),
+        body: new URLSearchParams(fields).toString(),
       })
 
       if (!response.ok) {
