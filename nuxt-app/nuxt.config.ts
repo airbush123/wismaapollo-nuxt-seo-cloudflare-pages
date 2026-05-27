@@ -58,13 +58,6 @@ export default defineNuxtConfig({
         { rel: 'icon', href: '/images/logo/favicon-192.png', sizes: '192x192' },
         { rel: 'apple-touch-icon', href: '/images/logo/favicon-192.png' },
         { rel: 'preload', as: 'image', href: '/images/hero-mobile.webp', media: '(max-width: 767px)', fetchpriority: 'high' },
-        { rel: 'preconnect', href: 'https://fonts.googleapis.com', media: '(min-width: 768px)' },
-        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '', media: '(min-width: 768px)' },
-        {
-          rel: 'stylesheet',
-          href: 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap',
-          media: '(min-width: 768px)',
-        },
         { rel: 'dns-prefetch', href: 'https://script.google.com' },
       ],
     },
