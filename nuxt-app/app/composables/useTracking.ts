@@ -148,7 +148,14 @@ export function useTracking() {
     const ua = navigator.userAgent
     if (/iPhone|iPad|iPod/.test(ua)) return 'iPhone'
     if (/Android/.test(ua)) return 'Android'
+    if (/Mobile|IEMobile|Opera Mini/i.test(ua)) return 'Mobile'
     return 'Desktop'
+  }
+
+  const isMobileViewport = (): boolean => {
+    if (!hasWindow()) return false
+
+    return window.matchMedia('(max-width: 720px)').matches || detectDevice() !== 'Desktop'
   }
 
   const normalizePhoneForAds = (rawPhone: string): string => {
@@ -594,6 +601,12 @@ export function useTracking() {
     setTimeout(callback, 15000)
   }
 
+  const shouldAutoLoadPassiveTracking = () => {
+    if (!isMobileViewport()) return true
+
+    return Boolean(getClickId() || getFromStorage('fbclid'))
+  }
+
   const initLandingTracking = () => {
     if (!hasWindow()) return
 
@@ -631,12 +644,14 @@ export function useTracking() {
     window.addEventListener('click', onInteraction, { passive: true, once: true })
     window.addEventListener('keydown', onInteraction, { passive: true, once: true })
 
-    scheduleIdleTrackingLoad(() => {
-      if (!triggered) {
-        triggered = true
-        triggerLoad()
-      }
-    })
+    if (shouldAutoLoadPassiveTracking()) {
+      scheduleIdleTrackingLoad(() => {
+        if (!triggered) {
+          triggered = true
+          triggerLoad()
+        }
+      })
+    }
   }
 
   const trackContact = (source = 'whatsapp') => {
