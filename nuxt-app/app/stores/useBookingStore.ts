@@ -1,6 +1,4 @@
 import { defineStore } from 'pinia'
-import { BookingFormSchema } from '~/schemas/booking'
-import type { BookingFormData } from '~/schemas/booking'
 
 const BOOKING_LEAD_URL = '/api/booking-lead'
 const WA_NUMBER = '62818232021'
@@ -9,6 +7,8 @@ const SINGLE_ROOM_PRICE = 200000
 const DOUBLE_ROOM_PRICE = 250000
 const SINGLE_ROOM_LIMIT = 3
 const DOUBLE_ROOM_LIMIT = 1
+const SINGLE_ADULT_CAPACITY = 2
+const DOUBLE_ADULT_CAPACITY = 3
 const LAST_WA_URL_KEY = 'wisma_last_wa_url'
 const LAST_WA_MESSAGE_KEY = 'wisma_last_wa_message'
 const LAST_BOOKING_PAYLOAD_KEY = 'wisma_last_booking_payload'
@@ -92,6 +92,76 @@ function getCookieValue(name: string) {
 
 function buildFbcFromFbclid(fbclid: string) {
   return fbclid ? `fb.1.${Date.now()}.${fbclid}` : ''
+}
+
+function getBookingValidationErrors(data: {
+  name: string
+  phone: string
+  checkIn: string
+  checkOut: string
+  singleRoomCount: number
+  doubleRoomCount: number
+  guestCount: number
+  notes?: string
+}) {
+  const errors: Record<string, string> = {}
+  const cleanPhone = data.phone.trim()
+
+  if (data.name.trim().length < 2) {
+    errors.name = 'Nama minimal 2 karakter'
+  }
+
+  if (cleanPhone.length < 10) {
+    errors.phone = 'Nomor minimal 10 digit'
+  } else if (!/^[0-9+\-\s]+$/.test(cleanPhone)) {
+    errors.phone = 'Format nomor tidak valid'
+  }
+
+  if (!data.checkIn) {
+    errors.checkIn = 'Tanggal check-in wajib diisi'
+  }
+
+  if (!data.checkOut) {
+    errors.checkOut = 'Tanggal check-out wajib diisi'
+  }
+
+  if (data.checkIn && data.checkOut && new Date(`${data.checkOut}T00:00:00`) <= new Date(`${data.checkIn}T00:00:00`)) {
+    errors.checkOut = 'Check-out minimal 1 hari setelah check-in'
+  }
+
+  if (data.singleRoomCount < 0) {
+    errors.singleRoomCount = 'Jumlah Single Bed tidak valid'
+  } else if (data.singleRoomCount > SINGLE_ROOM_LIMIT) {
+    errors.singleRoomCount = 'Single Bed maksimal 3 kamar'
+  }
+
+  if (data.doubleRoomCount < 0) {
+    errors.doubleRoomCount = 'Jumlah Double Bed tidak valid'
+  } else if (data.doubleRoomCount > DOUBLE_ROOM_LIMIT) {
+    errors.doubleRoomCount = 'Double Bed hanya tersedia 1 kamar'
+  }
+
+  const totalRooms = data.singleRoomCount + data.doubleRoomCount
+  if (totalRooms < 1) {
+    errors.singleRoomCount = 'Pilih minimal 1 kamar'
+  }
+
+  if (data.guestCount < 1) {
+    errors.guestCount = 'Minimal 1 tamu dewasa'
+  } else if (data.guestCount > 50) {
+    errors.guestCount = 'Maksimal 50 tamu dewasa'
+  } else {
+    const adultCapacity = (data.singleRoomCount * SINGLE_ADULT_CAPACITY) + (data.doubleRoomCount * DOUBLE_ADULT_CAPACITY)
+    if (adultCapacity > 0 && data.guestCount > adultCapacity) {
+      errors.guestCount = `Maksimal ${adultCapacity} tamu dewasa untuk kombinasi kamar yang dipilih.`
+    }
+  }
+
+  if ((data.notes || '').length > 300) {
+    errors.notes = 'Catatan maksimal 300 karakter'
+  }
+
+  return errors
 }
 
 export const useBookingStore = defineStore('booking', {
@@ -207,29 +277,19 @@ export const useBookingStore = defineStore('booking', {
     },
 
     validate(): boolean {
-      const result = BookingFormSchema.safeParse({
+      const errors = getBookingValidationErrors({
         name: this.name,
         phone: this.phone,
         checkIn: this.checkIn,
         checkOut: this.checkOut,
-        singleRoomCount: this.singleRoomCount,
-        doubleRoomCount: this.doubleRoomCount,
-        guestCount: this.guestCount,
-        breakfast: this.breakfast,
+        singleRoomCount: Number(this.singleRoomCount) || 0,
+        doubleRoomCount: Number(this.doubleRoomCount) || 0,
+        guestCount: Number(this.guestCount) || 0,
         notes: this.notes,
       })
 
-      if (!result.success) {
-        this.errors = {}
-        result.error.issues.forEach((err) => {
-          const field = err.path[0] as string
-          this.errors[field] = err.message
-        })
-        return false
-      }
-
-      this.errors = {}
-      return true
+      this.errors = errors
+      return Object.keys(errors).length === 0
     },
 
     isQualifiedForAddToCart() {
