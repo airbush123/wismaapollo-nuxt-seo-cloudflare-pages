@@ -94,6 +94,12 @@ function buildFbcFromFbclid(fbclid: string) {
   return fbclid ? `fb.1.${Date.now()}.${fbclid}` : ''
 }
 
+function formatSpreadsheetPhone(phone: string) {
+  const cleanPhone = phone.trim()
+  if (!cleanPhone || cleanPhone.startsWith("'")) return cleanPhone
+  return cleanPhone.startsWith('0') ? `'${cleanPhone}` : cleanPhone
+}
+
 function getBookingValidationErrors(data: {
   name: string
   phone: string
@@ -378,7 +384,7 @@ export const useBookingStore = defineStore('booking', {
       return {
         submittedAt: new Date().toISOString(),
         name: this.name,
-        phone: this.phone,
+        phone: formatSpreadsheetPhone(this.phone),
         checkIn: this.checkIn,
         checkOut: this.checkOut,
         roomType: this.roomTypeValue,
