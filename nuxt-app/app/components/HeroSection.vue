@@ -13,11 +13,11 @@
           height="600"
           loading="eager"
           fetchpriority="high"
-          decoding="async"
+          decoding="sync"
         />
       </picture>
     </div>
-    <div class="hero-body anim-up">
+    <div class="hero-body">
       <p class="hero-tag">{{ $t('hero.tag') }}</p>
       <h1>{{ $t('hero.title') }}</h1>
       <p class="hero-motto">{{ $t('hero.motto') }}</p>

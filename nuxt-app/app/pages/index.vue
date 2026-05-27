@@ -2,12 +2,12 @@
   <div>
     <HeroSection />
     <PromoStrip />
-    <AboutSection />
-    <FacilitiesSection />
-    <RoomCards />
-    <GallerySection />
-    <TestimonialSection />
-    <MapSection />
+    <LazyAboutSection />
+    <LazyFacilitiesSection />
+    <LazyRoomCards />
+    <LazyGallerySection />
+    <LazyTestimonialSection />
+    <LazyMapSection />
   </div>
 </template>
 

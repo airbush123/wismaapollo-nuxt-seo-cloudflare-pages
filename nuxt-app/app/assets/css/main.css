@@ -2108,15 +2108,32 @@ a:focus-visible {
 }
 
 @media (max-width: 720px) {
+  .section {
+    content-visibility: auto;
+    contain-intrinsic-size: 760px;
+  }
+
+  #tentang {
+    contain-intrinsic-size: 980px;
+  }
+
+  #fasilitas {
+    contain-intrinsic-size: 1120px;
+  }
+
+  #kamar {
+    contain-intrinsic-size: 1500px;
+  }
+
   .hero {
     min-height: 94svh;
     padding-bottom: 48px;
   }
 
   .hero-bg img {
-    object-position: 52% 42%;
-    transform: translateY(-8px) scale(1.04);
-    transform-origin: 52% 18%;
+    filter: none;
+    object-position: 52% 36%;
+    transform: none;
   }
 
   .nav-tools {

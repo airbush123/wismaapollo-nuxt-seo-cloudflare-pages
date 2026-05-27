@@ -5,10 +5,10 @@
     <main id="main-content" role="main">
       <slot />
     </main>
-    <AppFooter />
+    <LazyAppFooter />
     <BottomBar />
-    <BookingModal />
-    <LightboxOverlay />
+    <LazyBookingModal v-if="bookingStore.isModalOpen" />
+    <LazyLightboxOverlay v-if="uiStore.isLightboxOpen" />
   </div>
 </template>
 
