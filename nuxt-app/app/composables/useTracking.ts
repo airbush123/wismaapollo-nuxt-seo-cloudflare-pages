@@ -602,8 +602,6 @@ export function useTracking() {
   }
 
   const shouldAutoLoadPassiveTracking = () => {
-    if (!isMobileViewport()) return true
-
     return Boolean(getClickId() || getFromStorage('fbclid'))
   }
 
