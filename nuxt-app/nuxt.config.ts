@@ -66,8 +66,6 @@ export default defineNuxtConfig({
           media: 'print',
           onload: "this.media='all'",
         },
-        { rel: 'dns-prefetch', href: 'https://www.googletagmanager.com' },
-        { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' },
         { rel: 'dns-prefetch', href: 'https://script.google.com' },
       ],
     },
