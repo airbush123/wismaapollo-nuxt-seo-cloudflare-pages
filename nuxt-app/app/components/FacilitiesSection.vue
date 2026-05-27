@@ -7,8 +7,11 @@
         <NuxtImg
           src="/images/facilities-smoking-corridor-mobile.webp"
           alt="Koridor santai outdoor Wisma Apollo dengan meja dan kursi"
-          width="720"
-          height="960"
+          width="370"
+          height="493"
+          sizes="370px"
+          densities="1x"
+          quality="72"
           loading="lazy"
         />
         <div class="facilities-media-caption">

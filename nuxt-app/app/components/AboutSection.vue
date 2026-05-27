@@ -19,8 +19,11 @@
             <NuxtImg
               src="/images/about-lobby-mobile.webp"
               alt="Lobby Wisma Apollo dengan area resepsionis dan sofa tunggu"
-              width="720"
-              height="540"
+              width="370"
+              height="278"
+              sizes="370px"
+              densities="1x"
+              quality="72"
               loading="lazy"
             />
           </div>
