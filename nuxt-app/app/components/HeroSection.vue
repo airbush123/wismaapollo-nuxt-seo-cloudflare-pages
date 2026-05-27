@@ -7,7 +7,7 @@
           srcset="/images/penginapan-di-kuala-kurun-desktop.webp"
         >
         <img
-          src="/images/hero.webp"
+          src="/images/hero-mobile.webp"
           alt="Hotel Kuala Kurun - Penginapan Wisma Apollo"
           width="480"
           height="600"
