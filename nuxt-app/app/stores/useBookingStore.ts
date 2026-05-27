@@ -100,6 +100,24 @@ function formatSpreadsheetPhone(phone: string) {
   return cleanPhone.startsWith('0') ? `'${cleanPhone}` : cleanPhone
 }
 
+function getTrafficSource(params: URLSearchParams) {
+  const utmSource = (params.get('utm_source') || '').toLowerCase()
+  const fbclid = params.get('fbclid') || ''
+  const gclid = params.get('gclid') || params.get('GCLID') || ''
+  const wbraid = params.get('wbraid') || ''
+  const gbraid = params.get('gbraid') || ''
+
+  if (fbclid || ['facebook', 'fb', 'instagram', 'ig', 'meta'].includes(utmSource)) {
+    return { source: 'Meta', clickId: fbclid }
+  }
+
+  if (gclid || wbraid || gbraid || utmSource === 'google') {
+    return { source: 'Google', clickId: gclid || wbraid || gbraid }
+  }
+
+  return { source: 'Organic', clickId: '' }
+}
+
 function getBookingValidationErrors(data: {
   name: string
   phone: string
@@ -256,19 +274,11 @@ export const useBookingStore = defineStore('booking', {
       if (!import.meta.client) return
       try {
         const urlParams = new URLSearchParams(window.location.search)
-        if (urlParams.has('fbclid')) {
-          this.source = 'Meta'
-          this.clickId = urlParams.get('fbclid') || ''
-          sessionStorage.setItem('wa_source', this.source)
-          sessionStorage.setItem('wa_click_id', this.clickId)
-        } else if (urlParams.has('gclid') || urlParams.get('utm_source') === 'google') {
-          this.source = 'Google'
-          this.clickId = urlParams.get('gclid') || ''
-          sessionStorage.setItem('wa_source', this.source)
-          sessionStorage.setItem('wa_click_id', this.clickId)
-        } else if (urlParams.has('wbraid') || urlParams.has('gbraid')) {
-          this.source = 'Google'
-          this.clickId = urlParams.get('wbraid') || urlParams.get('gbraid') || ''
+        const traffic = getTrafficSource(urlParams)
+
+        if (traffic.source !== 'Organic') {
+          this.source = traffic.source
+          this.clickId = traffic.clickId
           sessionStorage.setItem('wa_source', this.source)
           sessionStorage.setItem('wa_click_id', this.clickId)
         } else {

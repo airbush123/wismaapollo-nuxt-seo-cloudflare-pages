@@ -23,6 +23,7 @@ let removeScrollListener: (() => void) | undefined
 // Initialize tracking on client
 onMounted(() => {
   bookingStore.initTracking()
+  useTracking().initLandingTracking()
 
   let isTicking = false
   let lastScrolled = window.scrollY > 40
