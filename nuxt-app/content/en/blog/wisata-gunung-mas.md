@@ -3,6 +3,8 @@ title: '5 Best Tourism Destinations in Gunung Mas, Central Kalimantan'
 description: 'A practical travel guide to Gunung Mas tourism, including natural attractions, local landmarks, and where to stay in Kuala Kurun.'
 category: 'Travel'
 image: '/images/blog/air-terjun-batu-mahasur.webp'
+date: '2024-10-20'
+dateModified: '2026-05-29'
 ---
 
 Gunung Mas Regency in Central Kalimantan offers a calm travel experience with nature, rivers, local culture, and town landmarks. Visitors usually use Kuala Kurun as the main base because it is the regency capital and has easier access to accommodation, food, shops, and transportation.

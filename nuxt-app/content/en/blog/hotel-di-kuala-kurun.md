@@ -3,6 +3,8 @@ title: 'Hotel in Kuala Kurun: Strategic Lodging Recommendation'
 description: 'Wisma Apollo offers room rates starting from IDR 200,000, near the town center, with private bathroom, cold AC, WiFi, and easy WhatsApp reservation.'
 category: 'Accommodation'
 image: '/images/blog/hotel-di-kuala-kurun.webp'
+date: '2024-10-15'
+dateModified: '2026-05-29'
 ---
 
 Finding a hotel in Kuala Kurun is usually about more than choosing the lowest price. Guests often need a place that is clean, easy to find, close to town activity, and simple to book. Whether you are visiting Gunung Mas for official duty, field work, family matters, or transit, a comfortable room can make the whole trip feel smoother.

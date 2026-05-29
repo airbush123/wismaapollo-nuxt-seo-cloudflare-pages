@@ -3,6 +3,8 @@ title: '5 Best Coffee Cafes in Kuala Kurun for Hanging Out'
 description: 'Recommendation of 5 coffee cafes and casual places in Kuala Kurun for guests who want to relax, meet friends, or work with a cup of coffee.'
 category: 'Culinary'
 image: '/images/blog/5-cafe-kopi-terbaik-di-kuala-kurun.png'
+date: '2024-10-25'
+dateModified: '2026-05-29'
 ---
 
 Kuala Kurun may feel calm compared with larger cities, but it still has pleasant places to sit down, drink coffee, and take a break after work or travel. For guests staying in town, a good cafe can be useful for many reasons: meeting a colleague, waiting for an appointment, catching up on messages, or simply enjoying a slower evening before returning to the room.

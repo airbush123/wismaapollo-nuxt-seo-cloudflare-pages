@@ -3,6 +3,8 @@ title: 'Enjoying the Natural Beauty of Batu Suli in Upon Batu Village'
 description: 'A travel guide to Batu Suli in Upon Batu Village, Gunung Mas, with practical tips for visitors staying in Kuala Kurun.'
 category: 'Travel'
 image: '/images/blog/batu-suli-desa-upon-batu.webp'
+date: '2024-11-05'
+dateModified: '2026-05-29'
 ---
 
 Batu Suli in Upon Batu Village is one of the natural attractions that can make a visit to Gunung Mas feel more complete. The destination is known for its stone formation, river scenery, and natural atmosphere. For travelers who enjoy landscapes and outdoor views, Batu Suli is worth considering when planning time around Kuala Kurun.

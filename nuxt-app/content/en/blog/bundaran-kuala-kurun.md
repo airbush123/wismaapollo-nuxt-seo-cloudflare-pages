@@ -3,6 +3,8 @@ title: 'Kuala Kurun Roundabout: A City Symbol with Charm'
 description: 'A short guide to the Kuala Kurun Roundabout, one of the recognizable city points in Gunung Mas, Central Kalimantan.'
 category: 'Travel'
 image: '/images/blog/bundaran-kuala-kurun.webp'
+date: '2024-11-10'
+dateModified: '2026-05-29'
 ---
 
 The Kuala Kurun Roundabout is one of the recognizable points in the town of Kuala Kurun, Gunung Mas Regency. For local residents, it is part of daily mobility. For visitors, it can become a simple landmark that helps them understand the city layout and remember the atmosphere of the town center.

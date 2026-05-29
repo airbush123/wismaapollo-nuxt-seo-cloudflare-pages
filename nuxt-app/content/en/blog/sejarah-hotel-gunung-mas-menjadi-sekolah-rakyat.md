@@ -3,6 +3,8 @@ title: 'Old Gunung Mas Hotel Transformed Into a People School'
 description: 'A local story about how an old hotel building in Gunung Mas became connected with education and community value in Central Kalimantan.'
 category: 'Info'
 image: '/images/blog/sekolah-rakyat-gunung-mas.jpg'
+date: '2025-07-15'
+dateModified: '2026-05-29'
 ---
 
 Buildings often hold stories that are bigger than their original function. In Gunung Mas, Central Kalimantan, the story of an old hotel building being transformed into a people's school shows how local assets can continue to serve the community in new ways. A place that once welcomed travelers can later become part of education, learning, and social progress.

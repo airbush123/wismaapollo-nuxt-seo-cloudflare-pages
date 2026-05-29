@@ -3,6 +3,8 @@ title: 'Tips for Staying Comfortably in Kuala Kurun: Complete Guide'
 description: 'Tips for staying comfortably in Kuala Kurun, including location, facilities, room type, budget, booking, and travel preparation.'
 category: 'Tips'
 image: '/images/gallery/penginapan-murah-kuala-kurun.webp'
+date: '2025-01-20'
+dateModified: '2026-05-29'
 ---
 
 Kuala Kurun is the capital of Gunung Mas Regency in Central Kalimantan. Visitors come for many reasons: government affairs, field work, family visits, local events, transit, and travel. Whatever the purpose, choosing the right accommodation will strongly affect the comfort of your stay.

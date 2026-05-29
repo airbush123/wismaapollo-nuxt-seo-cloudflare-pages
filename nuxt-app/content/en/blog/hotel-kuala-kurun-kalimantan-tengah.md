@@ -3,6 +3,8 @@ title: 'Hotel in Kuala Kurun, Central Kalimantan: Best Recommendation'
 description: 'Looking for a hotel or lodging in Kuala Kurun, Central Kalimantan? Find comfortable, strategic, and affordable accommodation at Wisma Apollo.'
 category: 'Accommodation'
 image: '/images/blog/hotel-kuala-kurun-kalimantan-tengah.jpg'
+date: '2025-05-10'
+dateModified: '2026-05-29'
 ---
 
 Kuala Kurun is the capital of Gunung Mas Regency in Central Kalimantan. For visitors who come from outside the region, choosing the right hotel in Kuala Kurun can make the trip much easier. The town is often used as a base for government affairs, field work, family visits, local events, and transit before continuing to other areas.

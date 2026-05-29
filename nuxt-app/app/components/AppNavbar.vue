@@ -21,6 +21,7 @@
           <NuxtLink :to="localePath('/#kamar')" role="menuitem">{{ $t('nav.rooms') }}</NuxtLink>
           <NuxtLink :to="localePath('/#galeri')" role="menuitem">{{ $t('nav.gallery') }}</NuxtLink>
           <NuxtLink :to="localePath('/#testimoni')" role="menuitem">{{ $t('nav.testimonials') }}</NuxtLink>
+          <NuxtLink v-if="isBlogVisible" :to="localePath('/blog')" role="menuitem">{{ $t('nav.blog') }}</NuxtLink>
           <NuxtLink :to="localePath('/faq')" role="menuitem">{{ $t('nav.faq') }}</NuxtLink>
         </div>
         <button

@@ -3,6 +3,8 @@ title: 'Must-Try Local Culinary Experiences in Kuala Kurun'
 description: 'A practical culinary guide for Kuala Kurun visitors, from river fish and local dishes to simple food-hunting tips while staying at Wisma Apollo.'
 category: 'Culinary'
 image: '/images/gallery/hotel-di-kuala-kurun.webp'
+date: '2024-11-15'
+dateModified: '2026-05-29'
 ---
 
 Trying local food is one of the easiest ways to enjoy a visit to Kuala Kurun. The town may be quiet, but visitors can still find simple and satisfying culinary experiences around Gunung Mas. From river fish to local snacks and everyday food stalls, the best approach is to explore with curiosity and keep the plan flexible.
