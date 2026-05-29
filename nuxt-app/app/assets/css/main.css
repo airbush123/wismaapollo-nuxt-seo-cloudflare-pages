@@ -2863,6 +2863,23 @@ a:focus-visible {
     box-shadow: 0 16px 32px rgba(232, 106, 51, 0.34);
   }
 
+  .nav-locale-id .desktop-nav-shell {
+    gap: 8px;
+  }
+
+  .nav-locale-id .desktop-menu {
+    gap: 2px;
+    padding-inline: 10px;
+  }
+
+  .nav-locale-id .desktop-menu a {
+    padding-inline: 11px;
+  }
+
+  .nav-locale-id .desktop-cta {
+    padding-inline: 14px;
+  }
+
   .lang-switch {
     margin-right: 0;
     margin-left: 6px;

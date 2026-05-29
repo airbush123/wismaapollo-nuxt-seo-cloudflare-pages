@@ -1,5 +1,5 @@
 <template>
-  <nav :class="['nav', { scrolled: uiStore.isScrolled }]" role="navigation" aria-label="Main Navigation">
+  <nav :class="['nav', `nav-locale-${locale}`, { scrolled: uiStore.isScrolled }]" role="navigation" aria-label="Main Navigation">
     <div class="nav-inner">
       <NuxtLink :to="localePath('/')" class="nav-logo" :aria-label="'Wisma Apollo - ' + $t('common.backHome')">
         <img
