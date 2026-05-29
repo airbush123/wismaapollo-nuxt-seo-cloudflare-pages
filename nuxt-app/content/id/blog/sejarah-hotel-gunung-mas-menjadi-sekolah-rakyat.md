@@ -26,5 +26,18 @@ image: '/images/blog/sekolah-rakyat-gunung-mas.jpg'
 <p>Bagi pembaca yang sedang merencanakan perjalanan, jadikan cerita lokal sebagai pelengkap itinerary. Setelah menyelesaikan agenda kerja atau wisata, sempatkan mengenal sisi kota yang tidak selalu muncul di brosur perjalanan. Kuala Kurun punya banyak hal untuk diceritakan, dan pengalaman menginap yang nyaman akan membuat proses mengenal kota ini terasa lebih tenang.</p>
 <p>Jika Anda kebetulan berkunjung atau menginap di <a href="https://wisma-apollo.my.id/"><strong>Wisma Apollo Kuala Kurun</strong>
 </a>, bangunan eks-hotel ini bisa memicu cerita inspiratif lokal yang sangat memotivasi. Mari kita dukung terus program pendidikan seperti ini agar Kuala Kurun semakin maju dan mencetak sumber daya manusia unggul dari bumi Kalimantan Tengah!</p>
+<div class="cta-box cta-reservation">
+<div class="cta-copy">
+<span class="cta-kicker">Reservasi Langsung</span>
+<h3>Menginap di Kuala Kurun Saat Berkunjung ke Gunung Mas</h3>
+<p>Isi form reservasi singkat untuk mengecek ketersediaan kamar. Admin akan melanjutkan konfirmasi melalui WhatsApp resmi Wisma Apollo.</p>
+</div>
+<div class="cta-meta" aria-label="Ringkasan fasilitas Wisma Apollo">
+<span>Mulai Rp200.000</span>
+<span>Lokasi strategis</span>
+<span>Booking langsung</span>
+</div>
+<a href="#reservasi" class="blog-reserve-btn" data-booking-trigger="true">Buka Form Reservasi</a>
+</div>
 <h2>Penutup</h2>
 <p>Transformasi bangunan lama menjadi ruang pendidikan adalah pengingat bahwa sebuah kota selalu punya cara untuk memperbarui dirinya. Kuala Kurun tidak hanya tumbuh sebagai pusat pemerintahan Kabupaten Gunung Mas, tetapi juga sebagai ruang hidup yang menyimpan cerita sosial, pendidikan, dan harapan masyarakat. Bagi tamu yang datang, memahami cerita seperti ini membuat perjalanan terasa lebih dekat dengan karakter daerah.</p>

@@ -31,6 +31,19 @@ image: '/images/blog/hotel-kuala-kurun-kalimantan-tengah.jpg'
 <p>Kuala Kurun dapat menjadi ramai saat ada agenda pemerintahan, kegiatan daerah, perjalanan kerja, atau akhir pekan tertentu. Karena itu, melakukan reservasi lebih awal adalah langkah yang bijak. Dengan booking lebih dulu, Anda bisa memastikan tipe kamar yang diinginkan, menyesuaikan jumlah tamu, dan menanyakan kebutuhan tambahan seperti extra bed atau sarapan by request.</p>
 <p>Wisma Apollo menyediakan kamar mulai Rp200.000 per malam untuk tamu yang mengutamakan efisiensi. Dengan fasilitas kamar yang lengkap dan lokasi di pusat Kuala Kurun, penginapan ini menjadi referensi yang kuat untuk perjalanan singkat maupun beberapa malam. Jika Anda sedang menyusun perjalanan ke Gunung Mas, memastikan tempat menginap sejak awal akan membuat agenda lebih rapi dan tidak melelahkan.</p>
 <p>Percayakan penginapan Anda di Kalimantan Tengah pada Wisma Apollo. Kepuasan, harga terukur, serta memori perjalanan yang mulus akan selalu Anda bawa pulang dengan senyuman.</p>
+<div class="cta-box cta-reservation">
+<div class="cta-copy">
+<span class="cta-kicker">Reservasi Langsung</span>
+<h3>Booking Kamar Hotel di Kuala Kurun</h3>
+<p>Isi form reservasi singkat untuk mengecek ketersediaan kamar. Admin akan melanjutkan konfirmasi melalui WhatsApp resmi Wisma Apollo.</p>
+</div>
+<div class="cta-meta" aria-label="Ringkasan fasilitas Wisma Apollo">
+<span>Mulai Rp200.000</span>
+<span>Lokasi strategis</span>
+<span>Kamar bersih</span>
+</div>
+<a href="#reservasi" class="blog-reserve-btn" data-booking-trigger="true">Buka Form Reservasi</a>
+</div>
 <h2>Kesimpulan: Hotel Strategis Membuat Perjalanan Lebih Efisien</h2>
 <p>Memilih hotel di Kuala Kurun, Kalimantan Tengah sebaiknya dimulai dari kebutuhan utama: lokasi, kenyamanan, fasilitas, dan kemudahan booking. Untuk tamu dinas, wisatawan, pekerja lapangan, maupun keluarga, hotel yang strategis akan menghemat waktu dan tenaga. Wisma Apollo hadir untuk kebutuhan tersebut, dengan kamar bersih, harga terukur, dan akses yang praktis di pusat Kuala Kurun.</p>
 <p>Pastikan juga Anda menyimpan kontak penginapan sebelum tiba. Komunikasi yang cepat akan membantu jika jadwal berubah, perjalanan terlambat, atau jumlah tamu bertambah. Persiapan kecil seperti ini membuat pengalaman menginap di Kuala Kurun lebih rapi dan bebas panik.</p>

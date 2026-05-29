@@ -29,6 +29,19 @@ image: '/images/blog/penginapan-murah-kuala-kurun.jpg'
 <p>Harga murah akan terasa percuma jika kamar tidak nyaman untuk tidur. Karena itu, pilih penginapan yang tetap memperhatikan kebersihan, sirkulasi udara, kamar mandi, dan kualitas tempat tidur. Setelah perjalanan jauh, tamu membutuhkan kamar yang bisa langsung digunakan untuk mandi, menaruh barang, mengisi daya ponsel, dan beristirahat tanpa banyak gangguan.</p>
 <p>Wisma Apollo menjaga keseimbangan antara harga terjangkau dan kenyamanan dasar. Dengan kamar mulai Rp200.000 per malam, tamu tetap mendapatkan AC, WiFi gratis, TV Android, kamar mandi dalam, shower, handuk, amenities, dan parkir luas. Kombinasi ini membuat Wisma Apollo cocok untuk tamu yang ingin hemat, tetapi tetap ingin tidur dengan nyaman di pusat Kuala Kurun.</p>
 <p>Harga yang terjangkau dipadukan dengan kenyamanan tanpa batas membuat Wisma Apollo menjadi pilihan rasional bagi setiap pelancong di Kuala Kurun. Tunggu apa lagi? Rasakan sensasi tidur yang sangat pulas tanpa rasa khawatir akan dompet Anda!</p>
+<div class="cta-box cta-reservation">
+<div class="cta-copy">
+<span class="cta-kicker">Reservasi Langsung</span>
+<h3>Cek Penginapan Murah di Kuala Kurun</h3>
+<p>Isi form reservasi singkat untuk mengecek ketersediaan kamar. Admin akan melanjutkan konfirmasi melalui WhatsApp resmi Wisma Apollo.</p>
+</div>
+<div class="cta-meta" aria-label="Ringkasan fasilitas Wisma Apollo">
+<span>Mulai Rp200.000</span>
+<span>Kamar bersih</span>
+<span>Booking mudah</span>
+</div>
+<a href="#reservasi" class="blog-reserve-btn" data-booking-trigger="true">Buka Form Reservasi</a>
+</div>
 <h2>Kesimpulan: Hemat Tanpa Mengorbankan Kenyamanan</h2>
 <p>Penginapan murah di Kuala Kurun sebaiknya tetap dinilai dari kualitas istirahatnya. Harga terjangkau memang penting, tetapi lokasi, kebersihan, kamar mandi dalam, AC, WiFi, dan parkir juga menentukan kenyamanan. Wisma Apollo memberi pilihan yang seimbang untuk tamu yang ingin menghemat biaya perjalanan tanpa harus mengorbankan kebutuhan dasar selama menginap.</p>
 <p>Jika kamu sedang menyusun perjalanan ke Gunung Mas, cek kamar lebih awal agar pilihan tipe kamar masih tersedia. Dengan reservasi langsung, kamu bisa memastikan harga terbaru, fasilitas, dan kebutuhan tambahan sebelum tiba di Kuala Kurun.</p>
