@@ -28,17 +28,17 @@ export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: { lang: 'id' },
-      title: 'Wisma Apollo - Hotel & Penginapan Kuala Kurun',
+      title: 'Hotel Kuala Kurun - Penginapan Wisma Apollo',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width,initial-scale=1,maximum-scale=5' },
-        { name: 'description', content: 'Wisma Apollo adalah hotel dan penginapan Kuala Kurun yang bersih, strategis, dan nyaman dengan AC, WiFi gratis, TV Android, dan parkir luas.' },
+        { name: 'description', content: 'Mencari hotel Kuala Kurun yang nyaman? Wisma Apollo adalah pilihan tepat untuk penginapan Kuala Kurun dengan fasilitas bersih dan harga terjangkau.' },
         { name: 'keywords', content: 'hotel kuala kurun, penginapan kuala kurun, wisma kuala kurun, wisma apollo, hotel murah kuala kurun, penginapan murah kuala kurun, guest house kuala kurun, homestay kuala kurun, hotel gunung mas kalimantan tengah' },
         { name: 'robots', content: 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' },
         { name: 'theme-color', content: '#FAF6F0' },
         // Open Graph
-        { property: 'og:title', content: 'Wisma Apollo - Hotel & Penginapan Kuala Kurun' },
-        { property: 'og:description', content: 'Hotel dan penginapan Kuala Kurun yang bersih, strategis, dan nyaman dengan AC, WiFi gratis, TV Android, dan parkir luas.' },
+        { property: 'og:title', content: 'Hotel Kuala Kurun - Penginapan Wisma Apollo' },
+        { property: 'og:description', content: 'Mencari hotel Kuala Kurun yang nyaman? Wisma Apollo adalah pilihan tepat untuk penginapan Kuala Kurun dengan fasilitas bersih dan harga terjangkau.' },
         { property: 'og:type', content: 'website' },
         { property: 'og:url', content: 'https://wisma-apollo.my.id/' },
         { property: 'og:image', content: 'https://wisma-apollo.my.id/images/hero.webp' },
@@ -49,8 +49,8 @@ export default defineNuxtConfig({
         { property: 'og:site_name', content: 'Wisma Apollo Kuala Kurun' },
         // Twitter
         { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:title', content: 'Wisma Apollo - Hotel & Penginapan Kuala Kurun' },
-        { name: 'twitter:description', content: 'Hotel dan penginapan Kuala Kurun yang bersih, strategis, dan nyaman.' },
+        { name: 'twitter:title', content: 'Hotel Kuala Kurun - Penginapan Wisma Apollo' },
+        { name: 'twitter:description', content: 'Mencari hotel Kuala Kurun yang nyaman? Wisma Apollo adalah pilihan tepat untuk penginapan Kuala Kurun dengan fasilitas bersih dan harga terjangkau.' },
         { name: 'twitter:image', content: 'https://wisma-apollo.my.id/images/hero.webp' },
       ],
       link: [

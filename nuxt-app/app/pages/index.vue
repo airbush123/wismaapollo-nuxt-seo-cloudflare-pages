@@ -36,13 +36,13 @@ const homeUrl = computed(() => {
 const homeTitle = computed(() => {
   if (locale.value === 'en') return 'Wisma Apollo - Hotel & Lodging in Kuala Kurun'
   if (locale.value === 'zh') return 'Wisma Apollo - Kuala Kurun 酒店与住宿'
-  return 'Wisma Apollo - Hotel & Penginapan Kuala Kurun'
+  return 'Hotel Kuala Kurun - Penginapan Wisma Apollo'
 })
 
 const homeDescription = computed(() => {
   if (locale.value === 'en') return 'Wisma Apollo is a clean and strategic hotel in Kuala Kurun with AC rooms, free WiFi, Android TV, private bathroom, and spacious parking.'
   if (locale.value === 'zh') return 'Wisma Apollo 是 Kuala Kurun 干净便利的住宿选择，提供空调客房、免费 WiFi、Android 电视、独立浴室和宽敞停车区。'
-  return 'Wisma Apollo adalah hotel dan penginapan Kuala Kurun yang bersih, strategis, dan nyaman dengan AC, WiFi gratis, TV Android, dan parkir luas.'
+  return 'Mencari hotel Kuala Kurun yang nyaman? Wisma Apollo adalah pilihan tepat untuk penginapan Kuala Kurun dengan fasilitas bersih dan harga terjangkau.'
 })
 
 const homeImage = `${siteUrl}/images/hero.webp`
