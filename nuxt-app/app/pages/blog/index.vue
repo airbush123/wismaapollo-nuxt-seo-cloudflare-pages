@@ -179,7 +179,7 @@ useHead(() => ({
   script: [
     {
       type: 'application/ld+json',
-      innerHTML: JSON.stringify(blogStructuredData.value),
+      textContent: JSON.stringify(blogStructuredData.value),
     },
   ],
 }))

@@ -165,7 +165,7 @@ useHead(() => ({
   script: [
     {
       type: 'application/ld+json',
-      innerHTML: JSON.stringify(articleStructuredData.value),
+      textContent: JSON.stringify(articleStructuredData.value),
     },
   ],
 }))

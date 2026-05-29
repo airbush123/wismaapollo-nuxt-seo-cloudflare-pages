@@ -83,7 +83,7 @@ useHead(() => ({
   script: [
     {
       type: 'application/ld+json',
-      innerHTML: JSON.stringify(buildGraphSchema([
+      textContent: JSON.stringify(buildGraphSchema([
         buildOrganizationSchema(),
         buildHotelSchema(),
         buildWebsiteSchema(locale.value === 'zh' ? 'zh-CN' : locale.value === 'en' ? 'en-US' : 'id-ID'),

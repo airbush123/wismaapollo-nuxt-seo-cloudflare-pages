@@ -407,7 +407,7 @@ useHead(() => ({
   script: [
     {
       type: 'application/ld+json',
-      innerHTML: JSON.stringify(pageStructuredData.value),
+      textContent: JSON.stringify(pageStructuredData.value),
     },
   ],
 }))

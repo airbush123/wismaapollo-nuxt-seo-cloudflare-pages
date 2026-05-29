@@ -1,5 +1,5 @@
 ---
-title: 'Hotel in Kuala Kurun: Comfortable and Strategic Lodging Recommendation'
+title: 'Hotel in Kuala Kurun: Strategic Lodging Recommendation'
 description: 'Wisma Apollo offers room rates starting from IDR 200,000, near the town center, with private bathroom, cold AC, WiFi, and easy WhatsApp reservation.'
 category: 'Accommodation'
 image: '/images/blog/hotel-di-kuala-kurun.webp'

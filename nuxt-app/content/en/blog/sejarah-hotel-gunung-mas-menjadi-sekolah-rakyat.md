@@ -1,5 +1,5 @@
 ---
-title: 'The Transformation of an Old Gunung Mas Hotel Into a People School'
+title: 'Old Gunung Mas Hotel Transformed Into a People School'
 description: 'A local story about how an old hotel building in Gunung Mas became connected with education and community value in Central Kalimantan.'
 category: 'Info'
 image: '/images/blog/sekolah-rakyat-gunung-mas.jpg'

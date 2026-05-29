@@ -1,5 +1,5 @@
 ---
-title: 'Hotel Gunung Mas Kalimantan Tengah: Rekomendasi Menginap di Kuala Kurun'
+title: 'Hotel Gunung Mas Kalimantan Tengah: Menginap di Kuala Kurun'
 description: 'Panduan memilih hotel Gunung Mas Kalimantan Tengah untuk tamu dinas, keluarga, pekerja lapangan, dan wisatawan yang mencari penginapan strategis di Kuala Kurun.'
 category: 'Penginapan'
 image: '/images/blog/hotel-gunung-mas-kalimantan-tengah.png'
