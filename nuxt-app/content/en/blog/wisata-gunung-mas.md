@@ -1,72 +1,45 @@
 ---
 title: '5 Best Tourism Destinations in Gunung Mas, Central Kalimantan'
-description: 'A practical travel guide to Gunung Mas tourism, including natural attractions, local landmarks, and where to stay in Kuala Kurun.'
+description: 'Gunung Mas Central Kalimantan travel guide – 5 best destinations from nature to Dayak culture. Itinerary tips and lodging in Kuala Kurun.'
 category: 'Travel'
 image: '/images/blog/air-terjun-batu-mahasur.webp'
 date: '2024-10-20'
 dateModified: '2026-05-29'
 ---
 
-Gunung Mas Regency in Central Kalimantan offers a calm travel experience with nature, rivers, local culture, and town landmarks. Visitors usually use Kuala Kurun as the main base because it is the regency capital and has easier access to accommodation, food, shops, and transportation.
-
-This guide introduces several tourism ideas for visitors who want to explore Gunung Mas while staying in Kuala Kurun.
-
-## 1. Batu Mahasur Waterfall
-
-Batu Mahasur Waterfall is one of the natural attractions often mentioned by visitors to Gunung Mas. The area offers flowing water, green surroundings, and a refreshing outdoor atmosphere. It is suitable for travelers who want a simple nature trip outside the town rhythm.
-
-Before visiting, check weather and access conditions. Wear comfortable footwear, bring drinking water, and avoid going too late in the day. Waterfall areas can be slippery, so safety should always come first.
-
-## 2. Batu Suli in Upon Batu Village
-
-Batu Suli is known for its natural stone formation and scenic surroundings. It gives visitors a chance to see another side of Gunung Mas beyond the town center. The destination is suitable for photography, light exploration, and appreciating local landscapes.
-
-If you plan to visit Batu Suli, start from Kuala Kurun with enough time. Ask local contacts about current route conditions and prepare basic travel needs before departure.
-
-## 3. Kuala Kurun Town Center
-
-The town center itself is part of the travel experience. Visitors can see daily life, main roads, local food stalls, cafes, and public landmarks such as the Kuala Kurun Roundabout. For guests who only stay briefly, exploring the town center is an easy way to understand the local atmosphere.
-
-A short evening walk, coffee stop, or local dinner can make the visit more memorable without requiring a long trip.
-
-## 4. Local Culinary Stops
-
-Food is a simple but important part of traveling. In Kuala Kurun, visitors can try river fish, local dishes, coffee stalls, and everyday food options. The best culinary experience is often found by asking local people what is good that day.
-
-If your schedule is busy, choose food spots near your accommodation. This keeps the trip efficient and helps you return to rest on time.
-
-## 5. Cultural and Community Stories
-
-Gunung Mas is also shaped by Dayak culture, community activity, and regional development stories. Visitors can learn from local conversations, public spaces, and the way residents use town facilities. Travel becomes richer when you pay attention to these details.
-
-Not every attraction has to be a formal destination. Sometimes the most meaningful part of a visit is understanding how people live, work, and maintain local identity.
-
-## Why Stay in Kuala Kurun?
-
-Kuala Kurun is the most practical base for exploring Gunung Mas. It offers access to accommodation, food, shops, main roads, and local contacts. Staying in town helps visitors plan day trips more easily and return to a comfortable room after exploring.
-
-Wisma Apollo is located at Jl. Letjen Soeprapto No.56, Kuala Kurun. Rooms include AC, WiFi, Android TV, private bathroom, towels, amenities, drinking water, and parking. Rates start from IDR 200,000 per night.
-
-## Travel Tips for Gunung Mas
-
-Plan routes before leaving town, especially for natural destinations. Check weather, prepare water, bring comfortable footwear, and keep your phone charged. If you are unfamiliar with the area, ask local contacts or accommodation staff for practical advice.
-
-For work travelers who want to add a short tourism stop, choose destinations that fit your available time. Do not force a long trip if your schedule is tight.
-
+<p><strong>Gunung Mas</strong> Regency in Central Kalimantan holds extraordinary natural and cultural charm. Here are 5 must-visit tourist destinations for those planning a trip to this region.</p>
+<h2>1. Batu Mahasur Waterfall</h2>
+<p>Located about 15 km from Kuala Kurun, this waterfall offers stunning natural beauty. The surrounding tropical forest creates a cool and natural atmosphere. Visitors can swim in the natural pool, take photos, or just enjoy the sound of flowing water.</p>
+<h2>2. Batu Suli, Upon Batu Village</h2>
+<p>This hidden gem features massive ancient rock formations and breathtaking panoramic views. The trekking route is moderately challenging, making it perfect for adventure seekers and landscape photographers.</p>
+<h2>3. Kuala Kurun Roundabout</h2>
+<p>The heart of the city where local life converges. The surrounding area features traditional markets, food stalls, parks, and cultural buildings. A perfect orientation point for first-time visitors.</p>
+<h2>4. Dayak Betang House (Longhouse)</h2>
+<p>Just a short drive away, visitors can explore the grandeur of traditional Dayak communal brotherhood culture. These majestic wooden buildings often transform into national-scale cultural exhibition venues.</p>
+<h2>5. Kahayan River Exploration</h2>
+<p>The lifeline of the region. Enjoy river cruises, observe local fishermen, and experience the authentic riverside lifestyle of Central Kalimantan.</p>
+<h2>Travel Tips for Gunung Mas</h2>
+<ul>
+<li><strong>Best Time to Visit</strong> – April to September to avoid the heavy rainy season.</li>
+<li><strong>Transportation</strong> – From Palangka Raya, Kuala Kurun is about 100 km (2-3 hours by road).</li>
+<li><strong>Preparation</strong> – Bring hiking shoes, drinking water, rain jacket, and power bank.</li>
+<li><strong>Local Etiquette</strong> – Always dress modestly and ask permission before photographing cultural buildings.</li>
+</ul>
+<h2>Why Kuala Kurun Is the Best Base Camp</h2>
+<p>For guests who want to explore Gunung Mas attractions, staying in Kuala Kurun makes trips more practical. The city center has easier access to daily needs: food, fuel, shops, and health services. After returning from nature tours, guests usually need a clean room, cool AC, private bathroom, and a comfortable bed to recover energy.</p>
+<p><a href="https://wisma-apollo.my.id/penginapan-kuala-kurun/"><strong>Wisma Apollo</strong></a> can serve as your travel base camp as it's located at Jl. Letjen Soeprapto No.56, Kuala Kurun. Rooms are available from IDR 200,000 per night, with facilities including AC, free WiFi, Android TV, shower, towels, amenities, spacious parking, and a quiet atmosphere. With clear accommodation, tourists can focus more on enjoying Gunung Mas without worrying about finding a room when already tired.</p>
 <div class="cta-box cta-reservation">
 <div class="cta-copy">
 <span class="cta-kicker">Direct Reservation</span>
-<h3>Use Kuala Kurun as Your Gunung Mas Travel Base</h3>
+<h3>Secure Your Room at Wisma Apollo</h3>
 <p>Fill in the short reservation form to check room availability. The admin will continue confirmation through the official Wisma Apollo WhatsApp.</p>
 </div>
 <div class="cta-meta" aria-label="Wisma Apollo facility summary">
 <span>From IDR 200,000</span>
-<span>Strategic location</span>
 <span>AC + WiFi</span>
+<span>Spacious parking</span>
 </div>
 <a href="#reservasi" class="blog-reserve-btn" data-booking-trigger="true">Open Reservation Form</a>
 </div>
-
-## Conclusion
-
-Gunung Mas offers nature, town landmarks, local food, and community stories for visitors who want to explore Central Kalimantan at a calmer pace. By staying in Kuala Kurun, especially at a strategic accommodation like Wisma Apollo, travelers can enjoy the region more comfortably and manage their itinerary with less stress.
+<h2>Conclusion</h2>
+<p>Gunung Mas has rich tourism potential from natural waterfalls, ancient rock formations, cultural heritage, to authentic riverside life. The key to a comfortable trip is proper preparation and strategic accommodation. Wisma Apollo in central Kuala Kurun offers a practical base for exploring all these destinations while ensuring quality rest after each adventure.</p>
