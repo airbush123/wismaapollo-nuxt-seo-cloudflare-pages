@@ -1,5 +1,5 @@
 ---
-title: 'Transformation of the Oldest Hotel in Gunung Mas Into a People School'
+title: 'Old Gunung Mas Hotel Transformed Into a People School'
 description: 'The extraordinary history of Hotel Gunung Mas that has now been converted into a People School for children from remote areas.'
 category: 'Info'
 image: '/images/blog/sekolah-rakyat-gunung-mas.jpg'

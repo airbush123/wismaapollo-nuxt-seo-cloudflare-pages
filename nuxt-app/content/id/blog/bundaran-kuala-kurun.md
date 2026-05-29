@@ -1,6 +1,6 @@
 ---
 title: 'Bundaran Kuala Kurun: Simbol Kota yang Menyimpan Pesona'
-description: 'Bundaran Kuala Kurun: Simbol Kota yang Menyimpan Pesona.'
+description: 'Panduan singkat Bundaran Kuala Kurun sebagai ikon kota Gunung Mas, dekat area kuliner, pusat aktivitas warga, dan pilihan penginapan strategis.'
 category: 'Wisata'
 image: '/images/blog/bundaran-kuala-kurun.webp'
 date: '2024-11-10'

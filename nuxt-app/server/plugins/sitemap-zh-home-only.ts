@@ -40,6 +40,7 @@ export default defineNitroPlugin((nitroApp) => {
   })
 
   nitroApp.hooks.hook('sitemap:output', (ctx) => {
+    ctx.sitemap = ctx.sitemap.replace(/&amp;amp;/g, '&amp;')
     ctx.sitemap = ctx.sitemap.replace(/\s*<xhtml:link rel="alternate" hreflang="zh-CN" href="([^"]+)" \/>/g, (line, href) => {
       const pathname = getPathname(href).replace(/\/$/, '') || '/'
       return pathname === '/zh' || pathname === '/zh/faq' ? line : ''

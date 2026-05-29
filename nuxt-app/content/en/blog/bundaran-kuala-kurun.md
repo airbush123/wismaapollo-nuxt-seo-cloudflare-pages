@@ -1,6 +1,6 @@
 ---
 title: 'Kuala Kurun Roundabout: A City Symbol with Charm'
-description: 'Kuala Kurun Roundabout: A City Symbol with Charm.'
+description: 'A short guide to Kuala Kurun Roundabout, one of the recognizable city landmarks in Gunung Mas near local food, offices, and lodging.'
 category: 'Travel'
 image: '/images/blog/bundaran-kuala-kurun.webp'
 date: '2024-11-10'

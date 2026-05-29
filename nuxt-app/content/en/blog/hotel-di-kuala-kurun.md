@@ -1,5 +1,5 @@
 ---
-title: 'Review Wisma Apollo: Budget Lodging with Hotel Quality in Kuala Kurun'
+title: 'Wisma Apollo Review: Budget Lodging in Kuala Kurun'
 description: 'Complete review of Wisma Apollo Kuala Kurun – budget accommodation with AC, WiFi, Android TV, private bathroom, and spacious parking. Prices from IDR 200,000/night.'
 category: 'Accommodation'
 image: '/images/blog/hotel-di-kuala-kurun.webp'
