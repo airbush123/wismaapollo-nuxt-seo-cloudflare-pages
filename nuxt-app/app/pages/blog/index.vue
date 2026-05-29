@@ -2,7 +2,7 @@
   <div>
     <div class="lp-header">
       <div class="container">
-        <NuxtLink to="/" class="lp-back lp-back-light">← {{ $t('common.backHome') }}</NuxtLink>
+        <NuxtLink :to="localePath('/')" class="lp-back lp-back-light">← {{ $t('common.backHome') }}</NuxtLink>
         <h1>{{ $t('blog.title') }}</h1>
         <p>{{ $t('blog.desc') }}</p>
       </div>
@@ -17,7 +17,7 @@
           <NuxtLink
             v-for="(post, i) in articles"
             :key="i"
-            :to="'/blog/' + ((post as any).path?.split('/').pop() || '')"
+            :to="localePath('/blog/' + ((post as any).path?.split('/').pop() || ''))"
             class="blog-card"
             role="listitem"
           >
@@ -54,10 +54,14 @@ import {
 } from '~/composables/useSitelinkSchema'
 
 const { locale } = useI18n()
+const localePath = useLocalePath()
 const siteUrl = SITE_URL
 const isIdBlog = computed(() => locale.value === 'id')
 
-const blogUrl = `${siteUrl}/blog`
+const localePrefix = computed(() => locale.value === 'id' ? '' : `/${locale.value}`)
+const homeUrl = computed(() => `${siteUrl}${localePrefix.value}/`)
+const blogUrl = computed(() => `${siteUrl}${localePrefix.value}/blog`)
+const blogLanguage = computed(() => locale.value === 'zh' ? 'zh-CN' : locale.value === 'en' ? 'en-US' : 'id-ID')
 
 const blogTitle = computed(() => locale.value === 'id'
   ? 'Blog Wisma Apollo Kuala Kurun | Tips Menginap & Wisata'
@@ -70,23 +74,23 @@ const blogDescription = computed(() => locale.value === 'id'
 const blogImage = `${siteUrl}/images/hero.webp`
 const blogStructuredData = computed(() => buildGraphSchema([
   buildWebPageSchema({
-    url: blogUrl,
+    url: blogUrl.value,
     name: blogTitle.value,
     description: blogDescription.value,
     image: blogImage,
-    inLanguage: 'id-ID',
+    inLanguage: blogLanguage.value,
   }),
   buildBreadcrumbSchema([
-    { name: 'Wisma Apollo Kuala Kurun', url: `${siteUrl}/` },
-    { name: 'Blog Wisma Apollo', url: blogUrl },
+    { name: 'Wisma Apollo Kuala Kurun', url: homeUrl.value },
+    { name: 'Blog Wisma Apollo', url: blogUrl.value },
   ]),
   {
     '@type': 'CollectionPage',
-    '@id': `${blogUrl}#collection`,
+    '@id': `${blogUrl.value}#collection`,
     name: blogTitle.value,
     description: blogDescription.value,
-    url: blogUrl,
-    inLanguage: 'id-ID',
+    url: blogUrl.value,
+    inLanguage: blogLanguage.value,
     isPartOf: { '@id': `${siteUrl}/#website` },
     mainEntity: {
       '@type': 'ItemList',
@@ -94,7 +98,7 @@ const blogStructuredData = computed(() => buildGraphSchema([
         '@type': 'ListItem',
         position: index + 1,
         name: post.title,
-        url: `${siteUrl}/blog/${post.path?.split('/').pop() || ''}`,
+        url: `${blogUrl.value}/${post.path?.split('/').pop() || ''}`,
       })),
     },
   },
@@ -115,7 +119,7 @@ useSeoMeta({
   ogTitle: () => blogTitle.value,
   ogDescription: () => blogDescription.value,
   ogType: 'website',
-  ogUrl: blogUrl,
+  ogUrl: () => blogUrl.value,
   ogImage: blogImage,
   ogImageAlt: 'Wisma Apollo Kuala Kurun',
   twitterCard: 'summary_large_image',
@@ -128,7 +132,7 @@ useSeoMeta({
 
 useHead(() => ({
   link: [
-    { rel: 'canonical', href: blogUrl },
+    { rel: 'canonical', href: blogUrl.value },
   ],
   meta: [
     { property: 'og:site_name', content: 'Wisma Apollo Kuala Kurun' },

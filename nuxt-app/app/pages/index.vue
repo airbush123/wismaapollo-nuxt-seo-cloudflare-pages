@@ -95,7 +95,7 @@ useHead(() => ({
           inLanguage: locale.value === 'zh' ? 'zh-CN' : locale.value === 'en' ? 'en-US' : 'id-ID',
         }),
         buildBreadcrumbSchema([
-          { name: 'Wisma Apollo Kuala Kurun', url: `${siteUrl}/` },
+          { name: 'Wisma Apollo Kuala Kurun', url: homeUrl.value },
         ]),
       ])),
     },

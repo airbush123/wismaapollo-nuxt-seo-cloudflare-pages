@@ -82,6 +82,11 @@ const { locale, t } = useI18n()
 const siteUrl = SITE_URL
 const bookingStore = useBookingStore()
 
+const homeUrl = computed(() => {
+  const localePrefix = locale.value === 'id' ? '' : `/${locale.value}`
+  return `${siteUrl}${localePrefix}/`
+})
+
 const faqUrl = computed(() => {
   const localePrefix = locale.value === 'id' ? '' : `/${locale.value}`
   return `${siteUrl}${localePrefix}/faq`
@@ -110,7 +115,7 @@ const faqStructuredData = computed(() => buildGraphSchema([
     inLanguage: faqLanguage.value,
   }),
   buildBreadcrumbSchema([
-    { name: 'Wisma Apollo Kuala Kurun', url: `${siteUrl}/` },
+    { name: 'Wisma Apollo Kuala Kurun', url: homeUrl.value },
     { name: 'FAQ Wisma Apollo', url: faqUrl.value },
   ]),
   {

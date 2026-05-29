@@ -2,7 +2,7 @@
   <div>
     <div class="lp-header">
       <div class="container">
-        <NuxtLink to="/blog" class="lp-back lp-back-light">← {{ $t('nav.blog') }}</NuxtLink>
+        <NuxtLink :to="localePath('/blog')" class="lp-back lp-back-light">← {{ $t('nav.blog') }}</NuxtLink>
         <h1>{{ article?.title || 'Article' }}</h1>
       </div>
     </div>
@@ -23,7 +23,7 @@
         </template>
         <div v-else style="padding: 40px 0; text-align: center; color: var(--text2);">
           <p>Artikel sedang dimuat atau belum tersedia.</p>
-          <NuxtLink to="/blog" class="lp-back" style="margin-top: 16px;">← Kembali ke Blog</NuxtLink>
+          <NuxtLink :to="localePath('/blog')" class="lp-back" style="margin-top: 16px;">← Kembali ke Blog</NuxtLink>
         </div>
       </div>
     </div>
@@ -42,9 +42,14 @@ const route = useRoute()
 const slug = route.params.slug as string
 
 const { locale } = useI18n()
+const localePath = useLocalePath()
 const bookingStore = useBookingStore()
 const siteUrl = SITE_URL
 const isIdBlog = computed(() => locale.value === 'id')
+const localePrefix = computed(() => locale.value === 'id' ? '' : `/${locale.value}`)
+const homeUrl = computed(() => `${siteUrl}${localePrefix.value}/`)
+const blogUrl = computed(() => `${siteUrl}${localePrefix.value}/blog`)
+const articleLanguage = computed(() => locale.value === 'zh' ? 'zh-CN' : locale.value === 'en' ? 'en-US' : 'id-ID')
 
 const { data: article } = await useAsyncData(`article-view-${locale.value}-${slug}`, async () => {
   return await queryCollection('content').path(`/id/blog/${slug}`).first()
@@ -55,10 +60,10 @@ const articleUrl = computed(() => {
 
   if (articlePath) {
     const [, , articleSlug] = articlePath.match(/^\/([^/]+)\/blog\/(.+)$/) || []
-    return `${siteUrl}/blog/${articleSlug || slug}`
+    return `${blogUrl.value}/${articleSlug || slug}`
   }
 
-  return `${siteUrl}/blog/${slug}`
+  return `${blogUrl.value}/${slug}`
 })
 
 const articleTitle = computed(() => article.value?.title || 'Blog Wisma Apollo Kuala Kurun')
@@ -74,11 +79,11 @@ const articleStructuredData = computed(() => buildGraphSchema([
     name: articleTitle.value,
     description: articleDescription.value,
     image: articleImage.value,
-    inLanguage: 'id-ID',
+    inLanguage: articleLanguage.value,
   }),
   buildBreadcrumbSchema([
-    { name: 'Wisma Apollo Kuala Kurun', url: `${siteUrl}/` },
-    { name: 'Blog Wisma Apollo', url: `${siteUrl}/blog` },
+    { name: 'Wisma Apollo Kuala Kurun', url: homeUrl.value },
+    { name: 'Blog Wisma Apollo', url: blogUrl.value },
     { name: articleTitle.value, url: articleUrl.value },
   ]),
   article.value
@@ -90,7 +95,7 @@ const articleStructuredData = computed(() => buildGraphSchema([
         image: articleImage.value,
         mainEntityOfPage: { '@id': `${articleUrl.value}#webpage` },
         url: articleUrl.value,
-        inLanguage: 'id-ID',
+        inLanguage: articleLanguage.value,
         author: {
           '@type': 'Organization',
           name: 'Wisma Apollo Kuala Kurun',

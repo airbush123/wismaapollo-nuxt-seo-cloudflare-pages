@@ -318,6 +318,11 @@ const pageUrl = computed(() => {
   return `${siteUrl}${localePrefix}/${slug.value}`
 })
 
+const homeUrl = computed(() => {
+  const localePrefix = locale.value === 'id' ? '' : `/${locale.value}`
+  return `${siteUrl}${localePrefix}/`
+})
+
 const pageTitle = computed(() => pageData.value.seoTitle || pageData.value.title || 'Wisma Apollo Kuala Kurun')
 const pageDescription = computed(() => pageData.value.meta || pageData.value.subtitle || 'Wisma Apollo adalah hotel dan penginapan nyaman di Kuala Kurun, Gunung Mas, Kalimantan Tengah.')
 const pageImage = computed(() => {
@@ -337,7 +342,7 @@ const pageStructuredData = computed(() => {
       inLanguage: pageLanguage.value,
     }),
     buildBreadcrumbSchema([
-      { name: 'Wisma Apollo Kuala Kurun', url: `${siteUrl}/` },
+      { name: 'Wisma Apollo Kuala Kurun', url: homeUrl.value },
       { name: pageData.value.title, url: pageUrl.value },
     ]),
   ]

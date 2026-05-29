@@ -167,9 +167,12 @@ export function buildWebPageSchema(params: {
 }
 
 export function buildBreadcrumbSchema(items: Array<{ name: string; url: string }>) {
+  const currentUrl = items[items.length - 1]?.url || SITE_URL
+  const breadcrumbIdBase = currentUrl.endsWith('/') ? currentUrl.slice(0, -1) : currentUrl
+
   return {
     '@type': 'BreadcrumbList',
-    '@id': `${items[items.length - 1]?.url || SITE_URL}/#breadcrumb`,
+    '@id': `${breadcrumbIdBase}/#breadcrumb`,
     itemListElement: items.map((item, index) => ({
       '@type': 'ListItem',
       position: index + 1,
