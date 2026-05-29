@@ -14,27 +14,27 @@
 
       <nav v-if="isFullLocale" class="footer-links" :aria-label="$t('footer.accommodationTypes')">
         <h4>{{ $t('footer.accommodationTypes') }}</h4>
-        <NuxtLink :to="localePath('/hotel-kuala-kurun')">{{ $t('footer.links.hotel') }}</NuxtLink>
-        <NuxtLink :to="localePath('/penginapan-kuala-kurun')">{{ $t('footer.links.penginapan') }}</NuxtLink>
-        <NuxtLink :to="localePath('/guest-house-kuala-kurun')">{{ $t('footer.links.guestHouse') }}</NuxtLink>
-        <NuxtLink :to="localePath('/homestay-kuala-kurun')">{{ $t('footer.links.homestay') }}</NuxtLink>
-        <NuxtLink :to="localePath('/staycation-kuala-kurun')">{{ $t('footer.links.staycation') }}</NuxtLink>
-        <NuxtLink :to="localePath('/tempat-istirahat-kuala-kurun')">{{ $t('footer.links.tempatIstirahat') }}</NuxtLink>
+        <NuxtLink :to="localePath('/hotel-kuala-kurun/')">{{ $t('footer.links.hotel') }}</NuxtLink>
+        <NuxtLink :to="localePath('/penginapan-kuala-kurun/')">{{ $t('footer.links.penginapan') }}</NuxtLink>
+        <NuxtLink :to="localePath('/guest-house-kuala-kurun/')">{{ $t('footer.links.guestHouse') }}</NuxtLink>
+        <NuxtLink :to="localePath('/homestay-kuala-kurun/')">{{ $t('footer.links.homestay') }}</NuxtLink>
+        <NuxtLink :to="localePath('/staycation-kuala-kurun/')">{{ $t('footer.links.staycation') }}</NuxtLink>
+        <NuxtLink :to="localePath('/tempat-istirahat-kuala-kurun/')">{{ $t('footer.links.tempatIstirahat') }}</NuxtLink>
       </nav>
 
       <nav v-if="isBlogVisible" class="footer-links" :aria-label="$t('footer.blogTitle')">
         <h4>{{ $t('footer.blogTitle') }}</h4>
-        <NuxtLink :to="localePath('/blog')">{{ $t('footer.blogLinks.all') }}</NuxtLink>
-        <NuxtLink :to="localePath('/blog/tips-menginap-kuala-kurun')">{{ $t('footer.blogLinks.tips') }}</NuxtLink>
-        <NuxtLink :to="localePath('/blog/wisata-gunung-mas')">{{ $t('footer.blogLinks.wisata') }}</NuxtLink>
-        <NuxtLink :to="localePath('/blog/kuliner-kuala-kurun')">{{ $t('footer.blogLinks.kuliner') }}</NuxtLink>
-        <NuxtLink :to="localePath('/blog/air-terjun-batu-mahasur')">{{ $t('footer.blogLinks.airTerjun') }}</NuxtLink>
+        <NuxtLink :to="localePath('/blog/')">{{ $t('footer.blogLinks.all') }}</NuxtLink>
+        <NuxtLink :to="localePath('/blog/tips-menginap-kuala-kurun/')">{{ $t('footer.blogLinks.tips') }}</NuxtLink>
+        <NuxtLink :to="localePath('/blog/wisata-gunung-mas/')">{{ $t('footer.blogLinks.wisata') }}</NuxtLink>
+        <NuxtLink :to="localePath('/blog/kuliner-kuala-kurun/')">{{ $t('footer.blogLinks.kuliner') }}</NuxtLink>
+        <NuxtLink :to="localePath('/blog/air-terjun-batu-mahasur/')">{{ $t('footer.blogLinks.airTerjun') }}</NuxtLink>
       </nav>
 
       <nav v-if="isZhLocale" class="footer-links" :aria-label="$t('footer.quickLinks')">
         <h4>{{ $t('footer.quickLinks') }}</h4>
         <NuxtLink :to="localePath('/')">{{ $t('footer.links.home') }}</NuxtLink>
-        <NuxtLink :to="localePath('/faq')">{{ $t('nav.faq') }}</NuxtLink>
+        <NuxtLink :to="localePath('/faq/')">{{ $t('nav.faq') }}</NuxtLink>
       </nav>
 
       <div class="footer-social">

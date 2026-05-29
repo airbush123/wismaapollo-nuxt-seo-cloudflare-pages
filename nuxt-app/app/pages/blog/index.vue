@@ -32,7 +32,7 @@
           <NuxtLink
             v-for="(post, i) in articles"
             :key="i"
-            :to="localePath('/blog/' + ((post as any).path?.split('/').pop() || ''))"
+            :to="localePath('/blog/' + ((post as any).path?.split('/').pop() || '') + '/')"
             class="blog-card"
             role="listitem"
           >

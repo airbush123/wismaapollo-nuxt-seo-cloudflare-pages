@@ -2,7 +2,7 @@
   <div>
     <div class="lp-header">
       <div class="container">
-        <NuxtLink :to="localePath('/blog')" class="lp-back lp-back-light">&lt;- {{ $t('nav.blog') }}</NuxtLink>
+        <NuxtLink :to="localePath('/blog/')" class="lp-back lp-back-light">&lt;- {{ $t('nav.blog') }}</NuxtLink>
         <h1>{{ article?.title || 'Article' }}</h1>
         <p v-if="article" class="article-meta-line">
           {{ articleAuthorLabel }} - {{ publishedLabel }} {{ formatArticleDate((article as any).date) }}
@@ -29,7 +29,7 @@
         </template>
         <div v-else style="padding: 40px 0; text-align: center; color: var(--text2);">
           <p>{{ articleUnavailableText }}</p>
-          <NuxtLink :to="localePath('/blog')" class="lp-back" style="margin-top: 16px;">&lt;- {{ backToBlogText }}</NuxtLink>
+          <NuxtLink :to="localePath('/blog/')" class="lp-back" style="margin-top: 16px;">&lt;- {{ backToBlogText }}</NuxtLink>
         </div>
       </div>
     </div>
@@ -58,7 +58,7 @@ if (locale.value === 'zh') {
 }
 const localePrefix = computed(() => locale.value === 'id' ? '' : `/${locale.value}`)
 const homeUrl = computed(() => `${siteUrl}${localePrefix.value}/`)
-const blogUrl = computed(() => `${siteUrl}${localePrefix.value}/blog`)
+const blogUrl = computed(() => `${siteUrl}${localePrefix.value}/blog/`)
 const articleLanguage = computed(() => locale.value === 'zh' ? 'zh-CN' : locale.value === 'en' ? 'en-US' : 'id-ID')
 
 const { data: article } = await useAsyncData(`article-view-${locale.value}-${slug}`, async () => {
@@ -70,10 +70,10 @@ const articleUrl = computed(() => {
 
   if (articlePath) {
     const [, , articleSlug] = articlePath.match(/^\/([^/]+)\/blog\/(.+)$/) || []
-    return `${blogUrl.value}/${articleSlug || slug}/`
+    return `${blogUrl.value}${articleSlug || slug}/`
   }
 
-  return `${blogUrl.value}/${slug}/`
+  return `${blogUrl.value}${slug}/`
 })
 
 const articleTitle = computed(() => article.value?.title || 'Blog Wisma Apollo Kuala Kurun')
@@ -113,7 +113,7 @@ const articleStructuredData = computed(() => buildGraphSchema([
   }),
   buildBreadcrumbSchema([
     { name: 'Wisma Apollo Kuala Kurun', url: homeUrl.value },
-    { name: 'Blog Wisma Apollo', url: `${blogUrl.value}/` },
+    { name: 'Blog Wisma Apollo', url: blogUrl.value },
     { name: articleTitle.value, url: articleUrl.value },
   ]),
   article.value

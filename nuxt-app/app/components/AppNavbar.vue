@@ -21,8 +21,8 @@
           <NuxtLink :to="localePath('/#kamar')" role="menuitem">{{ $t('nav.rooms') }}</NuxtLink>
           <NuxtLink :to="localePath('/#galeri')" role="menuitem">{{ $t('nav.gallery') }}</NuxtLink>
           <NuxtLink :to="localePath('/#testimoni')" role="menuitem">{{ $t('nav.testimonials') }}</NuxtLink>
-          <NuxtLink v-if="isBlogVisible" :to="localePath('/blog')" role="menuitem">{{ $t('nav.blog') }}</NuxtLink>
-          <NuxtLink :to="localePath('/faq')" role="menuitem">{{ $t('nav.faq') }}</NuxtLink>
+          <NuxtLink v-if="isBlogVisible" :to="localePath('/blog/')" role="menuitem">{{ $t('nav.blog') }}</NuxtLink>
+          <NuxtLink :to="localePath('/faq/')" role="menuitem">{{ $t('nav.faq') }}</NuxtLink>
         </div>
         <button
           type="button"
@@ -67,8 +67,8 @@
       <NuxtLink :to="localePath('/#kamar')" role="menuitem" @click="uiStore.closeMenu()">{{ $t('nav.rooms') }}</NuxtLink>
       <NuxtLink :to="localePath('/#galeri')" role="menuitem" @click="uiStore.closeMenu()">{{ $t('nav.gallery') }}</NuxtLink>
       <NuxtLink :to="localePath('/#testimoni')" role="menuitem" @click="uiStore.closeMenu()">{{ $t('nav.testimonials') }}</NuxtLink>
-      <NuxtLink v-if="isBlogVisible" :to="localePath('/blog')" role="menuitem" @click="uiStore.closeMenu()">{{ $t('nav.blog') }}</NuxtLink>
-      <NuxtLink :to="localePath('/faq')" role="menuitem" @click="uiStore.closeMenu()">{{ $t('nav.faq') }}</NuxtLink>
+      <NuxtLink v-if="isBlogVisible" :to="localePath('/blog/')" role="menuitem" @click="uiStore.closeMenu()">{{ $t('nav.blog') }}</NuxtLink>
+      <NuxtLink :to="localePath('/faq/')" role="menuitem" @click="uiStore.closeMenu()">{{ $t('nav.faq') }}</NuxtLink>
       <button
         type="button"
         class="menu-cta"
@@ -93,7 +93,7 @@ const isFaqRoute = computed(() => route.path.replace(/\/$/, '') === '/faq' || ro
 
 async function handleLocaleClick(localeCode: string) {
   if (localeCode === 'zh') {
-    await navigateTo(isFaqRoute.value ? '/zh/faq' : '/zh/')
+    await navigateTo(isFaqRoute.value ? '/zh/faq/' : '/zh/')
     return
   }
 
