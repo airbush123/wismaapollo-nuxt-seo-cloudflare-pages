@@ -10,6 +10,21 @@
 
     <section class="section">
       <div class="container">
+        <div v-if="locale === 'en'" class="blog-intro">
+          <span class="blog-intro-kicker">Kuala Kurun Travel Guide</span>
+          <h2>Accommodation, Food, and Travel Notes for Gunung Mas Visitors</h2>
+          <p>
+            This blog collects practical guides for travelers who plan to stay in Kuala Kurun, the capital of Gunung Mas Regency.
+            You can find hotel recommendations, local food references, nearby attractions, and simple tips for choosing a clean,
+            strategic place to rest after a long road trip or work agenda.
+          </p>
+          <p>
+            Wisma Apollo is located on Jl. Letjen Soeprapto No.56, close to the city center, local cafes, government offices, and
+            everyday needs. Use these articles as a starting point, then contact our team via WhatsApp to check room availability,
+            current rates, and the best room type for your schedule.
+          </p>
+        </div>
+
         <!-- Debug Info -->
         <div v-if="pending" style="text-align: center; padding: 40px;">Memuat artikel...</div>
         
@@ -40,6 +55,20 @@
         <div v-else style="padding: 60px 0; text-align: center; color: var(--text2);">
           <p>{{ locale === 'id' ? 'Belum ada artikel untuk bahasa ini.' : 'No articles available for this language.' }}</p>
         </div>
+
+        <div v-if="locale === 'en'" class="blog-cta" id="reservation">
+          <div>
+            <span>Need a room in Kuala Kurun?</span>
+            <h2>Reserve Wisma Apollo directly via WhatsApp</h2>
+            <p>
+              Fill in the short reservation form to send your stay dates, guest count, room type, and notes to our admin.
+              We will help confirm availability before your arrival.
+            </p>
+          </div>
+          <button type="button" class="blog-cta-btn" @click="bookingStore.openModal()">
+            Reserve Now
+          </button>
+        </div>
       </div>
     </section>
   </div>
@@ -55,6 +84,7 @@ import {
 
 const { locale } = useI18n()
 const localePath = useLocalePath()
+const bookingStore = useBookingStore()
 const siteUrl = SITE_URL
 const isIndexableBlog = computed(() => locale.value !== 'zh')
 

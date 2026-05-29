@@ -14,7 +14,7 @@
         <button
           class="bm-close"
           @click="bookingStore.closeModal()"
-          :aria-label="'Close'"
+          :aria-label="$t('booking.aria.close')"
         >&times;</button>
 
         <div class="bm-head">
@@ -126,7 +126,7 @@
                       type="button"
                       class="bm-step-btn"
                       :disabled="bookingStore.singleRoomCount <= 0"
-                      aria-label="Kurangi Single Bed"
+                      :aria-label="$t('booking.aria.decreaseSingle')"
                       @click.prevent="decrementRoom('single')"
                     >-</button>
                     <input
@@ -144,7 +144,7 @@
                       type="button"
                       class="bm-step-btn"
                       :disabled="bookingStore.singleRoomCount >= 3"
-                      aria-label="Tambah Single Bed"
+                      :aria-label="$t('booking.aria.increaseSingle')"
                       @click.prevent="incrementRoom('single')"
                     >+</button>
                   </div>
@@ -170,7 +170,7 @@
                       type="button"
                       class="bm-step-btn"
                       :disabled="bookingStore.doubleRoomCount <= 0"
-                      aria-label="Kurangi Double Bed"
+                      :aria-label="$t('booking.aria.decreaseDouble')"
                       @click.prevent="decrementRoom('double')"
                     >-</button>
                     <input
@@ -188,7 +188,7 @@
                       type="button"
                       class="bm-step-btn"
                       :disabled="bookingStore.doubleRoomCount >= 1"
-                      aria-label="Tambah Double Bed"
+                      :aria-label="$t('booking.aria.increaseDouble')"
                       @click.prevent="incrementRoom('double')"
                     >+</button>
                   </div>
@@ -213,7 +213,7 @@
                     type="button"
                     class="bm-step-btn"
                     :disabled="bookingStore.guestCount <= 1"
-                    aria-label="Kurangi jumlah tamu"
+                    :aria-label="$t('booking.aria.decreaseGuests')"
                     @click.prevent="decrementGuest"
                   >-</button>
                   <input
@@ -233,7 +233,7 @@
                     type="button"
                     class="bm-step-btn"
                     :disabled="bookingStore.guestCount >= maxGuestCount"
-                    aria-label="Tambah jumlah tamu"
+                    :aria-label="$t('booking.aria.increaseGuests')"
                     @click.prevent="incrementGuest"
                   >+</button>
                 </div>
@@ -310,7 +310,7 @@ const adultCapacities = {
   double: 3,
 }
 
-const formatCurrency = (value: number) => new Intl.NumberFormat(locale.value === 'id' ? 'id-ID' : 'en-US', {
+const formatCurrency = (value: number) => new Intl.NumberFormat(locale.value === 'zh' ? 'zh-CN' : locale.value === 'id' ? 'id-ID' : 'en-US', {
   style: 'currency',
   currency: 'IDR',
   maximumFractionDigits: 0,
@@ -343,7 +343,16 @@ const maxGuestCount = computed(() => {
   return Math.max(singleCapacity + doubleCapacity, adultCapacities.single)
 })
 
-const selectedRoomName = computed(() => bookingStore.roomSummary || t('booking.roomTypeLabel'))
+const selectedRoomName = computed(() => {
+  const rooms: string[] = []
+  if (bookingStore.singleRoomCount > 0) {
+    rooms.push(`${t('booking.roomTypeNames.single')}: ${bookingStore.singleRoomCount} ${t('booking.roomUnit')}`)
+  }
+  if (bookingStore.doubleRoomCount > 0) {
+    rooms.push(`${t('booking.roomTypeNames.double')}: ${bookingStore.doubleRoomCount} ${t('booking.roomUnit')}`)
+  }
+  return rooms.join(', ') || t('booking.roomTypeLabel')
+})
 const guestCapacityHelp = computed(() => {
   const rooms = Math.max(bookingStore.totalRoomCount || 1, 1)
   const hasSingle = bookingStore.singleRoomCount > 0

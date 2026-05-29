@@ -80,6 +80,23 @@ function formatRupiah(value: number) {
   }).format(value)
 }
 
+function getCurrentLocale() {
+  if (!import.meta.client) return 'id'
+  if (window.location.pathname.startsWith('/en')) return 'en'
+  if (window.location.pathname.startsWith('/zh')) return 'zh'
+  return 'id'
+}
+
+function translateBooking(key: string, fallback: string, params: Record<string, unknown> = {}) {
+  try {
+    const nuxtApp = useNuxtApp()
+    const translated = (nuxtApp.$i18n as { t?: (key: string, params?: Record<string, unknown>) => string })?.t?.(key, params)
+    return translated && translated !== key ? translated : fallback
+  } catch {
+    return fallback
+  }
+}
+
 function getCookieValue(name: string) {
   if (typeof document === 'undefined') return ''
 
@@ -132,57 +149,57 @@ function getBookingValidationErrors(data: {
   const cleanPhone = data.phone.trim()
 
   if (data.name.trim().length < 2) {
-    errors.name = 'Nama minimal 2 karakter'
+    errors.name = translateBooking('booking.errors.nameMin', 'Nama minimal 2 karakter')
   }
 
   if (cleanPhone.length < 10) {
-    errors.phone = 'Nomor minimal 10 digit'
+    errors.phone = translateBooking('booking.errors.phoneMin', 'Nomor minimal 10 digit')
   } else if (!/^[0-9+\-\s]+$/.test(cleanPhone)) {
-    errors.phone = 'Format nomor tidak valid'
+    errors.phone = translateBooking('booking.errors.phoneFormat', 'Format nomor tidak valid')
   }
 
   if (!data.checkIn) {
-    errors.checkIn = 'Tanggal check-in wajib diisi'
+    errors.checkIn = translateBooking('booking.errors.checkInRequired', 'Tanggal check-in wajib diisi')
   }
 
   if (!data.checkOut) {
-    errors.checkOut = 'Tanggal check-out wajib diisi'
+    errors.checkOut = translateBooking('booking.errors.checkOutRequired', 'Tanggal check-out wajib diisi')
   }
 
   if (data.checkIn && data.checkOut && new Date(`${data.checkOut}T00:00:00`) <= new Date(`${data.checkIn}T00:00:00`)) {
-    errors.checkOut = 'Check-out minimal 1 hari setelah check-in'
+    errors.checkOut = translateBooking('booking.errors.checkOutAfterCheckIn', 'Check-out minimal 1 hari setelah check-in')
   }
 
   if (data.singleRoomCount < 0) {
-    errors.singleRoomCount = 'Jumlah Single Bed tidak valid'
+    errors.singleRoomCount = translateBooking('booking.errors.singleRoomInvalid', 'Jumlah Single Bed tidak valid')
   } else if (data.singleRoomCount > SINGLE_ROOM_LIMIT) {
-    errors.singleRoomCount = 'Single Bed maksimal 3 kamar'
+    errors.singleRoomCount = translateBooking('booking.errors.singleRoomMax', 'Single Bed maksimal 3 kamar')
   }
 
   if (data.doubleRoomCount < 0) {
-    errors.doubleRoomCount = 'Jumlah Double Bed tidak valid'
+    errors.doubleRoomCount = translateBooking('booking.errors.doubleRoomInvalid', 'Jumlah Double Bed tidak valid')
   } else if (data.doubleRoomCount > DOUBLE_ROOM_LIMIT) {
-    errors.doubleRoomCount = 'Double Bed hanya tersedia 1 kamar'
+    errors.doubleRoomCount = translateBooking('booking.errors.doubleRoomMax', 'Double Bed hanya tersedia 1 kamar')
   }
 
   const totalRooms = data.singleRoomCount + data.doubleRoomCount
   if (totalRooms < 1) {
-    errors.singleRoomCount = 'Pilih minimal 1 kamar'
+    errors.singleRoomCount = translateBooking('booking.errors.roomRequired', 'Pilih minimal 1 kamar')
   }
 
   if (data.guestCount < 1) {
-    errors.guestCount = 'Minimal 1 tamu dewasa'
+    errors.guestCount = translateBooking('booking.errors.guestMin', 'Minimal 1 tamu dewasa')
   } else if (data.guestCount > 50) {
-    errors.guestCount = 'Maksimal 50 tamu dewasa'
+    errors.guestCount = translateBooking('booking.errors.guestMax', 'Maksimal 50 tamu dewasa')
   } else {
     const adultCapacity = (data.singleRoomCount * SINGLE_ADULT_CAPACITY) + (data.doubleRoomCount * DOUBLE_ADULT_CAPACITY)
     if (adultCapacity > 0 && data.guestCount > adultCapacity) {
-      errors.guestCount = `Maksimal ${adultCapacity} tamu dewasa untuk kombinasi kamar yang dipilih.`
+      errors.guestCount = translateBooking('booking.errors.guestCapacity', `Maksimal ${adultCapacity} tamu dewasa untuk kombinasi kamar yang dipilih.`, { adults: adultCapacity })
     }
   }
 
   if ((data.notes || '').length > 300) {
-    errors.notes = 'Catatan maksimal 300 karakter'
+    errors.notes = translateBooking('booking.errors.notesMax', 'Catatan maksimal 300 karakter')
   }
 
   return errors
@@ -450,9 +467,12 @@ export const useBookingStore = defineStore('booking', {
 
     redirectToWhatsApp() {
       if (!import.meta.client) return
+      const singleRoomName = translateBooking('booking.roomTypeNames.single', 'Single Bed')
+      const doubleRoomName = translateBooking('booking.roomTypeNames.double', 'Double Bed')
+      const roomUnit = translateBooking('booking.roomUnit', 'kamar')
       const roomLines = [
-        this.singleRoomCount > 0 ? `- Single Bed: ${this.singleRoomCount} kamar` : '',
-        this.doubleRoomCount > 0 ? `- Double Bed: ${this.doubleRoomCount} kamar` : '',
+        this.singleRoomCount > 0 ? `- ${singleRoomName}: ${this.singleRoomCount} ${roomUnit}` : '',
+        this.doubleRoomCount > 0 ? `- ${doubleRoomName}: ${this.doubleRoomCount} ${roomUnit}` : '',
       ].filter(Boolean)
       const stayNights = getStayNights(this.checkIn, this.checkOut)
       const totalValue = getTotalBookingValue(
@@ -463,42 +483,48 @@ export const useBookingStore = defineStore('booking', {
         this.guestCount,
         this.breakfast,
       )
+      const breakfastText = this.breakfast
+        ? translateBooking('booking.whatsapp.breakfastYes', `Ya, ${this.guestCount} pack/orang x ${stayNights} hari`, {
+            guests: this.guestCount,
+            nights: stayNights,
+          })
+        : translateBooking('booking.whatsapp.no', 'Tidak')
       const message = [
-        '🏨 Reservasi Wisma Apollo',
+        translateBooking('booking.whatsapp.title', 'Reservasi Wisma Apollo'),
         '',
-        'Halo admin Wisma Apollo, saya ingin reservasi kamar.',
+        translateBooking('booking.whatsapp.intro', 'Halo admin Wisma Apollo, saya ingin reservasi kamar.'),
         '',
-        '👤 Data Tamu',
-        `Nama: ${this.name}`,
-        `Nomor WA: ${this.phone}`,
+        translateBooking('booking.whatsapp.guestData', 'Data Tamu'),
+        `${translateBooking('booking.whatsapp.name', 'Nama')}: ${this.name}`,
+        `${translateBooking('booking.whatsapp.phone', 'Nomor WA')}: ${this.phone}`,
         '',
-        '📅 Jadwal Menginap',
-        `Check-in: ${this.checkIn}`,
-        `Check-out: ${this.checkOut}`,
-        `Durasi: ${stayNights} malam`,
+        translateBooking('booking.whatsapp.staySchedule', 'Jadwal Menginap'),
+        `${translateBooking('booking.whatsapp.checkIn', 'Check-in')}: ${this.checkIn}`,
+        `${translateBooking('booking.whatsapp.checkOut', 'Check-out')}: ${this.checkOut}`,
+        `${translateBooking('booking.whatsapp.duration', 'Durasi')}: ${translateBooking('booking.whatsapp.nights', `${stayNights} malam`, { nights: stayNights })}`,
         '',
-        '🛏️ Detail Kamar',
+        translateBooking('booking.whatsapp.roomDetails', 'Detail Kamar'),
         ...roomLines,
-        `Jumlah kamar: ${this.totalRoomCount}`,
-        `Jumlah tamu dewasa: ${this.guestCount}`,
+        `${translateBooking('booking.whatsapp.roomCount', 'Jumlah kamar')}: ${this.totalRoomCount}`,
+        `${translateBooking('booking.whatsapp.guestCount', 'Jumlah tamu dewasa')}: ${this.guestCount}`,
         '',
-        '🍽️ Sarapan',
-        `Sarapan: ${this.breakfast ? `Ya, ${this.guestCount} pack/orang x ${stayNights} hari` : 'Tidak'}`,
+        translateBooking('booking.whatsapp.breakfast', 'Sarapan'),
+        `${translateBooking('booking.whatsapp.breakfast', 'Sarapan')}: ${breakfastText}`,
         '',
-        '💰 Total Estimasi',
-        `Total: ${formatRupiah(totalValue)}`,
+        translateBooking('booking.whatsapp.totalEstimate', 'Total Estimasi'),
+        `${translateBooking('booking.whatsapp.total', 'Total')}: ${formatRupiah(totalValue)}`,
         '',
-        '📝 Catatan Tamu',
-        `Catatan: ${this.notes || '-'}`,
+        translateBooking('booking.whatsapp.guestNotes', 'Catatan Tamu'),
+        `${translateBooking('booking.whatsapp.notes', 'Catatan')}: ${this.notes || '-'}`,
         '',
-        'ℹ️ Info Kamar',
-        'Semua kamar non-smoking. Merokok tersedia di area luar.',
+        translateBooking('booking.whatsapp.roomInfo', 'Info Kamar'),
+        translateBooking('booking.nonSmokingNote', 'Semua kamar non-smoking. Merokok tersedia di area luar.'),
         '',
-        '✅ Status Reservasi',
-        'Mohon dibantu cek ketersediaan kamar untuk tanggal di atas.',
-        'Jika kamar tersedia, reservasi resmi diterima setelah pembayaran masuk dan dikonfirmasi admin.',
+        translateBooking('booking.whatsapp.reservationStatus', 'Status Reservasi'),
+        translateBooking('booking.whatsapp.availabilityRequest', 'Mohon dibantu cek ketersediaan kamar untuk tanggal di atas.'),
+        translateBooking('booking.whatsapp.paymentNotice', 'Jika kamar tersedia, reservasi resmi diterima setelah pembayaran masuk dan dikonfirmasi admin.'),
         '',
-        'Terima kasih.'
+        translateBooking('booking.whatsapp.thanks', 'Terima kasih.')
       ].join('\n')
 
       const waUrl = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(message)}`
@@ -523,7 +549,8 @@ export const useBookingStore = defineStore('booking', {
 
       window.open(waUrl, '_blank', 'noopener,noreferrer')
       setTimeout(() => {
-        window.location.href = '/thanks'
+        const locale = getCurrentLocale()
+        window.location.href = locale === 'en' ? '/en/thanks' : locale === 'zh' ? '/zh/' : '/thanks'
       }, 250)
       setTimeout(() => {
         this.isSubmitting = false
