@@ -2,7 +2,7 @@
   <div>
     <div class="lp-header">
       <div class="container">
-        <NuxtLink :to="localePath('/')" class="lp-back lp-back-light">&lt;- {{ $t('common.backHome') }}</NuxtLink>
+        <a :href="canonicalPath('/')" class="lp-back lp-back-light">&lt;- {{ $t('common.backHome') }}</a>
         <h1>{{ $t('faq.pageTitle') }}</h1>
         <p>{{ $t('faq.pageDesc') }}</p>
       </div>
@@ -79,7 +79,7 @@ import { useBookingStore } from '~/stores/useBookingStore'
 
 const openIndex = ref<number | null>(null)
 const { locale, t, tm } = useI18n()
-const localePath = useLocalePath()
+const canonicalPath = useCanonicalLocalePath()
 const siteUrl = SITE_URL
 const bookingStore = useBookingStore()
 const faqItemCount = computed(() => {

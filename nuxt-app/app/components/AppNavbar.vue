@@ -1,7 +1,7 @@
 <template>
   <nav :class="['nav', `nav-locale-${locale}`, { scrolled: uiStore.isScrolled }]" role="navigation" aria-label="Main Navigation">
     <div class="nav-inner">
-      <NuxtLink :to="localePath('/')" class="nav-logo" :aria-label="'Wisma Apollo - ' + $t('common.backHome')">
+      <a :href="canonicalPath('/')" class="nav-logo" :aria-label="'Wisma Apollo - ' + $t('common.backHome')">
         <img
           src="/images/logo/wisma-apollo-logo-88.webp"
           alt="Logo Wisma Apollo"
@@ -13,16 +13,16 @@
         <span class="logo-text">
           Wisma Apollo
         </span>
-      </NuxtLink>
+      </a>
       <div class="desktop-nav-shell">
         <div class="desktop-menu" role="menubar">
-          <NuxtLink :to="localePath('/#tentang')" role="menuitem">{{ $t('nav.about') }}</NuxtLink>
-          <NuxtLink :to="localePath('/#fasilitas')" role="menuitem">{{ $t('nav.facilities') }}</NuxtLink>
-          <NuxtLink :to="localePath('/#kamar')" role="menuitem">{{ $t('nav.rooms') }}</NuxtLink>
-          <NuxtLink :to="localePath('/#galeri')" role="menuitem">{{ $t('nav.gallery') }}</NuxtLink>
-          <NuxtLink :to="localePath('/#testimoni')" role="menuitem">{{ $t('nav.testimonials') }}</NuxtLink>
-          <NuxtLink v-if="isBlogVisible" :to="localePath('/blog/')" role="menuitem">{{ $t('nav.blog') }}</NuxtLink>
-          <NuxtLink :to="localePath('/faq/')" role="menuitem">{{ $t('nav.faq') }}</NuxtLink>
+          <a :href="canonicalPath('/#tentang')" role="menuitem">{{ $t('nav.about') }}</a>
+          <a :href="canonicalPath('/#fasilitas')" role="menuitem">{{ $t('nav.facilities') }}</a>
+          <a :href="canonicalPath('/#kamar')" role="menuitem">{{ $t('nav.rooms') }}</a>
+          <a :href="canonicalPath('/#galeri')" role="menuitem">{{ $t('nav.gallery') }}</a>
+          <a :href="canonicalPath('/#testimoni')" role="menuitem">{{ $t('nav.testimonials') }}</a>
+          <a v-if="isBlogVisible" :href="canonicalPath('/blog/')" role="menuitem">{{ $t('nav.blog') }}</a>
+          <a :href="canonicalPath('/faq/')" role="menuitem">{{ $t('nav.faq') }}</a>
         </div>
         <button
           type="button"
@@ -62,13 +62,13 @@
       :aria-hidden="!uiStore.isMenuOpen"
       :inert="!uiStore.isMenuOpen"
     >
-      <NuxtLink :to="localePath('/#tentang')" role="menuitem" @click="uiStore.closeMenu()">{{ $t('nav.about') }}</NuxtLink>
-      <NuxtLink :to="localePath('/#fasilitas')" role="menuitem" @click="uiStore.closeMenu()">{{ $t('nav.facilities') }}</NuxtLink>
-      <NuxtLink :to="localePath('/#kamar')" role="menuitem" @click="uiStore.closeMenu()">{{ $t('nav.rooms') }}</NuxtLink>
-      <NuxtLink :to="localePath('/#galeri')" role="menuitem" @click="uiStore.closeMenu()">{{ $t('nav.gallery') }}</NuxtLink>
-      <NuxtLink :to="localePath('/#testimoni')" role="menuitem" @click="uiStore.closeMenu()">{{ $t('nav.testimonials') }}</NuxtLink>
-      <NuxtLink v-if="isBlogVisible" :to="localePath('/blog/')" role="menuitem" @click="uiStore.closeMenu()">{{ $t('nav.blog') }}</NuxtLink>
-      <NuxtLink :to="localePath('/faq/')" role="menuitem" @click="uiStore.closeMenu()">{{ $t('nav.faq') }}</NuxtLink>
+      <a :href="canonicalPath('/#tentang')" role="menuitem" @click="uiStore.closeMenu()">{{ $t('nav.about') }}</a>
+      <a :href="canonicalPath('/#fasilitas')" role="menuitem" @click="uiStore.closeMenu()">{{ $t('nav.facilities') }}</a>
+      <a :href="canonicalPath('/#kamar')" role="menuitem" @click="uiStore.closeMenu()">{{ $t('nav.rooms') }}</a>
+      <a :href="canonicalPath('/#galeri')" role="menuitem" @click="uiStore.closeMenu()">{{ $t('nav.gallery') }}</a>
+      <a :href="canonicalPath('/#testimoni')" role="menuitem" @click="uiStore.closeMenu()">{{ $t('nav.testimonials') }}</a>
+      <a v-if="isBlogVisible" :href="canonicalPath('/blog/')" role="menuitem" @click="uiStore.closeMenu()">{{ $t('nav.blog') }}</a>
+      <a :href="canonicalPath('/faq/')" role="menuitem" @click="uiStore.closeMenu()">{{ $t('nav.faq') }}</a>
       <button
         type="button"
         class="menu-cta"
@@ -87,7 +87,7 @@ const uiStore = useUIStore()
 const bookingStore = useBookingStore()
 const route = useRoute()
 const { locale, locales, setLocale } = useI18n()
-const localePath = useLocalePath()
+const canonicalPath = useCanonicalLocalePath()
 const isBlogVisible = computed(() => locale.value !== 'zh')
 const isFaqRoute = computed(() => route.path.replace(/\/$/, '') === '/faq' || route.path.replace(/\/$/, '') === '/en/faq' || route.path.replace(/\/$/, '') === '/zh/faq')
 

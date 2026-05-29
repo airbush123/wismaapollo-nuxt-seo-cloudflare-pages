@@ -34,13 +34,13 @@
         </svg>
         {{ $t('hero.phone') }}
       </div>
-      <NuxtLink :to="localePath('/#kamar')" class="btn-hero" :aria-label="$t('hero.cta')">
+      <a :href="canonicalPath('/#kamar')" class="btn-hero" :aria-label="$t('hero.cta')">
         {{ $t('hero.cta') }}
-      </NuxtLink>
+      </a>
     </div>
   </header>
 </template>
 
 <script setup lang="ts">
-const localePath = useLocalePath()
+const canonicalPath = useCanonicalLocalePath()
 </script>

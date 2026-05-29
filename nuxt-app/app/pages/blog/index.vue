@@ -2,7 +2,7 @@
   <div>
     <div class="lp-header">
       <div class="container">
-        <NuxtLink :to="localePath('/')" class="lp-back lp-back-light">← {{ $t('common.backHome') }}</NuxtLink>
+        <a :href="canonicalPath('/')" class="lp-back lp-back-light">← {{ $t('common.backHome') }}</a>
         <h1>{{ $t('blog.title') }}</h1>
         <p>{{ $t('blog.desc') }}</p>
       </div>
@@ -29,10 +29,10 @@
         <div v-if="pending" style="text-align: center; padding: 40px;">Memuat artikel...</div>
         
         <div v-else-if="articles && articles.length" class="blog-grid" role="list">
-          <NuxtLink
+          <a
             v-for="(post, i) in articles"
             :key="i"
-            :to="localePath('/blog/' + ((post as any).path?.split('/').pop() || '') + '/')"
+            :href="canonicalPath('/blog/' + ((post as any).path?.split('/').pop() || '') + '/')"
             class="blog-card"
             role="listitem"
           >
@@ -52,7 +52,7 @@
               <p>{{ (post as any).description || (post as any).excerpt }}</p>
               <span class="read-more">{{ $t('common.readMore') }}</span>
             </div>
-          </NuxtLink>
+          </a>
         </div>
         
         <div v-else style="padding: 60px 0; text-align: center; color: var(--text2);">
@@ -86,7 +86,7 @@ import {
 } from '~/composables/useSitelinkSchema'
 
 const { locale } = useI18n()
-const localePath = useLocalePath()
+const canonicalPath = useCanonicalLocalePath()
 const bookingStore = useBookingStore()
 const siteUrl = SITE_URL
 const isIndexableBlog = computed(() => locale.value !== 'zh')

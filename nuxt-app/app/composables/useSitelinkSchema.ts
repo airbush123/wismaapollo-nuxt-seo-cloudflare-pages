@@ -1,24 +1,25 @@
 export const SITE_URL = 'https://wisma-apollo.my.id'
+export const LOCAL_BUSINESS_ALIAS = 'Wisma Apollo Kuala Kurun - Penginapan Hotel Guest House Homestay Staycation'
 
 export const PRIMARY_SITELINKS = [
   {
     name: 'Hotel Kuala Kurun',
-    url: `${SITE_URL}/hotel-kuala-kurun`,
+    url: `${SITE_URL}/hotel-kuala-kurun/`,
     description: 'Halaman utama Wisma Apollo untuk pencarian hotel Kuala Kurun.',
   },
   {
     name: 'Penginapan Kuala Kurun',
-    url: `${SITE_URL}/penginapan-kuala-kurun`,
+    url: `${SITE_URL}/penginapan-kuala-kurun/`,
     description: 'Penginapan bersih dan strategis di pusat Kuala Kurun.',
   },
   {
     name: 'Guest House Kuala Kurun',
-    url: `${SITE_URL}/guest-house-kuala-kurun`,
+    url: `${SITE_URL}/guest-house-kuala-kurun/`,
     description: 'Guest house Kuala Kurun dengan kamar AC, WiFi, dan parkir luas.',
   },
   {
     name: 'Homestay Kuala Kurun',
-    url: `${SITE_URL}/homestay-kuala-kurun`,
+    url: `${SITE_URL}/homestay-kuala-kurun/`,
     description: 'Homestay nyaman di Kuala Kurun untuk keluarga dan perjalanan singkat.',
   },
   {
@@ -33,12 +34,12 @@ export const PRIMARY_SITELINKS = [
   },
   {
     name: 'FAQ Wisma Apollo',
-    url: `${SITE_URL}/faq`,
+    url: `${SITE_URL}/faq/`,
     description: 'Pertanyaan umum tentang lokasi, fasilitas, harga, dan reservasi.',
   },
   {
     name: 'Blog Wisma Apollo',
-    url: `${SITE_URL}/blog`,
+    url: `${SITE_URL}/blog/`,
     description: 'Artikel seputar penginapan, wisata, dan kuliner Kuala Kurun.',
   },
 ]
@@ -48,6 +49,11 @@ export function buildOrganizationSchema() {
     '@type': 'Organization',
     '@id': `${SITE_URL}/#organization`,
     name: 'Wisma Apollo Kuala Kurun',
+    alternateName: [
+      'Wisma Apollo',
+      LOCAL_BUSINESS_ALIAS,
+      'Wisma Apollo Hotel Kuala Kurun',
+    ],
     url: `${SITE_URL}/`,
     logo: {
       '@type': 'ImageObject',
@@ -71,7 +77,16 @@ export function buildHotelSchema() {
     '@type': 'Hotel',
     '@id': `${SITE_URL}/#hotel`,
     name: 'Wisma Apollo Kuala Kurun',
-    alternateName: ['Wisma Apollo', 'Apollo Kuala Kurun'],
+    alternateName: [
+      'Wisma Apollo',
+      'Apollo Kuala Kurun',
+      LOCAL_BUSINESS_ALIAS,
+      'Wisma Apollo Hotel Kuala Kurun',
+      'Wisma Apollo Penginapan Kuala Kurun',
+      'Wisma Apollo Guest House Kuala Kurun',
+      'Wisma Apollo Homestay Kuala Kurun',
+      'Wisma Apollo Staycation Kuala Kurun',
+    ],
     description: 'Hotel dan penginapan Kuala Kurun yang bersih, strategis, dan nyaman dengan AC, WiFi gratis, TV Android, kamar mandi dalam, dan parkir luas.',
     url: `${SITE_URL}/`,
     telephone: '+62818232021',
@@ -120,7 +135,15 @@ export function buildWebsiteSchema(inLanguage = 'id-ID') {
     '@type': 'WebSite',
     '@id': `${SITE_URL}/#website`,
     name: 'Wisma Apollo Kuala Kurun',
-    alternateName: ['Wisma Apollo', 'Hotel Kuala Kurun', 'Penginapan Kuala Kurun'],
+    alternateName: [
+      'Wisma Apollo',
+      LOCAL_BUSINESS_ALIAS,
+      'Hotel Kuala Kurun',
+      'Penginapan Kuala Kurun',
+      'Guest House Kuala Kurun',
+      'Homestay Kuala Kurun',
+      'Staycation Kuala Kurun',
+    ],
     url: `${SITE_URL}/`,
     inLanguage,
     publisher: { '@id': `${SITE_URL}/#organization` },

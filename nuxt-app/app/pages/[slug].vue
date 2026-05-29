@@ -2,7 +2,7 @@
   <div>
     <div class="lp-header">
       <div class="container">
-        <NuxtLink :to="localePath('/')" class="lp-back lp-back-light">← {{ $t('common.backHome') }}</NuxtLink>
+        <a :href="canonicalPath('/')" class="lp-back lp-back-light">← {{ $t('common.backHome') }}</a>
         <h1>{{ pageData.title }}</h1>
         <p>{{ pageData.subtitle }}</p>
       </div>
@@ -78,7 +78,7 @@ import zhMessagesRaw from '../../locales/zh.json?raw'
 const route = useRoute()
 
 const { locale } = useI18n()
-const localePath = useLocalePath()
+const canonicalPath = useCanonicalLocalePath()
 const siteUrl = SITE_URL
 
 if (locale.value === 'zh') {

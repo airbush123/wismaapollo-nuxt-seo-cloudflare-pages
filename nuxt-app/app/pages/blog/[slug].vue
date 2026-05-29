@@ -2,7 +2,7 @@
   <div>
     <div class="lp-header">
       <div class="container">
-        <NuxtLink :to="localePath('/blog/')" class="lp-back lp-back-light">&lt;- {{ $t('nav.blog') }}</NuxtLink>
+        <a :href="canonicalPath('/blog/')" class="lp-back lp-back-light">&lt;- {{ $t('nav.blog') }}</a>
         <h1>{{ article?.title || 'Article' }}</h1>
         <p v-if="article" class="article-meta-line">
           {{ articleAuthorLabel }} - {{ publishedLabel }} {{ formatArticleDate((article as any).date) }}
@@ -29,7 +29,7 @@
         </template>
         <div v-else style="padding: 40px 0; text-align: center; color: var(--text2);">
           <p>{{ articleUnavailableText }}</p>
-          <NuxtLink :to="localePath('/blog/')" class="lp-back" style="margin-top: 16px;">&lt;- {{ backToBlogText }}</NuxtLink>
+          <a :href="canonicalPath('/blog/')" class="lp-back" style="margin-top: 16px;">&lt;- {{ backToBlogText }}</a>
         </div>
       </div>
     </div>
@@ -48,7 +48,7 @@ const route = useRoute()
 const slug = route.params.slug as string
 
 const { locale } = useI18n()
-const localePath = useLocalePath()
+const canonicalPath = useCanonicalLocalePath()
 const bookingStore = useBookingStore()
 const siteUrl = SITE_URL
 const isIndexableBlog = computed(() => locale.value !== 'zh')

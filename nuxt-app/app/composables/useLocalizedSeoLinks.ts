@@ -24,6 +24,24 @@ function localizedUrl(path: string, locale: LocaleCode) {
   return `${SITE_URL}/${locale}${pathWithSlash}`
 }
 
+export function canonicalLocalizedPath(path: string, locale: LocaleCode) {
+  const [, rawPath = '/', suffix = ''] = path.match(/^([^?#]*)([?#].*)?$/) || []
+  const normalizedPath = normalizePath(rawPath)
+  const pathWithSlash = normalizedPath === '/' ? '/' : `${normalizedPath}/`
+
+  if (locale === 'id') {
+    return `${pathWithSlash}${suffix}`
+  }
+
+  return `/${locale}${pathWithSlash}${suffix}`
+}
+
+export function useCanonicalLocalePath() {
+  const { locale } = useI18n()
+
+  return (path: string) => canonicalLocalizedPath(path, locale.value as LocaleCode)
+}
+
 export function buildHreflangLinks(path: string, locales: LocaleCode[]) {
   const normalizedPath = normalizePath(path)
 
