@@ -3,6 +3,8 @@ title: 'Kuliner Khas Kuala Kurun yang Wajib Dicoba'
 description: 'Dari ikan sungai bakar hingga kue tradisional Dayak. Panduan kuliner lengkap dari Wisma Apollo.'
 category: 'Kuliner'
 image: '/images/gallery/hotel-di-kuala-kurun.webp'
+date: '2024-11-15'
+dateModified: '2026-05-29'
 ---
 
 <p>Berkunjung ke <strong>Kuala Kurun</strong> tidak lengkap tanpa mencicipi kuliner khasnya. Kota ini menyimpan
@@ -26,7 +28,7 @@ image: '/images/gallery/hotel-di-kuala-kurun.webp'
 <p>Sebagian besar kuliner khas bisa ditemukan di:</p>
 <ul>
 <li><strong>Pasar Tradisional Kuala Kurun</strong> – Buka pagi sampai siang</li>
-<li><strong>Warung-warung di sekitar Jl. Letjen Soeprapto</strong> – Dekat <a href="https://wisma-apollo.my.id/"><strong>Wisma Apollo</strong></a></li>
+<li><strong>Warung-warung di sekitar Jl. Letjen Soeprapto</strong> – Dekat <a href="https://wisma-apollo.my.id/penginapan-kuala-kurun/"><strong>Wisma Apollo</strong></a></li>
 <li><strong>Cafe &amp; rumah makan di pusat kota</strong> – Menu modern dan tradisional</li>
 </ul>
 <h2>Cara Menikmati Kuliner Kuala Kurun dalam Satu Hari</h2>

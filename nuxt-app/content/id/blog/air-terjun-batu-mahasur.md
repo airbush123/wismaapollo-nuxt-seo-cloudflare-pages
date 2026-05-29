@@ -3,6 +3,8 @@ title: 'Air Terjun Batu Mahasur: Keindahan Tersembunyi di Kuala Kurun'
 description: 'Jelajahi keindahan Air Terjun Batu Mahasur di Kuala Kurun, Kalimantan Tengah. Temukan pesona alam yang memukau.'
 category: 'Wisata'
 image: '/images/blog/air-terjun-batu-mahasur.webp'
+date: '2024-11-01'
+dateModified: '2026-05-29'
 ---
 <h2>Pendahuluan</h2>
 <p>Kuala Kurun, sebuah kota kecil yang terletak di Kabupaten Gunung Mas, Kalimantan Tengah, menyimpan banyak
@@ -75,7 +77,7 @@ image: '/images/blog/air-terjun-batu-mahasur.webp'
             Menginap di pusat Kuala Kurun membuat perjalanan pulang dari destinasi wisata terasa lebih praktis. Kamu
             bisa mandi, mengganti pakaian, mengisi daya ponsel, lalu mencari makan malam di sekitar kota tanpa harus
             menempuh perjalanan tambahan yang melelahkan.</p>
-<p><a href="https://wisma-apollo.my.id/"><strong>Wisma Apollo</strong></a> cocok menjadi pilihan penginapan setelah berkunjung ke Air Terjun Batu Mahasur. Lokasinya di
+<p><a href="https://wisma-apollo.my.id/penginapan-kuala-kurun/"><strong>Wisma Apollo</strong></a> cocok menjadi pilihan penginapan setelah berkunjung ke Air Terjun Batu Mahasur. Lokasinya di
             Jl. Letjen Soeprapto No.56, Kuala Kurun, dengan kamar mulai Rp200.000 per malam. Fasilitas seperti AC, WiFi
             gratis, TV Android, shower, handuk, amenities, dan parkir luas membantu tamu memulihkan tenaga setelah
             seharian menikmati wisata alam Gunung Mas.</p>

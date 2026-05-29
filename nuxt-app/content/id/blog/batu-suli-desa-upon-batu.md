@@ -3,6 +3,8 @@ title: 'Menikmati Keindahan Alam Batu Suli di Desa Upon Batu'
 description: 'Menikmati keindahan alam Batu Suli di Desa Upon Batu, Kabupaten Gunung Mas.'
 category: 'Wisata'
 image: '/images/blog/batu-suli-desa-upon-batu.webp'
+date: '2024-11-05'
+dateModified: '2026-05-29'
 ---
 
 <p><strong>Batu Suli</strong> adalah destinasi wisata alam tersembunyi yang kini mulai bersinar berkat

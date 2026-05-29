@@ -64,10 +64,10 @@ const articleUrl = computed(() => {
 
   if (articlePath) {
     const [, , articleSlug] = articlePath.match(/^\/([^/]+)\/blog\/(.+)$/) || []
-    return `${blogUrl.value}/${articleSlug || slug}`
+    return `${blogUrl.value}/${articleSlug || slug}/`
   }
 
-  return `${blogUrl.value}/${slug}`
+  return `${blogUrl.value}/${slug}/`
 })
 
 const articleTitle = computed(() => article.value?.title || 'Blog Wisma Apollo Kuala Kurun')
@@ -93,7 +93,7 @@ const articleStructuredData = computed(() => buildGraphSchema([
   }),
   buildBreadcrumbSchema([
     { name: 'Wisma Apollo Kuala Kurun', url: homeUrl.value },
-    { name: 'Blog Wisma Apollo', url: blogUrl.value },
+    { name: 'Blog Wisma Apollo', url: `${blogUrl.value}/` },
     { name: articleTitle.value, url: articleUrl.value },
   ]),
   article.value
@@ -106,6 +106,8 @@ const articleStructuredData = computed(() => buildGraphSchema([
         mainEntityOfPage: { '@id': `${articleUrl.value}#webpage` },
         url: articleUrl.value,
         inLanguage: articleLanguage.value,
+        datePublished: (article.value as any)?.date || undefined,
+        dateModified: (article.value as any)?.dateModified || (article.value as any)?.date || undefined,
         author: {
           '@type': 'Organization',
           name: 'Wisma Apollo Kuala Kurun',

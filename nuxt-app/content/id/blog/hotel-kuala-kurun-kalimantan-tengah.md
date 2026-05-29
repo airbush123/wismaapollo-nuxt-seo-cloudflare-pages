@@ -3,10 +3,12 @@ title: 'Hotel di Kuala Kurun, Kalimantan Tengah – Referensi Terbaik'
 description: 'Sedang mencari hotel dan penginapan di Kuala Kurun, Kalimantan Tengah? Temukan akomodasi terpercaya yang nyaman, strategis, dan murah di Wisma Apollo.'
 category: 'Penginapan'
 image: '/images/blog/hotel-kuala-kurun-kalimantan-tengah.jpg'
+date: '2025-05-10'
+dateModified: '2026-05-29'
 ---
-<p>Bagi pendatang baru, berwisata atau melaksanakan dinas pekerjaan di Kalimantan Tengah sering kali membutuhkan persiapan, terutama mengenai tempat tinggal sementara. Memilih <a href="https://wisma-apollo.my.id/"><strong>hotel di Kuala Kurun, Kalimantan Tengah</strong>
+<p>Bagi pendatang baru, berwisata atau melaksanakan dinas pekerjaan di Kalimantan Tengah sering kali membutuhkan persiapan, terutama mengenai tempat tinggal sementara. Memilih <a href="https://wisma-apollo.my.id/hotel-kuala-kurun/"><strong>hotel di Kuala Kurun, Kalimantan Tengah</strong>
 </a> yang ideal tidak perlu membingungkan jika Anda mengetahui kriteria kenyamanan dan keamanan yang pas. Kuala Kurun adalah ibu kota dari Kabupaten Gunung Mas—sebuah kabupaten yang tengah berkembang pesat baik secara ekonomi maupun infrastrukturnya.</p>
-<p>Di antara berbagai opsi yang tersebar, terdapat satu rekomendasi penginapan dan hotel yang selalu konsisten berada di puncak <em>review</em> para tamu: <a href="https://wisma-apollo.my.id/"><strong>Wisma Apollo Kuala Kurun</strong>
+<p>Di antara berbagai opsi yang tersebar, terdapat satu rekomendasi penginapan dan hotel yang selalu konsisten berada di puncak <em>review</em> para tamu: <a href="https://wisma-apollo.my.id/hotel-kuala-kurun/"><strong>Wisma Apollo Kuala Kurun</strong>
 </a>.</p>
 <h2>Kenyamanan Premium di Pusat Gunung Mas</h2>
 <p>Hotel di Kalimantan Tengah sering kali identik dengan letaknya yang tersebar. Namun, jika Anda menetapkan <em>base</em> dan kegiatan di area Kuala Kurun, maka posisi strategis menjadi penentu kelancaran akivitas Anda. Wisma Apollo berlokasi tepat di jalan utama (Jl. Letjen Soeprapto), sebuah poros utama lalu lintas komersial dan pemerintahan lokal Gunung Mas.</p>

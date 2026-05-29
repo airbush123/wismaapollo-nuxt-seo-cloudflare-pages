@@ -3,6 +3,8 @@ title: 'Transformasi Hotel Tertua di Gunung Mas Menjadi Sekolah Rakyat'
 description: 'Sejarah luar biasa Hotel Gunung Mas yang kini beralih fungsi menjadi Sekolah Rakyat untuk anak pedalaman.'
 category: 'Info'
 image: '/images/blog/sekolah-rakyat-gunung-mas.jpg'
+date: '2025-07-15'
+dateModified: '2026-05-29'
 ---
 <p>Kuala Kurun, ibu kota Kabupaten Gunung Mas, Kalimantan Tengah, terus berbenah dan mengukir sejarah baru dalam dunia pendidikannya. Salah satu cerita transformasi yang paling memikat perhatian masyarakat belakangan ini adalah beralih fungsinya sebuah bangunan hotel tertua di Gunung Mas menjadi fasilitas pendidikan yang mulia, yakni <strong>Sekolah Rakyat</strong>.</p>
 <p>Bangunan yang dimaksud dulunya dikenal luas sebagai Hotel Gunung Mas. Bertahun-tahun lamanya, gedung ini menjadi salah satu wajah penyedia akomodasi paling awal bagi pelancong atau aparatur negara yang singgah di Kuala Kurun. Tempat ini merekam banyak jejak sejarah perkembangan ekonomi kota. Namun, seiring dengan berjalannya waktu dan munculnya kesadaran pemerintah daerah akan pentingnya pemerataan pendidikan, hotel bersejarah ini ditutup dan bertransformasi sepenuhnya menjadi sarana yang mendidik generasi penerus bangsa.</p>
@@ -24,7 +26,7 @@ image: '/images/blog/sekolah-rakyat-gunung-mas.jpg'
 <h2>Menjaga Cerita Kota agar Tetap Hidup</h2>
 <p>Cerita tentang bangunan lama, sekolah, pasar, sungai, dan ruang publik adalah bagian dari identitas Kuala Kurun. Semakin banyak cerita lokal ditulis dan dibagikan, semakin mudah orang luar memahami daerah ini dengan lebih utuh. Artikel seperti ini bukan hanya catatan sejarah singkat, tetapi juga ajakan untuk melihat Gunung Mas sebagai daerah yang punya perjalanan, tantangan, dan harapan.</p>
 <p>Bagi pembaca yang sedang merencanakan perjalanan, jadikan cerita lokal sebagai pelengkap itinerary. Setelah menyelesaikan agenda kerja atau wisata, sempatkan mengenal sisi kota yang tidak selalu muncul di brosur perjalanan. Kuala Kurun punya banyak hal untuk diceritakan, dan pengalaman menginap yang nyaman akan membuat proses mengenal kota ini terasa lebih tenang.</p>
-<p>Jika Anda kebetulan berkunjung atau menginap di <a href="https://wisma-apollo.my.id/"><strong>Wisma Apollo Kuala Kurun</strong>
+<p>Jika Anda kebetulan berkunjung atau menginap di <a href="https://wisma-apollo.my.id/hotel-kuala-kurun/"><strong>Wisma Apollo Kuala Kurun</strong>
 </a>, bangunan eks-hotel ini bisa memicu cerita inspiratif lokal yang sangat memotivasi. Mari kita dukung terus program pendidikan seperti ini agar Kuala Kurun semakin maju dan mencetak sumber daya manusia unggul dari bumi Kalimantan Tengah!</p>
 <div class="cta-box cta-reservation">
 <div class="cta-copy">

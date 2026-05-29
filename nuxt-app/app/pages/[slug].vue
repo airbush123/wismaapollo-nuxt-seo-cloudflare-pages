@@ -185,8 +185,9 @@ const fallbackPages: Record<string, any> = {
   },
   'penginapan-kuala-kurun': {
     title: 'Penginapan Kuala Kurun - Wisma Apollo',
+    seoTitle: 'Penginapan Kuala Kurun - Wisma Apollo | Kamar Bersih Mulai Rp200.000',
     subtitle: 'Penginapan bersih, nyaman & murah di Kuala Kurun',
-    meta: 'Penginapan Kuala Kurun terbaik. Wisma Apollo, kamar bersih, AC, WiFi gratis. Harga mulai Rp200.000/malam.',
+    meta: 'Penginapan Kuala Kurun terbaik di pusat kota Gunung Mas. Wisma Apollo menawarkan kamar bersih, AC, WiFi gratis, kamar mandi dalam, parkir luas. Harga mulai Rp200.000/malam. Reservasi mudah via WhatsApp.',
     sections: [
       {
         heading: 'Penginapan Nyaman di Kuala Kurun',
@@ -319,7 +320,7 @@ const pageData = computed(() => {
 
 const pageUrl = computed(() => {
   const localePrefix = locale.value === 'id' ? '' : `/${locale.value}`
-  return `${siteUrl}${localePrefix}/${slug.value}`
+  return `${siteUrl}${localePrefix}/${slug.value}/`
 })
 
 const homeUrl = computed(() => {

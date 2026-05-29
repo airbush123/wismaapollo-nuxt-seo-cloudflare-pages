@@ -3,6 +3,8 @@ title: 'Tips Menginap Nyaman di Kuala Kurun – Panduan Lengkap'
 description: 'Tips menginap nyaman di Kuala Kurun. Panduan lengkap memilih penginapan, hotel, dan wisma terbaik di Kuala Kurun, Gunung Mas, Kalimantan Tengah.'
 category: 'Tips'
 image: '/images/gallery/penginapan-murah-kuala-kurun.webp'
+date: '2025-01-20'
+dateModified: '2026-05-29'
 ---
 
 <p>Kuala Kurun, ibu kota Kabupaten Gunung Mas di Kalimantan Tengah, adalah destinasi yang semakin populer untuk
@@ -10,7 +12,7 @@ image: '/images/gallery/penginapan-murah-kuala-kurun.webp'
             terjangkau bisa jadi tantangan jika kamu belum tahu tips-nya.</p>
 <h2>1. Pilih Lokasi Strategis</h2>
 <p>Pastikan penginapan yang kamu pilih dekat dengan pusat kota. Lokasi strategis memudahkan akses ke
-            perkantoran, cafe, dan tempat kuliner. <a href="https://wisma-apollo.my.id/"><strong>Wisma Apollo</strong></a> misalnya, terletak di Jl. Letjen
+            perkantoran, cafe, dan tempat kuliner. <a href="https://wisma-apollo.my.id/penginapan-kuala-kurun/"><strong>Wisma Apollo</strong></a> misalnya, terletak di Jl. Letjen
             Soeprapto No.56, tepat di jantung kota Kuala Kurun.</p>
 <h2>2. Cek Fasilitas Kamar</h2>
 <p>Jangan hanya tergiur harga murah. Pastikan fasilitas kamar sesuai kebutuhanmu:</p>

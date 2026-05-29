@@ -1,8 +1,10 @@
 ---
-title: 'Hotel di Kuala Kurun: Rekomendasi Penginapan Nyaman dan Strategis'
-description: 'Wisma Apollo menawarkan harga mulai Rp200.000, dekat Cafe Rumah Teduh, dengan kamar mandi dalam, AC dingin, dan WiFi kencang!'
+title: 'Review Wisma Apollo: Penginapan Budget Rasa Hotel di Kuala Kurun'
+description: 'Review lengkap Wisma Apollo Kuala Kurun – penginapan budget dengan fasilitas AC, WiFi, TV Android, kamar mandi dalam, dan parkir luas. Harga mulai Rp200.000/malam.'
 category: 'Penginapan'
 image: '/images/blog/hotel-di-kuala-kurun.webp'
+date: '2024-10-15'
+dateModified: '2026-05-29'
 ---
 
 <p><strong>Update Terbaru Penginapan Kuala Kurun - 2025: Menginap Premium mulai 200 Ribuan Saja Sedang cari
@@ -10,8 +12,8 @@ image: '/images/blog/hotel-di-kuala-kurun.webp'
                     Apollo</strong>, pelopor penginapan <em>budget</em> rasa bintang tiga yang terletak tepat di jantung
                 ring-1 kota Kuala Kurun. Tempat singgah paling favorit yang sangat ramah untuk kebutuhan perjalanan
                 dinas PNS, pekerja *traveling*, *sales* area, maupun keluarga yang menghabiskan liburan akhir pekan.</p>
-<h2>📍 Lokasi Super Strategis: Dekat Cafe Hits & Laundry</h2>
-<p>Beralamat sah di Jl. Letjen Soeprapto No. 56, Kuala Kurun, Kabupaten Gunung Mas, <a href="https://wisma-apollo.my.id/"><strong>Wisma Apollo</strong></a> diberkati
+<h2>Lokasi Super Strategis: Dekat Cafe Hits & Laundry</h2>
+<p>Beralamat sah di Jl. Letjen Soeprapto No. 56, Kuala Kurun, Kabupaten Gunung Mas, <a href="https://wisma-apollo.my.id/hotel-kuala-kurun/"><strong>Wisma Apollo</strong></a> diberkati
                 dengan kemudahan akses sentral. Menginap di mari artinya Anda dikelilingi oleh pilar fasilitas penunjang
                 yang pasti Anda cari dan inginkan:</p>
 <ol>
@@ -25,7 +27,7 @@ image: '/images/blog/hotel-di-kuala-kurun.webp'
                     warung lalapan, padang, ayam bakar, hingga minimarket mudah dijumpai lewat jalan kaki dari
 <em>lobby</em> kamar Anda.</li>
 </ol>
-<h2>🛏️ Kamar Ekstra Bersih, Sejuk, dan Menang Budget</h2>
+<h2>Kamar Ekstra Bersih, Sejuk, dan Menang Budget</h2>
 <p>Berhenti mengorbankan kenyamanan istirahat Anda untuk harga miring. Di Wisma Apollo "Nyaman Seperti di
                 Rumah Sendiri" bukan sekedar *tagline* kosong, melainkan misi dari setiap tipe kamar yang kami bersihkan
                 harian setara tata graha profesional. Anda bebas bereksplorasi sesuai *budget* saku:</p>
@@ -47,7 +49,7 @@ image: '/images/blog/hotel-di-kuala-kurun.webp'
 <li>Kupon air mineral segar harian, dan racikan minuman hangat Teh & Kopi</li>
 <li>Kantong parkiran mobil yang masuk pekarangan *indoor* berlapis pagar besi keamanan CCTV.</li>
 </ul>
-<h2>✨ Prioritas Kami: Rekan Dinas, Pelancong, & Pejuang Transit</h2>
+<h2>Prioritas Kami: Rekan Dinas, Pelancong, & Pejuang Transit</h2>
 <p>Berhentilah membaca ulasan *fake* hotel mahal dan tanyalah pada ratusan lisesensi perusahaan lokal yang
                 menitipkan karyawannya di Wisma Apollo tiap menembus penugasan Gunung Mas. Inilah alasan utama mengapa
                 rezeki perputaran tamu di buku kas kami nyaris tidak pernah pudar:</p>
@@ -70,7 +72,6 @@ image: '/images/blog/hotel-di-kuala-kurun.webp'
 <span>Parkir luas</span>
 </div>
 <a href="#reservasi" class="blog-reserve-btn" data-booking-trigger="true">Buka Form Reservasi</a>
-</div>
 </div>
 <h2>Checklist Memilih Hotel di Kuala Kurun</h2>
 <p>Sebelum memilih hotel di Kuala Kurun, pastikan lokasi sesuai dengan kebutuhan perjalananmu. Jika datang untuk

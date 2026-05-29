@@ -3,6 +3,8 @@ title: 'Bundaran Kuala Kurun: Simbol Kota yang Menyimpan Pesona'
 description: 'Bundaran Kuala Kurun: Simbol Kota yang Menyimpan Pesona.'
 category: 'Wisata'
 image: '/images/blog/bundaran-kuala-kurun.webp'
+date: '2024-11-10'
+dateModified: '2026-05-29'
 ---
 
 <p><strong>Bundaran Kuala Kurun</strong> terletak di jantung kota, tepatnya di persimpangan jalan utama yang

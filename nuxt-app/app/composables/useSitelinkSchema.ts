@@ -79,7 +79,11 @@ export function buildHotelSchema() {
       `${SITE_URL}/images/hero.webp`,
       `${SITE_URL}/images/gallery/wisma-apollo-hotel-kuala-kurun.webp`,
       `${SITE_URL}/images/gallery/kamar-double-bed-wisma-apollo.webp`,
+      `${SITE_URL}/images/gallery/kamar-hotel-murah-kuala-kurun.webp`,
+      `${SITE_URL}/images/gallery/kamar-penginapan-kuala-kurun.webp`,
     ],
+    checkinTime: '14:00',
+    checkoutTime: '12:00',
     priceRange: 'Rp200.000 - Rp250.000',
     address: {
       '@type': 'PostalAddress',
@@ -104,8 +108,8 @@ export function buildHotelSchema() {
     ],
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '5',
-      reviewCount: '15',
+      ratingValue: '4.8',
+      reviewCount: '24',
       bestRating: '5',
     },
   }

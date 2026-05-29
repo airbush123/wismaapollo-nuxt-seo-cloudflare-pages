@@ -3,13 +3,15 @@ title: 'Hotel Gunung Mas Kalimantan Tengah: Menginap di Kuala Kurun'
 description: 'Panduan memilih hotel Gunung Mas Kalimantan Tengah untuk tamu dinas, keluarga, pekerja lapangan, dan wisatawan yang mencari penginapan strategis di Kuala Kurun.'
 category: 'Penginapan'
 image: '/images/blog/hotel-gunung-mas-kalimantan-tengah.png'
+date: '2025-06-01'
+dateModified: '2026-05-29'
 ---
 
 <p>Mencari <strong>hotel Gunung Mas Kalimantan Tengah</strong> biasanya dimulai dari satu pertanyaan sederhana: area mana yang paling praktis untuk menginap? Kabupaten Gunung Mas memiliki wilayah yang luas, sementara aktivitas pemerintahan, perjalanan kerja, kebutuhan transit, dan sebagian besar layanan kota banyak berpusat di Kuala Kurun. Karena itu, memilih hotel atau penginapan di Kuala Kurun sering menjadi pilihan paling masuk akal untuk tamu yang ingin perjalanan lebih efisien.</p>
 
 <p>Kuala Kurun adalah ibu kota Kabupaten Gunung Mas. Kota ini menjadi titik penting bagi tamu dinas, pekerja proyek, keluarga yang berkunjung, dan wisatawan yang ingin menjelajahi kawasan sekitar. Dari sini, akses ke kantor pemerintahan, jalan utama, tempat makan, minimarket, dan kebutuhan harian terasa lebih mudah. Jika agenda perjalanan padat, lokasi menginap yang strategis akan membantu menghemat waktu, tenaga, dan biaya transportasi.</p>
 
-<p>Salah satu pilihan yang bisa dipertimbangkan adalah <a href="https://wisma-apollo.my.id/"><strong>Wisma Apollo Kuala Kurun</strong></a>. Penginapan ini berada di Jl. Letjen Soeprapto No.56, Kuala Kurun, Gunung Mas, Kalimantan Tengah. Lokasinya dekat dengan pusat aktivitas kota, sehingga cocok untuk tamu yang membutuhkan tempat istirahat bersih, mudah dihubungi, dan tidak jauh dari kebutuhan utama selama berada di Gunung Mas.</p>
+<p>Salah satu pilihan yang bisa dipertimbangkan adalah <a href="https://wisma-apollo.my.id/hotel-kuala-kurun/"><strong>Wisma Apollo Kuala Kurun</strong></a>. Penginapan ini berada di Jl. Letjen Soeprapto No.56, Kuala Kurun, Gunung Mas, Kalimantan Tengah. Lokasinya dekat dengan pusat aktivitas kota, sehingga cocok untuk tamu yang membutuhkan tempat istirahat bersih, mudah dihubungi, dan tidak jauh dari kebutuhan utama selama berada di Gunung Mas.</p>
 
 <h2>Kenapa Kuala Kurun Jadi Titik Menginap yang Strategis?</h2>
 

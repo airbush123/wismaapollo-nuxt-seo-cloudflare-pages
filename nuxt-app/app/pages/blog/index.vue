@@ -94,7 +94,7 @@ if (locale.value === 'zh') {
 
 const localePrefix = computed(() => locale.value === 'id' ? '' : `/${locale.value}`)
 const homeUrl = computed(() => `${siteUrl}${localePrefix.value}/`)
-const blogUrl = computed(() => `${siteUrl}${localePrefix.value}/blog`)
+const blogUrl = computed(() => `${siteUrl}${localePrefix.value}/blog/`)
 const blogLanguage = computed(() => locale.value === 'zh' ? 'zh-CN' : locale.value === 'en' ? 'en-US' : 'id-ID')
 
 const blogTitle = computed(() => locale.value === 'id'
@@ -132,7 +132,7 @@ const blogStructuredData = computed(() => buildGraphSchema([
         '@type': 'ListItem',
         position: index + 1,
         name: post.title,
-        url: `${blogUrl.value}/${post.path?.split('/').pop() || ''}`,
+        url: `${blogUrl.value}${post.path?.split('/').pop() || ''}/`,
       })),
     },
   },

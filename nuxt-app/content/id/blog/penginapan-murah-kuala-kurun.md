@@ -3,10 +3,12 @@ title: 'Penginapan Murah di Kuala Kurun – Rekomendasi 200 Ribuan Terbaik'
 description: 'Cari penginapan murah di Kuala Kurun? Wisma Apollo menawarkan kenyamanan setara hotel dengan harga mulai Rp200.000/malam.'
 category: 'Penginapan'
 image: '/images/blog/penginapan-murah-kuala-kurun.jpg'
+date: '2025-03-15'
+dateModified: '2026-05-29'
 ---
-<p>Kuala Kurun, pusat pemerintahan dan ekonomi Kabupaten Gunung Mas di Kalimantan Tengah, sering menjadi tujuan bagi para pebisnis, aparatur negara, maupun wisatawan. Jika Anda sedang mencari <a href="https://wisma-apollo.my.id/"><strong>penginapan murah di Kuala Kurun</strong>
+<p>Kuala Kurun, pusat pemerintahan dan ekonomi Kabupaten Gunung Mas di Kalimantan Tengah, sering menjadi tujuan bagi para pebisnis, aparatur negara, maupun wisatawan. Jika Anda sedang mencari <a href="https://wisma-apollo.my.id/penginapan-kuala-kurun/"><strong>penginapan murah di Kuala Kurun</strong>
 </a>, hal utama yang kerap menjadi perhatian adalah menemukan tempat yang menawarkan harga bersahabat namun tidak mengorbankan kenyamanan dan fasilitas.</p>
-<p>Kenyataannya, menginap di pusat kota tidak selalu berarti Anda harus merogoh kocek terlalu dalam. <a href="https://wisma-apollo.my.id/"><strong>Wisma Apollo</strong>
+<p>Kenyataannya, menginap di pusat kota tidak selalu berarti Anda harus merogoh kocek terlalu dalam. <a href="https://wisma-apollo.my.id/penginapan-kuala-kurun/"><strong>Wisma Apollo</strong>
 </a> hadir sebagai solusi utama dan rekomendasi penginapan termurah namun berkualitas tinggi di Kuala Kurun. Kami membuktikan bahwa harga murah tetap bisa memberikan pengalaman menginap setara dengan hotel berbintang.</p>
 <h2>Kenapa Memilih Wisma Apollo sebagai Penginapan Murah Anda?</h2>
 <p>Faktor harga memang menjadi daya tarik utama. Mulai dari <strong>Rp200.000,- per malam</strong>, Anda sudah bisa menikmati kamar privat (Single Bed) yang sangat ideal bagi para <em>solo traveler</em>, dinas luar kota, atau <em>backpacker</em>. Harga Rp250.000,- juga tersedia untuk kamar Double Bed bagi Anda yang membawa pasangan atau keluarga.</p>

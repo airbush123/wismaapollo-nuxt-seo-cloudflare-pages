@@ -94,13 +94,13 @@ const homeUrl = computed(() => {
 
 const faqUrl = computed(() => {
   const localePrefix = locale.value === 'id' ? '' : `/${locale.value}`
-  return `${siteUrl}${localePrefix}/faq`
+  return `${siteUrl}${localePrefix}/faq/`
 })
 
 const faqTitle = computed(() => {
-  if (locale.value === 'en') return 'FAQ - Wisma Apollo Kuala Kurun'
+  if (locale.value === 'en') return 'FAQ Hotel & Lodging Kuala Kurun - Wisma Apollo'
   if (locale.value === 'zh') return '常见问题 - Wisma Apollo Kuala Kurun'
-  return 'FAQ - Wisma Apollo Kuala Kurun'
+  return 'FAQ Hotel & Penginapan Kuala Kurun - Wisma Apollo'
 })
 
 const faqDescription = computed(() => {
