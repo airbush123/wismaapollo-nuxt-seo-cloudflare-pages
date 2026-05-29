@@ -56,7 +56,11 @@ import {
 const { locale } = useI18n()
 const localePath = useLocalePath()
 const siteUrl = SITE_URL
-const isIdBlog = computed(() => locale.value === 'id')
+const isIndexableBlog = computed(() => locale.value !== 'zh')
+
+if (locale.value === 'zh') {
+  await navigateTo('/zh/', { redirectCode: 301 })
+}
 
 const localePrefix = computed(() => locale.value === 'id' ? '' : `/${locale.value}`)
 const homeUrl = computed(() => `${siteUrl}${localePrefix.value}/`)
@@ -106,7 +110,7 @@ const blogStructuredData = computed(() => buildGraphSchema([
 
 const { data: articles, pending, refresh } = await useAsyncData(`articles-${locale.value}`, async () => {
   const all = await queryCollection('content').all()
-  return all.filter(a => a.path.startsWith('/id/blog/'))
+  return all.filter(a => a.path.startsWith(`/${locale.value}/blog/`))
 })
 
 watch(locale, () => {
@@ -127,12 +131,13 @@ useSeoMeta({
   twitterDescription: () => blogDescription.value,
   twitterImage: blogImage,
   twitterImageAlt: 'Wisma Apollo Kuala Kurun',
-  robots: () => isIdBlog.value ? 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' : 'noindex, follow',
+  robots: () => isIndexableBlog.value ? 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' : 'noindex, follow',
 })
 
 useHead(() => ({
   link: [
     { rel: 'canonical', href: blogUrl.value },
+    ...buildHreflangLinks('/blog', ['id', 'en']),
   ],
   meta: [
     { property: 'og:site_name', content: 'Wisma Apollo Kuala Kurun' },

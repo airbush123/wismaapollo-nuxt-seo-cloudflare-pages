@@ -172,8 +172,10 @@
     "addressLine2": "Kel. Tampang Tumbang Anjir, Kec. Kurun",
     "addressLine3": "Gunung Mas, Central Kalimantan, 74571",
     "phone": "电话/WhatsApp: 0818 232 021",
+    "quickLinks": "快速链接",
     "accommodationTypes": "住宿类型",
     "links": {
+      "home": "首页",
       "hotel": "库拉库伦酒店",
       "penginapan": "库拉库伦客栈",
       "guestHouse": "库拉库伦招待所",

@@ -38,7 +38,7 @@
             :key="loc.code"
             :class="['lang-btn', { active: locale === loc.code }]"
             :aria-pressed="locale === loc.code"
-            @click="setLocale(loc.code)"
+            @click="handleLocaleClick(loc.code)"
           >
             {{ loc.code.toUpperCase() }}
           </button>
@@ -84,9 +84,20 @@ import { useBookingStore } from '~/stores/useBookingStore'
 
 const uiStore = useUIStore()
 const bookingStore = useBookingStore()
+const route = useRoute()
 const { locale, locales, setLocale } = useI18n()
 const localePath = useLocalePath()
-const isBlogVisible = computed(() => locale.value === 'id')
+const isBlogVisible = computed(() => locale.value !== 'zh')
+const isFaqRoute = computed(() => route.path.replace(/\/$/, '') === '/faq' || route.path.replace(/\/$/, '') === '/en/faq' || route.path.replace(/\/$/, '') === '/zh/faq')
+
+async function handleLocaleClick(localeCode: string) {
+  if (localeCode === 'zh') {
+    await navigateTo(isFaqRoute.value ? '/zh/faq' : '/zh/')
+    return
+  }
+
+  await setLocale(localeCode)
+}
 
 function handleMobileReserveClick() {
   uiStore.closeMenu()

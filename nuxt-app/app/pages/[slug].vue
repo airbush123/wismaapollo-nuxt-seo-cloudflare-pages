@@ -16,11 +16,11 @@
         </div>
 
         <div v-if="pageData.priceRows?.length" class="lp-price">
-          <h2>{{ pageData.priceHeading || 'Harga Kamar' }}</h2>
+          <h2>{{ pageData.priceHeading || priceFallbackHeading }}</h2>
           <div class="lp-price-table" role="table">
             <div class="lp-price-row lp-price-head" role="row">
-              <span role="columnheader">Tipe Kamar</span>
-              <span role="columnheader">Harga</span>
+              <span role="columnheader">{{ roomTypeLabel }}</span>
+              <span role="columnheader">{{ priceLabel }}</span>
             </div>
             <div v-for="(row, i) in pageData.priceRows" :key="i" class="lp-price-row" role="row">
               <span role="cell">{{ row.type }}</span>
@@ -49,7 +49,7 @@
         </div>
 
         <div v-if="pageData.faqs?.length" class="lp-faq">
-          <h2>Pertanyaan Seputar {{ pageData.title }}</h2>
+          <h2>{{ faqHeading }}</h2>
           <div v-for="(faq, i) in pageData.faqs" :key="i" class="lp-faq-item">
             <h3>{{ faq.q }}</h3>
             <p>{{ faq.a }}</p>
@@ -80,6 +80,10 @@ const route = useRoute()
 const { locale } = useI18n()
 const localePath = useLocalePath()
 const siteUrl = SITE_URL
+
+if (locale.value === 'zh') {
+  await navigateTo('/zh/', { redirectCode: 301 })
+}
 
 const parseMessages = (messages: string) => JSON.parse(messages)
 const normalizeMessages = (messages: any) => messages?.default || messages
@@ -331,6 +335,12 @@ const pageImage = computed(() => {
 })
 
 const pageLanguage = computed(() => locale.value === 'zh' ? 'zh-CN' : locale.value === 'en' ? 'en-US' : 'id-ID')
+const priceFallbackHeading = computed(() => locale.value === 'en' ? 'Room Rates' : 'Harga Kamar')
+const roomTypeLabel = computed(() => locale.value === 'en' ? 'Room Type' : 'Tipe Kamar')
+const priceLabel = computed(() => locale.value === 'en' ? 'Rate' : 'Harga')
+const faqHeading = computed(() => locale.value === 'en'
+  ? `Questions About ${pageData.value.title}`
+  : `Pertanyaan Seputar ${pageData.value.title}`)
 
 const pageStructuredData = computed(() => {
   const schemaItems: any[] = [
@@ -384,6 +394,7 @@ useSeoMeta({
 useHead(() => ({
   link: [
     { rel: 'canonical', href: pageUrl.value },
+    ...buildHreflangLinks(`/${slug.value}`, ['id', 'en']),
   ],
   meta: [
     { property: 'og:site_name', content: 'Wisma Apollo Kuala Kurun' },

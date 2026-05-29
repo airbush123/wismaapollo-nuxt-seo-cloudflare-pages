@@ -74,6 +74,7 @@ export default defineNuxtConfig({
     prerender: {
       ignore: [
         /^\/(?:en|zh)(?:\/(?:en|zh))*\/sitemap\.xml$/,
+        /^\/zh\/(?:blog|thanks|tag\/|category\/|author\/|hotel-kuala-kurun|penginapan-kuala-kurun|guest-house-kuala-kurun|homestay-kuala-kurun|staycation-kuala-kurun|tempat-istirahat-kuala-kurun)(?:\/|$)/,
         /^\/(?:(?:en|zh)\/)?(?:hotel-di-kuala-kurun-kalimantan-tengah-wisma-apollo-pilihan-strategis-nyaman|hotel-di-kuala-kurun-rekomendasi-penginapan-nyaman-dan-strategis|penginapan-murah-kuala-kurun|air-terjun-batu-mahasur-keindahan-tersembunyi-di-kuala-kurun|menikmati-keindahan-alam-batu-suli-di-desa-upon-batu-kabupaten-gunung-mas|bundaran-kuala-kurun-simbol-kota-yang-menyimpan-pesona|icon-tugu-selamat-datang-di-kuala-kurun-simbol-identitas-dan-keramahan-kota|harga|hotel-murah-kuala-kurun|guest-house-kurun|penginapan-kurun|faq-wisma|tentang-kami)(?:\/|$)/,
         /^\/(?:(?:en|zh)\/)?(?:20\d{2}\/\d{2}|category\/|tag\/|author\/|feed)(?:\/|$)/,
       ],

@@ -2,7 +2,7 @@
   <div>
     <div class="lp-header">
       <div class="container">
-        <NuxtLink :to="localePath('/blog')" class="lp-back lp-back-light">← {{ $t('nav.blog') }}</NuxtLink>
+        <NuxtLink :to="localePath('/blog')" class="lp-back lp-back-light">&lt;- {{ $t('nav.blog') }}</NuxtLink>
         <h1>{{ article?.title || 'Article' }}</h1>
       </div>
     </div>
@@ -22,8 +22,8 @@
           <ContentRenderer :value="article" />
         </template>
         <div v-else style="padding: 40px 0; text-align: center; color: var(--text2);">
-          <p>Artikel sedang dimuat atau belum tersedia.</p>
-          <NuxtLink :to="localePath('/blog')" class="lp-back" style="margin-top: 16px;">← Kembali ke Blog</NuxtLink>
+          <p>{{ articleUnavailableText }}</p>
+          <NuxtLink :to="localePath('/blog')" class="lp-back" style="margin-top: 16px;">&lt;- {{ backToBlogText }}</NuxtLink>
         </div>
       </div>
     </div>
@@ -45,14 +45,18 @@ const { locale } = useI18n()
 const localePath = useLocalePath()
 const bookingStore = useBookingStore()
 const siteUrl = SITE_URL
-const isIdBlog = computed(() => locale.value === 'id')
+const isIndexableBlog = computed(() => locale.value !== 'zh')
+
+if (locale.value === 'zh') {
+  await navigateTo('/zh/', { redirectCode: 301 })
+}
 const localePrefix = computed(() => locale.value === 'id' ? '' : `/${locale.value}`)
 const homeUrl = computed(() => `${siteUrl}${localePrefix.value}/`)
 const blogUrl = computed(() => `${siteUrl}${localePrefix.value}/blog`)
 const articleLanguage = computed(() => locale.value === 'zh' ? 'zh-CN' : locale.value === 'en' ? 'en-US' : 'id-ID')
 
 const { data: article } = await useAsyncData(`article-view-${locale.value}-${slug}`, async () => {
-  return await queryCollection('content').path(`/id/blog/${slug}`).first()
+  return await queryCollection('content').path(`/${locale.value}/blog/${slug}`).first()
 }, { watch: [locale], default: () => null })
 
 const articleUrl = computed(() => {
@@ -67,7 +71,13 @@ const articleUrl = computed(() => {
 })
 
 const articleTitle = computed(() => article.value?.title || 'Blog Wisma Apollo Kuala Kurun')
-const articleDescription = computed(() => article.value?.description || article.value?.excerpt || 'Artikel Wisma Apollo Kuala Kurun seputar penginapan, wisata, dan kuliner di Gunung Mas.')
+const articleDescription = computed(() => article.value?.description || article.value?.excerpt || (locale.value === 'en'
+  ? 'Wisma Apollo Kuala Kurun articles about accommodation, travel, and culinary destinations in Gunung Mas.'
+  : 'Artikel Wisma Apollo Kuala Kurun seputar penginapan, wisata, dan kuliner di Gunung Mas.'))
+const articleUnavailableText = computed(() => locale.value === 'en'
+  ? 'Article is loading or not yet available.'
+  : 'Artikel sedang dimuat atau belum tersedia.')
+const backToBlogText = computed(() => locale.value === 'en' ? 'Back to Blog' : 'Kembali ke Blog')
 const articleImage = computed(() => {
   const image = (article.value as any)?.image || '/images/hero.webp'
   return image.startsWith('http') ? image : `${siteUrl}${image}`
@@ -137,12 +147,13 @@ useSeoMeta({
   twitterDescription: () => articleDescription.value,
   twitterImage: () => articleImage.value,
   twitterImageAlt: () => articleTitle.value,
-  robots: () => isIdBlog.value ? 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' : 'noindex, follow',
+  robots: () => isIndexableBlog.value ? 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' : 'noindex, follow',
 })
 
 useHead(() => ({
   link: [
     { rel: 'canonical', href: articleUrl.value },
+    ...buildHreflangLinks(`/blog/${slug}`, ['id', 'en']),
   ],
   meta: [
     { property: 'og:site_name', content: 'Wisma Apollo Kuala Kurun' },

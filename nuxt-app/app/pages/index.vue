@@ -71,6 +71,7 @@ useSeoMeta({
 useHead(() => ({
   link: [
     { rel: 'canonical', href: homeUrl.value },
+    ...buildHreflangLinks('/', ['id', 'en', 'zh']),
   ],
   meta: [
     { property: 'og:site_name', content: 'Wisma Apollo Kuala Kurun' },

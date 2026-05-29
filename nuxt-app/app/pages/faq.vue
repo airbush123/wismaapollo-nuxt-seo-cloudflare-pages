@@ -2,7 +2,7 @@
   <div>
     <div class="lp-header">
       <div class="container">
-        <NuxtLink to="/" class="lp-back lp-back-light">← {{ $t('common.backHome') }}</NuxtLink>
+        <NuxtLink :to="localePath('/')" class="lp-back lp-back-light">&lt;- {{ $t('common.backHome') }}</NuxtLink>
         <h1>{{ $t('faq.pageTitle') }}</h1>
         <p>{{ $t('faq.pageDesc') }}</p>
       </div>
@@ -11,7 +11,7 @@
     <section class="section">
       <div class="container">
         <div class="faq-list" role="list">
-          <div v-for="i in 8" :key="i" class="faq-item" role="listitem">
+          <div v-for="i in faqItemCount" :key="i" class="faq-item" role="listitem">
             <button
               class="faq-question"
               :aria-expanded="openIndex === i - 1"
@@ -78,9 +78,14 @@ import {
 import { useBookingStore } from '~/stores/useBookingStore'
 
 const openIndex = ref<number | null>(null)
-const { locale, t } = useI18n()
+const { locale, t, tm } = useI18n()
+const localePath = useLocalePath()
 const siteUrl = SITE_URL
 const bookingStore = useBookingStore()
+const faqItemCount = computed(() => {
+  const items = tm('faq.items')
+  return Array.isArray(items) ? items.length : 8
+})
 
 const homeUrl = computed(() => {
   const localePrefix = locale.value === 'id' ? '' : `/${locale.value}`
@@ -121,7 +126,7 @@ const faqStructuredData = computed(() => buildGraphSchema([
   {
     '@type': 'FAQPage',
     '@id': `${faqUrl.value}#faq`,
-    mainEntity: Array.from({ length: 8 }, (_, index) => ({
+    mainEntity: Array.from({ length: faqItemCount.value }, (_, index) => ({
       '@type': 'Question',
       name: t(`faq.items[${index}].q`),
       acceptedAnswer: {
@@ -164,6 +169,7 @@ useSeoMeta({
 useHead(() => ({
   link: [
     { rel: 'canonical', href: faqUrl.value },
+    ...buildHreflangLinks('/faq', ['id', 'en', 'zh']),
   ],
   meta: [
     { property: 'og:site_name', content: 'Wisma Apollo Kuala Kurun' },

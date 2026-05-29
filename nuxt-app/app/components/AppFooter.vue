@@ -12,7 +12,7 @@
         </p>
       </div>
 
-      <nav class="footer-links" :aria-label="$t('footer.accommodationTypes')">
+      <nav v-if="isFullLocale" class="footer-links" :aria-label="$t('footer.accommodationTypes')">
         <h4>{{ $t('footer.accommodationTypes') }}</h4>
         <NuxtLink :to="localePath('/hotel-kuala-kurun')">{{ $t('footer.links.hotel') }}</NuxtLink>
         <NuxtLink :to="localePath('/penginapan-kuala-kurun')">{{ $t('footer.links.penginapan') }}</NuxtLink>
@@ -29,6 +29,12 @@
         <NuxtLink :to="localePath('/blog/wisata-gunung-mas')">{{ $t('footer.blogLinks.wisata') }}</NuxtLink>
         <NuxtLink :to="localePath('/blog/kuliner-kuala-kurun')">{{ $t('footer.blogLinks.kuliner') }}</NuxtLink>
         <NuxtLink :to="localePath('/blog/air-terjun-batu-mahasur')">{{ $t('footer.blogLinks.airTerjun') }}</NuxtLink>
+      </nav>
+
+      <nav v-if="isZhLocale" class="footer-links" :aria-label="$t('footer.quickLinks')">
+        <h4>{{ $t('footer.quickLinks') }}</h4>
+        <NuxtLink :to="localePath('/')">{{ $t('footer.links.home') }}</NuxtLink>
+        <NuxtLink :to="localePath('/faq')">{{ $t('nav.faq') }}</NuxtLink>
       </nav>
 
       <div class="footer-social">
@@ -65,5 +71,7 @@
 <script setup lang="ts">
 const { locale } = useI18n()
 const localePath = useLocalePath()
-const isBlogVisible = computed(() => locale.value === 'id')
+const isFullLocale = computed(() => locale.value !== 'zh')
+const isBlogVisible = computed(() => locale.value !== 'zh')
+const isZhLocale = computed(() => locale.value === 'zh')
 </script>

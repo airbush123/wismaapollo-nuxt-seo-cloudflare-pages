@@ -1,0 +1,41 @@
+import { SITE_URL } from './useSitelinkSchema'
+
+type LocaleCode = 'id' | 'en' | 'zh'
+
+const localeHreflang: Record<LocaleCode, string> = {
+  id: 'id',
+  en: 'en',
+  zh: 'zh',
+}
+
+function normalizePath(path: string) {
+  if (!path || path === '/') return '/'
+  return `/${path.replace(/^\/+|\/+$/g, '')}`
+}
+
+function localizedUrl(path: string, locale: LocaleCode) {
+  const normalizedPath = normalizePath(path)
+
+  if (locale === 'id') {
+    return `${SITE_URL}${normalizedPath === '/' ? '/' : normalizedPath}`
+  }
+
+  return `${SITE_URL}/${locale}${normalizedPath === '/' ? '/' : normalizedPath}`
+}
+
+export function buildHreflangLinks(path: string, locales: LocaleCode[]) {
+  const normalizedPath = normalizePath(path)
+
+  return [
+    ...locales.map(locale => ({
+      rel: 'alternate',
+      hreflang: localeHreflang[locale],
+      href: localizedUrl(normalizedPath, locale),
+    })),
+    {
+      rel: 'alternate',
+      hreflang: 'x-default',
+      href: localizedUrl(normalizedPath, 'id'),
+    },
+  ]
+}
