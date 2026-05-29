@@ -2794,7 +2794,7 @@ a:focus-visible {
     display: flex;
     align-items: center;
     gap: 4px;
-    padding: 5px 7px;
+    padding: 5px 14px;
     flex: 0 1 auto;
     min-width: 0;
     border-radius: 999px;
@@ -3222,7 +3222,7 @@ a:focus-visible {
 
   .desktop-menu {
     gap: 2px;
-    padding: 5px 6px;
+    padding: 5px 10px;
   }
 
   .desktop-menu a {
