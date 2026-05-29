@@ -5,6 +5,7 @@ category: 'Wisata'
 image: '/images/blog/bundaran-kuala-kurun.webp'
 date: '2024-11-10'
 dateModified: '2026-05-29'
+author: 'Tim Wisma Apollo'
 ---
 
 <p><strong>Bundaran Kuala Kurun</strong> terletak di jantung kota, tepatnya di persimpangan jalan utama yang
@@ -25,7 +26,7 @@ dateModified: '2026-05-29'
                 bersama kopi yang hangat.</p>
 <h2>Pesona Sekitar Bundaran: Destinasi Wisata dan Kuliner</h2>
 <p>Meskipun Bundaran Kuala Kurun secara teknis bukanlah tempat wisata, area padat yang mengitarinya justru
-                menawarkan surga aktivitas yang menarik untuk disinggahi:</p>
+                menawarkan beberapa aktivitas yang menarik untuk disinggahi:</p>
 <ol>
 <li><strong>Pasar Tradisional Kuala Kurun:</strong> Hanya selemparan batu dari putaran bundaran, pasar
                     riuh ini menjadi gerbang observasi otentik kehidupan warga. Anda akan mendapati lapak yang
@@ -38,7 +39,7 @@ dateModified: '2026-05-29'
                     bisa melompat masuk melintasi waktu untuk menelusuri keagungan budaya persaudaraan komunal suku
                     Dayak kuno. Bangunan serba kayu yang megah ini juga acap kali bertransformasi menjadi *venue* ajang
                     pameran kebudayaan skala nasional.</li>
-<li><strong>Surga Kuliner Jalanan:</strong> Selalu lapar usai menelusuri sudut kota? Deretan kedai soto
+<li><strong>Kuliner Jalanan:</strong> Selalu lapar usai menelusuri sudut kota? Deretan kedai soto
                     banjar mengepul, ikan patin bakar garing, hingga warung padang bisa langsung disambangi dengan
                     menyusuri radius 500 meter di bibir bundaran.</li>
 </ol>

@@ -5,6 +5,7 @@ category: 'Info'
 image: '/images/blog/sekolah-rakyat-gunung-mas.jpg'
 date: '2025-07-15'
 dateModified: '2026-05-29'
+author: 'Wisma Apollo Editorial Team'
 ---
 <p>Kuala Kurun, the capital of Gunung Mas Regency, Central Kalimantan, continues to improve and carve new history in its education sector. One of the most captivating transformation stories recently is the conversion of the oldest hotel building in Gunung Mas into a noble educational facility: the <strong>People's School (Sekolah Rakyat)</strong>.</p>
 <p>The building in question was formerly widely known as Hotel Gunung Mas. For years, this building served as one of the earliest accommodation providers for travelers or government officials passing through Kuala Kurun. This place recorded many traces of the city's economic development history. However, as time passed and the local government became aware of the importance of educational equality, this historic hotel was closed and fully transformed into a facility for educating the nation's next generation.</p>

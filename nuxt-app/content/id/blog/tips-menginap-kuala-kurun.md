@@ -1,10 +1,11 @@
 ---
-title: 'Tips Menginap Nyaman di Kuala Kurun – Panduan Lengkap'
-description: 'Tips menginap nyaman di Kuala Kurun. Panduan lengkap memilih penginapan, hotel, dan wisma terbaik di Kuala Kurun, Gunung Mas, Kalimantan Tengah.'
+title: 'Tips Menginap Nyaman di Kuala Kurun - Panduan Praktis'
+description: 'Tips menginap nyaman di Kuala Kurun: cara memilih penginapan, hotel, atau wisma yang sesuai untuk dinas, transit, dan perjalanan keluarga.'
 category: 'Tips'
 image: '/images/gallery/penginapan-murah-kuala-kurun.webp'
 date: '2025-01-20'
 dateModified: '2026-05-29'
+author: 'Tim Wisma Apollo'
 ---
 
 <p>Kuala Kurun, ibu kota Kabupaten Gunung Mas di Kalimantan Tengah, adalah destinasi yang semakin populer untuk

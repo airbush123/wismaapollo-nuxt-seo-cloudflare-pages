@@ -1,28 +1,29 @@
 ---
 title: 'Air Terjun Batu Mahasur: Keindahan Tersembunyi di Kuala Kurun'
-description: 'Jelajahi keindahan Air Terjun Batu Mahasur di Kuala Kurun, Kalimantan Tengah. Temukan pesona alam yang memukau.'
+description: 'Panduan singkat ke Air Terjun Batu Mahasur di Kuala Kurun: akses, aktivitas, tips berkunjung, dan pilihan menginap di pusat kota.'
 category: 'Wisata'
 image: '/images/blog/air-terjun-batu-mahasur.webp'
 date: '2024-11-01'
 dateModified: '2026-05-29'
+author: 'Tim Wisma Apollo'
 ---
 <h2>Pendahuluan</h2>
 <p>Kuala Kurun, sebuah kota kecil yang terletak di Kabupaten Gunung Mas, Kalimantan Tengah, menyimpan banyak
             keindahan alam yang belum banyak diketahui orang. Salah satu permata tersembunyi di daerah ini adalah
 <strong>Air Terjun Batu Mahasur</strong>.
 </p>
-<p>Air terjun ini menawarkan pemandangan yang menakjubkan dan pengalaman yang tak terlupakan bagi para
-            pengunjungnya. Dalam artikel ini, kita akan menjelajahi keindahan Air Terjun Batu Mahasur, bagaimana cara
-            mencapainya, aktivitas yang bisa dilakukan, serta rekomendasi tempat penginapan terbaik di Kuala Kurun.</p>
+<p>Air terjun ini menawarkan suasana alam yang sejuk dan cocok untuk kunjungan singkat. Dalam artikel ini, kita akan
+            membahas gambaran lokasi Air Terjun Batu Mahasur, cara mencapainya, aktivitas yang bisa dilakukan, serta
+            pilihan menginap yang praktis di Kuala Kurun.</p>
 <h2>Keindahan Air Terjun Batu Mahasur</h2>
 <p>Air Terjun Batu Mahasur terletak sekitar 15 kilometer dari pusat kota Kuala Kurun. Air terjun ini dikelilingi
             oleh hutan tropis yang lebat, memberikan suasana yang sejuk dan sangat alami. Dengan ketinggian sekitar 20
             meter, air terjun ini mengalir deras di antara bebatuan besar yang menciptakan suara gemuruh yang
             menenangkan hati.</p>
 <p>Kejernihan airnya membuat setiap pengunjung tergoda untuk merasakan kesegaran airnya secara langsung. Selain
-            keindahan air terjunnya, kawasan sekitarnya juga menawarkan panorama alam yang memukau. Hutan yang
+            keindahan air terjunnya, kawasan sekitarnya juga menawarkan panorama alam yang masih asri. Hutan yang
             mengelilingi air terjun ini merupakan habitat bagi berbagai jenis satwa dan flora endemik, menjadikannya
-            tempat yang ideal bagi para pecinta alam dan fotografer alam.</p>
+            tempat yang cocok bagi pecinta alam dan fotografer alam.</p>
 <h2>Cara Mencapai Air Terjun Batu Mahasur</h2>
 <p>Untuk mencapai Air Terjun Batu Mahasur, pengunjung dapat memulai perjalanan dari pusat kota Kuala Kurun.
             Perjalanan dapat ditempuh dengan kendaraan pribadi atau langsung menyewa kendaraan dari penduduk setempat.
@@ -40,14 +41,14 @@ dateModified: '2026-05-29'
 <li><strong>Membidik Lensa (Fotografi)</strong>: Keindahan bebatuan di sekitar air terjun dan rimbunnya
                 pohon hutan tropis sangat cocok untuk diabadikan untuk feed Instagram Anda.</li>
 <li><strong>Piknik Keluarga</strong>: Area di dekat jatuhnya air terjun menyediakan tempat berbatu yang
-                cukup datar dan ideal untuk menggelar tikar piknik. Pengunjung bisa membawa perbekalan sambil ditemani
+                cukup datar untuk menggelar tikar piknik. Pengunjung bisa membawa perbekalan sambil ditemani
                 suara alam.</li>
 <li><strong>Trekking Hutan</strong>: Bagi jiwa petualang, menjelajahi hutan asri di sekitar kawasan
                 merupakan rute trekking yang menarik dengan beragam satwa lokal liar.</li>
 </ol>
 <h2>Tips Berkunjung</h2>
 <ul>
-<li><strong>Waktu Terbaik:</strong> Musim kemarau adalah waktu paling tepat agar jalur darat tidak terlalu
+<li><strong>Waktu yang Disarankan:</strong> Musim kemarau adalah waktu paling tepat agar jalur darat tidak terlalu
                 becek dan debit air aman di kolam bawah.</li>
 <li><strong>Persiapan:</strong> Kenakan alas kaki trekking atau sepatu outdoor yang anti slip. Jangan lupa
                 untuk membawa pakaian ganti jika berencana mandi.</li>

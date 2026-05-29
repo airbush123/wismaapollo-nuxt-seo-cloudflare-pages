@@ -1,10 +1,11 @@
 ---
 title: 'Tips for Staying Comfortably in Kuala Kurun – Complete Guide'
-description: 'Tips for staying comfortably in Kuala Kurun. A complete guide to choosing the best lodging, hotel, and guesthouse in Kuala Kurun, Gunung Mas, Central Kalimantan.'
+description: 'Tips for staying comfortably in Kuala Kurun: how to choose lodging, hotels, or guesthouses for work trips, transit, and family travel.'
 category: 'Tips'
 image: '/images/gallery/penginapan-murah-kuala-kurun.webp'
 date: '2025-01-20'
 dateModified: '2026-05-29'
+author: 'Wisma Apollo Editorial Team'
 ---
 
 <p>Kuala Kurun, the capital of Gunung Mas Regency in Central Kalimantan, is an increasingly popular destination for

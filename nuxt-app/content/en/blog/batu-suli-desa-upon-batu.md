@@ -5,29 +5,45 @@ category: 'Travel'
 image: '/images/blog/batu-suli-desa-upon-batu.webp'
 date: '2024-11-05'
 dateModified: '2026-05-29'
+author: 'Wisma Apollo Editorial Team'
 ---
 
-<p><strong>Batu Suli</strong> is a hidden natural tourist destination that is now starting to shine thanks to its stunning colossal rock formations and the charm of landscapes largely untouched by human hands. Nestled in the tranquility of Upon Batu Village, Gunung Mas Regency, Central Kalimantan, this attraction has captured the attention of nature lovers, trekking enthusiasts, landscape photographers, and families seeking relaxing vacations far from big city pollution.</p>
-<p>More than just a geological formation, Batu Suli offers a complete combination that soothes the soul: green hillside horizons, clear streams that cut through the forest, and pure oxygen that directly sweeps away the sweat of the climb.</p>
-<h2>Exotic Attractions of Batu Suli</h2>
+<p><strong>Batu Suli</strong> is a nature destination in Upon Batu Village, Gunung Mas Regency, Central
+                Kalimantan. The area is known for large rock formations, forest atmosphere, and open-air scenery that
+                suits visitors who want to walk, take photos, or spend time outside the city center.</p>
+<p>Batu Suli is easier to enjoy with simple preparation and enough time. Visitors should check weather, road
+                conditions, footwear, and basic supplies because most activities take place in an outdoor natural
+                setting.</p>
+<h2>Attractions of Batu Suli</h2>
 <ol>
-<li><strong>Unique Ancient Rock Formations:</strong> The main attraction of this area is massive giant-scale rock boulders naturally stacked over thousands of years. This exotic arrangement not only elicits amazement from visitors but also serves as epic cliff walls that become the ultimate photo documentation spot.</li>
-<li><strong>Stunning Natural Views:</strong> When visitors successfully climb the elevated area or rock summit, a landscape like a green carpet will immediately pamper the eyes. You can witness the canopy carpet of forested hills split by a still-pristine river channel.</li>
-<li><strong>Fresh Air Lung Therapy:</strong> Surrounded by lush forest ridges, the microclimate temperature at the peak area is very cool and fresh. This calm atmosphere makes Batu Suli the best escape destination for those weary from the noisy routine of the capital.</li>
-<li><strong>Instagrammable Photography Paradise:</strong> From epic rock crevices, sunlight rays filtering through leaf canopies, to endless blue sky expanses, every step at Batu Suli is a natural studio for those who love capturing moments.</li>
+<li><strong>Unique rock formations:</strong> The main attraction is the large natural rock formation. The area
+                is often used as a photo point because it looks different from the city landscape.</li>
+<li><strong>Natural views:</strong> From several points, visitors can see green areas, hills, and river lines.
+                The view is clearer when the weather is bright.</li>
+<li><strong>Quiet forest atmosphere:</strong> The surrounding area still feels natural, making it suitable for
+                visitors who want a short break from city activity.</li>
+<li><strong>Nature photo spots:</strong> Rock gaps, trees, and morning or afternoon light can create good photo
+                backgrounds. Be careful with footing because rocks can be slippery after rain.</li>
 </ol>
-<h2>Fun Activities at Batu Suli</h2>
+<h2>Activities at Batu Suli</h2>
 <ul>
-<li><strong>Hiking and Canopy Exploration (Jungle Tracking):</strong> The hilly contours offer an exciting climbing route that is relatively friendly yet adrenaline-pumping enough. Traversing this hiking trail guarantees discovery of tropical flora and fauna typical of Kalimantan mountains.</li>
-<li><strong>Landscape Photography Sessions:</strong> Clear your memory card! Bring a wide lens so the gigantic rock curves and grand river landscapes can be perfectly documented.</li>
-<li><strong>Camping Under the Stars:</strong> Want a closer experience with the universe? On its flat ground, safe camping areas have been provided for visitors to pitch tents. Sharing campfire warmth accompanied by the harmony of night insects will surely be a dream vacation experience.</li>
-<li><strong>Watching Time Transitions:</strong> As one of the elevated vantage points, Batu Suli is a crucial golden spot for watching the magnificent orange glow at Sunrise splitting the dawn or the serene dimming at Sunset.</li>
+<li><strong>Walking around the rock area:</strong> Some paths can be used to see the formation from closer
+                range. Wear footwear with a good grip.</li>
+<li><strong>Landscape photography:</strong> Bring a camera or phone with enough battery. Morning or afternoon
+                light is usually easier for photos.</li>
+<li><strong>Short picnic:</strong> If site conditions allow, visitors can bring light food and enjoy the
+                natural atmosphere without leaving trash.</li>
+<li><strong>Morning or afternoon visit:</strong> Cooler visiting hours often make the trip feel more
+                comfortable.</li>
 </ul>
 <h2>Jungle Trip Tips to Batu Suli</h2>
 <ol>
-<li><strong>Field Equipment:</strong> If planning to hike or simply walk recreationally, it's mandatory to use hiking shoes for strong grip on rocky terrain, bring a water pack, instant rain jacket, and thin windbreaker jacket.</li>
-<li><strong>Insure Your Memory Stack:</strong> The scenery is too beautiful not to photograph. Make sure your camera and phone battery is full at 100%. Bringing a large-capacity portable charger is highly recommended as there are no power outlets in this lush natural area.</li>
-<li><strong>Love the Environment Principle:</strong> Cool tourists are smart tourists! Apply the old yet essential principle: bring your trash back (don't litter in the forest area) and don't take or damage anything except leaving memories behind.</li>
+<li><strong>Prepare basic gear:</strong> Use shoes or outdoor sandals with a good grip on rocky terrain. Bring
+                drinking water, a light raincoat, and a thin jacket if needed.</li>
+<li><strong>Keep your battery ready:</strong> Charge your phone before leaving and bring a power bank if you
+                plan to take many photos. Electricity access is usually limited in nature areas.</li>
+<li><strong>Keep the area clean:</strong> Bring personal trash back and avoid damaging rocks, plants, or local
+                facilities.</li>
 </ol>
 <div class="cta-box cta-reservation">
 <div class="cta-copy">

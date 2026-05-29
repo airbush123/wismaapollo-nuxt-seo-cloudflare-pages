@@ -149,7 +149,7 @@ const fallbackPages: Record<string, any> = {
         heading: 'Hotel Kuala Kurun untuk Tamu Dinas dan Keluarga',
         paragraphs: [
           'Sebagian besar tamu Wisma Apollo datang untuk urusan kerja, dinas pemerintahan, proyek, kunjungan keluarga, atau perjalanan singkat. Karena itu, fasilitas kamar dibuat sederhana tetapi lengkap: bersih, sejuk, tenang, dan mudah dipesan.',
-          'Jika kamu membutuhkan hotel di Kuala Kurun yang tidak ribet, punya harga transparan, dan tetap nyaman untuk tidur nyenyak, Wisma Apollo layak masuk daftar pilihan utama.'
+          'Jika kamu membutuhkan hotel di Kuala Kurun yang tidak ribet, punya harga transparan, dan tetap nyaman untuk tidur nyenyak, Wisma Apollo layak dipertimbangkan.'
         ]
       }
     ],
@@ -185,19 +185,68 @@ const fallbackPages: Record<string, any> = {
   },
   'penginapan-kuala-kurun': {
     title: 'Penginapan Kuala Kurun - Wisma Apollo',
-    seoTitle: 'Penginapan Kuala Kurun - Wisma Apollo | Kamar Bersih Mulai Rp200.000',
+    seoTitle: 'Penginapan Kuala Kurun - Wisma Apollo | Mulai Rp200.000',
     subtitle: 'Penginapan bersih, nyaman & murah di Kuala Kurun',
-    meta: 'Penginapan Kuala Kurun terbaik di pusat kota Gunung Mas. Wisma Apollo menawarkan kamar bersih, AC, WiFi gratis, kamar mandi dalam, parkir luas. Harga mulai Rp200.000/malam. Reservasi mudah via WhatsApp.',
+    meta: 'Butuh penginapan di Kuala Kurun yang nyaman dan murah? Wisma Apollo menyediakan kamar AC, WiFi gratis, TV Android, shower, parkir luas, dan harga mulai Rp200.000/malam.',
     sections: [
       {
-        heading: 'Penginapan Nyaman di Kuala Kurun',
+        heading: 'Tempat Menginap yang Nyaman dan Mudah Dipesan',
         paragraphs: [
-          'Mencari penginapan di Kuala Kurun yang bersih, nyaman, dan harganya terjangkau? Wisma Apollo adalah pilihan tepat.',
-          'Lokasinya strategis di pusat kota dan cocok untuk keluarga, perjalanan dinas, maupun tamu yang butuh tempat istirahat tenang.'
+          'Wisma Apollo hadir untuk tamu yang membutuhkan tempat bermalam bersih, tenang, dan praktis di Kuala Kurun. Lokasinya berada di Jl. Letjen Soeprapto No.56, sehingga tamu lebih mudah menjangkau pusat kota, area perkantoran, tempat makan, cafe, minimarket, laundry, dan titik aktivitas utama di Kabupaten Gunung Mas.',
+          'Banyak tamu datang untuk urusan dinas, pekerjaan lapangan, kunjungan keluarga, perjalanan sales, atau transit setelah perjalanan darat. Karena kebutuhan tiap tamu berbeda, Wisma Apollo menyiapkan kamar yang sederhana, rapi, sejuk, dan nyaman untuk istirahat tanpa proses reservasi yang rumit.'
+        ]
+      },
+      {
+        heading: 'Fasilitas Penginapan Wisma Apollo',
+        paragraphs: [
+          'Setiap kamar dilengkapi AC, TV Android 32 inch, WiFi gratis, kamar mandi dalam dengan shower, handuk bersih, amenities, spring bed nyaman, bantal bulu angsa, serta dinding dan plafon kedap suara.',
+          'Tamu juga mendapatkan air mineral, kopi, dan teh gratis setiap hari. Area parkir luas dan jalur komunikasi lewat WhatsApp membuat proses menginap terasa lebih mudah, terutama untuk tamu yang baru tiba sore atau malam hari.'
+        ]
+      },
+      {
+        heading: 'Cocok untuk Dinas, Keluarga, dan Transit',
+        paragraphs: [
+          'Tamu dinas bisa beristirahat dengan tenang setelah agenda kantor atau kunjungan lapangan. Pekerja proyek dan sales mendapatkan kamar yang mudah dipesan, harga jelas, serta akses ke jalan utama.',
+          'Untuk keluarga kecil dan tamu transit, kamar bersih, lokasi yang mudah ditemukan, dan fasilitas dasar yang lengkap membantu perjalanan terasa lebih rapi.'
+        ]
+      },
+      {
+        heading: 'Harga dan Cara Booking',
+        paragraphs: [
+          'Harga kamar mulai Rp200.000 per malam untuk Single Bed dan Rp250.000 per malam untuk Double Bed. Extra bed dan sarapan dapat ditanyakan sesuai kebutuhan.',
+          'Reservasi bisa dilakukan langsung melalui WhatsApp resmi Wisma Apollo dengan mengirim tanggal check-in, jumlah tamu, pilihan kamar, dan estimasi kedatangan.'
         ]
       }
     ],
-    faqs: []
+    priceHeading: 'Harga Kamar Penginapan di Kuala Kurun',
+    priceRows: [
+      { type: 'Single Bed', price: 'Mulai Rp200.000/malam' },
+      { type: 'Double Bed', price: 'Mulai Rp250.000/malam' },
+      { type: 'Extra Bed + Bantal', price: '+Rp50.000' },
+      { type: 'Sarapan by request', price: '+Rp25.000/pack' }
+    ],
+    priceNote: 'Harga dapat berubah mengikuti ketersediaan kamar dan periode menginap. Untuk informasi paling akurat, hubungi WhatsApp resmi Wisma Apollo sebelum datang.',
+    galleryHeading: 'Foto Penginapan Wisma Apollo',
+    gallery: [
+      { src: '/images/gallery/wisma-apollo-hotel-kuala-kurun.webp', alt: 'Penginapan Kuala Kurun - Tampak depan Wisma Apollo' },
+      { src: '/images/gallery/kamar-hotel-murah-kuala-kurun.webp', alt: 'Penginapan Kuala Kurun - Fasilitas kamar dengan TV Android' },
+      { src: '/images/gallery/kamar-penginapan-kuala-kurun.webp', alt: 'Penginapan Kuala Kurun - Kamar single bed Wisma Apollo' },
+      { src: '/images/gallery/kamar-double-bed-wisma-apollo.webp', alt: 'Penginapan Kuala Kurun - Kamar double bed Wisma Apollo' }
+    ],
+    faqs: [
+      {
+        q: 'Apakah Wisma Apollo termasuk penginapan murah di Kuala Kurun?',
+        a: 'Ya. Harga kamar mulai Rp200.000 per malam untuk Single Bed dan Rp250.000 per malam untuk Double Bed, dengan fasilitas AC, WiFi gratis, TV Android, shower, handuk, dan amenities.'
+      },
+      {
+        q: 'Apakah penginapan ini dekat pusat kota Kuala Kurun?',
+        a: 'Ya. Wisma Apollo berada di Jl. Letjen Soeprapto No.56, Kuala Kurun, dekat area pusat kota, tempat makan, minimarket, dan kebutuhan harian.'
+      },
+      {
+        q: 'Bagaimana cara reservasi kamar di Wisma Apollo?',
+        a: 'Reservasi bisa langsung melalui WhatsApp 0818 232 021 dengan mengirim tanggal check-in, jumlah tamu, tipe kamar, dan kebutuhan tambahan.'
+      }
+    ]
   },  'guest-house-kuala-kurun': {
     title: 'Guest House Kuala Kurun - Wisma Apollo',
     seoTitle: 'Guest House Kuala Kurun - Wisma Apollo | Fasilitas Hotel Mulai Rp200.000',
@@ -205,7 +254,7 @@ const fallbackPages: Record<string, any> = {
     meta: 'Guest house di Kuala Kurun dengan fasilitas lengkap: AC, WiFi gratis, TV Android, kamar mandi dalam, parkir luas. Wisma Apollo, harga mulai Rp200.000/malam di pusat kota Gunung Mas.',
     sections: [
       {
-        heading: 'Guest House Terbaik di Kuala Kurun',
+        heading: 'Guest House Nyaman di Kuala Kurun',
         paragraphs: [
           'Wisma Apollo cocok untuk tamu yang mencari guest house bersih, tenang, dan strategis di Kuala Kurun. Berlokasi di Jl. Letjen Soeprapto No.56, tepat di pusat kota Kabupaten Gunung Mas.',
           'Fasilitas kamar lengkap dengan AC, TV Android 32 inch, WiFi gratis, shower, kamar mandi dalam, handuk bersih, amenities, dan tempat tidur nyaman. Semua ini membuat Wisma Apollo lebih dari sekadar guest house biasa.'
@@ -215,7 +264,7 @@ const fallbackPages: Record<string, any> = {
         heading: 'Kenapa Memilih Guest House di Kuala Kurun?',
         paragraphs: [
           'Guest house menjadi pilihan populer bagi tamu yang menginginkan kenyamanan rumah dengan fasilitas hotel. Berbeda dengan hotel besar yang formal, guest house memberikan suasana yang lebih personal dan hangat.',
-          'Di Kuala Kurun, guest house seperti Wisma Apollo menawarkan keseimbangan sempurna: harga terjangkau mulai Rp200.000/malam, fasilitas modern, dan lokasi strategis dekat perkantoran, cafe, serta pusat kota.'
+          'Di Kuala Kurun, guest house seperti Wisma Apollo menawarkan keseimbangan yang pas: harga terjangkau mulai Rp200.000/malam, fasilitas modern, dan lokasi strategis dekat perkantoran, cafe, serta pusat kota.'
         ]
       },
       {
@@ -372,13 +421,13 @@ const fallbackPages: Record<string, any> = {
   'tempat-istirahat-kuala-kurun': {
     title: 'Tempat Istirahat Kuala Kurun - Wisma Apollo',
     seoTitle: 'Tempat Istirahat Kuala Kurun - Wisma Apollo | Kamar Kedap Suara Rp200.000',
-    subtitle: 'Tempat istirahat terbaik di Kuala Kurun, Gunung Mas',
+    subtitle: 'Tempat istirahat nyaman di Kuala Kurun, Gunung Mas',
     meta: 'Tempat istirahat nyaman di Kuala Kurun dengan kamar bersih, kedap suara, AC, WiFi gratis, dan parkir luas. Wisma Apollo, harga mulai Rp200.000/malam di pusat kota Gunung Mas.',
     sections: [
       {
         heading: 'Tempat Istirahat Ideal di Kuala Kurun',
         paragraphs: [
-          'Setelah perjalanan panjang atau hari kerja yang melelahkan, Wisma Apollo menyediakan tempat istirahat yang bersih dan nyaman di pusat Kuala Kurun. Kamar tenang, fasilitas lengkap, dan harga terjangkau menjadikannya pilihan utama.',
+          'Setelah perjalanan panjang atau hari kerja yang melelahkan, Wisma Apollo menyediakan tempat istirahat yang bersih dan nyaman di pusat Kuala Kurun. Kamar tenang, fasilitas lengkap, dan harga terjangkau membuatnya layak dipertimbangkan.',
           'Berlokasi di Jl. Letjen Soeprapto No.56, Wisma Apollo mudah dijangkau dari jalan utama Kuala Kurun. Tamu bisa langsung check-in, mandi, dan beristirahat tanpa perlu mencari-cari.'
         ]
       },

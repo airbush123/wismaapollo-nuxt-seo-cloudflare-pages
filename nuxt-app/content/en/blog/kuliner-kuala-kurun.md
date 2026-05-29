@@ -5,6 +5,7 @@ category: 'Culinary'
 image: '/images/gallery/hotel-di-kuala-kurun.webp'
 date: '2024-11-15'
 dateModified: '2026-05-29'
+author: 'Wisma Apollo Editorial Team'
 ---
 
 <p>Visiting <strong>Kuala Kurun</strong> is not complete without trying its local cuisine. This city holds a variety of dishes that reflect the richness of Dayak culture and Central Kalimantan's nature.</p>
@@ -13,9 +14,9 @@ dateModified: '2026-05-29'
 <h2>2. Juhu Singkah</h2>
 <p>A traditional Dayak vegetable dish made from young rattan shoots. Cooked with coconut milk and fish, juhu singkah has a unique flavor that can only be found in Central Kalimantan.</p>
 <h2>3. Wadi (Fermented Fish)</h2>
-<p>Wadi is fish fermented with salt and rice. This traditional food has a strong flavor and is usually fried or grilled. Perfect for lovers of bold-flavored food.</p>
+<p>Wadi is fish fermented with salt and rice. This traditional food has a strong flavor and is usually fried or grilled, so it suits guests who enjoy bold-flavored food.</p>
 <h2>4. Cucur & Lapis Cake</h2>
-<p>Traditional market snacks that are always available at Kuala Kurun's market. Sweet and crispy cucur cake, along with colorful layered cake, are perfect as souvenirs.</p>
+<p>Traditional market snacks are often available at Kuala Kurun's market. Sweet and crispy cucur cake, along with colorful layered cake, can be bought as simple souvenirs.</p>
 <h2>5. Kalimantan Black Coffee</h2>
 <p>Enjoy authentic Kalimantan black coffee at local food stalls. The coffee is thick, deep black, and served with palm sugar. An authentic coffee experience!</p>
 <h2>Where to Find Local Cuisine?</h2>
@@ -51,5 +52,5 @@ dateModified: '2026-05-29'
 <a href="#reservasi" class="blog-reserve-btn" data-booking-trigger="true">Open Reservation Form</a>
 </div>
 <h2>Conclusion on Kuala Kurun's Culinary Journey</h2>
-<p>Kuala Kurun's cuisine is appealing because it feels close to the daily life of its residents. There's river food, market snacks, local coffee, home-cooked meals, and cafe options that can be adjusted to your travel schedule. For the best experience, don't just look for viral menu items. Pay attention to places that are crowded with locals, ask what's most frequently ordered, and choose portions that fit so you can still try other food.</p>
+<p>Kuala Kurun's cuisine is appealing because it feels close to the daily life of its residents. There's river food, market snacks, local coffee, home-cooked meals, and cafe options that can be adjusted to your travel schedule. For a more grounded experience, don't just look for viral menu items. Pay attention to places that are crowded with locals, ask what's most frequently ordered, and choose portions that fit so you can still try other food.</p>
 <p>Enjoy slowly.</p>

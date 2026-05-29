@@ -1,17 +1,18 @@
 ---
-title: 'Kuliner Khas Kuala Kurun yang Wajib Dicoba'
+title: 'Kuliner Khas Kuala Kurun yang Bisa Dicoba'
 description: 'Dari ikan sungai bakar hingga kue tradisional Dayak. Panduan kuliner lengkap dari Wisma Apollo.'
 category: 'Kuliner'
 image: '/images/gallery/hotel-di-kuala-kurun.webp'
 date: '2024-11-15'
 dateModified: '2026-05-29'
+author: 'Tim Wisma Apollo'
 ---
 
 <p>Berkunjung ke <strong>Kuala Kurun</strong> tidak lengkap tanpa mencicipi kuliner khasnya. Kota ini menyimpan
             ragam masakan yang mencerminkan kekayaan budaya Dayak dan alam Kalimantan Tengah.</p>
 <h2>1. Ikan Jelawat Bakar</h2>
 <p>Ikan jelawat adalah ikan air tawar khas Kalimantan yang dagingnya tebal dan gurih. Dibakar dengan bumbu khas
-            Dayak dan disajikan dengan sambal terasi, rasanya tak terlupakan.</p>
+            Dayak dan disajikan dengan sambal terasi, rasanya kuat dan khas.</p>
 <h2>2. Juhu Singkah</h2>
 <p>Hidangan sayur khas Dayak yang terbuat dari umbut rotan muda. Dimasak dengan santan dan ikan, juhu singkah
             memiliki cita rasa unik yang hanya bisa ditemukan di Kalimantan Tengah.</p>
@@ -20,7 +21,7 @@ dateModified: '2026-05-29'
             biasanya digoreng atau dibakar. Cocok untuk pecinta makanan berkarakter.</p>
 <h2>4. Kue Cucur &amp; Kue Lapis</h2>
 <p>Jajanan pasar tradisional yang selalu ada di pasar Kuala Kurun. Kue cucur yang manis dan renyah, serta kue
-            lapis warna-warni, sempurna untuk oleh-oleh.</p>
+            lapis warna-warni, cocok untuk oleh-oleh.</p>
 <h2>5. Kopi Hitam Kalimantan</h2>
 <p>Nikmati kopi hitam khas Kalimantan di warung-warung lokal. Kopinya kental, hitam pekat, dan disajikan dengan
             gula merah. Pengalaman ngopi yang autentik!</p>
@@ -84,7 +85,7 @@ dateModified: '2026-05-29'
 <h2>Kesimpulan Wisata Kuliner Kuala Kurun</h2>
 <p>Kuliner Kuala Kurun menarik karena terasa dekat dengan kehidupan harian warga. Ada makanan sungai, jajanan
             pasar, kopi lokal, menu rumahan, dan pilihan cafe yang bisa disesuaikan dengan waktu perjalanan. Untuk
-            pengalaman terbaik, jangan hanya mencari menu yang viral. Coba perhatikan tempat yang ramai oleh warga
+            pengalaman yang lebih pas, jangan hanya mencari menu yang viral. Coba perhatikan tempat yang ramai oleh warga
             lokal, tanyakan menu yang paling sering dipesan, dan pilih porsi yang sesuai agar masih bisa mencoba
             makanan lain.</p>
 <p>Bagi tamu yang menginap di Wisma Apollo, menjelajah kuliner bisa dilakukan tanpa rencana rumit. Kamu bisa

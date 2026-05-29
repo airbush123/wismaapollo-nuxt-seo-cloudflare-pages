@@ -5,6 +5,7 @@ category: 'Accommodation'
 image: '/images/blog/hotel-gunung-mas-kalimantan-tengah.png'
 date: '2025-06-01'
 dateModified: '2026-05-29'
+author: 'Wisma Apollo Editorial Team'
 ---
 
 <p>Searching for a <strong>hotel in Gunung Mas, Central Kalimantan</strong> usually starts with one simple question: which area is the most practical for staying? Gunung Mas Regency covers a vast territory, while government activities, work trips, transit needs, and most city services are largely centered in Kuala Kurun. Therefore, choosing a hotel or lodging in Kuala Kurun often becomes the most sensible choice for guests who want a more efficient trip.</p>

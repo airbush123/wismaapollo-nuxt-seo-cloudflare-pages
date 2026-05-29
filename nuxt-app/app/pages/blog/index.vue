@@ -44,7 +44,10 @@
               loading="lazy"
             />
             <div class="blog-card-body">
-              <span class="blog-card-tag">{{ (post as any).category }}</span>
+              <div class="blog-card-meta">
+                <span class="blog-card-tag">{{ (post as any).category }}</span>
+                <time v-if="(post as any).date" :datetime="(post as any).date">{{ formatBlogDate((post as any).date) }}</time>
+              </div>
               <h3>{{ (post as any).title }}</h3>
               <p>{{ (post as any).description || (post as any).excerpt }}</p>
               <span class="read-more">{{ $t('common.readMore') }}</span>
@@ -106,6 +109,15 @@ const blogDescription = computed(() => locale.value === 'id'
   : 'Accommodation tips, tourism, and culinary guides for Kuala Kurun & Gunung Mas, Central Kalimantan.')
 
 const blogImage = `${siteUrl}/images/hero.webp`
+const formatBlogDate = (date?: string) => {
+  if (!date) return ''
+
+  return new Intl.DateTimeFormat(locale.value === 'en' ? 'en-US' : 'id-ID', {
+    day: 'numeric',
+    month: 'short',
+    year: 'numeric',
+  }).format(new Date(date))
+}
 const blogStructuredData = computed(() => buildGraphSchema([
   buildWebPageSchema({
     url: blogUrl.value,

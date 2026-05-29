@@ -4,6 +4,12 @@
       <div class="container">
         <NuxtLink :to="localePath('/blog')" class="lp-back lp-back-light">&lt;- {{ $t('nav.blog') }}</NuxtLink>
         <h1>{{ article?.title || 'Article' }}</h1>
+        <p v-if="article" class="article-meta-line">
+          {{ articleAuthorLabel }} - {{ publishedLabel }} {{ formatArticleDate((article as any).date) }}
+          <span v-if="(article as any).dateModified && (article as any).dateModified !== (article as any).date">
+            - {{ updatedLabel }} {{ formatArticleDate((article as any).dateModified) }}
+          </span>
+        </p>
       </div>
     </div>
 
@@ -78,10 +84,24 @@ const articleUnavailableText = computed(() => locale.value === 'en'
   ? 'Article is loading or not yet available.'
   : 'Artikel sedang dimuat atau belum tersedia.')
 const backToBlogText = computed(() => locale.value === 'en' ? 'Back to Blog' : 'Kembali ke Blog')
+const fallbackArticleAuthor = computed(() => locale.value === 'en' ? 'Wisma Apollo Editorial Team' : 'Tim Wisma Apollo')
+const articleAuthorLabel = computed(() => (article.value as any)?.author || fallbackArticleAuthor.value)
+const publishedLabel = computed(() => locale.value === 'en' ? 'Published' : 'Terbit')
+const updatedLabel = computed(() => locale.value === 'en' ? 'Updated' : 'Diperbarui')
 const articleImage = computed(() => {
   const image = (article.value as any)?.image || '/images/hero.webp'
   return image.startsWith('http') ? image : `${siteUrl}${image}`
 })
+
+const formatArticleDate = (date?: string) => {
+  if (!date) return locale.value === 'en' ? 'not dated' : 'tanpa tanggal'
+
+  return new Intl.DateTimeFormat(locale.value === 'en' ? 'en-US' : 'id-ID', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+  }).format(new Date(date))
+}
 
 const articleStructuredData = computed(() => buildGraphSchema([
   buildWebPageSchema({
@@ -110,7 +130,7 @@ const articleStructuredData = computed(() => buildGraphSchema([
         dateModified: (article.value as any)?.dateModified || (article.value as any)?.date || undefined,
         author: {
           '@type': 'Organization',
-          name: 'Wisma Apollo Kuala Kurun',
+          name: articleAuthorLabel.value,
           url: `${siteUrl}/`,
         },
         publisher: {

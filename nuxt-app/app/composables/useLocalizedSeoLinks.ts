@@ -15,12 +15,13 @@ function normalizePath(path: string) {
 
 function localizedUrl(path: string, locale: LocaleCode) {
   const normalizedPath = normalizePath(path)
+  const pathWithSlash = normalizedPath === '/' ? '/' : `${normalizedPath}/`
 
   if (locale === 'id') {
-    return `${SITE_URL}${normalizedPath === '/' ? '/' : normalizedPath}`
+    return `${SITE_URL}${pathWithSlash}`
   }
 
-  return `${SITE_URL}/${locale}${normalizedPath === '/' ? '/' : normalizedPath}`
+  return `${SITE_URL}/${locale}${pathWithSlash}`
 }
 
 export function buildHreflangLinks(path: string, locales: LocaleCode[]) {

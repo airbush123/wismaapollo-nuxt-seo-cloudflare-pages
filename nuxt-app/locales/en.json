@@ -29,7 +29,7 @@
   "about": {
     "label": "About Wisma Apollo",
     "title": "Why Choose Wisma Apollo?",
-    "desc1": "Wisma Apollo Kuala Kurun is the perfect accommodation and hotel for those who need a comfortable, clean, and quiet place to rest. Strategically located near the city center, it is suitable for families or business trips.",
+    "desc1": "Wisma Apollo Kuala Kurun is a practical hotel and accommodation for guests who need a clean, quiet, and easy-to-book room near the city center.",
     "desc2": "All rooms feature full AC, 32\" Android TV, free Wi-Fi, comfortable spring beds, goose feather pillows, full cotton linen, shower bathrooms, and fresh towels daily (Breakfast by Request). For privacy and peace, we use soundproof walls and ceilings, allowing you to rest without interruption. Extra beds and pillows are available if needed.",
     "desc3": "Book now and experience stay in the best and most affordable hotel in Kuala Kurun. Contact us via WhatsApp for easy booking!",
     "usp": {
@@ -42,7 +42,7 @@
         "desc": "Soundproof walls & ceilings"
       },
       "bed": {
-        "title": "Premium Bedding",
+        "title": "Comfortable Bedding",
         "desc": "Spring beds & goose pillows"
       },
       "clean": {
@@ -372,6 +372,20 @@
           "paragraphs": [
             "Many Wisma Apollo guests come for work, official duties, project visits, family visits, or short transit stays. For that reason, the rooms are designed to be simple but complete: clean, cool, quiet, and easy to reserve.",
             "If you need a hotel in Kuala Kurun that is practical, transparent in price, and still comfortable for a good night of sleep, Wisma Apollo deserves to be on your shortlist."
+          ]
+        },
+        {
+          "heading": "What to Check Before Booking",
+          "paragraphs": [
+            "Before booking, match the room to your trip. For official visits, a location near the main road and the city center may matter more than extra facilities. For families, private bathroom, clean bedding, and easy food access are usually the main points.",
+            "Wisma Apollo keeps the room rates, facilities, and reservation contact easy to check so guests can make a decision faster. If your schedule changes, you can update the estimated arrival time through WhatsApp and ask the admin to recheck availability."
+          ]
+        },
+        {
+          "heading": "A Practical Room After the Road Trip",
+          "paragraphs": [
+            "The road trip to Kuala Kurun can be tiring, especially for guests coming from Palangka Raya or other areas around Gunung Mas. A cool, clean, and quiet room becomes a basic need after arrival.",
+            "With AC, WiFi, Android TV, shower, towels, amenities, and spacious parking, Wisma Apollo gives guests a simple but complete stay experience. The focus is helping guests rest properly before continuing the next agenda."
           ]
         }
       ],

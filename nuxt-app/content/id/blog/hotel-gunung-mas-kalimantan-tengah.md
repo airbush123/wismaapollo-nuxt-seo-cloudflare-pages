@@ -5,6 +5,7 @@ category: 'Penginapan'
 image: '/images/blog/hotel-gunung-mas-kalimantan-tengah.png'
 date: '2025-06-01'
 dateModified: '2026-05-29'
+author: 'Tim Wisma Apollo'
 ---
 
 <p>Mencari <strong>hotel Gunung Mas Kalimantan Tengah</strong> biasanya dimulai dari satu pertanyaan sederhana: area mana yang paling praktis untuk menginap? Kabupaten Gunung Mas memiliki wilayah yang luas, sementara aktivitas pemerintahan, perjalanan kerja, kebutuhan transit, dan sebagian besar layanan kota banyak berpusat di Kuala Kurun. Karena itu, memilih hotel atau penginapan di Kuala Kurun sering menjadi pilihan paling masuk akal untuk tamu yang ingin perjalanan lebih efisien.</p>

@@ -5,6 +5,7 @@ category: 'Info'
 image: '/images/blog/sekolah-rakyat-gunung-mas.jpg'
 date: '2025-07-15'
 dateModified: '2026-05-29'
+author: 'Tim Wisma Apollo'
 ---
 <p>Kuala Kurun, ibu kota Kabupaten Gunung Mas, Kalimantan Tengah, terus berbenah dan mengukir sejarah baru dalam dunia pendidikannya. Salah satu cerita transformasi yang paling memikat perhatian masyarakat belakangan ini adalah beralih fungsinya sebuah bangunan hotel tertua di Gunung Mas menjadi fasilitas pendidikan yang mulia, yakni <strong>Sekolah Rakyat</strong>.</p>
 <p>Bangunan yang dimaksud dulunya dikenal luas sebagai Hotel Gunung Mas. Bertahun-tahun lamanya, gedung ini menjadi salah satu wajah penyedia akomodasi paling awal bagi pelancong atau aparatur negara yang singgah di Kuala Kurun. Tempat ini merekam banyak jejak sejarah perkembangan ekonomi kota. Namun, seiring dengan berjalannya waktu dan munculnya kesadaran pemerintah daerah akan pentingnya pemerataan pendidikan, hotel bersejarah ini ditutup dan bertransformasi sepenuhnya menjadi sarana yang mendidik generasi penerus bangsa.</p>

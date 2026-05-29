@@ -1,10 +1,11 @@
 ---
-title: '5 Destinasi Wisata Terbaik di Gunung Mas, Kalimantan Tengah'
-description: 'Panduan wisata Gunung Mas Kalimantan Tengah – 5 destinasi terbaik dari alam hingga budaya Dayak. Tips itinerary dan penginapan di Kuala Kurun.'
+title: '5 Destinasi Wisata di Gunung Mas, Kalimantan Tengah'
+description: 'Panduan wisata Gunung Mas Kalimantan Tengah: 5 destinasi alam dan budaya Dayak, tips itinerary, dan pilihan menginap di Kuala Kurun.'
 category: 'Wisata'
 image: '/images/blog/air-terjun-batu-mahasur.webp'
 date: '2024-10-20'
 dateModified: '2026-05-29'
+author: 'Tim Wisma Apollo'
 ---
 
 <p>Kabupaten <strong>Gunung Mas</strong> di Kalimantan Tengah menyimpan pesona alam dan budaya yang luar biasa.
@@ -12,15 +13,15 @@ dateModified: '2026-05-29'
             dilewatkan.</p>
 <h2>1. Sungai Kahayan</h2>
 <p>Sungai terpanjang di Kalimantan Tengah ini menawarkan pemandangan indah dan aktivitas susur sungai. Wisatawan
-            bisa menikmati <strong>sunset</strong> yang memukau dari tepian sungai di Kuala Kurun.</p>
+            bisa menikmati <strong>sunset</strong> dari tepian sungai di Kuala Kurun.</p>
 <h2>2. Rumah Betang (Rumah Panjang Dayak)</h2>
 <p>Rumah adat tradisional suku Dayak yang masih terjaga di beberapa kampung sekitar Gunung Mas. Kunjungan ke
-            rumah betang memberikan pengalaman budaya yang autentik dan tak terlupakan.</p>
+            rumah betang memberikan gambaran budaya yang dekat dengan kehidupan masyarakat setempat.</p>
 <h2>3. Bukit Batu</h2>
 <p>Formasi batu alam yang menawarkan pemandangan 360 derajat ke seluruh Kabupaten Gunung Mas. Spot trekking
             favorit bagi pecinta alam dengan jalur yang cukup menantang.</p>
 <h2>4. Danau Bulat</h2>
-<p>Danau alami yang tenang dan dikelilingi hutan tropis. Tempat yang sempurna untuk memancing, piknik, atau
+<p>Danau alami yang tenang dan dikelilingi hutan tropis. Tempat ini bisa dipakai untuk memancing, piknik, atau
             sekadar menikmati ketenangan alam Kalimantan.</p>
 <h2>5. Pasar Tradisional Kuala Kurun</h2>
 <p>Rasakan kehidupan lokal di pasar tradisional yang menjual hasil bumi, kerajinan tangan Dayak, dan berbagai
@@ -78,7 +79,7 @@ dateModified: '2026-05-29'
 <h2>Kesimpulan Wisata Gunung Mas</h2>
 <p>Gunung Mas cocok untuk wisatawan yang menyukai suasana alam, budaya, dan kota kecil yang masih terasa dekat
             dengan kehidupan lokal. Daya tariknya tidak hanya berada di satu tempat, tetapi tersebar melalui sungai,
-            pasar, rumah adat, kuliner, dan cerita warga. Karena itu, perjalanan terbaik ke Gunung Mas adalah perjalanan
+            pasar, rumah adat, kuliner, dan cerita warga. Karena itu, perjalanan ke Gunung Mas sebaiknya dibuat
             yang tidak terburu-buru.</p>
 <p>Jadikan Kuala Kurun sebagai pusat istirahat, lalu susun rute sesuai waktu dan kondisi tubuh. Jika hanya
             singgah sebentar, nikmati kota dan kulinernya. Jika punya waktu lebih panjang, tambahkan destinasi alam atau

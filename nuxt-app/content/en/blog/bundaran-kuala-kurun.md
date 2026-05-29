@@ -5,6 +5,7 @@ category: 'Travel'
 image: '/images/blog/bundaran-kuala-kurun.webp'
 date: '2024-11-10'
 dateModified: '2026-05-29'
+author: 'Wisma Apollo Editorial Team'
 ---
 
 <p><strong>Kuala Kurun Roundabout</strong> is located in the heart of the city, precisely at the main road intersection connecting various strategic areas of Gunung Mas Regency. As the pulse of citizen mobility, this roundabout not only functions as a traffic engineering and central geographical marker, but also establishes itself as a symbol of the city's dynamic development. At the center of this intersection, the wheels of economy and citizen interaction meet at a single point adorned with distinctive regional aesthetic ornaments.</p>
@@ -22,7 +23,7 @@ dateModified: '2026-05-29'
 <h2>Tips for Visiting the Roundabout & Accommodation Options</h2>
 <p>If you want to enjoy the Kuala Kurun Roundabout atmosphere more comfortably, come in the afternoon or evening when city activities start to feel alive. The area around the roundabout is a good orientation point for out-of-town guests because from here you can see main road directions, find places to eat, and understand the rhythm of central Kuala Kurun. Don't forget to be careful when taking photos because the roundabout is an active traffic area.</p>
 <ul>
-<li><strong>Best Time to Visit:</strong> Kalimantan is drenched in tropical climate. Visiting the city in the April - September arc will spare your vacation from heavy monsoon season attacks.</li>
+<li><strong>Suggested Time to Visit:</strong> April to September is usually easier because rain is lighter and short city walks are more comfortable.</li>
 <li><strong>Transportation from Palangka Raya:</strong> The 100 km asphalt distance can be covered in an exciting land route of approximately 2 to 3 hours using mini travel or rental vehicles.</li>
 <li><strong>Traveling Etiquette:</strong> Always wear neat casual attire to blend in and don't forget to give a friendly greeting before photographing the interior of Dayak tribe heritage buildings.</li>
 </ul>
