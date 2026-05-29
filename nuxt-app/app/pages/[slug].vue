@@ -426,7 +426,7 @@ const fallbackPages: Record<string, any> = {
         a: 'Check-in mulai pukul 14.00 WITA dan check-out pukul 12.00 WITA. Untuk kebutuhan early check-in atau late check-out, hubungi admin via WhatsApp.'
       }
     ]
-  } }
+  }
 }
 
 const isSupportedPageSlug = (candidate: string) => {
