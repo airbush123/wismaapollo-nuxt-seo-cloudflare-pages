@@ -5,6 +5,6 @@
     "generate": "npm ci --prefix nuxt-app && npm run generate --prefix nuxt-app"
   },
   "dependencies": {
-    "wrangler": "^4.69.0"
+    "wrangler": "^4.95.0"
   }
 }
