@@ -53,15 +53,15 @@ Generated files are written to:
 
 ## Booking Lead Webhook
 
-The booking form uses the Pinia booking store and submits validated lead data to `/api/webhook`.
+The booking form uses the Pinia booking store and submits validated lead data to `/api/booking-lead`.
 
-In `nuxt.config.ts`, `/api/webhook` is proxied to a Google Apps Script webhook. The Apps Script writes the reservation lead into Google Sheets, so the static Cloudflare Pages site can still collect structured booking inquiries without a traditional database server.
+`/api/booking-lead` is a Cloudflare Pages Function. It reads the private `GOOGLE_APP_SCRIPT_URL` environment variable, forwards the reservation lead to Google Apps Script, and the Apps Script writes the data into Google Sheets. This keeps the static Cloudflare Pages site able to collect structured booking inquiries without exposing the real Apps Script URL in the public Nuxt bundle.
 
 The webhook request is best-effort. If the endpoint is slow or unavailable, the user can still continue to WhatsApp so the reservation flow stays fast.
 
 Related backend and tracking files:
 
 - `../docs/google-sheet-webhook-columns.md` documents the Google Sheets fields.
-- `../functions/api/booking-lead.js` provides an alternative Cloudflare Function for forwarding leads to Google Apps Script and Meta CAPI.
+- `../functions/api/booking-lead.js` forwards leads to Google Apps Script and Meta CAPI.
 - `../functions/api/booking-event.js` handles booking event forwarding for Meta CAPI.
 - `../functions/px/gtm/[file].js` proxies GTM through a first-party Cloudflare Pages Function path.

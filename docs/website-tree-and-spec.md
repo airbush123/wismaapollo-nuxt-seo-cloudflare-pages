@@ -372,16 +372,16 @@ Alur booking:
 4. User isi data.
 5. Validasi lokal dijalankan.
 6. Store hash nomor telepon untuk tracking.
-7. Lead dikirim best-effort ke webhook `/api/webhook`.
+7. Lead dikirim best-effort ke endpoint first-party `/api/booking-lead`.
 8. Event lead dikirim ke tracking.
 9. WhatsApp dibuka dengan pesan reservasi yang sudah tersusun.
 10. User diarahkan ke `/thanks`.
 
 Catatan penting:
 
-- Store memakai endpoint `BOOKING_LEAD_URL = '/api/webhook'`.
-- Di `nuxt.config.ts`, `/api/webhook` diproxy ke Google Apps Script.
-- Di folder `functions/api`, ada endpoint `booking-lead.js`, tapi flow frontend saat ini tidak langsung memakai `/api/booking-lead`.
+- Store memakai endpoint `BOOKING_LEAD_URL = '/api/booking-lead'`.
+- Endpoint `functions/api/booking-lead.js` membaca private env `GOOGLE_APP_SCRIPT_URL`.
+- Function meneruskan lead ke Google Apps Script untuk masuk ke Google Sheet dan mengirim Meta CAPI `Lead`.
 
 ## Tracking dan Ads
 
@@ -443,8 +443,8 @@ Endpoint POST alternatif untuk Meta CAPI. Wrapper ke `_meta-capi-core.js`.
 
 Endpoint POST yang:
 
-- Menerima JSON payload
-- Forward fields ke Google Apps Script
+- Menerima JSON payload atau form-urlencoded dari frontend
+- Forward fields ke Google Apps Script lewat env `GOOGLE_APP_SCRIPT_URL`
 - Mengirim Meta CAPI `Lead`
 - Mengembalikan status sheet dan meta
 
@@ -462,6 +462,7 @@ Environment yang dibutuhkan:
 
 ```text
 META_PIXEL_ID=2098215477608895
+GOOGLE_APP_SCRIPT_URL=
 META_CAPI_ACCESS_TOKEN=
 META_TEST_EVENT_CODE=TEST29643
 META_GRAPH_VERSION=v23.0
@@ -536,7 +537,7 @@ https://wisma-apollo.my.id
 ## Catatan Risiko / Hal Yang Perlu Dirapikan
 
 - Blog i18n belum benar-benar dinamis karena query blog masih hardcoded ke `/id/blog/`.
-- Endpoint frontend booking memakai `/api/webhook` proxy di Nuxt config, sementara Cloudflare Function `booking-lead.js` memakai pola JSON berbeda. Perlu diputuskan satu jalur final agar tracking sheet + Meta CAPI konsisten.
+- Endpoint frontend booking sudah memakai `/api/booking-lead` agar URL Google Apps Script tidak hardcode di repository publik.
 - `BookingFormSchema` Zod sudah ada, tetapi store punya validasi manual sendiri. Bisa disatukan untuk mengurangi duplikasi.
 - File root legacy dan script recovery banyak. Perlu klasifikasi: masih aktif, arsip, atau bisa dipindah ke folder `scripts/`.
 - Beberapa string tampak mojibake, terutama karakter panah, emoji, dan Mandarin. Ini bisa mengganggu UX kalau ikut tampil di browser.
@@ -586,4 +587,3 @@ Conversion goal pendukung:
 - Scroll/view room section
 - Baca blog SEO
 - Masuk dari keyword lokal lalu menuju booking
-

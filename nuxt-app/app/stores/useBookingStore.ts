@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
 
-const BOOKING_LEAD_URL = '/api/webhook'
+const BOOKING_LEAD_URL = '/api/booking-lead'
 const WA_NUMBER = '62818232021'
 const BREAKFAST_PRICE = 25000
 const SINGLE_ROOM_PRICE = 200000

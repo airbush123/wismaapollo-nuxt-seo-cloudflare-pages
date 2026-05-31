@@ -172,7 +172,7 @@
                 clickId: clickId
             };
 
-            const GOOGLE_APP_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwesHjVm3vPikERszFwk0MqjM11EcomxAAmr-gclKDlYil1Lst0HfslqF2MW2O2BlE_/exec';
+            const BOOKING_LEAD_URL = '/api/booking-lead';
 
             // Fire Meta Pixel & Google Ads Lead Event - Wrapped in Try-Catch for AdBlockers
             try {
@@ -233,7 +233,7 @@
 
             const hiddenForm = document.createElement('form');
             hiddenForm.method = 'POST';
-            hiddenForm.action = GOOGLE_APP_SCRIPT_URL;
+            hiddenForm.action = BOOKING_LEAD_URL;
             hiddenForm.target = iframeId;
             hiddenForm.style.display = 'none';
 

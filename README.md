@@ -26,7 +26,7 @@ This project documents a practical Nuxt implementation that aims to keep the sit
 
 This project keeps the public website static, but still includes a lightweight backend flow for real booking leads.
 
-The reservation form is handled in the Nuxt app through the booking store. After the guest fills the modal, the site sends the lead to `/api/webhook`. Nuxt route rules proxy that endpoint to a Google Apps Script webhook, and the Apps Script writes the submitted data into Google Sheets.
+The reservation form is handled in the Nuxt app through the booking store. After the guest fills the modal, the site sends the lead to the first-party Cloudflare Pages Function at `/api/booking-lead`. That function reads the private `GOOGLE_APP_SCRIPT_URL` environment variable, forwards the lead to Google Apps Script, and the Apps Script writes the submitted data into Google Sheets.
 
 The lead submission is best-effort by design. If the webhook or network is slow, the guest is not blocked from continuing to WhatsApp. This keeps the booking funnel fast while still collecting structured lead data for follow-up and ad attribution.
 
@@ -35,7 +35,8 @@ Booking lead flow:
 ```text
 Reservation modal
   -> Nuxt Pinia booking store
-  -> /api/webhook
+  -> /api/booking-lead
+  -> Cloudflare Pages Function
   -> Google Apps Script webhook
   -> Google Sheets lead table
   -> WhatsApp reservation handoff
@@ -52,11 +53,11 @@ Related documentation:
 The repository also includes Cloudflare Pages Functions under `functions/` for first-party backend patterns:
 
 - `functions/api/booking-event.js` receives booking/tracking events and forwards Meta CAPI events.
-- `functions/api/booking-lead.js` is an alternative lead endpoint that forwards booking data to Google Apps Script and sends a Meta CAPI `Lead` event.
+- `functions/api/booking-lead.js` forwards booking data to Google Apps Script through a private environment variable and sends a Meta CAPI `Lead` event.
 - `functions/api/meta-capi.js` exposes a direct Meta CAPI endpoint wrapper.
 - `functions/px/gtm/[file].js` proxies the GTM script through a first-party path.
 
-The current frontend booking flow uses the Nuxt `/api/webhook` proxy to Google Apps Script. The Cloudflare `booking-lead` function is included as a documented alternative if the project needs one combined endpoint for Google Sheets and Meta CAPI lead tracking.
+The current frontend booking flow uses `/api/booking-lead` so the real Google Apps Script URL is not hardcoded in the public Nuxt bundle or repository.
 
 ## Stack
 
@@ -68,6 +69,16 @@ The current frontend booking flow uses the Nuxt `/api/webhook` proxy to Google A
 - Nuxt Sitemap
 - Pinia
 - Cloudflare Pages
+
+## Required Environment Variables
+
+Set these in Cloudflare Pages project settings, not in the public repository:
+
+- `GOOGLE_APP_SCRIPT_URL`: Google Apps Script web app URL used for Google Sheets lead storage.
+- `META_CAPI_ACCESS_TOKEN`: Meta Conversions API token.
+- `META_PIXEL_ID`: Optional override for the Meta Pixel ID.
+- `META_GRAPH_VERSION`: Optional override for the Meta Graph API version.
+- `META_TEST_EVENT_CODE`: Optional Meta test event code for debugging.
 
 ## SEO Features
 

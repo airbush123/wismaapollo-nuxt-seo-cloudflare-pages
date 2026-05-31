@@ -174,8 +174,5 @@ export default defineNuxtConfig({
     '/feed/': { redirect: { to: '/blog/', statusCode: 301 } },
     '/px/gtm/**': { proxy: 'https://www.googletagmanager.com/**' },
     '/px/ga/**': { proxy: 'https://www.google-analytics.com/**' },
-    '/api/webhook': {
-      proxy: 'https://script.google.com/macros/s/AKfycbwesHjVm3vPikERszFwk0MqjM11EcomxAAmr-gclKDlYil1Lst0HfslqF2MW2O2BlE_/exec',
-    },
   },
 })
