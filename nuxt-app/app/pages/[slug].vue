@@ -127,7 +127,7 @@ const fallbackPages: Record<string, any> = {
       {
         heading: 'Kenapa Wisma Apollo Jadi Hotel Pilihan di Kuala Kurun?',
         paragraphs: [
-          'Kalau kamu mencari hotel Kuala Kurun yang bersih, nyaman, dan harganya masuk akal, Wisma Apollo adalah pilihan yang praktis. Lokasinya berada di Jl. Letjen Soeprapto No.56, tepat di area pusat kota Kuala Kurun, Kabupaten Gunung Mas.',
+          'Kalau kamu mencari hotel Kuala Kurun yang bersih, nyaman, dan harganya masuk akal, Wisma Apollo adalah pilihan praktis sekaligus wisma Kuala Kurun yang berada di Jl. Letjen Soeprapto No.56, tepat di area pusat kota Kuala Kurun, Kabupaten Gunung Mas.',
           'Wisma Apollo cocok untuk tamu dinas, pekerja proyek, sales, keluarga, maupun tamu yang transit setelah perjalanan darat. Suasananya tenang, proses reservasi mudah lewat WhatsApp, dan kamar disiapkan agar tamu bisa langsung istirahat dengan nyaman.'
         ]
       },
@@ -192,7 +192,7 @@ const fallbackPages: Record<string, any> = {
       {
         heading: 'Tempat Menginap yang Nyaman dan Mudah Dipesan',
         paragraphs: [
-          'Wisma Apollo hadir untuk tamu yang membutuhkan tempat bermalam bersih, tenang, dan praktis di Kuala Kurun. Lokasinya berada di Jl. Letjen Soeprapto No.56, sehingga tamu lebih mudah menjangkau pusat kota, area perkantoran, tempat makan, cafe, minimarket, laundry, dan titik aktivitas utama di Kabupaten Gunung Mas.',
+          'Sebagai wisma Kuala Kurun yang melayani tamu harian, dinas, dan keluarga, Wisma Apollo hadir untuk tamu yang membutuhkan tempat bermalam bersih, tenang, dan praktis. Lokasinya berada di Jl. Letjen Soeprapto No.56, sehingga tamu lebih mudah menjangkau pusat kota, area perkantoran, tempat makan, cafe, minimarket, laundry, dan titik aktivitas utama di Kabupaten Gunung Mas.',
           'Banyak tamu datang untuk urusan dinas, pekerjaan lapangan, kunjungan keluarga, perjalanan sales, atau transit setelah perjalanan darat. Karena kebutuhan tiap tamu berbeda, Wisma Apollo menyiapkan kamar yang sederhana, rapi, sejuk, dan nyaman untuk istirahat tanpa proses reservasi yang rumit.'
         ]
       },

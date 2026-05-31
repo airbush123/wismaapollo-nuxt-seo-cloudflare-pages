@@ -3,6 +3,7 @@
     <div class="container">
       <div class="footer-brand">
         <h3>{{ $t('footer.brand') }}</h3>
+        <p>{{ $t('footer.summary') }}</p>
         <p>{{ $t('footer.addressLine1') }}<br>{{ $t('footer.addressLine2') }}<br>{{ $t('footer.addressLine3') }}</p>
         <p class="footer-phone">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block;vertical-align:-3px;margin-right:4px;" aria-hidden="true">
