@@ -123,7 +123,7 @@ export function buildHotelSchema() {
     ],
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.8',
+      ratingValue: '5',
       reviewCount: '24',
       bestRating: '5',
     },
