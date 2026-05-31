@@ -105,7 +105,7 @@ const faqTitle = computed(() => {
 
 const faqDescription = computed(() => {
   if (locale.value === 'en') return 'Find answers about Wisma Apollo location, room rates, facilities, check-in rules, and reservation steps in Kuala Kurun.'
-  if (locale.value === 'zh') return '了解 Wisma Apollo Kuala Kurun 的位置、房价、客房设施、入住规则、停车信息以及通过 WhatsApp 预订住宿的方式。'
+  if (locale.value === 'zh') return '查看 Wisma Apollo Kuala Kurun 常见问题，了解位置、房价、客房设施、入住规则、停车信息，以及通过 WhatsApp 预订住宿的完整方式。'
   return 'Temukan jawaban tentang lokasi Wisma Apollo, tarif kamar, fasilitas, aturan check-in, dan cara reservasi di Kuala Kurun.'
 })
 

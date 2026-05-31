@@ -4,7 +4,7 @@ description: 'Gunung Mas Central Kalimantan travel guide: 5 nature and Dayak cul
 category: 'Travel'
 image: '/images/blog/air-terjun-batu-mahasur.webp'
 date: '2024-10-20'
-dateModified: '2026-05-29'
+dateModified: '2026-05-31'
 author: 'Wisma Apollo Editorial Team'
 ---
 
@@ -30,6 +30,9 @@ author: 'Wisma Apollo Editorial Team'
 <p>For guests who want to explore Gunung Mas attractions, staying in Kuala Kurun makes trips more practical. The city center has easier access to daily needs: food, fuel, shops, and health services. After returning from nature tours, guests usually need a clean room, cool AC, private bathroom, and a comfortable bed to recover energy.</p>
 <p><a href="https://wisma-apollo.my.id/penginapan-kuala-kurun/"><strong>Wisma Apollo</strong></a> can serve as your travel base camp as it's located at Jl. Letjen Soeprapto No.56, Kuala Kurun. Rooms are available from IDR 200,000 per night, with facilities including AC, free WiFi, Android TV, shower, towels, amenities, spacious parking, and a quiet atmosphere. With clear accommodation, tourists can focus more on enjoying Gunung Mas without worrying about finding a room when already tired.</p>
 <p>If you only have one day, keep the route simple and avoid adding too many stops. Start in the morning, check weather and road conditions, and leave enough time to return before evening. For guests traveling with family, a slower itinerary is often more comfortable than chasing every destination in one trip.</p>
+<h2>Practical Planning Notes</h2>
+<p>Most Gunung Mas trips are easier when guests confirm transportation, travel time, and return plans before leaving the hotel. Some nature destinations may require flexible timing because road conditions and weather can change quickly. Carry cash, drinking water, snacks, and a phone charger, especially if the route includes rural areas outside the city center.</p>
+<p>For business travelers who only have spare time after meetings, the Kuala Kurun Roundabout and nearby food spots are usually simpler choices. For guests with a full free day, Batu Mahasur Waterfall or Batu Suli can be more rewarding. Choosing the right route helps the trip feel relaxed instead of rushed, especially when visiting with children, coworkers, or first-time guests.</p>
 <div class="cta-box cta-reservation">
 <div class="cta-copy">
 <span class="cta-kicker">Direct Reservation</span>

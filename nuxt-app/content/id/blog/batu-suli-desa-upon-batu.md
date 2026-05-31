@@ -1,10 +1,10 @@
 ---
 title: 'Menikmati Keindahan Alam Batu Suli di Desa Upon Batu'
-description: 'Menikmati keindahan alam Batu Suli di Desa Upon Batu, Kabupaten Gunung Mas.'
+description: 'Panduan wisata Batu Suli di Desa Upon Batu, Gunung Mas: daya tarik alam, persiapan berkunjung, rute dari Kuala Kurun, dan pilihan menginap terdekat.'
 category: 'Wisata'
 image: '/images/blog/batu-suli-desa-upon-batu.webp'
 date: '2024-11-05'
-dateModified: '2026-05-29'
+dateModified: '2026-05-31'
 author: 'Tim Wisma Apollo'
 ---
 
