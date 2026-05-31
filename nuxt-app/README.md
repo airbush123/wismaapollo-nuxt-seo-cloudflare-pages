@@ -1,6 +1,6 @@
-# Nuxt Minimal Starter
+# Wisma Apollo Nuxt App
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Nuxt application for the Wisma Apollo SEO and Cloudflare Pages case study. The app is built as a static site with multilingual routing, structured data, canonical URLs, hreflang, sitemap generation, optimized images, and marketing tracking utilities.
 
 ## Setup
 
@@ -22,54 +22,31 @@ bun install
 
 ## Development Server
 
-Start the development server on `http://localhost:3000`:
+Start the development server on `http://localhost:9000`:
 
 ```bash
-# npm
 npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
+## Static Generation
 
-Build the application for production:
+Generate the Cloudflare Pages-ready static output:
 
 ```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
+npm run generate
 ```
 
-Locally preview production build:
+Generated files are written to:
 
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
+```text
+.output/public
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## SEO Implementation
+
+- Locale-aware canonical URLs.
+- Partial multilingual hreflang strategy.
+- Sitemap filtering for Chinese homepage and FAQ only.
+- Schema graph for local business, website, pages, breadcrumbs, FAQ, and blog posts.
+- Content pages for local search keyword clusters.
+- Static HTML links normalized to canonical trailing slash URLs.
