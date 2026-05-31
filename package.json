@@ -4,6 +4,9 @@
     "dev": "npm ci --prefix nuxt-app && npm run dev --prefix nuxt-app",
     "generate": "npm ci --prefix nuxt-app && npm run generate --prefix nuxt-app"
   },
+  "engines": {
+    "node": ">=22.12.0"
+  },
   "dependencies": {
     "wrangler": "^4.69.0"
   }
