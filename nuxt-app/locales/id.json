@@ -429,6 +429,19 @@
           "alt": "Hotel Kuala Kurun - Kamar double bed Wisma Apollo"
         }
       ],
+      "relatedHeading": "Panduan Terkait Hotel Kuala Kurun",
+      "relatedLinks": [
+        {
+          "href": "/blog/hotel-kuala-kurun-kalimantan-tengah/",
+          "label": "Panduan hotel di Kuala Kurun, Kalimantan Tengah",
+          "text": "Baca cara memilih hotel dari sisi lokasi, fasilitas kamar, harga, dan kemudahan reservasi."
+        },
+        {
+          "href": "/blog/tips-menginap-kuala-kurun/",
+          "label": "Tips menginap nyaman di Kuala Kurun",
+          "text": "Panduan praktis untuk tamu dinas, keluarga, pekerja lapangan, dan perjalanan transit."
+        }
+      ],
       "faqs": [
         {
           "q": "Berapa harga kamar hotel di Wisma Apollo Kuala Kurun?",
@@ -541,6 +554,19 @@
         {
           "src": "/images/gallery/kamar-double-bed-wisma-apollo.webp",
           "alt": "Penginapan Kuala Kurun - Kamar double bed Wisma Apollo"
+        }
+      ],
+      "relatedHeading": "Panduan Terkait Penginapan Kuala Kurun",
+      "relatedLinks": [
+        {
+          "href": "/blog/penginapan-murah-kuala-kurun/",
+          "label": "Panduan penginapan murah di Kuala Kurun",
+          "text": "Cek cara menilai harga, fasilitas, lokasi, dan kemudahan reservasi sebelum memilih kamar."
+        },
+        {
+          "href": "/blog/tips-menginap-kuala-kurun/",
+          "label": "Tips menginap nyaman di Kuala Kurun",
+          "text": "Panduan praktis untuk tamu dinas, keluarga, pekerja lapangan, dan perjalanan singgah."
         }
       ],
       "faqs": [

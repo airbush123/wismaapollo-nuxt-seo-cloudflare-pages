@@ -55,3 +55,5 @@ author: 'Tim Wisma Apollo'
 <p>Untuk mencari hotel di Kuala Kurun, Kalimantan Tengah, fokuslah pada hal yang benar-benar berpengaruh saat menginap: kamar bersih, fasilitas dasar, lokasi yang jelas, harga transparan, dan admin yang mudah dihubungi. Wisma Apollo berada di jalur itu. Pilihan ini cocok untuk tamu yang ingin menginap praktis tanpa harus membayar fasilitas yang tidak dibutuhkan.</p>
 
 <p>Simpan kontak penginapan sebelum tiba di Kuala Kurun. Dengan begitu, kamu bisa memastikan kamar lebih awal dan mengatur perjalanan dengan lebih tenang.</p>
+
+<p>Untuk melihat detail kamar, harga, fasilitas, dan cara reservasi, buka halaman <a href="https://wisma-apollo.my.id/hotel-kuala-kurun/"><strong>hotel Kuala Kurun Wisma Apollo</strong></a>.</p>
