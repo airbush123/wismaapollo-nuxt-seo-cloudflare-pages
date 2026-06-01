@@ -56,6 +56,21 @@
           </div>
         </div>
 
+        <div v-if="pageData.relatedLinks?.length" class="lp-related" aria-labelledby="related-guides-heading">
+          <h2 id="related-guides-heading">{{ pageData.relatedHeading || relatedFallbackHeading }}</h2>
+          <div class="lp-related-grid">
+            <a
+              v-for="(item, i) in pageData.relatedLinks"
+              :key="i"
+              :href="canonicalPath(item.href)"
+              class="lp-related-card"
+            >
+              <strong>{{ item.label }}</strong>
+              <span>{{ item.text }}</span>
+            </a>
+          </div>
+        </div>
+
         <div style="margin-top: 32px;">
           <RoomCards />
         </div>
@@ -232,6 +247,19 @@ const fallbackPages: Record<string, any> = {
       { src: '/images/gallery/kamar-hotel-murah-kuala-kurun.webp', alt: 'Penginapan Kuala Kurun - Fasilitas kamar dengan TV Android' },
       { src: '/images/gallery/kamar-penginapan-kuala-kurun.webp', alt: 'Penginapan Kuala Kurun - Kamar single bed Wisma Apollo' },
       { src: '/images/gallery/kamar-double-bed-wisma-apollo.webp', alt: 'Penginapan Kuala Kurun - Kamar double bed Wisma Apollo' }
+    ],
+    relatedHeading: 'Panduan Terkait Penginapan Kuala Kurun',
+    relatedLinks: [
+      {
+        href: '/blog/penginapan-murah-kuala-kurun/',
+        label: 'Panduan penginapan murah di Kuala Kurun',
+        text: 'Cek cara menilai harga, fasilitas, lokasi, dan kemudahan reservasi sebelum memilih kamar.'
+      },
+      {
+        href: '/blog/tips-menginap-kuala-kurun/',
+        label: 'Tips menginap nyaman di Kuala Kurun',
+        text: 'Panduan praktis untuk tamu dinas, keluarga, pekerja lapangan, dan perjalanan singgah.'
+      }
     ],
     faqs: [
       {
@@ -520,7 +548,9 @@ const pageData = computed(() => {
       priceRows: Array.isArray(data.priceRows) ? data.priceRows : [],
       priceNote: String(data.priceNote || ''),
       galleryHeading: String(data.galleryHeading || ''),
-      gallery: Array.isArray(data.gallery) ? data.gallery : []
+      gallery: Array.isArray(data.gallery) ? data.gallery : [],
+      relatedHeading: String(data.relatedHeading || ''),
+      relatedLinks: Array.isArray(data.relatedLinks) ? data.relatedLinks : []
     }
   }
 
@@ -559,6 +589,7 @@ const priceLabel = computed(() => locale.value === 'en' ? 'Rate' : 'Harga')
 const faqHeading = computed(() => locale.value === 'en'
   ? `Questions About ${pageData.value.title}`
   : `Pertanyaan Seputar ${pageData.value.title}`)
+const relatedFallbackHeading = computed(() => locale.value === 'en' ? 'Related Guides' : 'Panduan Terkait')
 
 const pageStructuredData = computed(() => {
   const schemaItems: any[] = [
