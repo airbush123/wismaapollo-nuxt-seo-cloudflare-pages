@@ -74,7 +74,7 @@ export function buildOrganizationSchema() {
 
 export function buildHotelSchema() {
   return {
-    '@type': 'Hotel',
+    '@type': ['Hotel', 'LodgingBusiness', 'LocalBusiness'],
     '@id': `${SITE_URL}/#hotel`,
     name: 'Wisma Apollo Kuala Kurun',
     alternateName: [
@@ -90,6 +90,9 @@ export function buildHotelSchema() {
     description: 'Hotel dan penginapan Kuala Kurun yang bersih, strategis, dan nyaman dengan AC, WiFi gratis, TV Android, kamar mandi dalam, dan parkir luas.',
     url: `${SITE_URL}/`,
     telephone: '+62818232021',
+    hasMap: 'https://www.google.com/maps/search/Wisma+Apollo+Kuala+Kurun',
+    currenciesAccepted: 'IDR',
+    paymentAccepted: 'Cash, Bank Transfer',
     image: [
       `${SITE_URL}/images/hero.webp`,
       `${SITE_URL}/images/gallery/wisma-apollo-hotel-kuala-kurun.webp`,

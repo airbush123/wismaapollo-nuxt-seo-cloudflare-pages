@@ -36,7 +36,7 @@ const homeUrl = computed(() => {
 const homeTitle = computed(() => {
   if (locale.value === 'en') return 'Wisma Apollo - Hotel & Lodging in Kuala Kurun'
   if (locale.value === 'zh') return 'Wisma Apollo - Kuala Kurun 酒店与住宿'
-  return 'Hotel Kuala Kurun - Penginapan Wisma Apollo'
+  return 'Hotel & Penginapan Kuala Kurun - Wisma Apollo'
 })
 
 const homeDescription = computed(() => {

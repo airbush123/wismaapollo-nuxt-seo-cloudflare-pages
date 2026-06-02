@@ -15,7 +15,7 @@
   },
   "hero": {
     "tag": "Hotel, Penginapan & Wisma Kuala Kurun",
-    "title": "Selamat Datang di Wisma Apollo",
+    "title": "Hotel & Penginapan Kuala Kurun - Wisma Apollo",
     "motto": "\"Nyaman Seperti di Rumah\"",
     "address": "Jl. Letjen Soeprapto No.56, Kuala Kurun, Kab. Gunung Mas, Kalimantan Tengah 74571",
     "phone": "Telp/WA : 0818 232 021",
@@ -91,7 +91,7 @@
   },
   "rooms": {
     "label": "Tarif Kamar & Reservasi",
-    "title": "Pilih Kamar Anda",
+    "title": "Reservasi Penginapan Kuala Kurun via WhatsApp",
     "subtitle": "Kami menawarkan harga yang murah & terjangkau",
     "normalPrice": "Harga normal",
     "single": {
@@ -162,7 +162,7 @@
   },
   "map": {
     "label": "Lokasi Kami",
-    "title": "Temukan Wisma Apollo",
+    "title": "Lokasi Hotel di Kuala Kurun, Kabupaten Gunung Mas",
     "address": "Jl. Letjen Soeprapto No.56, Kuala Kurun, Kab. Gunung Mas, Kalimantan Tengah 74571",
     "openMaps": "Buka di Google Maps"
   },
