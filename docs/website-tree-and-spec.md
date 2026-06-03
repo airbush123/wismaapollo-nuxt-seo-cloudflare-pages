@@ -390,7 +390,7 @@ Tracking utama ada di `useTracking.ts`.
 Konfigurasi:
 
 - GTM Container: `GTM-5995VJ5B`
-- Google Ads ID: `11473033484`
+- Google Ads ID: `18107085431`
 - Meta Pixel ID: `2098215477608895`
 - Meta Graph version default: `v23.0`
 

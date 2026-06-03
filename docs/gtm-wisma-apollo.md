@@ -18,7 +18,7 @@ GTM_Wisma_Apollo_Google_Final_import.json
 
 File ini berisi tag:
 
-- `Tag Google AW-11473033484`
+- `Tag Google AW-18107085431`
 - `Conversion Linker`
 - `GAds - PV Wisma`
 - `GAds - VC Wisma`
@@ -26,6 +26,16 @@ File ini berisi tag:
 - `GAds - ATC Wisma`
 - `GAds - Lead Wisma`
 - `Tag Enhanced Conversion`
+
+## Google Ads Conversion Mapping
+
+| Funnel | DataLayer event | Google Ads label | Value |
+| --- | --- | --- | --- |
+| PV Wisma | `wisma_pv` | `DLj_COy4rrgcEPfkkLpD` | 100 |
+| VC Wisma | `wisma_vc` | `FrBUCM3jr7gcEPfkkLpD` | 200 |
+| WA Kontak | `wisma_kontak` | `gH-uCLSVsLgcEPfkkLpD` | 300 |
+| ATC Wisma | `wisma_atc` | `45vBCNiPrrgcEPfkkLpD` | 500 |
+| Lead Wisma | `wisma_lead` | `bo-PCNi5sLgcEPfkkLpD` | 5000 |
 
 ## Trigger
 

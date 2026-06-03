@@ -3,7 +3,7 @@ const SITE_URL = 'https://wisma-apollo.my.id'
 const PRODUCT_NAME = 'Wisma Apollo Kuala Kurun'
 const CURRENCY = 'IDR'
 const GTM_CONTAINER_ID = 'GTM-5995VJ5B'
-const GOOGLE_ADS_ID = '11473033484'
+const GOOGLE_ADS_ID = '18107085431'
 const META_PIXEL_ID = '2098215477608895'
 const BOOKING_TTL_MS = 24 * 60 * 60 * 1000
 const ATTRIBUTION_TTL_MS = 90 * 24 * 60 * 60 * 1000
@@ -12,27 +12,27 @@ const BOOKING_KEYS = ['trx_id', 'hashed_phone', 'meta_hashed_phone']
 const FUNNEL_EVENTS = {
   pv: {
     name: 'wisma_pv',
-    label: 'egfBCJearascEIyy4t4q',
+    label: 'DLj_COy4rrgcEPfkkLpD',
     value: 100
   },
   vc: {
     name: 'wisma_vc',
-    label: '6VFrCKurrascEIyy4t4q',
+    label: 'FrBUCM3jr7gcEPfkkLpD',
     value: 200
   },
   contact: {
     name: 'wisma_kontak',
-    label: 'bIBmCPfqk6scEIyy4t4q',
+    label: 'gH-uCLSVsLgcEPfkkLpD',
     value: 300
   },
   atc: {
     name: 'wisma_atc',
-    label: '1E3pCMmBlKscEIyy4t4q',
+    label: '45vBCNiPrrgcEPfkkLpD',
     value: 500
   },
   lead: {
     name: 'wisma_lead',
-    label: 'kR_PCIngrascEIyy4t4q',
+    label: 'bo-PCNi5sLgcEPfkkLpD',
     value: 5000
   },
   userData: {

@@ -187,7 +187,7 @@
                 } 
                 if (typeof gtag !== 'undefined') {
                     gtag('event', 'conversion', {
-                        'send_to': 'AW-11473033484/YOUR_CONVERSION_LABEL',
+                        'send_to': 'AW-18107085431/bo-PCNi5sLgcEPfkkLpD',
                         'event_category': 'engagement',
                         'event_label': 'WhatsApp Form'
                     });
@@ -261,9 +261,9 @@
             if (googLoaded) return;
             googLoaded = true;
             
-            // Inject Google Tag Manager strictly for Google Ads AW-11473033484
+            // Inject Google Tag Manager strictly for Google Ads AW-18107085431
             const script = document.createElement('script');
-            script.src = 'https://www.googletagmanager.com/gtag/js?id=AW-11473033484';
+            script.src = 'https://www.googletagmanager.com/gtag/js?id=AW-18107085431';
             script.async = true;
             document.head.appendChild(script);
 
@@ -272,12 +272,12 @@
             window.gtag = gtag; // Export globally
             
             gtag('js', new Date());
-            gtag('config', 'AW-11473033484'); // PageView is automatically sent here
+            gtag('config', 'AW-18107085431'); // PageView is automatically sent here
 
             // If it's a specific page like hotel rooms, fire ViewContent
             if (window.location.pathname.includes('/hotel') || window.location.pathname.includes('/penginapan')) {
                 gtag('event', 'view_item', {
-                    'send_to': 'AW-11473033484',
+                    'send_to': 'AW-18107085431',
                     'value': 200000,
                     'currency': 'IDR',
                     'items': [{
