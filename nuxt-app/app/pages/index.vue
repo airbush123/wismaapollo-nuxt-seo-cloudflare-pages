@@ -24,7 +24,6 @@ import {
 } from '~/composables/useSitelinkSchema'
 
 useScrollAnimation()
-const tracking = useTracking()
 const { locale } = useI18n()
 const siteUrl = SITE_URL
 
@@ -46,10 +45,6 @@ const homeDescription = computed(() => {
 })
 
 const homeImage = `${siteUrl}/images/hero.webp`
-
-onMounted(() => {
-  tracking.initLandingTracking()
-})
 
 useSeoMeta({
   title: () => homeTitle.value,

@@ -56,6 +56,7 @@ let vcScrollHandler: (() => void) | null = null
 let vcScrollRaf = 0
 let vcObserver: IntersectionObserver | null = null
 let lastHashedPhone = ''
+const sentTrackingEvents = new Set<string>()
 
 export function useTracking() {
   const hasWindow = () => typeof window !== 'undefined'
@@ -254,12 +255,20 @@ export function useTracking() {
   ) => {
     const basePayload = buildBasePayload(value)
     const eventId = getEventId(eventName)
-    const fullPayload = {
+    const fullPayload: TrackingPayload = {
       ...basePayload,
       ...payload,
       event_id: eventId,
       meta_event_id: eventId,
     }
+    const dedupeKey = [
+      eventName,
+      fullPayload.event_id,
+      fullPayload.page_location || getPageLocation(),
+    ].join(':')
+
+    if (sentTrackingEvents.has(dedupeKey)) return
+    sentTrackingEvents.add(dedupeKey)
 
     pushDataLayer({
       event: eventName,
@@ -605,6 +614,12 @@ export function useTracking() {
     return Boolean(getClickId() || getFromStorage('fbclid'))
   }
 
+  const shouldTrackPassiveFunnelOnPage = () => {
+    if (!hasWindow()) return false
+
+    return !/^\/(?:en\/)?thanks\/?$/.test(window.location.pathname)
+  }
+
   const getPassiveTrackingDelay = () => {
     if (shouldAutoLoadPassiveTracking()) return 1000
     if (!hasWindow()) return 3500
@@ -621,6 +636,8 @@ export function useTracking() {
 
     const triggerLoad = () => {
       loadGtm().then(() => {
+        if (!shouldTrackPassiveFunnelOnPage()) return
+
         trackPageView()
         attachVcScrollTracking()
       })
@@ -723,8 +740,14 @@ export function useTracking() {
 
   const resetTrackingIdentifiers = () => {
     BOOKING_KEYS.forEach(removeFromStorage)
+    landingPvSent = false
+    landingVcSent = false
+    contactSent = false
     addToCartSentForTrx = ''
     leadSentForTrx = ''
+    lastHashedPhone = ''
+    sentTrackingEvents.clear()
+    clearVcScrollListener()
   }
 
   const clearBookingSession = () => {
@@ -733,17 +756,31 @@ export function useTracking() {
     if (!hasWindow()) return
 
     try {
-      sessionStorage.removeItem('wisma_last_wa_url')
-      sessionStorage.removeItem('wisma_last_wa_message')
-      sessionStorage.removeItem('wisma_last_booking_payload')
+      Object.keys(localStorage)
+        .filter((key) => key.startsWith(STORAGE_PREFIX))
+        .forEach((key) => localStorage.removeItem(key))
+
+      Object.keys(sessionStorage)
+        .filter((key) => key.startsWith(STORAGE_PREFIX))
+        .forEach((key) => sessionStorage.removeItem(key))
+
       sessionStorage.removeItem('wa_source')
       sessionStorage.removeItem('wa_click_id')
+
+      const clearCookie = (cookieName: string) => {
+        document.cookie = `${cookieName}=; Max-Age=0; path=/`
+        document.cookie = `${cookieName}=; Max-Age=0; path=/; domain=${window.location.hostname}`
+        document.cookie = `${cookieName}=; Max-Age=0; path=/; domain=.${window.location.hostname}`
+      }
 
       document.cookie.split(';').forEach((cookie) => {
         const cookieName = cookie.split('=')[0]?.trim()
         if (!cookieName || !cookieName.startsWith(STORAGE_PREFIX)) return
-        document.cookie = `${cookieName}=; Max-Age=0; path=/`
+        clearCookie(cookieName)
       })
+
+      clearCookie('_fbp')
+      clearCookie('_fbc')
     } catch {
       // Ignore storage failures in strict/private browser modes.
     }
