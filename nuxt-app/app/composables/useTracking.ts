@@ -403,7 +403,7 @@ export function useTracking() {
       appWindow.fbq('track', metaEventName, customData, { eventID: eventId })
     })
 
-    if (metaEventName === 'AddToCart') {
+    if (['PageView', 'ViewContent', 'Contact', 'AddToCart'].includes(metaEventName)) {
       sendMetaCapiEvent(metaEventName, eventId, customData)
     }
   }
@@ -588,21 +588,29 @@ export function useTracking() {
     })
   }
 
-  const scheduleIdleTrackingLoad = (callback: () => void) => {
+  const scheduleIdleTrackingLoad = (callback: () => void, timeoutMs = 3500) => {
     const appWindow = window as typeof window & {
       requestIdleCallback?: (handler: () => void, options?: { timeout: number }) => number
     }
 
     if (typeof appWindow.requestIdleCallback === 'function') {
-      appWindow.requestIdleCallback(callback, { timeout: 15000 })
+      appWindow.requestIdleCallback(callback, { timeout: timeoutMs })
       return
     }
 
-    setTimeout(callback, 15000)
+    setTimeout(callback, timeoutMs)
   }
 
   const shouldAutoLoadPassiveTracking = () => {
     return Boolean(getClickId() || getFromStorage('fbclid'))
+  }
+
+  const getPassiveTrackingDelay = () => {
+    if (shouldAutoLoadPassiveTracking()) return 1000
+    if (!hasWindow()) return 3500
+
+    const path = window.location.pathname
+    return path === '/' || path === '/en/' || path === '/zh/' ? 8500 : 3500
   }
 
   const initLandingTracking = () => {
@@ -642,14 +650,12 @@ export function useTracking() {
     window.addEventListener('click', onInteraction, { passive: true, once: true })
     window.addEventListener('keydown', onInteraction, { passive: true, once: true })
 
-    if (shouldAutoLoadPassiveTracking()) {
-      scheduleIdleTrackingLoad(() => {
-        if (!triggered) {
-          triggered = true
-          triggerLoad()
-        }
-      })
-    }
+    scheduleIdleTrackingLoad(() => {
+      if (triggered) return
+
+      triggered = true
+      triggerLoad()
+    }, getPassiveTrackingDelay())
   }
 
   const trackContact = (source = 'whatsapp') => {

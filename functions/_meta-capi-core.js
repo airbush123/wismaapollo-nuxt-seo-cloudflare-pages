@@ -1,6 +1,6 @@
 const DEFAULT_META_PIXEL_ID = '2098215477608895'
 const DEFAULT_META_GRAPH_VERSION = 'v23.0'
-const ALLOWED_EVENTS = new Set(['AddToCart', 'Lead'])
+const ALLOWED_EVENTS = new Set(['PageView', 'ViewContent', 'Contact', 'AddToCart', 'Lead'])
 
 export function jsonResponse(body, status = 200) {
   return new Response(JSON.stringify(body), {

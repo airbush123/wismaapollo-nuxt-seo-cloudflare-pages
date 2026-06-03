@@ -391,6 +391,7 @@ Konfigurasi:
 
 - GTM Container: `GTM-5995VJ5B`
 - Google Ads ID: `18107085431`
+- GA4 Measurement ID: `G-24RFWGMFY8`
 - Meta Pixel ID: `2098215477608895`
 - Meta Graph version default: `v23.0`
 
@@ -406,11 +407,11 @@ Event funnel:
 Tracking behavior:
 
 - GTM diload first-party via `/px/gtm/gtm.js?id=GTM-5995VJ5B`.
-- GTM baru diload setelah interaksi user, kecuali preview mode atau ada click id.
+- GTM diload otomatis saat idle. Homepage menunggu lebih lama untuk performa, halaman lain lebih cepat supaya cakupan tag terbaca.
 - `gclid`, `wbraid`, `gbraid`, `fbclid`, dan campaign disimpan dengan TTL atribusi.
 - Nomor telepon di-hash SHA-256 untuk Google/Meta.
 - Meta Pixel diload langsung dari kode website.
-- Meta CAPI dikirim untuk event `AddToCart` dan `Lead`.
+- Meta CAPI dikirim untuk event `PageView`, `ViewContent`, `Contact`, `AddToCart`, dan `Lead`.
 - Event id memakai transaction id untuk deduplikasi browser/server.
 
 Dokumen terkait:
@@ -454,7 +455,7 @@ Core util:
 
 - JSON response helper
 - Sanitasi object kosong
-- Validasi event name hanya `AddToCart` dan `Lead`
+- Validasi event name hanya `PageView`, `ViewContent`, `Contact`, `AddToCart`, dan `Lead`
 - Kirim event ke Graph API Meta
 - Tambah IP dan user-agent dari request
 

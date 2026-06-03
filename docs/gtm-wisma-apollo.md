@@ -3,6 +3,7 @@
 Setup final untuk container `GTM-5995VJ5B`:
 
 - Google Ads dan Enhanced Conversion berjalan lewat GTM.
+- GA4 berjalan lewat GTM dengan Measurement ID `G-24RFWGMFY8`.
 - Script GTM dimuat lewat first-party proxy `/px/gtm/gtm.js?id=GTM-5995VJ5B`.
 - Meta Pixel berjalan langsung dari kode website.
 - Meta CAPI berjalan lewat Cloudflare Pages Functions first-party endpoint.
@@ -26,6 +27,12 @@ File ini berisi tag:
 - `GAds - ATC Wisma`
 - `GAds - Lead Wisma`
 - `Tag Enhanced Conversion`
+- `Tag Google G-24RFWGMFY8`
+- `GA4 - PV Wisma`
+- `GA4 - VC Wisma`
+- `GA4 - Kontak Wisma`
+- `GA4 - ATC Wisma`
+- `GA4 - Lead Wisma`
 
 ## Google Ads Conversion Mapping
 
@@ -36,6 +43,18 @@ File ini berisi tag:
 | WA Kontak | `wisma_kontak` | `gH-uCLSVsLgcEPfkkLpD` | 300 |
 | ATC Wisma | `wisma_atc` | `45vBCNiPrrgcEPfkkLpD` | 500 |
 | Lead Wisma | `wisma_lead` | `bo-PCNi5sLgcEPfkkLpD` | 5000 |
+
+## GA4 Event Mapping
+
+| Funnel | DataLayer event | GA4 event name | GA4 status |
+| --- | --- | --- | --- |
+| PV Wisma | `wisma_pv` | `wisma_pv` | Event |
+| VC Wisma | `wisma_vc` | `wisma_vc` | Event |
+| WA Kontak | `wisma_kontak` | `wisma_kontak` | Key event |
+| ATC Wisma | `wisma_atc` | `wisma_atc` | Key event |
+| Lead Wisma | `wisma_lead` | `wisma_lead` | Key event |
+
+Di GA4, tandai `wisma_kontak`, `wisma_atc`, dan `wisma_lead` sebagai key event. `wisma_pv` dan `wisma_vc` cukup menjadi event biasa.
 
 ## Trigger
 
@@ -57,6 +76,19 @@ Variable user yang dibutuhkan:
 
 - `dlv_phone`
 - `dlv_value`
+- `dlv_currency`
+- `dlv_transaction_id`
+- `dlv_page_location`
+- `dlv_campaign`
+- `dlv_gclid`
+- `dlv_wbraid`
+- `dlv_gbraid`
+- `dlv_room_type`
+- `dlv_room_summary`
+- `dlv_room_count`
+- `dlv_guest_count`
+- `dlv_stay_nights`
+- `dlv_total_booking_value`
 - `User Data EC`
 
 ## Catatan Meta
@@ -66,8 +98,9 @@ Meta tidak perlu di-import ke GTM. Kode website sudah menangani:
 - `fbclid` dari URL.
 - `_fbc` dan `_fbp`.
 - phone hash.
-- browser Pixel event.
-- server CAPI event untuk `AddToCart` dan `Lead`.
+- browser Pixel event untuk `PageView`, `ViewContent`, `Contact`, `AddToCart`, dan `Lead`.
+- server CAPI event untuk `PageView`, `ViewContent`, `Contact`, `AddToCart`, dan `Lead`.
+- CAPI `Lead` dikirim lewat endpoint booking lead supaya data sheet dan payload lead memakai event id yang sama.
 
 Dengan pemisahan ini, performa lebih ringan dan risiko event dobel lebih kecil.
 
