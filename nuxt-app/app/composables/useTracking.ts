@@ -3,11 +3,13 @@ const SITE_URL = 'https://wisma-apollo.my.id'
 const PRODUCT_NAME = 'Wisma Apollo Kuala Kurun'
 const CURRENCY = 'IDR'
 const GTM_CONTAINER_ID = 'GTM-5995VJ5B'
+const GTM_CACHE_VERSION = '20260604'
 const GOOGLE_ADS_ID = '18107085431'
 const META_PIXEL_ID = '2098215477608895'
 const BOOKING_TTL_MS = 24 * 60 * 60 * 1000
 const ATTRIBUTION_TTL_MS = 90 * 24 * 60 * 60 * 1000
 const BOOKING_KEYS = ['trx_id', 'hashed_phone', 'meta_hashed_phone']
+const PASSIVE_TRACKING_DELAY_MS = 45000
 
 const FUNNEL_EVENTS = {
   pv: {
@@ -302,6 +304,9 @@ export function useTracking() {
   const buildGtmScriptUrl = (): string => {
     const params = getGtmDebugParams()
     params.set('id', GTM_CONTAINER_ID)
+    if (!isGtmPreviewMode()) {
+      params.set('v', GTM_CACHE_VERSION)
+    }
 
     const query = params.toString()
     if (isGtmPreviewMode()) {
@@ -624,8 +629,7 @@ export function useTracking() {
     if (shouldAutoLoadPassiveTracking()) return 1000
     if (!hasWindow()) return 3500
 
-    const path = window.location.pathname
-    return path === '/' || path === '/en/' || path === '/zh/' ? 8500 : 3500
+    return PASSIVE_TRACKING_DELAY_MS
   }
 
   const initLandingTracking = () => {

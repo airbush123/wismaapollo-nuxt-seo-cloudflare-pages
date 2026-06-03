@@ -1,5 +1,6 @@
 const GTM_ORIGIN = 'https://www.googletagmanager.com'
 const ALLOWED_GTM_IDS = new Set(['GTM-5995VJ5B'])
+const GTM_CACHE_TTL = 31536000
 
 function jsonResponse(body, status = 200) {
   return new Response(JSON.stringify(body), {
@@ -36,14 +37,14 @@ export async function onRequestGet({ request, params }) {
       accept: 'application/javascript,text/javascript,*/*;q=0.8',
     },
     cf: {
-      cacheTtl: 300,
+      cacheTtl: GTM_CACHE_TTL,
       cacheEverything: true,
     },
   })
 
   const headers = new Headers(response.headers)
   headers.set('content-type', 'application/javascript; charset=utf-8')
-  headers.set('cache-control', 'public, max-age=300, s-maxage=300')
+  headers.set('cache-control', `public, max-age=${GTM_CACHE_TTL}, s-maxage=${GTM_CACHE_TTL}, immutable`)
   headers.set('x-robots-tag', 'noindex')
 
   return new Response(response.body, {
