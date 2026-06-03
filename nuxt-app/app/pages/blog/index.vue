@@ -10,23 +10,17 @@
 
     <section class="section">
       <div class="container">
-        <div v-if="locale === 'en'" class="blog-intro">
-          <span class="blog-intro-kicker">Kuala Kurun Travel Guide</span>
-          <h2>Accommodation, Food, and Travel Notes for Gunung Mas Visitors</h2>
-          <p>
-            This blog collects practical guides for travelers who plan to stay in Kuala Kurun, the capital of Gunung Mas Regency.
-            You can find hotel recommendations, local food references, nearby attractions, and simple tips for choosing a clean,
-            strategic place to rest after a long road trip or work agenda.
-          </p>
-          <p>
-            Wisma Apollo is located on Jl. Letjen Soeprapto No.56, close to the city center, local cafes, government offices, and
-            everyday needs. Use these articles as a starting point, then contact our team via WhatsApp to check room availability,
-            current rates, and the best room type for your schedule.
-          </p>
+        <div class="blog-intro">
+          <span class="blog-intro-kicker">{{ blogPageCopy.intro.kicker }}</span>
+          <h2>{{ blogPageCopy.intro.title }}</h2>
+          <div class="blog-intro-copy">
+            <p v-for="paragraph in blogPageCopy.intro.paragraphs" :key="paragraph">
+              {{ paragraph }}
+            </p>
+          </div>
         </div>
 
-        <!-- Debug Info -->
-        <div v-if="pending" style="text-align: center; padding: 40px;">Memuat artikel...</div>
+        <div v-if="pending" class="blog-empty">{{ blogPageCopy.loading }}</div>
         
         <div v-else-if="articles && articles.length" class="blog-grid" role="list">
           <a
@@ -55,21 +49,18 @@
           </a>
         </div>
         
-        <div v-else style="padding: 60px 0; text-align: center; color: var(--text2);">
-          <p>{{ locale === 'id' ? 'Belum ada artikel untuk bahasa ini.' : 'No articles available for this language.' }}</p>
+        <div v-else class="blog-empty">
+          <p>{{ blogPageCopy.empty }}</p>
         </div>
 
-        <div v-if="locale === 'en'" class="blog-cta" id="reservation">
+        <div class="blog-cta" id="reservation">
           <div>
-            <span>Need a room in Kuala Kurun?</span>
-            <h2>Reserve Wisma Apollo directly via WhatsApp</h2>
-            <p>
-              Fill in the short reservation form to send your stay dates, guest count, room type, and notes to our admin.
-              We will help confirm availability before your arrival.
-            </p>
+            <span>{{ blogPageCopy.cta.kicker }}</span>
+            <h2>{{ blogPageCopy.cta.title }}</h2>
+            <p>{{ blogPageCopy.cta.desc }}</p>
           </div>
           <button type="button" class="blog-cta-btn" @click="bookingStore.openModal()">
-            Reserve Now
+            {{ blogPageCopy.cta.button }}
           </button>
         </div>
       </div>
@@ -90,6 +81,47 @@ const canonicalPath = useCanonicalLocalePath()
 const bookingStore = useBookingStore()
 const siteUrl = SITE_URL
 const isIndexableBlog = computed(() => locale.value !== 'zh')
+const blogCopyByLocale = {
+  id: {
+    intro: {
+      kicker: 'Panduan Kuala Kurun',
+      title: 'Tips Menginap, Kuliner, dan Wisata di Gunung Mas',
+      paragraphs: [
+        'Kumpulan artikel Wisma Apollo seputar hotel Kuala Kurun, penginapan Kuala Kurun, kuliner lokal, tempat wisata, dan tips perjalanan praktis untuk tamu yang datang ke Gunung Mas.',
+        'Gunakan panduan ini untuk memilih tempat menginap yang bersih, strategis, dan mudah dipesan, lalu cek ketersediaan kamar Wisma Apollo langsung lewat form reservasi.',
+      ],
+    },
+    cta: {
+      kicker: 'Butuh kamar di Kuala Kurun?',
+      title: 'Reservasi Wisma Apollo langsung dari website',
+      desc: 'Isi form singkat untuk mengirim tanggal menginap, jumlah tamu, tipe kamar, dan catatan tambahan. Admin akan membantu cek ketersediaan kamar sebelum kedatangan.',
+      button: 'Reservasi Sekarang',
+    },
+    loading: 'Memuat artikel...',
+    empty: 'Belum ada artikel untuk bahasa ini.',
+  },
+  en: {
+    intro: {
+      kicker: 'Kuala Kurun Guide',
+      title: 'Accommodation, Food, and Travel Notes for Gunung Mas Visitors',
+      paragraphs: [
+        'Wisma Apollo Blog collects practical guides for travelers looking for hotels, lodging, local food, nearby attractions, and simple travel tips around Kuala Kurun and Gunung Mas.',
+        'Use these articles as a starting point to plan a clean, strategic stay, then check Wisma Apollo room availability directly through the reservation form.',
+      ],
+    },
+    cta: {
+      kicker: 'Need a room in Kuala Kurun?',
+      title: 'Reserve Wisma Apollo directly from the website',
+      desc: 'Fill in the short form to send your stay dates, guest count, room type, and notes. Our admin will help confirm availability before your arrival.',
+      button: 'Reserve Now',
+    },
+    loading: 'Loading articles...',
+    empty: 'No articles available for this language.',
+  },
+} as const
+const blogPageCopy = computed(() => {
+  return blogCopyByLocale[locale.value as keyof typeof blogCopyByLocale] || blogCopyByLocale.id
+})
 
 if (locale.value === 'zh') {
   await navigateTo('/zh/', { redirectCode: 301 })
@@ -203,8 +235,51 @@ useHead(() => ({
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 24px;
 }
+
+.blog-intro {
+  max-width: 1040px;
+  margin: 0 0 30px;
+}
+
+.blog-intro-kicker {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  margin-bottom: 14px;
+  padding: 6px 12px;
+  border: 1px solid rgba(232, 106, 51, 0.28);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.68);
+  color: var(--gold);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.blog-intro h2 {
+  max-width: 760px;
+  margin: 0 0 14px;
+  color: var(--forest);
+  font-size: clamp(1.7rem, 3vw, 2.35rem);
+  line-height: 1.18;
+}
+
+.blog-intro-copy {
+  display: grid;
+  gap: 8px;
+  max-width: 1040px;
+}
+
+.blog-intro p {
+  max-width: 1040px;
+  margin: 0;
+  color: var(--text);
+  font-size: 0.98rem;
+  line-height: 1.78;
+}
+
 .blog-card {
-  background: var(--bg);
+  background: var(--white);
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
@@ -222,8 +297,8 @@ useHead(() => ({
 .blog-card-tag {
   display: inline-block;
   padding: 4px 12px;
-  background: var(--primary-light);
-  color: var(--primary);
+  background: rgba(27, 67, 50, 0.08);
+  color: var(--forest);
   font-size: 12px;
   font-weight: 600;
   border-radius: 20px;
@@ -245,8 +320,116 @@ useHead(() => ({
   overflow: hidden;
 }
 .read-more {
-  color: var(--primary);
+  color: var(--forest);
   font-weight: 600;
   font-size: 0.9rem;
+}
+
+.blog-empty {
+  padding: 42px 0;
+  text-align: center;
+  color: var(--text2);
+}
+
+.blog-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 34px;
+  padding: 24px;
+  border: 1px solid rgba(27, 67, 50, 0.14);
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(250, 246, 240, 0.96));
+  box-shadow: 0 16px 40px rgba(91, 64, 51, 0.08);
+}
+
+.blog-cta span {
+  display: inline-flex;
+  margin-bottom: 7px;
+  color: var(--gold);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.blog-cta h2 {
+  margin: 0 0 8px;
+  color: var(--forest);
+  font-size: 1.45rem;
+}
+
+.blog-cta p {
+  max-width: 720px;
+  margin: 0;
+  color: var(--text2);
+  font-size: 0.94rem;
+  line-height: 1.65;
+}
+
+.blog-cta-btn {
+  flex: 0 0 auto;
+  min-width: 170px;
+  min-height: 48px;
+  padding: 0 22px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--cta-orange);
+  color: var(--white);
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 12px 24px rgba(211, 84, 0, 0.22);
+}
+
+.blog-cta-btn:hover {
+  background: var(--gold-lt);
+}
+
+@media (max-width: 720px) {
+  .blog-intro {
+    margin-bottom: 24px;
+  }
+
+  .blog-intro-kicker {
+    min-height: 28px;
+    margin-bottom: 12px;
+    font-size: 0.72rem;
+  }
+
+  .blog-intro h2 {
+    font-size: 1.55rem;
+    line-height: 1.22;
+  }
+
+  .blog-intro p {
+    font-size: 0.9rem;
+    line-height: 1.68;
+  }
+
+  .blog-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .blog-cta {
+    display: grid;
+    gap: 18px;
+    margin-top: 28px;
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  .blog-cta h2 {
+    font-size: 1.18rem;
+  }
+
+  .blog-cta p {
+    font-size: 0.88rem;
+  }
+
+  .blog-cta-btn {
+    width: 100%;
+    min-width: 0;
+  }
 }
 </style>
