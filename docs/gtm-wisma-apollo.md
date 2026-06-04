@@ -5,7 +5,8 @@ Setup final untuk container `GTM-5995VJ5B`:
 - Google Ads dan Enhanced Conversion berjalan lewat GTM.
 - GA4 berjalan lewat GTM dengan Measurement ID `G-24RFWGMFY8`.
 - Script GTM dimuat lewat first-party proxy `/px/gtm/gtm.js?id=GTM-5995VJ5B`.
-- Meta Pixel berjalan langsung dari kode website.
+- Meta Pixel browser berjalan langsung dari kode website hanya untuk aksi serius (`Contact`, `AddToCart`, `Lead`).
+- Event pasif Meta (`PageView`, `ViewContent`) dikirim lewat CAPI server agar audit speed tidak memuat script Facebook.
 - Meta CAPI berjalan lewat Cloudflare Pages Functions first-party endpoint.
 - Jangan memasang Meta Pixel lewat GTM selama Meta masih aktif langsung dari kode website, supaya event tidak dobel.
 
@@ -98,7 +99,7 @@ Meta tidak perlu di-import ke GTM. Kode website sudah menangani:
 - `fbclid` dari URL.
 - `_fbc` dan `_fbp`.
 - phone hash.
-- browser Pixel event untuk `PageView`, `ViewContent`, `Contact`, `AddToCart`, dan `Lead`.
+- browser Pixel event untuk `Contact`, `AddToCart`, dan `Lead`.
 - server CAPI event untuk `PageView`, `ViewContent`, `Contact`, `AddToCart`, dan `Lead`.
 - CAPI `Lead` dikirim lewat endpoint booking lead supaya data sheet dan payload lead memakai event id yang sama.
 

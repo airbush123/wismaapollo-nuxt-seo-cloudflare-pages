@@ -410,7 +410,8 @@ Tracking behavior:
 - GTM diload otomatis saat idle. Homepage menunggu lebih lama untuk performa, halaman lain lebih cepat supaya cakupan tag terbaca.
 - `gclid`, `wbraid`, `gbraid`, `fbclid`, dan campaign disimpan dengan TTL atribusi.
 - Nomor telepon di-hash SHA-256 untuk Google/Meta.
-- Meta Pixel diload langsung dari kode website.
+- Meta Pixel browser diload langsung dari kode website hanya untuk aksi serius: `Contact`, `AddToCart`, dan `Lead`.
+- Event pasif `PageView` dan `ViewContent` dikirim ke Meta lewat CAPI server tanpa memuat script Facebook.
 - Meta CAPI dikirim untuk event `PageView`, `ViewContent`, `Contact`, `AddToCart`, dan `Lead`.
 - Event id memakai transaction id untuk deduplikasi browser/server.
 

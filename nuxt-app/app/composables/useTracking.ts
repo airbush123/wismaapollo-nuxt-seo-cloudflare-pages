@@ -10,6 +10,8 @@ const BOOKING_TTL_MS = 24 * 60 * 60 * 1000
 const ATTRIBUTION_TTL_MS = 90 * 24 * 60 * 60 * 1000
 const BOOKING_KEYS = ['trx_id', 'hashed_phone', 'meta_hashed_phone']
 const PASSIVE_TRACKING_DELAY_MS = 90000
+const META_BROWSER_PIXEL_EVENTS = new Set(['Contact', 'AddToCart', 'Lead'])
+const META_CAPI_EVENTS = new Set(['PageView', 'ViewContent', 'Contact', 'AddToCart'])
 
 const FUNNEL_EVENTS = {
   pv: {
@@ -411,13 +413,15 @@ export function useTracking() {
     const eventId = String(payload.event_id || getEventId(eventName))
     const customData = buildMetaCustomData(value, payload)
 
-    loadMetaPixel().then(() => {
-      const appWindow = window as any
-      if (!appWindow.fbq || !metaPixelLoaded) return
-      appWindow.fbq('track', metaEventName, customData, { eventID: eventId })
-    })
+    if (META_BROWSER_PIXEL_EVENTS.has(metaEventName)) {
+      loadMetaPixel().then(() => {
+        const appWindow = window as any
+        if (!appWindow.fbq || !metaPixelLoaded) return
+        appWindow.fbq('track', metaEventName, customData, { eventID: eventId })
+      })
+    }
 
-    if (['PageView', 'ViewContent', 'Contact', 'AddToCart'].includes(metaEventName)) {
+    if (META_CAPI_EVENTS.has(metaEventName)) {
       sendMetaCapiEvent(metaEventName, eventId, customData)
     }
   }
