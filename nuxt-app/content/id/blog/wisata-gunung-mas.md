@@ -1,5 +1,6 @@
 ---
-title: '5 Destinasi Wisata di Gunung Mas, Kalimantan Tengah'
+title: '5 Destinasi Wisata Gunung Mas'
+seoTitle: 'Wisma Apollo: 5 Destinasi Wisata Gunung Mas | Wisma Apollo'
 description: 'Panduan wisata Gunung Mas Kalimantan Tengah: 5 destinasi alam dan budaya Dayak, tips itinerary, dan pilihan menginap di Kuala Kurun.'
 category: 'Wisata'
 image: '/images/blog/air-terjun-batu-mahasur.webp'

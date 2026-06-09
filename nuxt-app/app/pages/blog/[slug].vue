@@ -78,6 +78,9 @@ const articleUrl = computed(() => {
 
 const articleTitle = computed(() => article.value?.title || 'Blog Wisma Apollo Kuala Kurun')
 const articleSeoTitle = computed(() => {
+  const customSeoTitle = (article.value as any)?.seoTitle
+  if (customSeoTitle) return customSeoTitle
+
   const title = articleTitle.value
   return locale.value === 'en'
     ? `Travel Guide: ${title}`
