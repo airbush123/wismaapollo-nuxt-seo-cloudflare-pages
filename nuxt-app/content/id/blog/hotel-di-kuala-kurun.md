@@ -1,5 +1,5 @@
 ---
-title: 'Review Wisma Apollo: Penginapan Budget Rasa Hotel di Kuala Kurun'
+title: 'Penginapan Budget Rasa Hotel'
 seoTitle: 'Wisma Apollo: Penginapan Budget Rasa Hotel di Kuala Kurun'
 description: 'Review Wisma Apollo Kuala Kurun: lokasi pusat kota, kamar AC, WiFi, TV Android, kamar mandi dalam, parkir luas, dan harga mulai Rp200.000/malam.'
 category: 'Penginapan'
