@@ -215,7 +215,7 @@ const fallbackPages: Record<string, any> = {
     title: 'Penginapan Kuala Kurun - Wisma Apollo',
     seoTitle: 'Penginapan Kuala Kurun - Wisma Apollo | Mulai Rp200.000',
     subtitle: 'Penginapan bersih, nyaman & murah di Kuala Kurun',
-    meta: 'Butuh penginapan di Kuala Kurun yang nyaman dan murah? Wisma Apollo menyediakan kamar AC, WiFi gratis, TV Android, shower, parkir luas, dan harga mulai Rp200.000/malam.',
+    meta: 'Penginapan Kuala Kurun dengan kamar AC, WiFi, TV Android, shower, parkir luas, dan harga mulai Rp200.000/malam.',
     sections: [
       {
         heading: 'Tempat Menginap yang Nyaman dan Mudah Dipesan',

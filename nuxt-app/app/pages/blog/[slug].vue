@@ -77,6 +77,10 @@ const articleUrl = computed(() => {
 })
 
 const articleTitle = computed(() => article.value?.title || 'Blog Wisma Apollo Kuala Kurun')
+const articleSeoTitle = computed(() => {
+  const title = articleTitle.value
+  return title.includes('Wisma Apollo') ? `${title} | Blog` : `${title} | Wisma Apollo`
+})
 const articleDescription = computed(() => article.value?.description || article.value?.excerpt || (locale.value === 'en'
   ? 'Wisma Apollo Kuala Kurun articles about accommodation, travel, and culinary destinations in Gunung Mas.'
   : 'Artikel Wisma Apollo Kuala Kurun seputar penginapan, wisata, dan kuliner di Gunung Mas.'))
@@ -156,16 +160,16 @@ const handleArticleClick = (event: MouseEvent) => {
 }
 
 useSeoMeta({
-  title: () => articleTitle.value,
+  title: () => articleSeoTitle.value,
   description: () => articleDescription.value,
-  ogTitle: () => articleTitle.value,
+  ogTitle: () => articleSeoTitle.value,
   ogDescription: () => articleDescription.value,
   ogType: 'article',
   ogUrl: () => articleUrl.value,
   ogImage: () => articleImage.value,
   ogImageAlt: () => articleTitle.value,
   twitterCard: 'summary_large_image',
-  twitterTitle: () => articleTitle.value,
+  twitterTitle: () => articleSeoTitle.value,
   twitterDescription: () => articleDescription.value,
   twitterImage: () => articleImage.value,
   twitterImageAlt: () => articleTitle.value,

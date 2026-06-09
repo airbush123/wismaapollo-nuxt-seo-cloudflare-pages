@@ -1,6 +1,6 @@
 ---
 title: 'Hotel in Gunung Mas, Central Kalimantan: Staying in Kuala Kurun'
-description: 'A guide to choosing a hotel in Gunung Mas, Central Kalimantan for business guests, families, field workers, and travelers seeking strategic lodging in Kuala Kurun.'
+description: 'Guide to hotels in Gunung Mas for business guests, families, field workers, and travelers staying in Kuala Kurun.'
 category: 'Accommodation'
 image: '/images/blog/hotel-gunung-mas-kalimantan-tengah.png'
 date: '2025-06-01'
