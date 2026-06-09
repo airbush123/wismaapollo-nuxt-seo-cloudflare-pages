@@ -1,5 +1,6 @@
 ---
 title: 'Air Terjun Batu Mahasur: Keindahan Tersembunyi di Kuala Kurun'
+seoTitle: 'Air Terjun Batu Mahasur Kuala Kurun | Wisma Apollo'
 description: 'Panduan singkat ke Air Terjun Batu Mahasur di Kuala Kurun: akses, aktivitas, tips berkunjung, dan pilihan menginap di pusat kota.'
 category: 'Wisata'
 image: '/images/blog/air-terjun-batu-mahasur.webp'
