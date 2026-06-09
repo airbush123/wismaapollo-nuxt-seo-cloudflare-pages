@@ -1,5 +1,6 @@
 ---
-title: 'Hotel di Kuala Kurun, Kalimantan Tengah - Panduan Menginap'
+title: 'Hotel Kuala Kurun, Kalimantan Tengah'
+seoTitle: 'Wisma Apollo: Hotel Kuala Kurun, Kalimantan Tengah'
 description: 'Panduan memilih hotel di Kuala Kurun, Kalimantan Tengah: lokasi, fasilitas kamar, harga, akses pusat kota, dan cara reservasi Wisma Apollo.'
 category: 'Penginapan'
 image: '/images/blog/hotel-kuala-kurun-kalimantan-tengah.jpg'
