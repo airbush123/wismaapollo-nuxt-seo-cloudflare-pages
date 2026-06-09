@@ -1,5 +1,6 @@
 ---
-title: 'Menikmati Keindahan Alam Batu Suli di Desa Upon Batu'
+title: 'Wisata Batu Suli di Desa Upon Batu'
+seoTitle: 'Wisata Batu Suli: Jelajahi Alam Gunung Mas | Wisma Apollo'
 description: 'Panduan wisata Batu Suli di Desa Upon Batu, Gunung Mas: daya tarik alam, persiapan berkunjung, rute dari Kuala Kurun, dan pilihan menginap terdekat.'
 category: 'Wisata'
 image: '/images/blog/batu-suli-desa-upon-batu.webp'
