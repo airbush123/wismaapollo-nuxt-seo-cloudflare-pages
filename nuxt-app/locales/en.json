@@ -295,6 +295,30 @@
     "stillQuestion": "Still Have Questions?",
     "contactUs": "Contact us directly via WhatsApp for quick answers and room reservations.",
     "chatWa": "Chat WhatsApp",
+    "guideLabel": "Wisma Apollo FAQ Guide",
+    "guideTitle": "Important information before staying in Kuala Kurun",
+    "guideParagraphs": [
+      "This FAQ page helps guests who are searching for a hotel in Kuala Kurun, lodging in Kuala Kurun, or a clean guest house in Gunung Mas understand Wisma Apollo before making a reservation. The information is written for business travelers, government visitors, families, field workers, sales teams, and transit guests who need a simple and comfortable place to rest near the center of Kuala Kurun.",
+      "Wisma Apollo is located at Jl. Letjen Soeprapto No.56, Kuala Kurun, Gunung Mas Regency, Central Kalimantan. From this location, guests can reach government offices, local food spots, cafes, minimarkets, and daily needs without complicated travel. Room options include Single Bed rooms from IDR 200,000 per night and Double Bed rooms from IDR 250,000 per night.",
+      "Each room is prepared with air conditioning, free WiFi, Android TV, a private bathroom with shower, clean towels, bathroom amenities, and a quiet sleeping atmosphere. Guests can reserve through WhatsApp so the admin can help check room availability, check-in dates, check-out dates, adult guest count, breakfast requests, extra bed needs, and special notes before arrival.",
+      "If this is your first visit to Kuala Kurun, use this FAQ to confirm check-in rules, check-out time, parking information, smoking area guidance, room capacity, and available add-ons. The goal is to make the stay clear from the start, reduce waiting time at the property, and help guests choose the most suitable room at Wisma Apollo.",
+      "For guests traveling for work, official duty, or a short business agenda, this page also works as a quick preparation checklist. You can review room capacity, available facilities, reservation contact, breakfast options, extra bed information, and the easiest way to reach the team before leaving for Kuala Kurun.",
+      "Wisma Apollo keeps the booking information simple and transparent so guests can compare hotel Kuala Kurun and lodging Kuala Kurun options without confusion. If you need a late arrival note, a room preference, a small group stay, or additional support, you can send the details through the reservation form or WhatsApp."
+    ],
+    "guidePoints": [
+      {
+        "title": "Clear room rates",
+        "text": "Starting prices are shown upfront so guests can match room type, budget, and travel needs."
+      },
+      {
+        "title": "Strategic location",
+        "text": "The address is in Kuala Kurun, close to the main town access and daily guest needs."
+      },
+      {
+        "title": "Fast reservation",
+        "text": "The team can help check room availability, stay dates, and special notes via WhatsApp."
+      }
+    ],
     "items": [
       {
         "q": "Where is Wisma Apollo located?",

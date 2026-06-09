@@ -291,7 +291,43 @@
   "bottomBar": {
     "whatsapp": "微信咨询"
   },
+  "homeSeo": {
+    "label": "Kuala Kurun Accommodation Guide",
+    "title": "Wisma Apollo for Hotel Kuala Kurun and Penginapan Kuala Kurun",
+    "paragraphs": [
+      "Wisma Apollo is a Hotel Kuala Kurun and Penginapan Kuala Kurun choice for guests who need a clean room, strategic location, simple reservation, and clear nightly rates in Gunung Mas, Central Kalimantan. The property is suitable for business trips, family visits, transit stays, road trips, government office agendas, field work, sales visits, and short stays near the town center.",
+      "For Chinese-speaking guests, Wisma Apollo is located in Kuala Kurun city at Jl. Letjen Soeprapto No.56. The hotel is close to daily needs, local food, town access, and important activity points. Guests can choose Single Bed rooms from IDR 200,000 or Double Bed rooms from IDR 250,000 per night, then confirm availability through WhatsApp before arrival.",
+      "The main room facilities include air conditioning, free WiFi, Android TV, private bathroom with shower, clean towels, bathroom amenities, drinking water, coffee, tea, and a calm atmosphere for resting after travel. This makes Wisma Apollo useful for people searching hotel Kuala Kurun, penginapan Kuala Kurun, Wisma Kuala Kurun, guest house Kuala Kurun, homestay Kuala Kurun, and staycation Kuala Kurun.",
+      "If you are planning a trip to Gunung Mas, this page gives a quick overview before booking: location, room rates, facilities, reservation contact, parking, check-in, check-out, and available add-ons such as breakfast or extra bed. Wisma Apollo keeps the process practical so guests can arrive, confirm the room, and rest without complicated steps."
+    ]
+  },
   "faq": {
+    "guideLabel": "Wisma Apollo FAQ Guide",
+    "guideTitle": "Important information for Hotel Kuala Kurun guests",
+    "guideParagraphs": [
+      "This FAQ page is prepared for guests who are searching Hotel Kuala Kurun, Penginapan Kuala Kurun, Wisma Kuala Kurun, Guest House Kuala Kurun, or accommodation in Gunung Mas. Wisma Apollo is in Kuala Kurun city and is suitable for business trips, family visits, short stays, transit rest, government agendas, sales trips, and travelers who need clean rooms with clear prices.",
+      "Wisma Apollo is located at Jl. Letjen Soeprapto No.56, Kuala Kurun, Gunung Mas Regency, Central Kalimantan. The location is practical for guests who need access to the city center, local food, offices, shops, and daily needs. Room choices include Single Bed from IDR 200,000 per night and Double Bed from IDR 250,000 per night.",
+      "Each room includes air conditioning, free WiFi, Android TV, private shower bathroom, clean towels, amenities, mineral water, coffee, tea, and a quiet sleeping environment. Guests can reserve through WhatsApp so the admin can check room availability, check-in date, check-out date, adult guest count, breakfast request, extra bed request, and special notes before arrival.",
+      "Use this FAQ before booking to understand check-in time, check-out time, room capacity, parking, smoking area guidance, breakfast, extra bed, and the best way to contact Wisma Apollo. The goal is to make your stay in Kuala Kurun easier, faster, and clearer from the first message until you arrive at the property.",
+      "For guests comparing hotel Kuala Kurun, penginapan Kuala Kurun, wisma Kuala Kurun, guest house Kuala Kurun, homestay Kuala Kurun, and staycation Kuala Kurun, this guide gives practical details in one place. You can check the address, phone number, WhatsApp contact, room rate, room capacity, facilities, parking, breakfast, extra bed, and reservation process before deciding.",
+      "Business travelers, government visitors, field workers, sales teams, family guests, and transit guests often need direct information before booking a room. Wisma Apollo keeps the process simple: choose the date, choose Single Bed or Double Bed, enter the guest count, add notes if needed, then submit the reservation request so the admin can confirm availability.",
+      "If you arrive from Palangka Raya or another area in Central Kalimantan, Wisma Apollo can be used as a practical stop in Kuala Kurun. The property is positioned for short stays, work visits, family visits, road trips, and guests who want a clean room near the town center with clear pricing and fast WhatsApp support.",
+      "This FAQ also supports visitors who search for Wisma Apollo Kuala Kurun, hotel near Kuala Kurun city center, lodging near Gunung Mas offices, and clean accommodation with easy reservation. The information is intentionally simple so guests can understand the stay before contacting the admin."
+    ],
+    "guidePoints": [
+      {
+        "title": "Hotel Kuala Kurun",
+        "text": "A practical stay in central Kuala Kurun for business guests, family visits, transit, and short trips."
+      },
+      {
+        "title": "Penginapan Kuala Kurun",
+        "text": "Clear room rates, clean facilities, and WhatsApp reservation support before guests arrive."
+      },
+      {
+        "title": "Wisma Apollo",
+        "text": "Located on Jl. Letjen Soeprapto No.56 with rooms from IDR 200,000 per night."
+      }
+    ],
     "pageTitle": "常见问题解答",
     "pageDesc": "了解关于阿波罗客栈的位置、房价、设施及预订方式的常见问题。",
     "stillQuestion": "还有其他问题吗？",

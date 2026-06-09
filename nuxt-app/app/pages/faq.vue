@@ -10,6 +10,22 @@
 
     <section class="section">
       <div class="container">
+        <div class="faq-guide">
+          <p class="faq-guide-label">{{ $t('faq.guideLabel') }}</p>
+          <h2>{{ $t('faq.guideTitle') }}</h2>
+          <div class="faq-guide-copy">
+            <p v-for="i in faqGuideParagraphCount" :key="i">
+              {{ $t(`faq.guideParagraphs[${i-1}]`) }}
+            </p>
+          </div>
+          <div class="faq-guide-points" role="list">
+            <div v-for="i in faqGuidePointCount" :key="i" class="faq-guide-point" role="listitem">
+              <strong>{{ $t(`faq.guidePoints[${i-1}].title`) }}</strong>
+              <span>{{ $t(`faq.guidePoints[${i-1}].text`) }}</span>
+            </div>
+          </div>
+        </div>
+
         <div class="faq-list" role="list">
           <div v-for="i in faqItemCount" :key="i" class="faq-item" role="listitem">
             <button
@@ -85,6 +101,14 @@ const bookingStore = useBookingStore()
 const faqItemCount = computed(() => {
   const items = tm('faq.items')
   return Array.isArray(items) ? items.length : 8
+})
+const faqGuideParagraphCount = computed(() => {
+  const paragraphs = tm('faq.guideParagraphs')
+  return Array.isArray(paragraphs) ? paragraphs.length : 0
+})
+const faqGuidePointCount = computed(() => {
+  const points = tm('faq.guidePoints')
+  return Array.isArray(points) ? points.length : 0
 })
 
 const homeUrl = computed(() => {

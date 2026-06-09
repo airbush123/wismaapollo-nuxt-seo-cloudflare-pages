@@ -295,6 +295,31 @@
     "stillQuestion": "Masih Ada Pertanyaan?",
     "contactUs": "Hubungi kami langsung via WhatsApp untuk jawaban cepat dan reservasi kamar.",
     "chatWa": "Chat WhatsApp",
+    "guideLabel": "Panduan FAQ Wisma Apollo",
+    "guideTitle": "Informasi penting sebelum menginap di Kuala Kurun",
+    "guideParagraphs": [
+      "Halaman FAQ ini membantu tamu yang sedang mencari hotel Kuala Kurun atau penginapan Kuala Kurun memahami lokasi, fasilitas, tarif kamar, dan cara reservasi di Wisma Apollo. Informasi disusun untuk tamu dinas, keluarga, pekerja lapangan, sales, dan tamu transit yang membutuhkan tempat istirahat bersih di pusat Kuala Kurun.",
+      "Wisma Apollo berada di Jl. Letjen Soeprapto No.56, Kuala Kurun, Kabupaten Gunung Mas. Lokasi ini mudah dijangkau dari area pusat kota, kantor pemerintahan, tempat makan, dan kebutuhan harian. Tamu bisa memilih kamar Single Bed mulai Rp. 200.000 atau Double Bed mulai Rp. 250.000 per malam sesuai kebutuhan.",
+      "Setiap kamar dilengkapi AC, WiFi, TV Android, kamar mandi dalam dengan shower, handuk, amenities, dan suasana kamar yang tenang. Reservasi dapat dilakukan lewat WhatsApp agar admin bisa membantu cek ketersediaan kamar, tanggal check-in, jumlah tamu, sarapan, extra bed, dan catatan khusus sebelum tamu datang.",
+      "Jika kamu baru pertama kali datang ke Kuala Kurun, gunakan FAQ ini untuk memastikan aturan check-in, check-out, parkir, area merokok, dan pilihan fasilitas tambahan. Tujuannya agar proses menginap lebih jelas sejak awal dan tamu tidak perlu menunggu lama saat tiba di Wisma Apollo.",
+      "Untuk tamu yang datang karena urusan kerja atau perjalanan dinas, FAQ ini juga membantu menyiapkan kebutuhan praktis sebelum berangkat. Kamu bisa mengecek kapasitas kamar, fasilitas yang tersedia, nomor kontak reservasi, serta informasi tambahan seperti sarapan dan extra bed. Dengan begitu, keputusan memilih hotel Kuala Kurun bisa dibuat lebih cepat dan lebih yakin.",
+      "Wisma Apollo ingin menjadi penginapan Kuala Kurun yang mudah dipahami sejak halaman pertama. Karena itu informasi tarif, alamat, fasilitas, dan cara pesan dibuat langsung dan transparan. Jika ada kebutuhan khusus seperti datang malam, membawa rombongan kecil, atau membutuhkan kamar tertentu, catatan bisa dikirim melalui form reservasi atau WhatsApp.",
+      "FAQ ini juga dibuat agar calon tamu tidak perlu membuka banyak halaman hanya untuk menemukan informasi dasar. Semua jawaban utama tentang hotel Kuala Kurun, penginapan Kuala Kurun, fasilitas kamar, akses lokasi, dan kontak admin dirangkum singkat agar proses memilih kamar terasa lebih mudah dan keputusan reservasi bisa dibuat lebih cepat."
+    ],
+    "guidePoints": [
+      {
+        "title": "Tarif kamar jelas",
+        "text": "Harga kamar ditampilkan sejak awal agar tamu mudah menyesuaikan kebutuhan dan budget."
+      },
+      {
+        "title": "Lokasi strategis",
+        "text": "Alamat berada di Kuala Kurun, dekat akses utama kota dan kebutuhan harian tamu."
+      },
+      {
+        "title": "Reservasi cepat",
+        "text": "Admin bisa membantu pengecekan kamar, tanggal menginap, dan catatan tambahan via WhatsApp."
+      }
+    ],
     "items": [
       {
         "q": "Di mana lokasi Wisma Apollo?",

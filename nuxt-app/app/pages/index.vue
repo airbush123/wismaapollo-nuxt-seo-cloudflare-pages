@@ -8,6 +8,17 @@
     <LazyGallerySection />
     <LazyTestimonialSection />
     <LazyMapSection />
+    <section v-if="showHomeSeoNote" class="home-seo-note">
+      <div class="container">
+        <p class="home-seo-label">{{ $t('homeSeo.label') }}</p>
+        <h2>{{ $t('homeSeo.title') }}</h2>
+        <div class="home-seo-copy">
+          <p v-for="i in homeSeoParagraphCount" :key="i">
+            {{ $t(`homeSeo.paragraphs[${i-1}]`) }}
+          </p>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -24,8 +35,13 @@ import {
 } from '~/composables/useSitelinkSchema'
 
 useScrollAnimation()
-const { locale } = useI18n()
+const { locale, tm } = useI18n()
 const siteUrl = SITE_URL
+const showHomeSeoNote = computed(() => locale.value === 'zh')
+const homeSeoParagraphCount = computed(() => {
+  const paragraphs = tm('homeSeo.paragraphs')
+  return Array.isArray(paragraphs) ? paragraphs.length : 0
+})
 
 const homeUrl = computed(() => {
   const localePrefix = locale.value === 'id' ? '' : `/${locale.value}`
