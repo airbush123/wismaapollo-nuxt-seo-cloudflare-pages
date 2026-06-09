@@ -1,5 +1,6 @@
 ---
-title: 'Enjoying the Natural Beauty of Batu Suli in Upon Batu Village'
+title: 'Batu Suli, Upon Batu Village'
+seoTitle: 'Batu Suli, Upon Batu Village | Wisma Apollo Travel Guide'
 description: 'Enjoying the natural beauty of Batu Suli in Upon Batu Village, Gunung Mas Regency.'
 category: 'Travel'
 image: '/images/blog/batu-suli-desa-upon-batu.webp'

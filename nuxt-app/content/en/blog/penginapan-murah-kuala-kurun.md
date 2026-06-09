@@ -1,5 +1,6 @@
 ---
-title: 'Affordable Lodging in Kuala Kurun - Prices and Facilities'
+title: 'Affordable Lodging in Kuala Kurun'
+seoTitle: 'Affordable Lodging in Kuala Kurun | Wisma Apollo'
 description: 'Guide to affordable lodging in Kuala Kurun: room rates, facilities, central location, parking, and how to reserve Wisma Apollo directly.'
 category: 'Accommodation'
 image: '/images/blog/penginapan-murah-kuala-kurun.jpg'
