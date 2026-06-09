@@ -1,5 +1,6 @@
 ---
-title: 'Hotel in Gunung Mas, Central Kalimantan: Staying in Kuala Kurun'
+title: 'Hotel in Kuala Kurun'
+seoTitle: 'Hotel in Kuala Kurun: Wisma Apollo | Gunung Mas Travel'
 description: 'Guide to hotels in Gunung Mas for business guests, families, field workers, and travelers staying in Kuala Kurun.'
 category: 'Accommodation'
 image: '/images/blog/hotel-gunung-mas-kalimantan-tengah.png'

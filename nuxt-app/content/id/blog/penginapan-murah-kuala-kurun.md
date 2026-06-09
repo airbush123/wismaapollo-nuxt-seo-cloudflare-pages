@@ -1,5 +1,6 @@
 ---
-title: 'Penginapan Murah di Kuala Kurun - Cek Harga dan Fasilitas'
+title: 'Penginapan Murah Kuala Kurun'
+seoTitle: 'Penginapan Murah Kuala Kurun Terbaik | Wisma Apollo'
 description: 'Panduan memilih penginapan murah di Kuala Kurun: cek harga, fasilitas kamar, lokasi pusat kota, parkir, dan cara reservasi Wisma Apollo.'
 category: 'Penginapan'
 image: '/images/blog/penginapan-murah-kuala-kurun.jpg'

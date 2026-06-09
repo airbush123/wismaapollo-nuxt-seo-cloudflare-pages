@@ -1,5 +1,6 @@
 ---
-title: 'Tips Menginap Nyaman di Kuala Kurun - Panduan Praktis'
+title: 'Tips Menginap Nyaman di Kuala Kurun'
+seoTitle: 'Tips Menginap Nyaman di Kuala Kurun | Wisma Apollo'
 description: 'Tips menginap nyaman di Kuala Kurun: cara memilih penginapan, hotel, atau wisma yang sesuai untuk dinas, transit, dan perjalanan keluarga.'
 category: 'Tips'
 image: '/images/gallery/penginapan-murah-kuala-kurun.webp'
