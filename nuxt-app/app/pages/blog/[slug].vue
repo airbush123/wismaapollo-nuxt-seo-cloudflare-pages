@@ -79,7 +79,9 @@ const articleUrl = computed(() => {
 const articleTitle = computed(() => article.value?.title || 'Blog Wisma Apollo Kuala Kurun')
 const articleSeoTitle = computed(() => {
   const title = articleTitle.value
-  return title.includes('Wisma Apollo') ? `${title} | Blog` : `${title} | Wisma Apollo`
+  return locale.value === 'en'
+    ? `Travel Guide: ${title}`
+    : `Panduan Wisma Apollo: ${title}`
 })
 const articleDescription = computed(() => article.value?.description || article.value?.excerpt || (locale.value === 'en'
   ? 'Wisma Apollo Kuala Kurun articles about accommodation, travel, and culinary destinations in Gunung Mas.'
