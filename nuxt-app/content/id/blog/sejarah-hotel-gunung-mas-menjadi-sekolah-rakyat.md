@@ -1,5 +1,6 @@
 ---
-title: 'Transformasi Hotel Tertua di Gunung Mas Menjadi Sekolah Rakyat'
+title: 'Transformasi Hotel Gunung Mas Jadi Sekolah Rakyat'
+seoTitle: 'Transformasi Hotel Gunung Mas Jadi Sekolah Rakyat | Wisma Apollo'
 description: 'Sejarah luar biasa Hotel Gunung Mas yang kini beralih fungsi menjadi Sekolah Rakyat untuk anak pedalaman.'
 category: 'Info'
 image: '/images/blog/sekolah-rakyat-gunung-mas.jpg'
