@@ -1,5 +1,6 @@
 ---
-title: 'Tips for Staying Comfortably in Kuala Kurun – Complete Guide'
+title: 'Kuala Kurun Stay Guide'
+seoTitle: 'Kuala Kurun Stay Guide: Tips for Comfort | Wisma Apollo'
 description: 'Tips for staying comfortably in Kuala Kurun: how to choose lodging, hotels, or guesthouses for work trips, transit, and family travel.'
 category: 'Tips'
 image: '/images/gallery/penginapan-murah-kuala-kurun.webp'
