@@ -2,7 +2,7 @@
   <footer class="site-footer" role="contentinfo">
     <div class="container">
       <div class="footer-brand">
-        <h3>{{ $t('footer.brand') }}</h3>
+        <p class="footer-brand-title">{{ $t('footer.brand') }}</p>
         <p>{{ $t('footer.summary') }}</p>
         <p>{{ $t('footer.addressLine1') }}<br>{{ $t('footer.addressLine2') }}<br>{{ $t('footer.addressLine3') }}</p>
         <p class="footer-phone">
@@ -14,7 +14,7 @@
       </div>
 
       <nav v-if="isFullLocale" class="footer-links" :aria-label="$t('footer.accommodationTypes')">
-        <h4>{{ $t('footer.accommodationTypes') }}</h4>
+        <p class="footer-section-title">{{ $t('footer.accommodationTypes') }}</p>
         <a :href="canonicalPath('/hotel-kuala-kurun/')">{{ $t('footer.links.hotel') }}</a>
         <a :href="canonicalPath('/penginapan-kuala-kurun/')">{{ $t('footer.links.penginapan') }}</a>
         <a :href="canonicalPath('/guest-house-kuala-kurun/')">{{ $t('footer.links.guestHouse') }}</a>
@@ -24,7 +24,7 @@
       </nav>
 
       <nav v-if="isBlogVisible" class="footer-links" :aria-label="$t('footer.blogTitle')">
-        <h4>{{ $t('footer.blogTitle') }}</h4>
+        <p class="footer-section-title">{{ $t('footer.blogTitle') }}</p>
         <a :href="canonicalPath('/blog/')">{{ $t('footer.blogLinks.all') }}</a>
         <a :href="canonicalPath('/blog/tips-menginap-kuala-kurun/')">{{ $t('footer.blogLinks.tips') }}</a>
         <a :href="canonicalPath('/blog/wisata-gunung-mas/')">{{ $t('footer.blogLinks.wisata') }}</a>
@@ -33,13 +33,13 @@
       </nav>
 
       <nav v-if="isZhLocale" class="footer-links" :aria-label="$t('footer.quickLinks')">
-        <h4>{{ $t('footer.quickLinks') }}</h4>
+        <p class="footer-section-title">{{ $t('footer.quickLinks') }}</p>
         <a :href="canonicalPath('/')">{{ $t('footer.links.home') }}</a>
         <a :href="canonicalPath('/faq/')">{{ $t('nav.faq') }}</a>
       </nav>
 
       <div class="footer-social">
-        <h4>{{ $t('footer.followUs') }}</h4>
+        <p class="footer-section-title footer-social-title">{{ $t('footer.followUs') }}</p>
         <div class="social-row">
           <a href="https://web.facebook.com/wismaapollokualakurun" target="_blank" rel="noopener" aria-label="Facebook">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>

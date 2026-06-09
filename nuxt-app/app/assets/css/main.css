@@ -1007,11 +1007,12 @@ a:focus-visible {
   color: rgba(255, 255, 255, 0.85);
 }
 
-.footer-brand h3 {
+.footer-brand-title {
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--gold-lt);
   margin-bottom: 14px;
+  opacity: 1;
 }
 
 .footer-brand p {
@@ -1031,11 +1032,12 @@ a:focus-visible {
   margin-top: 28px;
 }
 
-.footer-links h4 {
+.footer-section-title {
   font-size: 0.83rem;
   font-weight: 600;
   color: var(--white);
   margin-bottom: 10px;
+  opacity: 1;
 }
 
 .footer-links a {
@@ -1062,10 +1064,7 @@ a:focus-visible {
   margin-top: 28px;
 }
 
-.footer-social h4 {
-  font-size: 0.83rem;
-  font-weight: 600;
-  color: var(--white);
+.footer-social-title {
   margin-bottom: 12px;
 }
 
@@ -2386,7 +2385,7 @@ a:focus-visible {
     background: rgba(15, 61, 46, 0.08);
   }
 
-  .footer-brand h3 {
+  .footer-brand-title {
     color: #FFF4D7;
   }
 
@@ -3211,7 +3210,7 @@ a:focus-visible {
     padding: 64px 0 32px;
   }
 
-  .footer-brand h3 {
+  .footer-brand-title {
     color: #fff4d7;
   }
 
