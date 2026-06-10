@@ -6,6 +6,7 @@
     "build": "nuxt build",
     "dev": "nuxt dev --port 9000",
     "generate": "nuxt generate",
+    "postgenerate": "node scripts/preload-mobile-hero.mjs",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },

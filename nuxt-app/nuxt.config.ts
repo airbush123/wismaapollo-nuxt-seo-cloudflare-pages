@@ -57,7 +57,6 @@ export default defineNuxtConfig({
         { rel: 'icon', href: '/images/logo/favicon-32.png', sizes: '32x32' },
         { rel: 'icon', href: '/images/logo/favicon-192.png', sizes: '192x192' },
         { rel: 'apple-touch-icon', href: '/images/logo/favicon-192.png' },
-        { rel: 'preload', as: 'image', href: '/images/hero-mobile.webp', media: '(max-width: 767px)', fetchpriority: 'high' },
         { rel: 'dns-prefetch', href: 'https://script.google.com' },
       ],
     },
