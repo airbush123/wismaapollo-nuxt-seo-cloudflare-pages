@@ -9,7 +9,6 @@ const META_PIXEL_ID = '2098215477608895'
 const BOOKING_TTL_MS = 24 * 60 * 60 * 1000
 const ATTRIBUTION_TTL_MS = 90 * 24 * 60 * 60 * 1000
 const BOOKING_KEYS = ['trx_id', 'hashed_phone', 'meta_hashed_phone']
-const PASSIVE_TRACKING_DELAY_MS = 90000
 const META_BROWSER_PIXEL_EVENTS = new Set(['Contact', 'AddToCart', 'Lead'])
 const META_CAPI_EVENTS = new Set(['PageView', 'ViewContent', 'Contact', 'AddToCart'])
 
@@ -629,13 +628,6 @@ export function useTracking() {
     return !/^\/(?:en\/)?thanks\/?$/.test(window.location.pathname)
   }
 
-  const getPassiveTrackingDelay = () => {
-    if (shouldAutoLoadPassiveTracking()) return 1000
-    if (!hasWindow()) return 3500
-
-    return PASSIVE_TRACKING_DELAY_MS
-  }
-
   const initLandingTracking = () => {
     if (!hasWindow()) return
 
@@ -669,12 +661,14 @@ export function useTracking() {
     window.addEventListener('click', onInteraction, { passive: true, once: true })
     window.addEventListener('keydown', onInteraction, { passive: true, once: true })
 
-    scheduleIdleTrackingLoad(() => {
-      if (triggered) return
+    if (shouldAutoLoadPassiveTracking()) {
+      scheduleIdleTrackingLoad(() => {
+        if (triggered) return
 
-      triggered = true
-      triggerLoad()
-    }, getPassiveTrackingDelay())
+        triggered = true
+        triggerLoad()
+      }, 1000)
+    }
   }
 
   const trackContact = (source = 'whatsapp') => {

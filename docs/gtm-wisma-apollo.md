@@ -5,6 +5,7 @@ Setup final untuk container `GTM-5995VJ5B`:
 - Google Ads dan Enhanced Conversion berjalan lewat GTM.
 - GA4 berjalan lewat GTM dengan Measurement ID `G-24RFWGMFY8`.
 - Script GTM dimuat lewat first-party proxy `/px/gtm/gtm.js?id=GTM-5995VJ5B`.
+- GTM auto-load cepat hanya untuk traffic ber-click-id (`gclid`, `wbraid`, `gbraid`, atau `fbclid`) dan mode Preview. Visitor organik tanpa interaksi baru memuat GTM setelah klik/keyboard agar audit performa tidak dipaksa memuat tag iklan eksternal.
 - Meta Pixel browser berjalan langsung dari kode website hanya untuk aksi serius (`Contact`, `AddToCart`, `Lead`).
 - Event pasif Meta (`PageView`, `ViewContent`) dikirim lewat CAPI server agar audit speed tidak memuat script Facebook.
 - Meta CAPI berjalan lewat Cloudflare Pages Functions first-party endpoint.
