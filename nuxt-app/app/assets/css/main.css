@@ -1688,6 +1688,18 @@ a:focus-visible {
   line-height: 1.7;
 }
 
+.lp-home-link {
+  margin-top: 22px;
+}
+
+.lp-home-link a {
+  color: var(--forest);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
 .lp-price-table {
   border: 1px solid var(--border);
   border-radius: var(--r-sm);

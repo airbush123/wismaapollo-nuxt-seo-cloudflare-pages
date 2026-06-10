@@ -23,7 +23,7 @@ author: 'Wisma Apollo Editorial Team'
 <p>Most local specialties can be found at:</p>
 <ul>
 <li><strong>Kuala Kurun Traditional Market</strong> – Open morning to afternoon</li>
-<li><strong>Food stalls around Jl. Letjen Soeprapto</strong> – Near <a href="https://wisma-apollo.my.id/penginapan-kuala-kurun/"><strong>Wisma Apollo</strong></a></li>
+<li><strong>Food stalls around Jl. Letjen Soeprapto</strong> – Near <a href="https://wisma-apollo.my.id/en/"><strong>Wisma Apollo</strong></a></li>
 <li><strong>Cafes & restaurants in the city center</strong> – Modern and traditional menu options</li>
 </ul>
 <h2>How to Enjoy Kuala Kurun Cuisine in One Day</h2>

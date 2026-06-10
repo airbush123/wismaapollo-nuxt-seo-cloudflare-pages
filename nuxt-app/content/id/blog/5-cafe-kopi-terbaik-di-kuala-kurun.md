@@ -55,7 +55,7 @@ author: 'Tim Wisma Apollo'
 <p>Nongkrong di cafe akan terasa lebih praktis jika penginapanmu berada di pusat Kuala Kurun. Setelah minum
             kopi atau makan ringan, kamu bisa kembali ke kamar tanpa perjalanan panjang. Ini penting untuk tamu yang
             datang karena dinas, perjalanan keluarga, atau transit, karena waktu istirahat tetap perlu dijaga.</p>
-<p><a href="https://wisma-apollo.my.id/penginapan-kuala-kurun/"><strong>Wisma Apollo</strong></a> berada di Jl. Letjen Soeprapto No.56, Kuala Kurun, sehingga cocok dijadikan titik menginap bagi
+<p><a href="https://wisma-apollo.my.id/"><strong>Wisma Apollo</strong></a> berada di Jl. Letjen Soeprapto No.56, Kuala Kurun, sehingga cocok dijadikan titik menginap bagi
             tamu yang ingin menjelajah cafe dan kuliner sekitar kota. Kamar tersedia mulai Rp200.000 per malam dengan
             AC, WiFi gratis, TV Android, kamar mandi dalam, shower, handuk, amenities, dan parkir luas. Setelah
             nongkrong, tamu bisa kembali ke kamar yang sejuk dan tenang untuk istirahat.</p>

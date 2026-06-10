@@ -57,4 +57,4 @@ author: 'Tim Wisma Apollo'
 
 <p>Simpan kontak penginapan sebelum tiba di Kuala Kurun. Dengan begitu, kamu bisa memastikan kamar lebih awal dan mengatur perjalanan dengan lebih tenang.</p>
 
-<p>Untuk melihat detail kamar, harga, fasilitas, dan cara reservasi, buka halaman <a href="https://wisma-apollo.my.id/hotel-kuala-kurun/"><strong>hotel Kuala Kurun Wisma Apollo</strong></a>.</p>
+<p>Untuk melihat detail kamar, harga, fasilitas, dan cara reservasi, buka halaman <a href="https://wisma-apollo.my.id/"><strong>hotel Kuala Kurun Wisma Apollo</strong></a>.</p>

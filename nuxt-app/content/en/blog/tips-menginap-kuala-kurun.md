@@ -14,7 +14,7 @@ author: 'Wisma Apollo Editorial Team'
             affordable can be challenging if you don't know the right tips.</p>
 <h2>1. Choose a Strategic Location</h2>
 <p>Make sure the accommodation you choose is close to the city center. A strategic location makes it easier to access
-            offices, cafes, and restaurants. <a href="https://wisma-apollo.my.id/penginapan-kuala-kurun/"><strong>Wisma Apollo</strong></a>, for example, is located at Jl. Letjen
+            offices, cafes, and restaurants. <a href="https://wisma-apollo.my.id/en/"><strong>Wisma Apollo</strong></a>, for example, is located at Jl. Letjen
             Soeprapto No.56, right in the heart of Kuala Kurun.</p>
 <h2>2. Check Room Facilities</h2>
 <p>Don't just be tempted by cheap prices. Make sure the room facilities match your needs:</p>

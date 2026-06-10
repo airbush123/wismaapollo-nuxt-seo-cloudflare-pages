@@ -13,7 +13,7 @@ author: 'Wisma Apollo Editorial Team'
 
 <p>Kuala Kurun is the capital of Gunung Mas Regency. This city serves as an important point for business guests, project workers, visiting families, and tourists wanting to explore the surrounding area. From here, access to government offices, main roads, restaurants, minimarkets, and daily needs feels much easier. If your travel agenda is packed, a strategically located accommodation will help save time, energy, and transportation costs.</p>
 
-<p>One option worth considering is <a href="https://wisma-apollo.my.id/hotel-kuala-kurun/"><strong>Wisma Apollo Kuala Kurun</strong></a>. This lodging is located at Jl. Letjen Soeprapto No.56, Kuala Kurun, Gunung Mas, Central Kalimantan. Its location is close to the city's activity center, making it suitable for guests who need a clean resting place that is easy to contact and not far from essential needs during their stay in Gunung Mas.</p>
+<p>One option worth considering is <a href="https://wisma-apollo.my.id/en/"><strong>Wisma Apollo Kuala Kurun</strong></a>. This lodging is located at Jl. Letjen Soeprapto No.56, Kuala Kurun, Gunung Mas, Central Kalimantan. Its location is close to the city's activity center, making it suitable for guests who need a clean resting place that is easy to contact and not far from essential needs during their stay in Gunung Mas.</p>
 
 <h2>Why Is Kuala Kurun a Strategic Staying Point?</h2>
 

@@ -15,6 +15,10 @@
           <p v-for="(p, j) in section.paragraphs" :key="j">{{ p }}</p>
         </div>
 
+        <p class="lp-home-link">
+          <a :href="canonicalPath('/')">{{ homeLinkText }}</a>
+        </p>
+
         <div v-if="pageData.priceRows?.length" class="lp-price">
           <h2>{{ pageData.priceHeading || priceFallbackHeading }}</h2>
           <div class="lp-price-table" role="table">
@@ -95,6 +99,10 @@ const route = useRoute()
 const { locale } = useI18n()
 const canonicalPath = useCanonicalLocalePath()
 const siteUrl = SITE_URL
+const homeLinkText = computed(() => {
+  if (locale.value === 'en') return 'View the Wisma Apollo Kuala Kurun homepage'
+  return 'Lihat halaman utama Wisma Apollo Kuala Kurun'
+})
 
 if (locale.value === 'zh') {
   await navigateTo('/zh/', { redirectCode: 301 })

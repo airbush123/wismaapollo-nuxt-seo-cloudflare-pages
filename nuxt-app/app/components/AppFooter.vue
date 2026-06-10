@@ -15,6 +15,7 @@
 
       <nav v-if="isFullLocale" class="footer-links" :aria-label="$t('footer.accommodationTypes')">
         <p class="footer-section-title">{{ $t('footer.accommodationTypes') }}</p>
+        <a :href="canonicalPath('/')">{{ $t('footer.brand') }} Kuala Kurun</a>
         <a :href="canonicalPath('/hotel-kuala-kurun/')">{{ $t('footer.links.hotel') }}</a>
         <a :href="canonicalPath('/penginapan-kuala-kurun/')">{{ $t('footer.links.penginapan') }}</a>
         <a :href="canonicalPath('/guest-house-kuala-kurun/')">{{ $t('footer.links.guestHouse') }}</a>

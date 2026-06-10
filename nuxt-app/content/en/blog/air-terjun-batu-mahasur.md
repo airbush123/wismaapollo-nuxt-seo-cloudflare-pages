@@ -37,7 +37,7 @@ author: 'Wisma Apollo Editorial Team'
 <p>Visitors should also be careful when taking photos. Wet rock areas can be slippery, so don't force dangerous positions just for a picture. If coming with children, make sure there's always an adult supervising. Nature tourism is easier to enjoy at a leisurely pace, safely, and while respecting the surrounding environment.</p>
 <h2>Accommodation Plans After Nature Tourism</h2>
 <p>After playing in the water or light trekking, the body usually needs a clean and cool resting place. Staying in central Kuala Kurun makes the return journey from tourist destinations feel more practical. You can shower, change clothes, charge your phone, then find dinner around the city without having to make an additional tiring journey.</p>
-<p><a href="https://wisma-apollo.my.id/penginapan-kuala-kurun/"><strong>Wisma Apollo</strong></a> is a suitable accommodation choice after visiting Batu Mahasur Waterfall. Located at Jl. Letjen Soeprapto No.56, Kuala Kurun, with rooms from IDR 200,000 per night. Facilities including AC, free WiFi, Android TV, shower, towels, amenities, and spacious parking help guests recover energy after a full day of enjoying Gunung Mas nature tourism.</p>
+<p><a href="https://wisma-apollo.my.id/en/"><strong>Wisma Apollo</strong></a> is a suitable accommodation choice after visiting Batu Mahasur Waterfall. Located at Jl. Letjen Soeprapto No.56, Kuala Kurun, with rooms from IDR 200,000 per night. Facilities including AC, free WiFi, Android TV, shower, towels, amenities, and spacious parking help guests recover energy after a full day of enjoying Gunung Mas nature tourism.</p>
 <div class="cta-box cta-reservation">
 <div class="cta-copy">
 <span class="cta-kicker">Direct Reservation</span>

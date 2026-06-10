@@ -27,7 +27,7 @@ author: 'Wisma Apollo Editorial Team'
 <h2>Keeping City Stories Alive</h2>
 <p>Stories about old buildings, schools, markets, rivers, and public spaces are part of Kuala Kurun's identity. The more local stories are written and shared, the easier it is for outsiders to understand this region more completely. Articles like this are not just brief historical notes, but also an invitation to see Gunung Mas as a region with its own journey, challenges, and hopes.</p>
 <p>For readers planning a trip, make local stories a complement to your itinerary. After completing work or tourism agendas, take time to discover the side of the city that doesn't always appear in travel brochures. Kuala Kurun has many stories to tell, and a comfortable staying experience will make the process of getting to know this city feel more peaceful.</p>
-<p>If you happen to visit or stay at <a href="https://wisma-apollo.my.id/hotel-kuala-kurun/"><strong>Wisma Apollo Kuala Kurun</strong>
+<p>If you happen to visit or stay at <a href="https://wisma-apollo.my.id/en/"><strong>Wisma Apollo Kuala Kurun</strong>
 </a>, this former hotel building can spark inspiring local stories that are very motivating. Let's continue supporting educational programs like this so Kuala Kurun continues to advance and produce excellent human resources from the land of Central Kalimantan!</p>
 <div class="cta-box cta-reservation">
 <div class="cta-copy">

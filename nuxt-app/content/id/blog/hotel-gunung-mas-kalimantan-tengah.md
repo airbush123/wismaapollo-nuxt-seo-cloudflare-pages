@@ -13,7 +13,7 @@ author: 'Tim Wisma Apollo'
 
 <p>Kuala Kurun adalah ibu kota Kabupaten Gunung Mas. Kota ini menjadi titik penting bagi tamu dinas, pekerja proyek, keluarga yang berkunjung, dan wisatawan yang ingin menjelajahi kawasan sekitar. Dari sini, akses ke kantor pemerintahan, jalan utama, tempat makan, minimarket, dan kebutuhan harian terasa lebih mudah. Jika agenda perjalanan padat, lokasi menginap yang strategis akan membantu menghemat waktu, tenaga, dan biaya transportasi.</p>
 
-<p>Salah satu pilihan yang bisa dipertimbangkan adalah <a href="https://wisma-apollo.my.id/hotel-kuala-kurun/"><strong>Wisma Apollo Kuala Kurun</strong></a>. Penginapan ini berada di Jl. Letjen Soeprapto No.56, Kuala Kurun, Gunung Mas, Kalimantan Tengah. Lokasinya dekat dengan pusat aktivitas kota, sehingga cocok untuk tamu yang membutuhkan tempat istirahat bersih, mudah dihubungi, dan tidak jauh dari kebutuhan utama selama berada di Gunung Mas.</p>
+<p>Salah satu pilihan yang bisa dipertimbangkan adalah <a href="https://wisma-apollo.my.id/"><strong>Wisma Apollo Kuala Kurun</strong></a>. Penginapan ini berada di Jl. Letjen Soeprapto No.56, Kuala Kurun, Gunung Mas, Kalimantan Tengah. Lokasinya dekat dengan pusat aktivitas kota, sehingga cocok untuk tamu yang membutuhkan tempat istirahat bersih, mudah dihubungi, dan tidak jauh dari kebutuhan utama selama berada di Gunung Mas.</p>
 
 <h2>Kenapa Kuala Kurun Jadi Titik Menginap yang Strategis?</h2>
 
