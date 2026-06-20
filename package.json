@@ -8,6 +8,6 @@
     "node": ">=22.12.0"
   },
   "dependencies": {
-    "wrangler": "^4.69.0"
+    "wrangler": "^4.103.0"
   }
 }
