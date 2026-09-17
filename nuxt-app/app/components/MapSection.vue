@@ -50,7 +50,7 @@
       <div v-else class="map-wrap">
         <iframe
           v-if="showMap"
-          src="https://maps.google.com/maps?q=-1.4683,113.886(Wisma+Apollo+Kuala+Kurun)&t=&z=16&ie=UTF8&iwloc=B&output=embed"
+          src="https://www.google.com/maps?q=Wisma+Apollo+Kuala+Kurun&output=embed"
           width="100%"
           height="280"
           style="border:0;border-radius:12px"
