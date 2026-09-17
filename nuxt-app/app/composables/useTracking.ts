@@ -64,6 +64,21 @@ const sentTrackingEvents = new Set<string>()
 export function useTracking() {
   const hasWindow = () => typeof window !== 'undefined'
 
+  const getCookie = (name: string): string => {
+    if (!hasWindow()) return ''
+
+    const cookie = document.cookie
+      .split('; ')
+      .find((item) => item.startsWith(`${name}=`))
+
+    return cookie ? decodeURIComponent(cookie.split('=').slice(1).join('=')) : ''
+  }
+
+  const setCookie = (name: string, value: string, maxAgeSeconds: number = 7776000) => {
+    if (!hasWindow()) return
+    document.cookie = `${name}=${encodeURIComponent(value)}; max-age=${maxAgeSeconds}; path=/`
+  }
+
   const getFromStorage = (key: string): string => {
     if (!hasWindow()) return ''
 
@@ -77,10 +92,13 @@ export function useTracking() {
       if (expiresAt && Date.now() > expiresAt) {
         localStorage.removeItem(`${STORAGE_PREFIX}${key}`)
         localStorage.removeItem(`${STORAGE_PREFIX}${key}_expires_at`)
-        return ''
       }
 
-      return localStorage.getItem(`${STORAGE_PREFIX}${key}`) || ''
+      let val = localStorage.getItem(`${STORAGE_PREFIX}${key}`) || ''
+      if (!val && ['gclid', 'wbraid', 'gbraid', 'fbclid'].includes(key)) {
+        val = getCookie(`aid_${key}`)
+      }
+      return val
     } catch {
       return ''
     }
@@ -137,10 +155,22 @@ export function useTracking() {
     const fbclid = params.get('fbclid') || ''
     const campaign = params.get('p') || params.get('utm_campaign') || ''
 
-    if (gclid) setToStorage('gclid', gclid, ATTRIBUTION_TTL_MS)
-    if (wbraid) setToStorage('wbraid', wbraid, ATTRIBUTION_TTL_MS)
-    if (gbraid) setToStorage('gbraid', gbraid, ATTRIBUTION_TTL_MS)
-    if (fbclid) setToStorage('fbclid', fbclid, ATTRIBUTION_TTL_MS)
+    if (gclid) {
+      setToStorage('gclid', gclid, ATTRIBUTION_TTL_MS)
+      setCookie('aid_gclid', gclid)
+    }
+    if (wbraid) {
+      setToStorage('wbraid', wbraid, ATTRIBUTION_TTL_MS)
+      setCookie('aid_wbraid', wbraid)
+    }
+    if (gbraid) {
+      setToStorage('gbraid', gbraid, ATTRIBUTION_TTL_MS)
+      setCookie('aid_gbraid', gbraid)
+    }
+    if (fbclid) {
+      setToStorage('fbclid', fbclid, ATTRIBUTION_TTL_MS)
+      setCookie('aid_fbclid', fbclid)
+    }
     if (campaign) setToStorage('campaign', campaign, ATTRIBUTION_TTL_MS)
   }
 
@@ -341,15 +371,7 @@ export function useTracking() {
 
   const getEventId = (eventName: string) => `${getOrCreateTrxId()}-${eventName}`
 
-  const getCookie = (name: string): string => {
-    if (!hasWindow()) return ''
 
-    const cookie = document.cookie
-      .split('; ')
-      .find((item) => item.startsWith(`${name}=`))
-
-    return cookie ? decodeURIComponent(cookie.split('=').slice(1).join('=')) : ''
-  }
 
   const getFbc = (): string => {
     const storedFbc = getCookie('_fbc')

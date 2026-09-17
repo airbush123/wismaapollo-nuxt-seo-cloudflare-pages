@@ -8,16 +8,21 @@
         const fbclid = urlParams.get('fbclid') || '';
         const utmSource = (urlParams.get('utm_source') || '').toLowerCase();
 
+        const setCookie = (name, value, maxAgeSeconds = 7776000) => {
+            document.cookie = `${name}=${encodeURIComponent(value)}; max-age=${maxAgeSeconds}; path=/`;
+        };
+
         if (fbclid || ['facebook', 'fb', 'instagram', 'ig', 'meta'].includes(utmSource)) {
             sessionStorage.setItem('wa_source', 'Meta');
             sessionStorage.setItem('wa_click_id', fbclid);
             sessionStorage.setItem('wa_fbclid', fbclid);
+            if (fbclid) setCookie('aid_fbclid', fbclid);
         } else if (gclid || wbraid || gbraid || utmSource === 'google') {
             sessionStorage.setItem('wa_source', 'Google');
             sessionStorage.setItem('wa_click_id', gclid || wbraid || gbraid);
-            if (gclid) sessionStorage.setItem('wa_gclid', gclid);
-            if (wbraid) sessionStorage.setItem('wa_wbraid', wbraid);
-            if (gbraid) sessionStorage.setItem('wa_gbraid', gbraid);
+            if (gclid) { sessionStorage.setItem('wa_gclid', gclid); setCookie('aid_gclid', gclid); }
+            if (wbraid) { sessionStorage.setItem('wa_wbraid', wbraid); setCookie('aid_wbraid', wbraid); }
+            if (gbraid) { sessionStorage.setItem('wa_gbraid', gbraid); setCookie('aid_gbraid', gbraid); }
         }
     } catch(e) {
         // Ignore sessionStorage exceptions in Strict Incognito Mode
@@ -174,13 +179,19 @@
             let wbraid = '';
             let gbraid = '';
             let fbclid = '';
+            
+            const getCookie = (name) => {
+                const cookie = document.cookie.split('; ').find(row => row.startsWith(name + '='));
+                return cookie ? decodeURIComponent(cookie.split('=')[1]) : '';
+            };
+
             try {
-                source = sessionStorage.getItem('wa_source') || 'Organic';
-                clickId = sessionStorage.getItem('wa_click_id') || '';
-                gclid = sessionStorage.getItem('wa_gclid') || '';
-                wbraid = sessionStorage.getItem('wa_wbraid') || '';
-                gbraid = sessionStorage.getItem('wa_gbraid') || '';
-                fbclid = sessionStorage.getItem('wa_fbclid') || '';
+                gclid = sessionStorage.getItem('wa_gclid') || localStorage.getItem('wisma_gclid') || getCookie('aid_gclid') || '';
+                wbraid = sessionStorage.getItem('wa_wbraid') || localStorage.getItem('wisma_wbraid') || getCookie('aid_wbraid') || '';
+                gbraid = sessionStorage.getItem('wa_gbraid') || localStorage.getItem('wisma_gbraid') || getCookie('aid_gbraid') || '';
+                fbclid = sessionStorage.getItem('wa_fbclid') || localStorage.getItem('wisma_fbclid') || getCookie('aid_fbclid') || '';
+                clickId = sessionStorage.getItem('wa_click_id') || gclid || wbraid || gbraid || fbclid || '';
+                source = sessionStorage.getItem('wa_source') || (gclid || wbraid || gbraid ? 'Google' : (fbclid ? 'Meta' : 'Organic'));
             } catch(e) {}
 
             const trxId = 'TRX-' + Date.now() + '-' + Math.random().toString(36).substring(2, 7);
