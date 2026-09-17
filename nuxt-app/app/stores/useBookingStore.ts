@@ -124,8 +124,18 @@ function getTrafficSource(params: URLSearchParams) {
   const wbraid = params.get('wbraid') || ''
   const gbraid = params.get('gbraid') || ''
 
-  if (fbclid || ['facebook', 'fb', 'instagram', 'ig', 'meta'].includes(utmSource)) {
-    return { source: 'Meta', clickId: fbclid }
+  const referrer = typeof document !== 'undefined' ? (document.referrer || '').toLowerCase() : ''
+
+  if (utmSource === 'instagram' || utmSource === 'ig' || referrer.includes('instagram.com')) {
+    return { source: 'Instagram', clickId: fbclid }
+  }
+
+  if (utmSource === 'facebook' || utmSource === 'fb' || referrer.includes('facebook.com')) {
+    return { source: 'Facebook', clickId: fbclid }
+  }
+
+  if (fbclid || utmSource === 'meta') {
+    return { source: referrer.includes('instagram') ? 'Instagram' : 'Meta', clickId: fbclid }
   }
 
   if (gclid || wbraid || gbraid || utmSource === 'google') {
