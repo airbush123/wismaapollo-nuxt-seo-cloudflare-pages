@@ -1,5 +1,5 @@
 <template>
-  <footer class="site-footer" role="contentinfo" data-nosnippet>
+  <footer class="site-footer" role="contentinfo">
     <div class="container">
       <div class="footer-brand">
         <p class="footer-brand-title">{{ $t('footer.brand') }}</p>
