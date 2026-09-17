@@ -132,6 +132,14 @@ function getTrafficSource(params: URLSearchParams) {
     return { source: 'Google', clickId: gclid || wbraid || gbraid }
   }
 
+  if (utmSource.includes('map') || utmSource === 'gmb') {
+    return { source: 'Google Maps', clickId: '' }
+  }
+
+  if (utmSource) {
+    return { source: utmSource, clickId: '' }
+  }
+
   return { source: 'Organic', clickId: '' }
 }
 
