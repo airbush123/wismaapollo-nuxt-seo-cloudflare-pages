@@ -44,6 +44,7 @@ Reservation modal
 
 Related documentation:
 
+- `docs/DOKUMENTASI_LENGKAP_WISMA_APOLLO.md` documents the complete end-to-end system: Google Ads tracking, Google Sheets & email alerts, greeting templates, and operational SOPs.
 - `docs/google-sheet-webhook-columns.md` documents the fields sent to Google Sheets.
 - `docs/website-tree-and-spec.md` documents the full website tree, booking flow, tracking flow, and SEO structure.
 - `docs/gtm-wisma-apollo.md` documents the GTM and tracking setup.

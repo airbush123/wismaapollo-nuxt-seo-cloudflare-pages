@@ -93,6 +93,22 @@ Variable user yang dibutuhkan:
 - `dlv_total_booking_value`
 - `User Data EC`
 
+## Integrasi WBRAID & GBRAID (iOS & App Attribution)
+
+Untuk mengantisipasi pembatasan tracking cookie di iOS (Apple App Tracking Transparency / ITP), sistem mendukung trio Google Click ID:
+1. `gclid`: Klik dari Google Search/Web Desktop dan Android browser standar.
+2. `wbraid`: Klik dari Web-to-App atau kampanye web pada perangkat iOS 14.5+.
+3. `gbraid`: Klik dari App-to-Web (iklan di aplikasi Google seperti YouTube app, Gmail app, Google Maps app) pada iOS/Android.
+
+### Pengaturan di GTM:
+- **Conversion Linker**: Opsi `enableUrlPassthrough` diaktifkan (`true`) agar parameter `wbraid` dan `gbraid` tidak hilang saat user berpindah halaman atau terjadi redirect.
+- **Google Ads Conversion Tags (`GAds - Lead`, `GAds - ATC`, `GAds - Kontak`, `GAds - VC`, `GAds - PV`)**:
+  - Menyertakan parameter `orderId: {{dlv_transaction_id}}` untuk deduplikasi.
+  - Membawa custom parameters `wbraid: {{dlv_wbraid}}`, `gbraid: {{dlv_gbraid}}`, dan `gclid: {{dlv_gclid}}`.
+- **Enhanced Conversions (Konversi yang Disempurnakan)**:
+  - Tag `GAds - Lead Wisma` dan `GAds - ATC Wisma` langsung menautkan variable `{{User Data EC}}` (`provideEnhancedConversionData: true`).
+  - Nomor telepon diformat E.164 (`+62...`), di-hash dengan SHA-256, lalu dikirim bersama `wbraid`/`gbraid` untuk dicocokkan dengan akun Google pengguna yang login di perangkat iOS/Android.
+
 ## Catatan Meta
 
 Meta tidak perlu di-import ke GTM. Kode website sudah menangani:

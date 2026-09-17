@@ -1,6 +1,6 @@
 {
   "exportFormatVersion": 2,
-  "exportTime": "2026-05-08 15:45:02",
+  "exportTime": "2026-05-11 20:50:54",
   "containerVersion": {
     "path": "accounts/6353748494/containers/251569894/versions/0",
     "accountId": "6353748494",
@@ -69,6 +69,62 @@
             "value": "FrBUCM3jr7gcEPfkkLpD"
           },
           {
+            "type": "TEMPLATE",
+            "key": "orderId",
+            "value": "{{dlv_transaction_id}}"
+          },
+          {
+            "type": "LIST",
+            "key": "customParams",
+            "list": [
+              {
+                "type": "MAP",
+                "map": [
+                  {
+                    "type": "TEMPLATE",
+                    "key": "key",
+                    "value": "wbraid"
+                  },
+                  {
+                    "type": "TEMPLATE",
+                    "key": "value",
+                    "value": "{{dlv_wbraid}}"
+                  }
+                ]
+              },
+              {
+                "type": "MAP",
+                "map": [
+                  {
+                    "type": "TEMPLATE",
+                    "key": "key",
+                    "value": "gbraid"
+                  },
+                  {
+                    "type": "TEMPLATE",
+                    "key": "value",
+                    "value": "{{dlv_gbraid}}"
+                  }
+                ]
+              },
+              {
+                "type": "MAP",
+                "map": [
+                  {
+                    "type": "TEMPLATE",
+                    "key": "key",
+                    "value": "gclid"
+                  },
+                  {
+                    "type": "TEMPLATE",
+                    "key": "value",
+                    "value": "{{dlv_gclid}}"
+                  }
+                ]
+              }
+            ]
+          },
+          {
             "type": "BOOLEAN",
             "key": "rdp",
             "value": "false"
@@ -113,6 +169,62 @@
             "type": "TEMPLATE",
             "key": "conversionLabel",
             "value": "DLj_COy4rrgcEPfkkLpD"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "orderId",
+            "value": "{{dlv_transaction_id}}"
+          },
+          {
+            "type": "LIST",
+            "key": "customParams",
+            "list": [
+              {
+                "type": "MAP",
+                "map": [
+                  {
+                    "type": "TEMPLATE",
+                    "key": "key",
+                    "value": "wbraid"
+                  },
+                  {
+                    "type": "TEMPLATE",
+                    "key": "value",
+                    "value": "{{dlv_wbraid}}"
+                  }
+                ]
+              },
+              {
+                "type": "MAP",
+                "map": [
+                  {
+                    "type": "TEMPLATE",
+                    "key": "key",
+                    "value": "gbraid"
+                  },
+                  {
+                    "type": "TEMPLATE",
+                    "key": "value",
+                    "value": "{{dlv_gbraid}}"
+                  }
+                ]
+              },
+              {
+                "type": "MAP",
+                "map": [
+                  {
+                    "type": "TEMPLATE",
+                    "key": "key",
+                    "value": "gclid"
+                  },
+                  {
+                    "type": "TEMPLATE",
+                    "key": "value",
+                    "value": "{{dlv_gclid}}"
+                  }
+                ]
+              }
+            ]
           },
           {
             "type": "BOOLEAN",
@@ -161,6 +273,72 @@
             "value": "bo-PCNi5sLgcEPfkkLpD"
           },
           {
+            "type": "TEMPLATE",
+            "key": "orderId",
+            "value": "{{dlv_transaction_id}}"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "provideEnhancedConversionData",
+            "value": "true"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "userDataVariable",
+            "value": "{{User Data EC}}"
+          },
+          {
+            "type": "LIST",
+            "key": "customParams",
+            "list": [
+              {
+                "type": "MAP",
+                "map": [
+                  {
+                    "type": "TEMPLATE",
+                    "key": "key",
+                    "value": "wbraid"
+                  },
+                  {
+                    "type": "TEMPLATE",
+                    "key": "value",
+                    "value": "{{dlv_wbraid}}"
+                  }
+                ]
+              },
+              {
+                "type": "MAP",
+                "map": [
+                  {
+                    "type": "TEMPLATE",
+                    "key": "key",
+                    "value": "gbraid"
+                  },
+                  {
+                    "type": "TEMPLATE",
+                    "key": "value",
+                    "value": "{{dlv_gbraid}}"
+                  }
+                ]
+              },
+              {
+                "type": "MAP",
+                "map": [
+                  {
+                    "type": "TEMPLATE",
+                    "key": "key",
+                    "value": "gclid"
+                  },
+                  {
+                    "type": "TEMPLATE",
+                    "key": "value",
+                    "value": "{{dlv_gclid}}"
+                  }
+                ]
+              }
+            ]
+          },
+          {
             "type": "BOOLEAN",
             "key": "rdp",
             "value": "false"
@@ -205,6 +383,72 @@
             "type": "TEMPLATE",
             "key": "conversionLabel",
             "value": "45vBCNiPrrgcEPfkkLpD"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "orderId",
+            "value": "{{dlv_transaction_id}}"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "provideEnhancedConversionData",
+            "value": "true"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "userDataVariable",
+            "value": "{{User Data EC}}"
+          },
+          {
+            "type": "LIST",
+            "key": "customParams",
+            "list": [
+              {
+                "type": "MAP",
+                "map": [
+                  {
+                    "type": "TEMPLATE",
+                    "key": "key",
+                    "value": "wbraid"
+                  },
+                  {
+                    "type": "TEMPLATE",
+                    "key": "value",
+                    "value": "{{dlv_wbraid}}"
+                  }
+                ]
+              },
+              {
+                "type": "MAP",
+                "map": [
+                  {
+                    "type": "TEMPLATE",
+                    "key": "key",
+                    "value": "gbraid"
+                  },
+                  {
+                    "type": "TEMPLATE",
+                    "key": "value",
+                    "value": "{{dlv_gbraid}}"
+                  }
+                ]
+              },
+              {
+                "type": "MAP",
+                "map": [
+                  {
+                    "type": "TEMPLATE",
+                    "key": "key",
+                    "value": "gclid"
+                  },
+                  {
+                    "type": "TEMPLATE",
+                    "key": "value",
+                    "value": "{{dlv_gclid}}"
+                  }
+                ]
+              }
+            ]
           },
           {
             "type": "BOOLEAN",
@@ -270,7 +514,7 @@
           {
             "type": "BOOLEAN",
             "key": "enableUrlPassthrough",
-            "value": "false"
+            "value": "true"
           },
           {
             "type": "TEMPLATE",
@@ -347,6 +591,62 @@
             "type": "TEMPLATE",
             "key": "conversionLabel",
             "value": "gH-uCLSVsLgcEPfkkLpD"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "orderId",
+            "value": "{{dlv_transaction_id}}"
+          },
+          {
+            "type": "LIST",
+            "key": "customParams",
+            "list": [
+              {
+                "type": "MAP",
+                "map": [
+                  {
+                    "type": "TEMPLATE",
+                    "key": "key",
+                    "value": "wbraid"
+                  },
+                  {
+                    "type": "TEMPLATE",
+                    "key": "value",
+                    "value": "{{dlv_wbraid}}"
+                  }
+                ]
+              },
+              {
+                "type": "MAP",
+                "map": [
+                  {
+                    "type": "TEMPLATE",
+                    "key": "key",
+                    "value": "gbraid"
+                  },
+                  {
+                    "type": "TEMPLATE",
+                    "key": "value",
+                    "value": "{{dlv_gbraid}}"
+                  }
+                ]
+              },
+              {
+                "type": "MAP",
+                "map": [
+                  {
+                    "type": "TEMPLATE",
+                    "key": "key",
+                    "value": "gclid"
+                  },
+                  {
+                    "type": "TEMPLATE",
+                    "key": "value",
+                    "value": "{{dlv_gclid}}"
+                  }
+                ]
+              }
+            ]
           },
           {
             "type": "BOOLEAN",
@@ -2155,6 +2455,6 @@
     ],
     "fingerprint": "1778255101977",
     "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/6353748494/containers/251569894/versions/0?apiLink=version",
-    "name": "Wisma Apollo Tracking"
+    "name": "Wisma Apollo - Google Ads Final"
   }
 }

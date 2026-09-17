@@ -2,12 +2,22 @@
 (function () {
     try {
         const urlParams = new URLSearchParams(window.location.search);
-        if (urlParams.has('fbclid')) {
+        const gclid = urlParams.get('gclid') || '';
+        const wbraid = urlParams.get('wbraid') || '';
+        const gbraid = urlParams.get('gbraid') || '';
+        const fbclid = urlParams.get('fbclid') || '';
+        const utmSource = (urlParams.get('utm_source') || '').toLowerCase();
+
+        if (fbclid || ['facebook', 'fb', 'instagram', 'ig', 'meta'].includes(utmSource)) {
             sessionStorage.setItem('wa_source', 'Meta');
-            sessionStorage.setItem('wa_click_id', urlParams.get('fbclid'));
-        } else if (urlParams.has('gclid') || urlParams.get('utm_source') === 'google') {
+            sessionStorage.setItem('wa_click_id', fbclid);
+            sessionStorage.setItem('wa_fbclid', fbclid);
+        } else if (gclid || wbraid || gbraid || utmSource === 'google') {
             sessionStorage.setItem('wa_source', 'Google');
-            sessionStorage.setItem('wa_click_id', urlParams.get('gclid') || '');
+            sessionStorage.setItem('wa_click_id', gclid || wbraid || gbraid);
+            if (gclid) sessionStorage.setItem('wa_gclid', gclid);
+            if (wbraid) sessionStorage.setItem('wa_wbraid', wbraid);
+            if (gbraid) sessionStorage.setItem('wa_gbraid', gbraid);
         }
     } catch(e) {
         // Ignore sessionStorage exceptions in Strict Incognito Mode
@@ -160,41 +170,82 @@
 
             let source = 'Organic';
             let clickId = '';
+            let gclid = '';
+            let wbraid = '';
+            let gbraid = '';
+            let fbclid = '';
             try {
                 source = sessionStorage.getItem('wa_source') || 'Organic';
                 clickId = sessionStorage.getItem('wa_click_id') || '';
+                gclid = sessionStorage.getItem('wa_gclid') || '';
+                wbraid = sessionStorage.getItem('wa_wbraid') || '';
+                gbraid = sessionStorage.getItem('wa_gbraid') || '';
+                fbclid = sessionStorage.getItem('wa_fbclid') || '';
             } catch(e) {}
 
-            const payload = {
-                name: name,
-                phone: phone,
-                source: source,
-                clickId: clickId
-            };
+            const trxId = 'TRX-' + Date.now() + '-' + Math.random().toString(36).substring(2, 7);
 
-            const BOOKING_LEAD_URL = '/api/booking-lead';
-
-            // Fire Meta Pixel & Google Ads Lead Event - Wrapped in Try-Catch for AdBlockers
-            try {
-                if (typeof dataLayer !== 'undefined') {
-                    dataLayer.push({
-                        'event': 'generate_lead',
-                        'lead_source': source
-                    });
+            // SHA-256 Hashing for Google Ads Enhanced Conversion (+62 format)
+            async function hashPhoneForAds(raw) {
+                if (!window.crypto || !window.crypto.subtle) return '';
+                try {
+                    let c = raw.replace(/[^0-9]/g, '');
+                    if (c.startsWith('0')) c = '62' + c.substring(1);
+                    if (!c.startsWith('62')) c = '62' + c;
+                    const normalized = '+' + c;
+                    const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(normalized));
+                    return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
+                } catch (e) {
+                    return '';
                 }
-                if (typeof fbq !== 'undefined') {
-                    fbq('track', 'Lead');
-                } 
-                if (typeof gtag !== 'undefined') {
-                    gtag('event', 'conversion', {
-                        'send_to': 'AW-18107085431/bo-PCNi5sLgcEPfkkLpD',
-                        'event_category': 'engagement',
-                        'event_label': 'WhatsApp Form'
-                    });
-                }
-            } catch(e) {
-                // Tracking blocked by browser, ignoring safely
             }
+
+            // Fire Meta Pixel & Google Ads Lead Event - Enhanced Conversions with wbraid & gbraid
+            hashPhoneForAds(phone).then(function(hashedPhone) {
+                try {
+                    if (typeof dataLayer !== 'undefined') {
+                        dataLayer.push({
+                            'event': 'wisma_lead',
+                            'event_id': trxId + '-wisma_lead',
+                            'transaction_id': trxId,
+                            'order_id': trxId,
+                            'lead_source': source,
+                            'clickId': clickId,
+                            'gclid': gclid,
+                            'wbraid': wbraid,
+                            'gbraid': gbraid,
+                            'fbclid': fbclid,
+                            'hashed_phone': hashedPhone,
+                            'sha256_phone_number': hashedPhone,
+                            'user_data': hashedPhone ? { 'sha256_phone_number': [hashedPhone] } : undefined
+                        });
+                    }
+                    if (typeof fbq !== 'undefined') {
+                        fbq('track', 'Lead');
+                    } 
+                    if (typeof gtag !== 'undefined') {
+                        if (hashedPhone) {
+                            gtag('set', 'user_data', {
+                                'sha256_phone_number': [hashedPhone]
+                            });
+                        }
+                        const convPayload = {
+                            'send_to': 'AW-18107085431/bo-PCNi5sLgcEPfkkLpD',
+                            'value': 5000,
+                            'currency': 'IDR',
+                            'transaction_id': trxId,
+                            'event_category': 'engagement',
+                            'event_label': 'WhatsApp Form'
+                        };
+                        if (wbraid) convPayload.wbraid = wbraid;
+                        if (gbraid) convPayload.gbraid = gbraid;
+                        if (gclid) convPayload.gclid = gclid;
+                        gtag('event', 'conversion', convPayload);
+                    }
+                } catch(e) {
+                    // Tracking blocked by browser, ignoring safely
+                }
+            });
 
             // Submit data via hidden iframe + form POST
             // Iframe has its own browsing context — Google Script processes the request
@@ -238,7 +289,17 @@
             hiddenForm.style.display = 'none';
 
             // Add form fields (Google Apps Script reads via e.parameter)
-            const fields = { name: name, phone: phone, source: source, clickId: clickId };
+            const fields = {
+                name: name,
+                phone: phone,
+                source: source,
+                clickId: clickId,
+                transactionId: trxId,
+                gclid: gclid,
+                wbraid: wbraid,
+                gbraid: gbraid,
+                fbclid: fbclid
+            };
             Object.keys(fields).forEach(key => {
                 const input = document.createElement('input');
                 input.type = 'hidden';

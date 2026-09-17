@@ -263,6 +263,10 @@ export function useTracking() {
       ...payload,
       event_id: eventId,
       meta_event_id: eventId,
+      order_id: basePayload.transaction_id || basePayload.trx_id,
+      gclid: payload.gclid || basePayload.gclid || getFromStorage('gclid'),
+      wbraid: payload.wbraid || basePayload.wbraid || getFromStorage('wbraid'),
+      gbraid: payload.gbraid || basePayload.gbraid || getFromStorage('gbraid'),
     }
     const dedupeKey = [
       eventName,
@@ -279,6 +283,24 @@ export function useTracking() {
       send_to: payload.conversion_label ? `AW-${GOOGLE_ADS_ID}/${payload.conversion_label}` : undefined,
       ...fullPayload
     })
+
+    const appWindow = window as any
+    if (typeof appWindow.gtag === 'function') {
+      try {
+        const adsParams: Record<string, unknown> = {}
+        if (fullPayload.wbraid) adsParams.wbraid = fullPayload.wbraid
+        if (fullPayload.gbraid) adsParams.gbraid = fullPayload.gbraid
+        if (fullPayload.gclid) adsParams.gclid = fullPayload.gclid
+        if (Object.keys(adsParams).length > 0) {
+          appWindow.gtag('set', adsParams)
+        }
+        if (fullPayload.user_data) {
+          appWindow.gtag('set', 'user_data', fullPayload.user_data)
+        }
+      } catch {
+        // Fallback safely
+      }
+    }
 
     pushMetaEvent(eventName, value, fullPayload)
   }
@@ -462,6 +484,9 @@ export function useTracking() {
       hashed_phone: hashedPhone,
       sha256_phone_number: hashedPhone,
       phone_number: hashedPhone,
+      gclid: getFromStorage('gclid'),
+      wbraid: getFromStorage('wbraid'),
+      gbraid: getFromStorage('gbraid'),
       user_data: {
         sha256_phone_number: [hashedPhone]
       }
@@ -712,6 +737,9 @@ export function useTracking() {
         hashed_phone: hashedPhone,
         sha256_phone_number: hashedPhone,
         phone_number: hashedPhone,
+        gclid: getFromStorage('gclid'),
+        wbraid: getFromStorage('wbraid'),
+        gbraid: getFromStorage('gbraid'),
         user_data: {
           sha256_phone_number: [hashedPhone]
         }
