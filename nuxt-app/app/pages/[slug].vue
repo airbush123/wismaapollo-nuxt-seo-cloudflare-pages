@@ -563,6 +563,7 @@ const pageData = computed(() => {
       seoTitle: String(data.seoTitle || data.title),
       subtitle: String(data.subtitle || ''),
       meta: String(data.meta || ''),
+      schemaDescription: String(data.schemaDescription || data.meta || ''),
       sections: Array.isArray(data.sections) ? data.sections : [],
       faqs: Array.isArray(data.faqs) ? data.faqs : [],
       priceHeading: String(data.priceHeading || ''),
@@ -617,7 +618,7 @@ const pageStructuredData = computed(() => {
     buildWebPageSchema({
       url: pageUrl.value,
       name: pageTitle.value,
-      description: pageDescription.value,
+      description: pageData.value.schemaDescription || pageDescription.value,
       image: pageImage.value,
       inLanguage: pageLanguage.value,
     }),

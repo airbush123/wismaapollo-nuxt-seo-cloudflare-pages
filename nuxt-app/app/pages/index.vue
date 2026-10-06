@@ -54,11 +54,16 @@ const homeTitle = computed(() => {
   return 'Hotel & Penginapan Kuala Kurun | Wisma Apollo'
 })
 
-const homeDescription = computed(() => {
+const homeSchemaDescription = computed(() => {
   if (locale.value === 'en') return 'Wisma Apollo is a clean and strategic hotel in Kuala Kurun with AC rooms, free WiFi, Android TV, private bathroom, and spacious parking.'
   if (locale.value === 'zh') return 'Wisma Apollo 是 Kuala Kurun 干净便利的住宿选择，位于市区，提供空调客房、免费 WiFi、Android 电视、独立浴室、宽敞停车区和便捷 WhatsApp 预订。'
   return 'Mencari hotel Kuala Kurun atau wisma Kuala Kurun yang nyaman? Wisma Apollo adalah pilihan penginapan Kuala Kurun dengan fasilitas bersih dan harga terjangkau.'
 })
+
+// Preserve the existing structured data while updating the approved Indonesian metadata.
+const homeDescription = computed(() => locale.value === 'id'
+  ? 'Hotel Kuala Kurun & penginapan Kuala Kurun di Wisma Apollo. Kamar mulai Rp200.000/malam, AC, WiFi, dan parkir luas. Reservasi via WhatsApp.'
+  : homeSchemaDescription.value)
 
 const homeImage = `${siteUrl}/images/hero.webp`
 
@@ -102,7 +107,7 @@ useHead(() => ({
         buildWebPageSchema({
           url: homeUrl.value,
           name: homeTitle.value,
-          description: homeDescription.value,
+          description: homeSchemaDescription.value,
           image: homeImage,
           inLanguage: locale.value === 'zh' ? 'zh-CN' : locale.value === 'en' ? 'en-US' : 'id-ID',
         }),

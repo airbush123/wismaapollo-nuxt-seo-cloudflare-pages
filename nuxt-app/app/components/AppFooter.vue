@@ -3,7 +3,7 @@
     <div class="container">
       <div class="footer-brand">
         <p class="footer-brand-title">{{ $t('footer.brand') }}</p>
-        <p>{{ $t('footer.summary') }}</p>
+        <p>{{ footerSummary }}</p>
         <p>{{ $t('footer.addressLine1') }}<br>{{ $t('footer.addressLine2') }}<br>{{ $t('footer.addressLine3') }}</p>
         <p class="footer-phone">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block;vertical-align:-3px;margin-right:4px;" aria-hidden="true">
@@ -71,8 +71,19 @@
 </template>
 
 <script setup lang="ts">
-const { locale } = useI18n()
+const { locale, t } = useI18n()
+const route = useRoute()
 const canonicalPath = useCanonicalLocalePath()
+const summaryKeys: Record<string, string> = {
+  '/': 'footer.summaryHome',
+  '/hotel-kuala-kurun': 'footer.summaryHotel',
+  '/penginapan-kuala-kurun': 'footer.summaryPenginapan',
+}
+const footerSummary = computed(() => {
+  const path = route.path.replace(/\/+$/, '') || '/'
+  const key = locale.value === 'id' ? summaryKeys[path] : undefined
+  return t(key || 'footer.summary')
+})
 const isFullLocale = computed(() => locale.value !== 'zh')
 const isBlogVisible = computed(() => locale.value !== 'zh')
 const isZhLocale = computed(() => locale.value === 'zh')
