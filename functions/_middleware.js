@@ -81,13 +81,13 @@ export async function onRequest(context) {
     legacyRedirects.get(normalizedDecodedPathname);
   if (redirectTarget) {
     url.pathname = redirectTarget;
-    url.search = '';
+    retainAttributionParams(url);
     return Response.redirect(url.toString(), 301);
   }
 
   if (url.searchParams.has('s')) {
     url.pathname = '/blog/';
-    url.search = '';
+    retainAttributionParams(url);
     return Response.redirect(url.toString(), 301);
   }
 
@@ -139,6 +139,18 @@ export async function onRequest(context) {
 
   // Continue to next middleware or static asset
   return context.next();
+}
+
+function retainAttributionParams(url) {
+  const allowed = new Set(['gclid', 'GCLID', 'wbraid', 'gbraid', 'fbclid', 'p']);
+  const attribution = new URLSearchParams();
+  for (const [key, value] of url.searchParams) {
+    if (allowed.has(key) || key.startsWith('utm_')) {
+      attribution.append(key, value);
+    }
+  }
+  // Keep attribution encoding safe and discard s and unrelated legacy parameters.
+  url.search = attribution.toString();
 }
 
 function safeDecodePath(pathname) {
