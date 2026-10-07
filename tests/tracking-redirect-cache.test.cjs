@@ -23,7 +23,8 @@ test('all legacy destinations, including locale aliases, retain every click ID s
         const response = await onRequest(request(url));
         const location = new URL(response.headers.get('location'));
         assert.equal(response.status, 301);
-        assert.equal(location.pathname, target);
+        assert.equal(location.pathname, new URL(target, 'https://wisma-apollo.my.id').pathname);
+        assert.equal(location.hash, new URL(target, 'https://wisma-apollo.my.id').hash);
         assert.deepEqual([...location.searchParams], [[key, 'fixture+' + key + '&/?=%']]);
       }
     }
@@ -37,7 +38,8 @@ test('all legacy destinations remain query-free without attribution', async () =
       const response = await onRequest(request('https://wisma-apollo.my.id' + path + suffix));
       assert.equal(response.status, 301);
       const location = new URL(response.headers.get('location'));
-      assert.equal(location.pathname, target);
+      assert.equal(location.pathname, new URL(target, 'https://wisma-apollo.my.id').pathname);
+      assert.equal(location.hash, new URL(target, 'https://wisma-apollo.my.id').hash);
       assert.equal(location.search, '');
     }
   }
@@ -67,7 +69,7 @@ test('combined IDs, arbitrary utm_* fields, repeats and reserved/unicode encodin
   const { onRequest } = await middleware;
   const query = 's=hotel%20%26%20%22Apollo%22&s=second&gclid=a%2Bb%26c%3Dd%2F%3F%23%25&GCLID=upper&wbraid=wb&gbraid=gb&fbclid=fb&utm_source=google&utm_medium=cpc&utm_campaign=Kuala%20Kurun%20%26%20Apollo&utm_term=%E9%85%92%E5%BA%97&utm_custom=a%2Fb&utm_campaign=repeat&p=a%2Fb%3Fc%3Dd&junk=discard';
   const expected = [...new URLSearchParams(query)].filter(([key]) => attributionKeys.includes(key) || key.startsWith('utm_'));
-  for (const path of ['/', '/harga/', '/en/penginapan-murah-kuala-kurun/', '/%E2%98%95-5-cafe-kopi-terbaik-di-kuala-kurun-spot-wajib-kunjung-di-sekitar-wisma-apollo-%E2%98%95/']) {
+  for (const path of ['/', '/harga/', '/chat/wisma-apollo/', '/en/penginapan-murah-kuala-kurun/', '/%E2%98%95-5-cafe-kopi-terbaik-di-kuala-kurun-spot-wajib-kunjung-di-sekitar-wisma-apollo-%E2%98%95/']) {
     const response = await onRequest(request('https://wisma-apollo.my.id' + path + '?' + query));
     const location = new URL(response.headers.get('location'));
     assert.deepEqual([...location.searchParams], expected);
@@ -78,6 +80,22 @@ test('combined IDs, arbitrary utm_* fields, repeats and reserved/unicode encodin
   }
   const repeated = await onRequest(request('https://wisma-apollo.my.id/harga?gclid=one&gclid=two'));
   assert.deepEqual(new URL(repeated.headers.get('location')).searchParams.getAll('gclid'), ['one', 'two']);
+});
+
+test('legacy chat resolves in one hop to rooms, retains attribution and uses a real fragment', async () => {
+  const { onRequest } = await middleware;
+  for (const path of ['/chat/wisma-apollo/', '/chat/wisma-apollo', '/en/chat/wisma-apollo/', '/zh/chat/wisma-apollo/']) {
+    for (const suffix of ['', '#old', '?gclid=a%2Bb%26c&utm_campaign=two%20nights&s=discard&junk=discard#old']) {
+      const response = await onRequest(request('https://wisma-apollo.my.id' + path + suffix));
+      assert.equal(response.status, 301);
+      const location = new URL(response.headers.get('location'));
+      assert.equal(location.pathname, '/');
+      assert.equal(location.hash, '#kamar');
+      assert.equal(location.toString().includes('%23kamar'), false);
+      assert.deepEqual([...location.searchParams], suffix.includes('?') ? [['gclid', 'a+b&c'], ['utm_campaign', 'two nights']] : []);
+      assert.equal((await onRequest(request(location))).status, 202, 'Destination must not redirect again');
+    }
+  }
 });
 
 test('normal pages, pages.dev attribution and spam status keep their existing behavior', async () => {

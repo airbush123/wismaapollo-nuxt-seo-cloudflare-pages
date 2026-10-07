@@ -94,6 +94,8 @@
     "title": "Reservasi Penginapan Kuala Kurun via WhatsApp",
     "subtitle": "Kami menawarkan harga yang murah & terjangkau",
     "normalPrice": "Harga normal",
+    "capacity": "Maksimal {adults} dewasa.",
+    "faqLink": "FAQ kapasitas kamar dan aturan menginap",
     "single": {
       "badge": "Single",
       "name": "Single Bed",
@@ -407,8 +409,8 @@
         {
           "heading": "Apa yang Perlu Dicek Sebelum Booking Hotel?",
           "paragraphs": [
-            "Sebelum memesan kamar, cek dulu kebutuhan perjalananmu. Untuk tamu dinas, lokasi dekat jalan utama dan pusat kota biasanya lebih penting daripada fasilitas tambahan yang jarang dipakai. Untuk keluarga, kamar mandi dalam, kebersihan, dan akses makan sering menjadi pertimbangan utama.",
-            "Wisma Apollo menampilkan informasi harga, fasilitas, dan kontak reservasi secara terbuka agar tamu bisa membuat keputusan dengan cepat. Jika jadwal masih berubah, cukup komunikasikan estimasi kedatangan melalui WhatsApp supaya admin bisa membantu mengecek ketersediaan kamar."
+            "Pilih tipe kamar sesuai jumlah tamu dewasa dan anggaran. Single Bed mulai Rp200.000 per malam untuk maksimal 2 dewasa, sedangkan Double Bed mulai Rp250.000 per malam untuk maksimal 3 dewasa.",
+            "Lihat foto setiap tipe kamar di galeri dan bandingkan fasilitasnya sebelum memilih. Konfirmasikan tanggal menginap, ketersediaan kamar, dan kebutuhan extra bed kepada admin saat reservasi."
           ]
         },
         {
@@ -519,8 +521,8 @@
         {
           "heading": "Harga Penginapan Murah di Kuala Kurun",
           "paragraphs": [
-            "Untuk tamu yang membandingkan beberapa pilihan penginapan murah Kuala Kurun, Wisma Apollo menawarkan harga mulai Rp200.000 per malam. Dengan harga tersebut, tamu tetap mendapatkan kamar bersih, AC, WiFi, TV Android, kamar mandi dalam, air mineral, kopi, teh, dan perlengkapan mandi dasar. Kamar Double Bed tersedia mulai Rp250.000 per malam untuk tamu yang ingin ruang tidur lebih lega.",
-            "Penginapan murah tidak harus terasa seadanya. Di Wisma Apollo, fokusnya adalah memberikan kamar yang bersih, nyaman, dan fungsional. Tamu tidak membayar untuk fasilitas yang tidak dibutuhkan, tetapi tetap mendapatkan kualitas istirahat yang baik. Karena itu, Wisma Apollo relevan untuk tamu yang ingin hemat tanpa mengorbankan kenyamanan tidur."
+            "Rencanakan biaya kamar dari tipe yang dipilih dan jumlah malam. Sebagai contoh, dua malam di Single Bed dengan tarif Rp200.000 per malam berarti Rp400.000 untuk biaya kamar. Double Bed tersedia mulai Rp250.000 per malam.",
+            "Tambahan dihitung terpisah dari biaya kamar: sarapan Rp25.000 per paket per orang dan extra bed serta bantal Rp50.000 per kamar. Tanyakan ketersediaan dan total biaya tambahan kepada admin sebelum mengonfirmasi reservasi."
           ]
         },
         {

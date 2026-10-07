@@ -26,12 +26,9 @@ author: 'Wisma Apollo Editorial Team'
 <li><strong>Soundproof</strong> – Sleep without disturbance</li>
 </ul>
 <h2>3. Pay Attention to Cleanliness</h2>
-<p>Cleanliness is the main factor for comfort. Look for accommodation that provides clean sheets and towels every
-            day. At Wisma Apollo, all linens use full cotton material and are changed daily.</p>
+<p>Check the cleanliness of the room, linens, and towels. For a stay of several nights, ask the property manager about the linen replacement schedule.</p>
 <h2>4. Compare Prices</h2>
-<p><strong>Hotel prices in Kuala Kurun</strong> vary from IDR 150,000 to IDR 500,000 per night. Wisma
-            Apollo offers rooms starting from IDR 200,000/night with complete facilities – very affordable for the quality
-            you get.</p>
+<p>At Wisma Apollo, Single Bed rooms start at IDR 200,000 per night and Double Bed rooms start at IDR 250,000 per night. Compare room types, capacity, facilities, and additional costs before booking.</p>
 <h2>5. Book Early</h2>
 <p>Kuala Kurun is often busy during government events or holiday seasons. Book early through WhatsApp
             to ensure room availability.</p>
@@ -85,7 +82,7 @@ author: 'Wisma Apollo Editorial Team'
 <span>AC + WiFi</span>
 <span>Spacious parking</span>
 </div>
-<a href="#reservasi" class="blog-reserve-btn" data-booking-trigger="true">Open Reservation Form</a>
+<a href="/#kamar" class="blog-reserve-btn" data-booking-trigger="true">Open Reservation Form</a>
 </div>
 <h2>Quick Checklist Before Check-in</h2>
 <p>Before heading to Kuala Kurun, create a short checklist so no important needs are left behind.

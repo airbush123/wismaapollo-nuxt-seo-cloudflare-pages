@@ -94,6 +94,8 @@
     "title": "Choose Your Room",
     "subtitle": "We offer cheap & affordable rates",
     "normalPrice": "Normal price",
+    "capacity": "Maximum {adults} adults.",
+    "faqLink": "Room capacity and stay policies FAQ",
     "single": {
       "badge": "Single",
       "name": "Single Bed",

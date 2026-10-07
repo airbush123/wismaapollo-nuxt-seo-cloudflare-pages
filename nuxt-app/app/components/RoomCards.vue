@@ -28,6 +28,7 @@
             </div>
             <div class="room-price">{{ $t('rooms.single.price') }} <small>{{ $t('rooms.single.perNight') }}</small></div>
           </div>
+          <p>{{ $t('rooms.capacity', { adults: 2 }) }}</p>
           <ul role="list">
             <li v-for="i in 5" :key="i" :class="{ 'highlight-ac': i === 1 }">{{ $t(`rooms.single.features[${i-1}]`) }}</li>
           </ul>
@@ -69,6 +70,7 @@
             </div>
             <div class="room-price">{{ $t('rooms.double.price') }} <small>{{ $t('rooms.double.perNight') }}</small></div>
           </div>
+          <p>{{ $t('rooms.capacity', { adults: 3 }) }}</p>
           <ul role="list">
             <li v-for="i in 6" :key="i" :class="{ 'highlight-ac': i === 1 }">{{ $t(`rooms.double.features[${i-1}]`) }}</li>
           </ul>
@@ -86,6 +88,7 @@
         </button>
       </div>
     </article>
+      <p class="desc center"><a :href="canonicalPath('/faq/')">{{ $t('rooms.faqLink') }}</a></p>
     </div>
   </section>
 </template>
@@ -94,4 +97,15 @@
 import { useBookingStore } from '~/stores/useBookingStore'
 
 const bookingStore = useBookingStore()
+const canonicalPath = useCanonicalLocalePath()
 </script>
+
+
+<style scoped>
+@media (scripting: none) {
+  .anim-up {
+    opacity: 1;
+    transform: none;
+  }
+}
+</style>

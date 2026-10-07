@@ -57,7 +57,7 @@ author: 'Wisma Apollo Editorial Team'
 <span>AC + WiFi</span>
 <span>Spacious parking</span>
 </div>
-<a href="#reservasi" class="blog-reserve-btn" data-booking-trigger="true">Open Reservation Form</a>
+<a href="/#kamar" class="blog-reserve-btn" data-booking-trigger="true">Open Reservation Form</a>
 </div>
 <h2>Tips for Visiting Batu Suli</h2>
 <p>Before heading to Batu Suli, make sure you've checked the weather conditions, route, and travel time from Kuala Kurun. Nature destinations are more comfortable to visit in the morning or daytime because the light is better for sightseeing and the return journey won't be too late. Wear comfortable footwear, bring drinking water, and prepare sufficient cash for small needs along the way.</p>

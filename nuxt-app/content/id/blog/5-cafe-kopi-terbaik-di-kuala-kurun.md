@@ -79,7 +79,7 @@ author: 'Tim Wisma Apollo'
 <span>AC + WiFi</span>
 <span>Parkir luas</span>
 </div>
-<a href="#reservasi" class="blog-reserve-btn" data-booking-trigger="true">Buka Form Reservasi</a>
+<a href="/#kamar" class="blog-reserve-btn" data-booking-trigger="true">Buka Form Reservasi</a>
 </div>
 <h2>Rencana Ngopi untuk Tamu yang Menginap</h2>
 <p>Kalau kamu menginap di Kuala Kurun, jadikan agenda ngopi sebagai bagian ringan dari perjalanan, bukan jadwal

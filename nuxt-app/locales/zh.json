@@ -94,6 +94,8 @@
     "title": "选择您的客房",
     "subtitle": "我们为您提供超值的住宿价格",
     "normalPrice": "标准价格",
+    "capacity": "最多 {adults} 位成人。",
+    "faqLink": "入住人数与住宿规定常见问题",
     "single": {
       "badge": "单人/大床",
       "name": "大床房 (Single Bed)",

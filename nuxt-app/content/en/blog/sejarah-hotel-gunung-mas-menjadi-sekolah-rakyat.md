@@ -40,7 +40,7 @@ author: 'Wisma Apollo Editorial Team'
 <span>Strategic location</span>
 <span>Direct booking</span>
 </div>
-<a href="#reservasi" class="blog-reserve-btn" data-booking-trigger="true">Open Reservation Form</a>
+<a href="/#kamar" class="blog-reserve-btn" data-booking-trigger="true">Open Reservation Form</a>
 </div>
 <h2>Closing</h2>
 <p>The transformation of an old building into an educational space is a reminder that a city always has ways to renew itself. Kuala Kurun doesn't only grow as the government center of Gunung Mas Regency, but also as a living space that stores social stories, education, and community hopes. For guests who come, understanding stories like this makes the journey feel closer to the character of the region.</p>

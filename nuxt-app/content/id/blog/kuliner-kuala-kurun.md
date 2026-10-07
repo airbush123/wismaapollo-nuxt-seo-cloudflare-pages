@@ -80,7 +80,7 @@ author: 'Tim Wisma Apollo'
 <span>AC + WiFi</span>
 <span>Parkir luas</span>
 </div>
-<a href="#reservasi" class="blog-reserve-btn" data-booking-trigger="true">Buka Form Reservasi</a>
+<a href="/#kamar" class="blog-reserve-btn" data-booking-trigger="true">Buka Form Reservasi</a>
 </div>
 <h2>Kesimpulan Wisata Kuliner Kuala Kurun</h2>
 <p>Kuliner Kuala Kurun menarik karena terasa dekat dengan kehidupan harian warga. Ada makanan sungai, jajanan

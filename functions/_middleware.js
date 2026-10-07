@@ -30,6 +30,8 @@ export async function onRequest(context) {
     ['/bundaran-kuala-kurun-simbol-kota-yang-menyimpan-pesona', '/blog/bundaran-kuala-kurun/'],
     ['/icon-tugu-selamat-datang-di-kuala-kurun-simbol-identitas-dan-keramahan-kota/', '/blog/bundaran-kuala-kurun/'],
     ['/icon-tugu-selamat-datang-di-kuala-kurun-simbol-identitas-dan-keramahan-kota', '/blog/bundaran-kuala-kurun/'],
+    ['/chat/wisma-apollo/', '/#kamar'],
+    ['/chat/wisma-apollo', '/#kamar'],
     ['/harga/', '/hotel-kuala-kurun/'],
     ['/harga', '/hotel-kuala-kurun/'],
     ['/hotel-murah-kuala-kurun/', '/hotel-kuala-kurun/'],
@@ -80,7 +82,9 @@ export async function onRequest(context) {
     legacyRedirects.get(normalizedPathname) ||
     legacyRedirects.get(normalizedDecodedPathname);
   if (redirectTarget) {
-    url.pathname = redirectTarget;
+    const destination = new URL(redirectTarget, url.origin);
+    url.pathname = destination.pathname;
+    if (destination.hash) url.hash = destination.hash;
     retainAttributionParams(url);
     return Response.redirect(url.toString(), 301);
   }

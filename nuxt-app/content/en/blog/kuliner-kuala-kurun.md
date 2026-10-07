@@ -49,7 +49,7 @@ author: 'Wisma Apollo Editorial Team'
 <span>AC + WiFi</span>
 <span>Spacious parking</span>
 </div>
-<a href="#reservasi" class="blog-reserve-btn" data-booking-trigger="true">Open Reservation Form</a>
+<a href="/#kamar" class="blog-reserve-btn" data-booking-trigger="true">Open Reservation Form</a>
 </div>
 <h2>Conclusion on Kuala Kurun's Culinary Journey</h2>
 <p>Kuala Kurun's cuisine is appealing because it feels close to the daily life of its residents. There's river food, market snacks, local coffee, home-cooked meals, and cafe options that can be adjusted to your travel schedule. For a more grounded experience, don't just look for viral menu items. Pay attention to places that are crowded with locals, ask what's most frequently ordered, and choose portions that fit so you can still try other food.</p>

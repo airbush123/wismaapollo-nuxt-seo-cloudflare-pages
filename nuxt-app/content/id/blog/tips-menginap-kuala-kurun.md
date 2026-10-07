@@ -26,12 +26,9 @@ author: 'Tim Wisma Apollo'
 <li><strong>Kedap suara</strong> – Tidur tanpa gangguan</li>
 </ul>
 <h2>3. Perhatikan Kebersihan</h2>
-<p>Kebersihan adalah faktor utama kenyamanan. Cari penginapan yang menyediakan sprei dan handuk bersih setiap
-            hari. Di Wisma Apollo, semua linen menggunakan bahan katun full dan diganti setiap hari.</p>
+<p>Perhatikan kebersihan kamar, linen, dan handuk. Untuk menginap beberapa malam, tanyakan jadwal penggantian linen kepada pengelola.</p>
 <h2>4. Bandingkan Harga</h2>
-<p>Harga <strong>hotel di Kuala Kurun</strong> bervariasi mulai dari Rp150.000 hingga Rp500.000 per malam. Wisma
-            Apollo menawarkan kamar mulai Rp200.000/malam dengan fasilitas lengkap – sangat terjangkau untuk kualitas
-            yang didapatkan.</p>
+<p>Di Wisma Apollo, Single Bed mulai Rp200.000 per malam dan Double Bed mulai Rp250.000 per malam. Bandingkan tipe kamar, kapasitas, fasilitas, dan biaya tambahan sebelum memesan.</p>
 <h2>5. Booking Lebih Awal</h2>
 <p>Kuala Kurun sering ramai saat ada acara pemerintahan atau musim liburan. Booking lebih awal lewat WhatsApp
             untuk memastikan ketersediaan kamar.</p>
@@ -87,7 +84,7 @@ author: 'Tim Wisma Apollo'
 <span>AC + WiFi</span>
 <span>Parkir luas</span>
 </div>
-<a href="#reservasi" class="blog-reserve-btn" data-booking-trigger="true">Buka Form Reservasi</a>
+<a href="/#kamar" class="blog-reserve-btn" data-booking-trigger="true">Buka Form Reservasi</a>
 </div>
 <h2>Checklist Cepat Sebelum Check-in</h2>
 <p>Sebelum berangkat ke Kuala Kurun, buat checklist singkat agar tidak ada kebutuhan penting yang tertinggal.
@@ -106,4 +103,4 @@ author: 'Tim Wisma Apollo'
 <p>Jika masih ragu, bandingkan penginapan dari sisi total manfaat, bukan hanya tarif per malam. Lokasi yang
             strategis, fasilitas lengkap, dan komunikasi cepat bisa menghemat waktu sekaligus tenaga. Dengan memilih
             penginapan yang tepat sejak awal, perjalanan ke Kuala Kurun akan terasa jauh lebih nyaman.</p>
-<p>Untuk melihat detail kamar, harga, fasilitas, dan cara reservasi, buka halaman <a href="https://wisma-apollo.my.id/"><strong>penginapan Kuala Kurun Wisma Apollo</strong></a>.</p>
+<p>Untuk memilih kamar dan melihat tarif, buka <a href="/#kamar"><strong>pilihan kamar dan reservasi Wisma Apollo</strong></a>.</p>

@@ -60,7 +60,7 @@ author: 'Tim Wisma Apollo'
 <span>AC + WiFi</span>
 <span>Parkir luas</span>
 </div>
-<a href="#reservasi" class="blog-reserve-btn" data-booking-trigger="true">Buka Form Reservasi</a>
+<a href="/#kamar" class="blog-reserve-btn" data-booking-trigger="true">Buka Form Reservasi</a>
 </div>
 <h2>Tips Berkunjung ke Batu Suli</h2>
 <p>Sebelum berangkat ke Batu Suli, pastikan kamu sudah mengecek kondisi cuaca, rute, dan waktu tempuh dari
