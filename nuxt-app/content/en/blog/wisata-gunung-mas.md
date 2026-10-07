@@ -44,7 +44,7 @@ author: 'Wisma Apollo Editorial Team'
 <span>AC + WiFi</span>
 <span>Spacious parking</span>
 </div>
-<a href="/#kamar" class="blog-reserve-btn" data-booking-trigger="true">Open Reservation Form</a>
+<a href="/#kamar" external class="blog-reserve-btn" data-booking-trigger="true">Open Reservation Form</a>
 </div>
 <h2>Conclusion</h2>
 <p>Gunung Mas has rich tourism potential from natural waterfalls, ancient rock formations, cultural heritage, to authentic riverside life. The key to a comfortable trip is proper preparation and strategic accommodation. Wisma Apollo in central Kuala Kurun offers a practical base for exploring all these destinations while ensuring quality rest after each adventure.</p>

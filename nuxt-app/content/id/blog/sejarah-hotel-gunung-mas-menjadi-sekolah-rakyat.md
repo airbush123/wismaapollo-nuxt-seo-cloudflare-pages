@@ -41,7 +41,7 @@ author: 'Tim Wisma Apollo'
 <span>Lokasi strategis</span>
 <span>Booking langsung</span>
 </div>
-<a href="/#kamar" class="blog-reserve-btn" data-booking-trigger="true">Buka Form Reservasi</a>
+<a href="/#kamar" external class="blog-reserve-btn" data-booking-trigger="true">Buka Form Reservasi</a>
 </div>
 <h2>Penutup</h2>
 <p>Transformasi bangunan lama menjadi ruang pendidikan adalah pengingat bahwa sebuah kota selalu punya cara untuk memperbarui dirinya. Kuala Kurun tidak hanya tumbuh sebagai pusat pemerintahan Kabupaten Gunung Mas, tetapi juga sebagai ruang hidup yang menyimpan cerita sosial, pendidikan, dan harapan masyarakat. Bagi tamu yang datang, memahami cerita seperti ini membuat perjalanan terasa lebih dekat dengan karakter daerah.</p>

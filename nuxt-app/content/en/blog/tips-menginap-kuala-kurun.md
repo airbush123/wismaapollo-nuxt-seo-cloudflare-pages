@@ -82,7 +82,7 @@ author: 'Wisma Apollo Editorial Team'
 <span>AC + WiFi</span>
 <span>Spacious parking</span>
 </div>
-<a href="/#kamar" class="blog-reserve-btn" data-booking-trigger="true">Open Reservation Form</a>
+<a href="/#kamar" external class="blog-reserve-btn" data-booking-trigger="true">Open Reservation Form</a>
 </div>
 <h2>Quick Checklist Before Check-in</h2>
 <p>Before heading to Kuala Kurun, create a short checklist so no important needs are left behind.

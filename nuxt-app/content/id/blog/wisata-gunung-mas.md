@@ -75,7 +75,7 @@ author: 'Tim Wisma Apollo'
 <span>AC + WiFi</span>
 <span>Parkir luas</span>
 </div>
-<a href="/#kamar" class="blog-reserve-btn" data-booking-trigger="true">Buka Form Reservasi</a>
+<a href="/#kamar" external class="blog-reserve-btn" data-booking-trigger="true">Buka Form Reservasi</a>
 </div>
 <h2>Kesimpulan Wisata Gunung Mas</h2>
 <p>Gunung Mas cocok untuk wisatawan yang menyukai suasana alam, budaya, dan kota kecil yang masih terasa dekat

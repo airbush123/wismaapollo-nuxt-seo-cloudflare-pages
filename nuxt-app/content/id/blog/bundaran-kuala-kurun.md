@@ -72,7 +72,7 @@ author: 'Tim Wisma Apollo'
 <span>AC + WiFi</span>
 <span>Parkir luas</span>
 </div>
-<a href="/#kamar" class="blog-reserve-btn" data-booking-trigger="true">Buka Form Reservasi</a>
+<a href="/#kamar" external class="blog-reserve-btn" data-booking-trigger="true">Buka Form Reservasi</a>
 </div>
 <h2>Kenapa Area Bundaran Cocok untuk Titik Orientasi Kota?</h2>
 <p>Bagi tamu yang baru pertama kali datang ke Kuala Kurun, area bundaran membantu membaca arah kota dengan

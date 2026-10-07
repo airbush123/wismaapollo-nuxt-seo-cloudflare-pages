@@ -38,7 +38,7 @@ author: 'Wisma Apollo Editorial Team'
 <span>AC + WiFi</span>
 <span>Spacious parking</span>
 </div>
-<a href="/#kamar" class="blog-reserve-btn" data-booking-trigger="true">Open Reservation Form</a>
+<a href="/#kamar" external class="blog-reserve-btn" data-booking-trigger="true">Open Reservation Form</a>
 </div>
 <h2>Why Is the Roundabout Area Suitable as a City Orientation Point?</h2>
 <p>For guests visiting Kuala Kurun for the first time, the roundabout area helps read the city directions more easily. From this point, you can identify the main road, estimate restaurant locations, observe citizen activities, and determine routes to your accommodation. That's why the roundabout is not just a traffic element, but also a marker that helps newcomers understand the city center.</p>

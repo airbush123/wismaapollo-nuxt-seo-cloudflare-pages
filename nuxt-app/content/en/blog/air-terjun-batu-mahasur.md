@@ -49,7 +49,7 @@ author: 'Wisma Apollo Editorial Team'
 <span>AC + WiFi</span>
 <span>Spacious parking</span>
 </div>
-<a href="/#kamar" class="blog-reserve-btn" data-booking-trigger="true">Open Reservation Form</a>
+<a href="/#kamar" external class="blog-reserve-btn" data-booking-trigger="true">Open Reservation Form</a>
 </div>
 <h2>Conclusion on the Journey to Batu Mahasur</h2>
 <p>Batu Mahasur Waterfall is suitable for tourists who want to see the natural side of Gunung Mas without losing access to central Kuala Kurun. The key is departing with sufficient preparation, maintaining site cleanliness, and not forcing the trip when weather conditions are unfavorable. After returning, choose accommodation that makes it easy for you to shower, rest, and find dinner.</p>

@@ -38,7 +38,7 @@ author: 'Wisma Apollo Editorial Team'
 <span>Central location</span>
 <span>Clean rooms</span>
 </div>
-<a href="/#kamar" class="blog-reserve-btn" data-booking-trigger="true">Open Reservation Form</a>
+<a href="/#kamar" external class="blog-reserve-btn" data-booking-trigger="true">Open Reservation Form</a>
 </div>
 
 <h2>Simple Tips Before Booking</h2>

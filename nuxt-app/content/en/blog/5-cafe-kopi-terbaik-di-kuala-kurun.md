@@ -48,7 +48,7 @@ author: 'Wisma Apollo Editorial Team'
 <span>AC + WiFi</span>
 <span>Spacious parking</span>
 </div>
-<a href="/#kamar" class="blog-reserve-btn" data-booking-trigger="true">Open Reservation Form</a>
+<a href="/#kamar" external class="blog-reserve-btn" data-booking-trigger="true">Open Reservation Form</a>
 </div>
 <h2>Coffee Plan for Guests Staying Overnight</h2>
 <p>If you're staying in Kuala Kurun, make coffee outings a light part of your trip, not an exhausting schedule. After check-in, rest briefly first, then choose the cafe that's closest to your accommodation. For business guests, this pattern helps maintain energy: work agenda gets done, but there's still time to enjoy the local atmosphere.</p>
